@@ -1,0 +1,13 @@
+{
+  "augmentation_parent_role_required": "TRAIN",
+  "augmentation_rule": "AUGMENTATION_TRAIN_ONLY",
+  "canonical_conversion_inherits_assignment": true,
+  "derived_artifact_rule": "Every canonical, normalized, augmented, or quantized sample inherits source split/domain/group/role and assignment rule; no reassignment.",
+  "no_augmentations_generated_in_t_a5": true,
+  "normalization_inherits_assignment": true,
+  "phase": "T-A5",
+  "policy_id": "THERMAL_SPLIT_POLICY_001",
+  "quantization_inherits_assignment": true,
+  "role_change_requires_new_policy_version": true,
+  "schema_version": "1.0"
+}

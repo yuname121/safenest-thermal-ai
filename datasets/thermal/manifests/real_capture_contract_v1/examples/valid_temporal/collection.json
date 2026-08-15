@@ -1,0 +1,33 @@
+{
+  "collection_id": "example_temporal_not_measurement",
+  "collection_role": "DEVICE_CONTRACT_PILOT",
+  "contract_id": "safenest.thermal.real_capture.v1",
+  "created_at": "2026-08-14T11:00:00+09:00",
+  "full_frame_collection_status": "FULL_FRAME_AVAILABLE",
+  "notes": "EXAMPLE / NOT REAL MEASUREMENT. Explicit event phases are synthetic metadata only.",
+  "privacy": {
+    "names_in_filenames": false,
+    "pseudonymous_ids_only": true,
+    "unnecessary_personal_metadata_present": false
+  },
+  "schema_version": "safenest.thermal.real_capture.collection.v1",
+  "session_ids": [
+    "session_S002_001"
+  ],
+  "source": {
+    "collector_git_commit": null,
+    "source_description": "Synthetic placeholder records; no physical measurement is included.",
+    "source_status": "SYNTHETIC_EXAMPLE_NOT_MEASUREMENT",
+    "team_repository_base_commit": null
+  },
+  "split_policy": {
+    "assignment_method": "NO_MODEL_SPLIT_DEVICE_CONTRACT_PILOT",
+    "assignment_unit": "NOT_ASSIGNED",
+    "frame_random_split_allowed": false,
+    "frozen_before_model_inspection": null,
+    "locked_test_access": "NOT_APPLICABLE"
+  },
+  "subject_ids": [
+    "S002"
+  ]
+}

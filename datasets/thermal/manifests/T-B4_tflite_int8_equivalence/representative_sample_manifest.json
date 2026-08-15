@@ -1,0 +1,4618 @@
+{
+  "manifest_checksum": "51bbced6b40ab14d547e3c80afd99b92a24c016c1853e66c634b69d1dc4b30a4",
+  "phase": "T-B4",
+  "policy_id": "T-B4_TRAIN_ONLY_STRATIFIED_CALIBRATION_512",
+  "role": "TRAIN",
+  "row_count": 512,
+  "rows": [
+    {
+      "canonical_sample_index": 0,
+      "frame_mean_celsius": 22.20284169143246,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00000",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 1,
+      "frame_mean_celsius": 22.24584638995509,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00001",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 4,
+      "frame_mean_celsius": 22.58871459691755,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00004",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 7,
+      "frame_mean_celsius": 22.461103893095448,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00007",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 17,
+      "frame_mean_celsius": 22.35341468357271,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00017",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 31,
+      "frame_mean_celsius": 22.404711669491185,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00031",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 209,
+      "frame_mean_celsius": 22.249679272790107,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00209",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 221,
+      "frame_mean_celsius": 22.13528764478622,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00221",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 257,
+      "frame_mean_celsius": 22.132471039602834,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00257",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 330,
+      "frame_mean_celsius": 22.46499693239889,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00330",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 357,
+      "frame_mean_celsius": 22.13353393616215,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00357",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 413,
+      "frame_mean_celsius": 22.191168054457634,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00413",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 472,
+      "frame_mean_celsius": 22.321216600941074,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00472",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 493,
+      "frame_mean_celsius": 22.396579255596283,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00493",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 629,
+      "frame_mean_celsius": 22.219501030060552,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00629",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 671,
+      "frame_mean_celsius": 22.55760104117855,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00671",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 864,
+      "frame_mean_celsius": 22.607201466252725,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00864",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 906,
+      "frame_mean_celsius": 22.219187501553566,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00906",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 918,
+      "frame_mean_celsius": 22.313554365019645,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00918",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 941,
+      "frame_mean_celsius": 22.40196081053826,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:00941",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 1068,
+      "frame_mean_celsius": 22.524504889211347,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01068",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 1192,
+      "frame_mean_celsius": 22.28178785885534,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01192",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 1322,
+      "frame_mean_celsius": 22.346631288143897,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01322",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 1347,
+      "frame_mean_celsius": 22.445594969872506,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01347",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 1410,
+      "frame_mean_celsius": 22.25501688987978,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01410",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 1476,
+      "frame_mean_celsius": 22.453231693467785,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01476",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 1543,
+      "frame_mean_celsius": 22.125706074699277,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01543",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 1646,
+      "frame_mean_celsius": 22.10557683860102,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01646",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 1656,
+      "frame_mean_celsius": 22.21762902928937,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01656",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 1658,
+      "frame_mean_celsius": 22.6084016776854,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01658",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 1687,
+      "frame_mean_celsius": 22.256435100878438,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01687",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 1725,
+      "frame_mean_celsius": 22.126903978855378,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01725",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 1729,
+      "frame_mean_celsius": 22.130030956575947,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01729",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 1740,
+      "frame_mean_celsius": 22.124577738008192,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01740",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 1745,
+      "frame_mean_celsius": 22.300202979195504,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01745",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 1824,
+      "frame_mean_celsius": 22.432441725653987,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01824",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 1874,
+      "frame_mean_celsius": 22.22540976732008,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01874",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 1895,
+      "frame_mean_celsius": 22.562643048840183,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01895",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 1952,
+      "frame_mean_celsius": 22.117546394178945,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:01952",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 2083,
+      "frame_mean_celsius": 22.28777514734576,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:02083",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 2102,
+      "frame_mean_celsius": 22.310695145207067,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:02102",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 2219,
+      "frame_mean_celsius": 22.37027177426123,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:02219",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 2337,
+      "frame_mean_celsius": 22.333961190331365,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:02337",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 2391,
+      "frame_mean_celsius": 22.27257562222019,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:02391",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 2540,
+      "frame_mean_celsius": 22.295225290329224,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:02540",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 2565,
+      "frame_mean_celsius": 22.389688501050394,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:02565",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 2696,
+      "frame_mean_celsius": 22.512167482991373,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:02696",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 2794,
+      "frame_mean_celsius": 22.261703679638526,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:02794",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 2800,
+      "frame_mean_celsius": 22.355933258994934,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:02800",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 2846,
+      "frame_mean_celsius": 22.40599185382166,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:02846",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 3045,
+      "frame_mean_celsius": 22.2981278138776,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:03045",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 3124,
+      "frame_mean_celsius": 22.37954529677668,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:03124",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 3243,
+      "frame_mean_celsius": 22.47814397273525,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:03243",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 3281,
+      "frame_mean_celsius": 22.227323659004703,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:03281",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 3299,
+      "frame_mean_celsius": 22.329230443508393,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:03299",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 3369,
+      "frame_mean_celsius": 22.406586372083233,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:03369",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 3397,
+      "frame_mean_celsius": 22.364998855129365,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:03397",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 3527,
+      "frame_mean_celsius": 22.35736523905108,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:03527",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 3564,
+      "frame_mean_celsius": 22.230068026819538,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:03564",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 3739,
+      "frame_mean_celsius": 22.311482023423718,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:03739",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 3827,
+      "frame_mean_celsius": 22.222891607976727,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:03827",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 3848,
+      "frame_mean_celsius": 22.37653412126726,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:03848",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 3991,
+      "frame_mean_celsius": 22.356564264143667,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:03991",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 4008,
+      "frame_mean_celsius": 23.060837488789712,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:04008",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 4065,
+      "frame_mean_celsius": 22.50469576389559,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:04065",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 4101,
+      "frame_mean_celsius": 22.834602204830414,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:04101",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 4223,
+      "frame_mean_celsius": 22.397756371575017,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:04223",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 4250,
+      "frame_mean_celsius": 22.578050914502914,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:04250",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 4344,
+      "frame_mean_celsius": 22.531778626672683,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:04344",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 4404,
+      "frame_mean_celsius": 22.634948982346444,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:04404",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 4561,
+      "frame_mean_celsius": 22.919187562311848,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:04561",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 4642,
+      "frame_mean_celsius": 22.484565990586436,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:04642",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 4702,
+      "frame_mean_celsius": 22.43737368391406,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:04702",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 4714,
+      "frame_mean_celsius": 22.897244438817424,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:04714",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 4843,
+      "frame_mean_celsius": 22.582376269371277,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:04843",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 4901,
+      "frame_mean_celsius": 22.546682368555377,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:04901",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 4988,
+      "frame_mean_celsius": 22.61262210184528,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:04988",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 5045,
+      "frame_mean_celsius": 23.02780871929661,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05045",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 5049,
+      "frame_mean_celsius": 22.594470229841047,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05049",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 5125,
+      "frame_mean_celsius": 22.504873644151996,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05125",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 5148,
+      "frame_mean_celsius": 22.872769035831574,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05148",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 5160,
+      "frame_mean_celsius": 22.426674065282267,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05160",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 5303,
+      "frame_mean_celsius": 22.65163626824656,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05303",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 5348,
+      "frame_mean_celsius": 22.346188978225953,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05348",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 5360,
+      "frame_mean_celsius": 22.488786396672648,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05360",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 5458,
+      "frame_mean_celsius": 22.86688483261293,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05458",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 5616,
+      "frame_mean_celsius": 22.409939878217635,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05616",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 5644,
+      "frame_mean_celsius": 22.655209417881505,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05644",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 5669,
+      "frame_mean_celsius": 22.460432919379205,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05669",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 5817,
+      "frame_mean_celsius": 22.57525717866036,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05817",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 5990,
+      "frame_mean_celsius": 22.420288630070225,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05990",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 5995,
+      "frame_mean_celsius": 22.564293806399068,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05995",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 5996,
+      "frame_mean_celsius": 22.255730185970183,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05996",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 5998,
+      "frame_mean_celsius": 22.333628738695577,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:05998",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 6000,
+      "frame_mean_celsius": 24.891100572001548,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:06000",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 6044,
+      "frame_mean_celsius": 23.505391400475656,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:06044",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 6134,
+      "frame_mean_celsius": 24.959583541270224,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:06134",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 6198,
+      "frame_mean_celsius": 23.5857495046431,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:06198",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 6269,
+      "frame_mean_celsius": 24.24434835218614,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:06269",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 6331,
+      "frame_mean_celsius": 23.842544336472788,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:06331",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 6405,
+      "frame_mean_celsius": 24.99142080506971,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:06405",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 6483,
+      "frame_mean_celsius": 23.59379843819526,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:06483",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 6550,
+      "frame_mean_celsius": 24.333304670549207,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:06550",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 6629,
+      "frame_mean_celsius": 23.710069900174293,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:06629",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 6683,
+      "frame_mean_celsius": 24.606961778286966,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:06683",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 6734,
+      "frame_mean_celsius": 24.172585151272436,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:06734",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 6784,
+      "frame_mean_celsius": 23.778994670221884,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:06784",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 6807,
+      "frame_mean_celsius": 24.443070403222116,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:06807",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 6938,
+      "frame_mean_celsius": 23.639904467905723,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:06938",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 6939,
+      "frame_mean_celsius": 24.694607333983143,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:06939",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 7066,
+      "frame_mean_celsius": 23.90742645840491,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:07066",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 7104,
+      "frame_mean_celsius": 23.557746273086916,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:07104",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 7182,
+      "frame_mean_celsius": 24.235333907988764,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:07182",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 7258,
+      "frame_mean_celsius": 23.45770887867097,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:07258",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 7331,
+      "frame_mean_celsius": 24.257026647367784,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:07331",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 7392,
+      "frame_mean_celsius": 23.295354749694948,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:07392",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 7478,
+      "frame_mean_celsius": 25.1336593447193,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:07478",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 7531,
+      "frame_mean_celsius": 23.69634494012402,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:07531",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 7633,
+      "frame_mean_celsius": 23.93021812323601,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:07633",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 7653,
+      "frame_mean_celsius": 23.003170275303624,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:07653",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 7670,
+      "frame_mean_celsius": 22.974854735020667,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:07670",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 7750,
+      "frame_mean_celsius": 24.66494711137587,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:07750",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 7830,
+      "frame_mean_celsius": 23.458645556819054,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:07830",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 7874,
+      "frame_mean_celsius": 24.274988099067443,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:07874",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 7995,
+      "frame_mean_celsius": 23.814496369515695,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:07995",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 7999,
+      "frame_mean_celsius": 24.13166930329415,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "LYING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:07999",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 8000,
+      "frame_mean_celsius": 22.293482758537415,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08000",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 8002,
+      "frame_mean_celsius": 22.76954415728969,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08002",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 8004,
+      "frame_mean_celsius": 22.38953077523939,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08004",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 8006,
+      "frame_mean_celsius": 22.528089810186817,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08006",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 8012,
+      "frame_mean_celsius": 22.268823820544828,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08012",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 8083,
+      "frame_mean_celsius": 22.117914068698884,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08083",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 8086,
+      "frame_mean_celsius": 22.12297637539525,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08086",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 8160,
+      "frame_mean_celsius": 22.0993133287276,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08160",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 8219,
+      "frame_mean_celsius": 22.238029200030912,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08219",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 8242,
+      "frame_mean_celsius": 22.107016037741015,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08242",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 8374,
+      "frame_mean_celsius": 22.979039326406294,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08374",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 8394,
+      "frame_mean_celsius": 22.120550681698706,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08394",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 8395,
+      "frame_mean_celsius": 22.321689802985038,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08395",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 8414,
+      "frame_mean_celsius": 22.285104914249914,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08414",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 8418,
+      "frame_mean_celsius": 22.567047049153235,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08418",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 8427,
+      "frame_mean_celsius": 22.451770672105972,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08427",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 8464,
+      "frame_mean_celsius": 22.119618978423457,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08464",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 8469,
+      "frame_mean_celsius": 22.39013796737117,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08469",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 8626,
+      "frame_mean_celsius": 22.285294243597214,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08626",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 8781,
+      "frame_mean_celsius": 22.516613959497022,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08781",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 8789,
+      "frame_mean_celsius": 22.129561976463563,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08789",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 8796,
+      "frame_mean_celsius": 22.123891793143365,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08796",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 8806,
+      "frame_mean_celsius": 22.307173934290486,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08806",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 8852,
+      "frame_mean_celsius": 22.243296820886673,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08852",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 8928,
+      "frame_mean_celsius": 22.39596588111693,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08928",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 8933,
+      "frame_mean_celsius": 22.12991246754123,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08933",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 8974,
+      "frame_mean_celsius": 22.598247580758986,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:08974",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 9062,
+      "frame_mean_celsius": 22.18548407785354,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09062",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 9139,
+      "frame_mean_celsius": 22.35301805773089,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09139",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 9170,
+      "frame_mean_celsius": 22.127474977124123,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09170",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 9193,
+      "frame_mean_celsius": 22.453766882804132,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09193",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 9212,
+      "frame_mean_celsius": 22.11613149873672,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09212",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 9264,
+      "frame_mean_celsius": 22.123299599078393,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09264",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 9322,
+      "frame_mean_celsius": 22.1598909897189,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09322",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 9424,
+      "frame_mean_celsius": 22.393551069690336,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09424",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 9532,
+      "frame_mean_celsius": 22.33689062326185,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09532",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 9555,
+      "frame_mean_celsius": 22.248401362665238,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09555",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 9575,
+      "frame_mean_celsius": 22.11815003156662,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09575",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 9585,
+      "frame_mean_celsius": 22.58865460772668,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09585",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 9660,
+      "frame_mean_celsius": 22.479249822324324,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09660",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 9664,
+      "frame_mean_celsius": 22.134921288105748,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09664",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 9783,
+      "frame_mean_celsius": 22.4049456842484,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09783",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 9791,
+      "frame_mean_celsius": 22.10754170071694,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09791",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 9816,
+      "frame_mean_celsius": 22.28201514405589,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09816",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 9875,
+      "frame_mean_celsius": 22.10390827309701,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09875",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 9900,
+      "frame_mean_celsius": 22.319573030933256,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:09900",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 10049,
+      "frame_mean_celsius": 22.20132809069849,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:10049",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 10107,
+      "frame_mean_celsius": 22.473800054673227,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:10107",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 10117,
+      "frame_mean_celsius": 22.28163617234076,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:10117",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 10146,
+      "frame_mean_celsius": 22.374038169076364,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:10146",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 10193,
+      "frame_mean_celsius": 22.36112870593225,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:10193",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 10418,
+      "frame_mean_celsius": 22.29389964149844,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:10418",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 10446,
+      "frame_mean_celsius": 22.214484772374554,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:10446",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 10459,
+      "frame_mean_celsius": 22.389231311121293,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:10459",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 10493,
+      "frame_mean_celsius": 22.549993495787344,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:10493",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 10700,
+      "frame_mean_celsius": 22.35480449661132,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:10700",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 10702,
+      "frame_mean_celsius": 22.366567334052053,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:10702",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 10757,
+      "frame_mean_celsius": 22.635035297178455,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:10757",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 10814,
+      "frame_mean_celsius": 22.24253125267644,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:10814",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 10885,
+      "frame_mean_celsius": 22.49717345430005,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:10885",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 10951,
+      "frame_mean_celsius": 22.357668683990354,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:10951",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 10994,
+      "frame_mean_celsius": 22.40801315730618,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:10994",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 11205,
+      "frame_mean_celsius": 22.325138809988577,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:11205",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 11252,
+      "frame_mean_celsius": 22.28881619861049,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:11252",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 11282,
+      "frame_mean_celsius": 22.382848612723812,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:11282",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 11343,
+      "frame_mean_celsius": 22.451142209191477,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:11343",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 11476,
+      "frame_mean_celsius": 22.362355963260896,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:11476",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 11563,
+      "frame_mean_celsius": 22.42243853845904,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:11563",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 11595,
+      "frame_mean_celsius": 22.223268187430598,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:11595",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 11731,
+      "frame_mean_celsius": 22.32936215477605,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:11731",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 11754,
+      "frame_mean_celsius": 22.486098365245326,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:11754",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 11797,
+      "frame_mean_celsius": 22.376496581877433,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:11797",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 11851,
+      "frame_mean_celsius": 22.43229448679955,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:11851",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 12005,
+      "frame_mean_celsius": 22.920805726512786,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:12005",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 12049,
+      "frame_mean_celsius": 22.352233496019917,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:12049",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 12077,
+      "frame_mean_celsius": 22.505194907419142,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:12077",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 12138,
+      "frame_mean_celsius": 22.269622985778316,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:12138",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 12199,
+      "frame_mean_celsius": 22.5737675724491,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:12199",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 12332,
+      "frame_mean_celsius": 22.416612392471684,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:12332",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 12412,
+      "frame_mean_celsius": 22.74533405111682,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:12412",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 12462,
+      "frame_mean_celsius": 22.563315782623906,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:12462",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 12651,
+      "frame_mean_celsius": 22.773654160961026,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:12651",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 12723,
+      "frame_mean_celsius": 23.010691368195317,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:12723",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 12783,
+      "frame_mean_celsius": 22.417676903355506,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:12783",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 12823,
+      "frame_mean_celsius": 22.476906985236752,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:12823",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 12846,
+      "frame_mean_celsius": 22.68430591091033,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:12846",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 12993,
+      "frame_mean_celsius": 22.363937530979033,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:12993",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 13024,
+      "frame_mean_celsius": 22.587172260207513,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:13024",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 13195,
+      "frame_mean_celsius": 22.491571057996442,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:13195",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 13228,
+      "frame_mean_celsius": 22.689251816657283,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:13228",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 13384,
+      "frame_mean_celsius": 22.37173661301213,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:13384",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 13409,
+      "frame_mean_celsius": 22.636255766114882,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:13409",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 13476,
+      "frame_mean_celsius": 22.429260586923167,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:13476",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 13579,
+      "frame_mean_celsius": 22.616574709261617,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:13579",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 13596,
+      "frame_mean_celsius": 22.46721826522581,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:13596",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 13640,
+      "frame_mean_celsius": 23.02441776260253,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:13640",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 13764,
+      "frame_mean_celsius": 22.74478433670536,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:13764",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 13946,
+      "frame_mean_celsius": 22.595395389295394,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:13946",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 13978,
+      "frame_mean_celsius": 22.374309314066362,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:13978",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 13991,
+      "frame_mean_celsius": 22.272010220635323,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:13991",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 13996,
+      "frame_mean_celsius": 22.509827179293477,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:13996",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 13998,
+      "frame_mean_celsius": 22.337536842207754,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:13998",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 14000,
+      "frame_mean_celsius": 24.328762855452876,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:14000",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 14102,
+      "frame_mean_celsius": 23.49650939779897,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:14102",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 14137,
+      "frame_mean_celsius": 24.221297314859207,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:14137",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 14259,
+      "frame_mean_celsius": 23.689627503964207,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:14259",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 14268,
+      "frame_mean_celsius": 25.066914370367606,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:14268",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 14405,
+      "frame_mean_celsius": 25.220855014554918,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:14405",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 14408,
+      "frame_mean_celsius": 23.662919811279544,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:14408",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 14534,
+      "frame_mean_celsius": 23.730283960988444,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:14534",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 14570,
+      "frame_mean_celsius": 24.197945918959956,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:14570",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 14676,
+      "frame_mean_celsius": 23.725043132228237,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:14676",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 14719,
+      "frame_mean_celsius": 24.45578470383921,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:14719",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 14832,
+      "frame_mean_celsius": 23.31168829702562,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:14832",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 14846,
+      "frame_mean_celsius": 24.09793763814434,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:14846",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 14982,
+      "frame_mean_celsius": 23.71640462875366,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:14982",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 14988,
+      "frame_mean_celsius": 25.428187579877914,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:14988",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 15121,
+      "frame_mean_celsius": 23.68797232374068,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:15121",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 15134,
+      "frame_mean_celsius": 24.812221718988113,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:15134",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 15160,
+      "frame_mean_celsius": 23.828047487043566,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:15160",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 15244,
+      "frame_mean_celsius": 24.51542630772437,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:15244",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 15312,
+      "frame_mean_celsius": 23.32403845325593,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:15312",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 15363,
+      "frame_mean_celsius": 24.465476132592848,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:15363",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 15473,
+      "frame_mean_celsius": 24.688093653417404,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:15473",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 15494,
+      "frame_mean_celsius": 23.511172173869227,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:15494",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 15604,
+      "frame_mean_celsius": 24.420580742051524,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:15604",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 15656,
+      "frame_mean_celsius": 23.53397154654226,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:15656",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 15735,
+      "frame_mean_celsius": 24.27352650280922,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:15735",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 15830,
+      "frame_mean_celsius": 23.626649597767862,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:15830",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 15864,
+      "frame_mean_celsius": 24.270414953077992,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:15864",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 15985,
+      "frame_mean_celsius": 22.83482141687024,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:15985",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 15996,
+      "frame_mean_celsius": 23.447792045531735,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:15996",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 15999,
+      "frame_mean_celsius": 24.115331317916993,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "SITTING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:15999",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 16000,
+      "frame_mean_celsius": 22.363052864997616,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16000",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 16002,
+      "frame_mean_celsius": 22.507620339624342,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16002",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 16003,
+      "frame_mean_celsius": 22.603358122225732,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16003",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 16009,
+      "frame_mean_celsius": 22.178969543595468,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16009",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 16013,
+      "frame_mean_celsius": 22.364964890480042,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16013",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 16196,
+      "frame_mean_celsius": 22.278459825438837,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16196",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 16356,
+      "frame_mean_celsius": 22.32252714710851,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16356",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 16419,
+      "frame_mean_celsius": 22.36866790517684,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16419",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 16422,
+      "frame_mean_celsius": 22.234296198045055,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16422",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 16436,
+      "frame_mean_celsius": 22.459344770831446,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16436",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 16613,
+      "frame_mean_celsius": 22.781239663400957,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16613",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 16658,
+      "frame_mean_celsius": 22.26221197343642,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16658",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 16734,
+      "frame_mean_celsius": 22.316403538180936,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16734",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 16792,
+      "frame_mean_celsius": 22.378629834036673,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16792",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 16845,
+      "frame_mean_celsius": 22.236564708525133,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16845",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 16880,
+      "frame_mean_celsius": 22.47532590666125,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16880",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 16908,
+      "frame_mean_celsius": 22.279443160180122,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:16908",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 17065,
+      "frame_mean_celsius": 22.34922567029153,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17065",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 17146,
+      "frame_mean_celsius": 22.18278418202554,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17146",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 17190,
+      "frame_mean_celsius": 22.367886556348495,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17190",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 17240,
+      "frame_mean_celsius": 22.701230792460905,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17240",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 17259,
+      "frame_mean_celsius": 22.134593964776684,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17259",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 17286,
+      "frame_mean_celsius": 22.555831325438714,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17286",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 17325,
+      "frame_mean_celsius": 22.127971897202155,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17325",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 17363,
+      "frame_mean_celsius": 22.20709295272827,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17363",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 17406,
+      "frame_mean_celsius": 22.13336857441933,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17406",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 17504,
+      "frame_mean_celsius": 22.33665519183682,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17504",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 17576,
+      "frame_mean_celsius": 22.23750945637303,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17576",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 17582,
+      "frame_mean_celsius": 22.444742440408277,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17582",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 17671,
+      "frame_mean_celsius": 22.544672018097295,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17671",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 17814,
+      "frame_mean_celsius": 22.224257312666985,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17814",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 17840,
+      "frame_mean_celsius": 22.316585798417368,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17840",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 17880,
+      "frame_mean_celsius": 22.58284736025718,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17880",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 17963,
+      "frame_mean_celsius": 25.61314898383233,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:17963",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 18012,
+      "frame_mean_celsius": 22.398079327614077,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:18012",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 18016,
+      "frame_mean_celsius": 22.541625400512448,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:18016",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 18152,
+      "frame_mean_celsius": 22.271467414594465,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:18152",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 18180,
+      "frame_mean_celsius": 22.344432262451416,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:18180",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 18305,
+      "frame_mean_celsius": 22.377949274355366,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:18305",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 18387,
+      "frame_mean_celsius": 22.459187679136953,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:18387",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 18421,
+      "frame_mean_celsius": 22.362937496554466,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:18421",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 18529,
+      "frame_mean_celsius": 22.44917895870824,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:18529",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 18563,
+      "frame_mean_celsius": 22.268284575400813,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:18563",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 18611,
+      "frame_mean_celsius": 22.384397310595357,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:18611",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 18720,
+      "frame_mean_celsius": 22.569487343680475,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:18720",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 18738,
+      "frame_mean_celsius": 22.299284085535234,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:18738",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 18857,
+      "frame_mean_celsius": 22.3654806379349,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:18857",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 19032,
+      "frame_mean_celsius": 22.345051007886088,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:19032",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 19056,
+      "frame_mean_celsius": 22.266837541518672,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:19056",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 19063,
+      "frame_mean_celsius": 22.454170733113443,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:19063",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 19122,
+      "frame_mean_celsius": 22.39827620560123,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:19122",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 19338,
+      "frame_mean_celsius": 22.330519188604047,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:19338",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 19398,
+      "frame_mean_celsius": 22.557383136595448,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:19398",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 19406,
+      "frame_mean_celsius": 22.432071959587834,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:19406",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 19471,
+      "frame_mean_celsius": 22.622747958475543,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:19471",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 19548,
+      "frame_mean_celsius": 22.277973236191656,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:19548",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 19619,
+      "frame_mean_celsius": 22.34900729617765,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:19619",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 19651,
+      "frame_mean_celsius": 22.369625156156477,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:19651",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 19807,
+      "frame_mean_celsius": 22.449312861119548,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:19807",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 19879,
+      "frame_mean_celsius": 22.30107729358058,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:19879",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 19912,
+      "frame_mean_celsius": 22.401132329433196,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:19912",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 19971,
+      "frame_mean_celsius": 22.22605814510776,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:19971",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 20017,
+      "frame_mean_celsius": 23.240770835645737,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:20017",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 20145,
+      "frame_mean_celsius": 22.86822818594594,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:20145",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 20210,
+      "frame_mean_celsius": 22.655049183291773,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:20210",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 20241,
+      "frame_mean_celsius": 22.49281633515512,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:20241",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 20345,
+      "frame_mean_celsius": 22.889587942631014,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:20345",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 20415,
+      "frame_mean_celsius": 22.345212000416172,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:20415",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 20527,
+      "frame_mean_celsius": 22.62038057504162,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:20527",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 20586,
+      "frame_mean_celsius": 22.42887430767859,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:20586",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 20625,
+      "frame_mean_celsius": 22.506374499490185,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:20625",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 20736,
+      "frame_mean_celsius": 23.073091016661735,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:20736",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 20746,
+      "frame_mean_celsius": 22.600750216361014,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:20746",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 20869,
+      "frame_mean_celsius": 22.24866863989061,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:20869",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 20956,
+      "frame_mean_celsius": 22.747797208832157,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:20956",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 21085,
+      "frame_mean_celsius": 22.454289503251353,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:21085",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 21131,
+      "frame_mean_celsius": 22.581142011380965,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:21131",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 21273,
+      "frame_mean_celsius": 22.344039851234804,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:21273",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 21275,
+      "frame_mean_celsius": 22.395566755340944,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:21275",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 21326,
+      "frame_mean_celsius": 22.67615647700525,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:21326",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 21374,
+      "frame_mean_celsius": 22.986711684350045,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:21374",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 21545,
+      "frame_mean_celsius": 22.6294995488659,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:21545",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 21571,
+      "frame_mean_celsius": 22.56456217265898,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:21571",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 21759,
+      "frame_mean_celsius": 22.79356314712955,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:21759",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 21887,
+      "frame_mean_celsius": 22.474406360041712,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:21887",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 21953,
+      "frame_mean_celsius": 22.681068747658884,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:21953",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 21955,
+      "frame_mean_celsius": 23.147773838812306,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:21955",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 21975,
+      "frame_mean_celsius": 22.27354925986259,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:21975",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 21987,
+      "frame_mean_celsius": 22.39812263442624,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:21987",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 21993,
+      "frame_mean_celsius": 22.36175918925193,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:21993",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 21998,
+      "frame_mean_celsius": 22.477085113140845,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:21998",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 22138,
+      "frame_mean_celsius": 24.125818377925505,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:22138",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 22161,
+      "frame_mean_celsius": 23.743484139442444,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:22161",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 22262,
+      "frame_mean_celsius": 23.99533668564212,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:22262",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 22329,
+      "frame_mean_celsius": 23.79844211109223,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:22329",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 22400,
+      "frame_mean_celsius": 24.33399424783645,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:22400",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 22510,
+      "frame_mean_celsius": 23.684019687098843,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:22510",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 22516,
+      "frame_mean_celsius": 24.981566020365683,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:22516",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 22652,
+      "frame_mean_celsius": 24.37681124671813,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:22652",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 22682,
+      "frame_mean_celsius": 23.617518191568312,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:22682",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 22794,
+      "frame_mean_celsius": 23.90185764335817,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:22794",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 22839,
+      "frame_mean_celsius": 23.287210064934147,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:22839",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 22914,
+      "frame_mean_celsius": 24.202991471752043,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:22914",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 23027,
+      "frame_mean_celsius": 23.28673312164122,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23027",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 23042,
+      "frame_mean_celsius": 23.96709725856781,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23042",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 23173,
+      "frame_mean_celsius": 23.92161471689901,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23173",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 23196,
+      "frame_mean_celsius": 23.340709337880533,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23196",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 23300,
+      "frame_mean_celsius": 23.94916336574862,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23300",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 23366,
+      "frame_mean_celsius": 23.250796734133075,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23366",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 23443,
+      "frame_mean_celsius": 24.381907743407833,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23443",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 23531,
+      "frame_mean_celsius": 23.76359337799011,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23531",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 23571,
+      "frame_mean_celsius": 23.517506353701314,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23571",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 23577,
+      "frame_mean_celsius": 24.02018719757757,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23577",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 23698,
+      "frame_mean_celsius": 23.19029553051918,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23698",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 23711,
+      "frame_mean_celsius": 23.92839616767822,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23711",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 23845,
+      "frame_mean_celsius": 23.745164712013736,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23845",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 23863,
+      "frame_mean_celsius": 24.459977101895117,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23863",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 23981,
+      "frame_mean_celsius": 22.90853488368373,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23981",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 23998,
+      "frame_mean_celsius": 24.374100934690045,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23998",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 23999,
+      "frame_mean_celsius": 23.500504579851704,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "STANDING",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:23999",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 24000,
+      "frame_mean_celsius": 22.279951838139564,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:24000",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 24002,
+      "frame_mean_celsius": 22.016604065510535,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:24002",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 24010,
+      "frame_mean_celsius": 22.299547019697005,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:24010",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 24020,
+      "frame_mean_celsius": 22.369182729721068,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:24020",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 24257,
+      "frame_mean_celsius": 22.211379460365542,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:24257",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 24294,
+      "frame_mean_celsius": 22.311771002892524,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:24294",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 24431,
+      "frame_mean_celsius": 22.016407886628183,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:24431",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 24545,
+      "frame_mean_celsius": 22.20262512622341,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:24545",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 24559,
+      "frame_mean_celsius": 22.33375446604144,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:24559",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 24781,
+      "frame_mean_celsius": 22.335883727381308,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:24781",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 24794,
+      "frame_mean_celsius": 22.24380316926587,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:24794",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 24887,
+      "frame_mean_celsius": 22.381069349473524,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:24887",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 24894,
+      "frame_mean_celsius": 22.115590430075123,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:24894",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 24977,
+      "frame_mean_celsius": 22.325194906034778,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:24977",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 25069,
+      "frame_mean_celsius": 22.193228284389743,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:25069",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 25252,
+      "frame_mean_celsius": 22.308140826609826,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:25252",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 25273,
+      "frame_mean_celsius": 22.291991531848907,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:25273",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 25318,
+      "frame_mean_celsius": 22.00203851922866,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:25318",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 25342,
+      "frame_mean_celsius": 22.155452844404405,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:25342",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 25537,
+      "frame_mean_celsius": 22.34134132977455,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:25537",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 25594,
+      "frame_mean_celsius": 22.252588989657742,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:25594",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 25754,
+      "frame_mean_celsius": 22.103690543866925,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:25754",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 25802,
+      "frame_mean_celsius": 22.35691780774824,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:25802",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 25881,
+      "frame_mean_celsius": 22.256874048709868,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:25881",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 25997,
+      "frame_mean_celsius": 22.36429615405298,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:25997",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 26127,
+      "frame_mean_celsius": 22.08491396673264,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:26127",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 26397,
+      "frame_mean_celsius": 22.04250904090943,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:26397",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 26674,
+      "frame_mean_celsius": 22.121790279111554,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:26674",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 26923,
+      "frame_mean_celsius": 22.0674609591884,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:26923",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 26942,
+      "frame_mean_celsius": 22.119861917341908,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:26942",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 27212,
+      "frame_mean_celsius": 22.088544947101223,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:27212",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 27481,
+      "frame_mean_celsius": 22.1019056216363,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:27481",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 27605,
+      "frame_mean_celsius": 22.145133675298382,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:27605",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 27755,
+      "frame_mean_celsius": 22.06705139567775,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:27755",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 28009,
+      "frame_mean_celsius": 22.343113501610294,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28009",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 28013,
+      "frame_mean_celsius": 22.60040274627747,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28013",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 28014,
+      "frame_mean_celsius": 22.48469022397072,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28014",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 28066,
+      "frame_mean_celsius": 22.032986023349146,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28066",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 28127,
+      "frame_mean_celsius": 22.371869780555848,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28127",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 28128,
+      "frame_mean_celsius": 22.484992967882462,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28128",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 28205,
+      "frame_mean_celsius": 22.367393197167303,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28205",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 28232,
+      "frame_mean_celsius": 22.160291010333644,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28232",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 28274,
+      "frame_mean_celsius": 22.35448584633489,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28274",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 28285,
+      "frame_mean_celsius": 22.464983012214784,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28285",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 28377,
+      "frame_mean_celsius": 22.431860674196674,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28377",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 28431,
+      "frame_mean_celsius": 22.60877965957888,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28431",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 28466,
+      "frame_mean_celsius": 22.471853437346798,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28466",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 28488,
+      "frame_mean_celsius": 22.426680898281834,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28488",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 28503,
+      "frame_mean_celsius": 22.1527386638426,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28503",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 28541,
+      "frame_mean_celsius": 22.324938366490027,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28541",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 28602,
+      "frame_mean_celsius": 22.154398522453924,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28602",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 28629,
+      "frame_mean_celsius": 22.46165172400013,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28629",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 28692,
+      "frame_mean_celsius": 22.43583909811512,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28692",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 28739,
+      "frame_mean_celsius": 22.058959871722806,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28739",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 28762,
+      "frame_mean_celsius": 22.479206947357422,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28762",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 28773,
+      "frame_mean_celsius": 22.754959467918642,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28773",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 28796,
+      "frame_mean_celsius": 22.175219415849256,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28796",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 28809,
+      "frame_mean_celsius": 22.29426724833827,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28809",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 28886,
+      "frame_mean_celsius": 22.368567017586,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28886",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 28906,
+      "frame_mean_celsius": 22.535109484964803,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:28906",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 29008,
+      "frame_mean_celsius": 22.3841865416496,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29008",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 29044,
+      "frame_mean_celsius": 22.55178230231808,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29044",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 29071,
+      "frame_mean_celsius": 22.234709095185803,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29071",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 29099,
+      "frame_mean_celsius": 22.34057755931731,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29099",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 29136,
+      "frame_mean_celsius": 22.728771779229564,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29136",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 29140,
+      "frame_mean_celsius": 22.469579976220285,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29140",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 29183,
+      "frame_mean_celsius": 22.365369649471774,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29183",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 29327,
+      "frame_mean_celsius": 22.46528154265496,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29327",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 29347,
+      "frame_mean_celsius": 22.20115750412787,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29347",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 29359,
+      "frame_mean_celsius": 22.39892739442087,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29359",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 29389,
+      "frame_mean_celsius": 22.04569812397803,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29389",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 29416,
+      "frame_mean_celsius": 22.29830357028592,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29416",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 29431,
+      "frame_mean_celsius": 22.504316240356815,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29431",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 29481,
+      "frame_mean_celsius": 22.38813406728929,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29481",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 29511,
+      "frame_mean_celsius": 22.671016203588056,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29511",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 29544,
+      "frame_mean_celsius": 22.536393210964818,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29544",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 29572,
+      "frame_mean_celsius": 22.40525709429095,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29572",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 29638,
+      "frame_mean_celsius": 22.538158198325863,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29638",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 29680,
+      "frame_mean_celsius": 22.149092385461252,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29680",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 29693,
+      "frame_mean_celsius": 22.48770782486085,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29693",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 29708,
+      "frame_mean_celsius": 22.329926401568997,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29708",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 29791,
+      "frame_mean_celsius": 22.376126779279403,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29791",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 29842,
+      "frame_mean_celsius": 22.487600078505853,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29842",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 29924,
+      "frame_mean_celsius": 22.637672376248144,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29924",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 29986,
+      "frame_mean_celsius": 22.51605244221226,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29986",
+      "temperature_band": 4
+    },
+    {
+      "canonical_sample_index": 29993,
+      "frame_mean_celsius": 22.36588059932955,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29993",
+      "temperature_band": 3
+    },
+    {
+      "canonical_sample_index": 29996,
+      "frame_mean_celsius": 22.050489799437983,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29996",
+      "temperature_band": 0
+    },
+    {
+      "canonical_sample_index": 29998,
+      "frame_mean_celsius": 22.221757884179393,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29998",
+      "temperature_band": 1
+    },
+    {
+      "canonical_sample_index": 29999,
+      "frame_mean_celsius": 22.323664142624025,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:29999",
+      "temperature_band": 2
+    },
+    {
+      "canonical_sample_index": 30000,
+      "frame_mean_celsius": 23.412830354705935,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30000",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 30001,
+      "frame_mean_celsius": 24.236177105288352,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30001",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 30120,
+      "frame_mean_celsius": 23.94774524242647,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30120",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 30140,
+      "frame_mean_celsius": 22.788785402236446,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30140",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 30143,
+      "frame_mean_celsius": 23.44035258793062,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30143",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 30248,
+      "frame_mean_celsius": 24.507935910455643,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30248",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 30276,
+      "frame_mean_celsius": 23.432659549482405,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30276",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 30305,
+      "frame_mean_celsius": 23.546269160316836,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30305",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 30365,
+      "frame_mean_celsius": 22.900739627499735,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30365",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 30384,
+      "frame_mean_celsius": 24.098449082143844,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30384",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 30412,
+      "frame_mean_celsius": 23.427232390449895,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30412",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 30518,
+      "frame_mean_celsius": 24.73147218958024,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30518",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 30535,
+      "frame_mean_celsius": 22.70247632457364,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30535",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 30547,
+      "frame_mean_celsius": 23.4763900799136,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30547",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 30678,
+      "frame_mean_celsius": 23.47862017423876,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30678",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 30679,
+      "frame_mean_celsius": 22.84429711218803,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30679",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 30690,
+      "frame_mean_celsius": 24.126850468112575,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30690",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 30793,
+      "frame_mean_celsius": 23.23853465395589,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30793",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 30830,
+      "frame_mean_celsius": 24.82223927974701,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30830",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 30933,
+      "frame_mean_celsius": 23.134278986146374,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30933",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 30935,
+      "frame_mean_celsius": 22.74551269738905,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30935",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 30944,
+      "frame_mean_celsius": 23.867490110858792,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:30944",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 31060,
+      "frame_mean_celsius": 23.09150482108516,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31060",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 31079,
+      "frame_mean_celsius": 24.489816254954185,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31079",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 31170,
+      "frame_mean_celsius": 22.77893146468747,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31170",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 31191,
+      "frame_mean_celsius": 23.418572878068492,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31191",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 31235,
+      "frame_mean_celsius": 24.178099509977525,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31235",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 31313,
+      "frame_mean_celsius": 23.7050230876092,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31313",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 31359,
+      "frame_mean_celsius": 24.381030348423987,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31359",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 31384,
+      "frame_mean_celsius": 22.618846761411238,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31384",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 31452,
+      "frame_mean_celsius": 23.25546615585204,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31452",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 31474,
+      "frame_mean_celsius": 24.583075078072085,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31474",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 31588,
+      "frame_mean_celsius": 22.89931177746865,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31588",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 31592,
+      "frame_mean_celsius": 23.132942796907116,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31592",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 31619,
+      "frame_mean_celsius": 24.50827522585469,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31619",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 31739,
+      "frame_mean_celsius": 22.620814050397566,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31739",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 31740,
+      "frame_mean_celsius": 23.347067287660416,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31740",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 31748,
+      "frame_mean_celsius": 24.111072912523824,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31748",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 31865,
+      "frame_mean_celsius": 23.16972766268638,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31865",
+      "temperature_band": 6
+    },
+    {
+      "canonical_sample_index": 31878,
+      "frame_mean_celsius": 24.5671332601578,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31878",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 31996,
+      "frame_mean_celsius": 24.528941676693577,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31996",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 31997,
+      "frame_mean_celsius": 24.432385704594275,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31997",
+      "temperature_band": 7
+    },
+    {
+      "canonical_sample_index": 31998,
+      "frame_mean_celsius": 22.91196109633292,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31998",
+      "temperature_band": 5
+    },
+    {
+      "canonical_sample_index": 31999,
+      "frame_mean_celsius": 23.143093912063108,
+      "p1_applied": true,
+      "role": "TRAIN",
+      "source_label": "EMPTY_ROOM",
+      "stable_sample_id": "local_sdt_zenodo_4124309:train:31999",
+      "temperature_band": 6
+    }
+  ],
+  "schema_version": "1.0"
+}

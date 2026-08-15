@@ -1,0 +1,26 @@
+{
+  "absolute_robustness_threshold": "NO_PREEXISTING_ABSOLUTE_PASS_THRESHOLD",
+  "deployment_status": "NOT_THERMAL44_VALIDATED",
+  "eligible_candidates": [
+    "FLOAT_KERAS",
+    "TFLITE_FP32",
+    "FULL_INT8"
+  ],
+  "frozen_before_results": true,
+  "ineligible_candidates": {
+    "TFLITE_DYNAMIC_RANGE": "DIAGNOSTIC_ONLY"
+  },
+  "lock_status_allowed": [
+    "OFFLINE_INT8_CANDIDATE_LOCKED_WITH_LIMITATIONS",
+    "OFFLINE_FP32_CANDIDATE_LOCKED_WITH_LIMITATIONS",
+    "BLOCKED"
+  ],
+  "locked_test_required": false,
+  "phase": "T-B5",
+  "policy_id": "THERMAL_T_B5_OFFLINE_CANDIDATE_LOCK_001",
+  "real_role": "REAL_EVAL_DEVELOPMENT",
+  "real_used_for_selection": false,
+  "rule": "Prefer FULL_INT8 when artifact identity, VALIDATION robustness execution, and Mac latency evidence are complete; otherwise prefer TRUE TFLITE_FP32; never select on REAL or deploy claim.",
+  "schema_version": "1.0",
+  "selection_role": "VALIDATION"
+}

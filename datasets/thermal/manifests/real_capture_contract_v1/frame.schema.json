@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://safenest.local/schemas/thermal-real-capture/frame-v1.json",
+  "title": "SafeNest Thermal real capture frame record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "frame_id",
+    "collection_id",
+    "subject_id",
+    "session_id",
+    "sequence_index",
+    "sequence_index_status",
+    "sensor_frame_counter",
+    "sensor_frame_counter_status",
+    "raw_file",
+    "decoded_native_file",
+    "raw_representation",
+    "native_shape",
+    "native_dtype",
+    "raw_encoding",
+    "raw_unit_claim",
+    "unit_status",
+    "validity_status",
+    "exclude_reason",
+    "annotation_status"
+  ],
+  "properties": {
+    "schema_version": { "const": "safenest.thermal.real_capture.frame.v1" },
+    "frame_id": { "type": "string", "minLength": 1, "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "collection_id": { "type": "string", "minLength": 1 },
+    "subject_id": { "type": "string", "minLength": 1 },
+    "session_id": { "type": "string", "minLength": 1 },
+    "recording_id": { "type": ["string", "null"] },
+    "sequence_id": { "type": ["string", "null"] },
+    "event_id": { "type": ["string", "null"] },
+    "sequence_index": { "type": ["integer", "null"], "minimum": 0 },
+    "sequence_index_status": {
+      "type": "string",
+      "enum": ["VERIFIED", "RECEIVED_ORDER_ONLY", "UNKNOWN", "NOT_APPLICABLE"]
+    },
+    "sensor_frame_counter": { "type": ["integer", "null"], "minimum": 0 },
+    "sensor_frame_counter_status": {
+      "type": "string",
+      "enum": ["VERIFIED", "RECEIVED_ONLY", "UNKNOWN", "NOT_APPLICABLE"]
+    },
+    "sensor_timestamp": { "type": ["number", "string", "null"] },
+    "sensor_timestamp_unit": { "type": ["string", "null"] },
+    "sensor_clock_domain": { "type": ["string", "null"] },
+    "sensor_timestamp_status": { "type": "string" },
+    "device_monotonic_timestamp_ns": { "type": ["integer", "null"], "minimum": 0 },
+    "host_receive_monotonic_timestamp_ns": { "type": ["integer", "null"], "minimum": 0 },
+    "host_wall_time": { "type": ["string", "null"] },
+    "host_wall_timezone": { "type": ["string", "null"] },
+    "raw_file": { "type": ["string", "null"] },
+    "decoded_native_file": { "type": ["string", "null"] },
+    "raw_representation": {
+      "type": "string",
+      "enum": [
+        "RAW_PACKET_AND_NATIVE",
+        "RAW_PACKET_ONLY",
+        "DECODED_NATIVE_ONLY",
+        "SCALAR_ONLY",
+        "PREPROCESSED_ONLY",
+        "SCREENSHOT_ONLY",
+        "UNKNOWN"
+      ]
+    },
+    "byte_count": { "type": ["integer", "null"], "minimum": 0 },
+    "native_shape": {
+      "type": ["array", "null"],
+      "items": { "type": "integer", "minimum": 1 },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "native_dtype": { "type": ["string", "null"] },
+    "raw_encoding": { "type": ["string", "null"] },
+    "raw_unit_claim": { "type": ["string", "null"] },
+    "unit_status": {
+      "type": "string",
+      "enum": ["VERIFIED", "NOT_VERIFIED", "UNKNOWN", "NOT_APPLICABLE"]
+    },
+    "crc_or_packet_status": { "type": ["string", "null"] },
+    "packet_loss_status": { "type": ["string", "null"] },
+    "validity_status": {
+      "type": "string",
+      "enum": ["VALID", "INVALID", "MISSING", "DUPLICATE", "CORRUPT", "PARTIAL", "LATE", "DECODE_ERROR"]
+    },
+    "exclude_reason": { "type": ["string", "null"] },
+    "annotation_status": {
+      "type": "string",
+      "enum": ["ANNOTATED", "UNANNOTATED", "UNKNOWN", "NOT_APPLICABLE"]
+    },
+    "raw_sha256": { "type": ["string", "null"], "pattern": "^[0-9a-fA-F]{64}$" },
+    "decoded_native_sha256": { "type": ["string", "null"], "pattern": "^[0-9a-fA-F]{64}$" },
+    "scalar_thermal_max_c": { "type": ["number", "null"] },
+    "capture_error_code": { "type": ["string", "null"] },
+    "notes": { "type": "string" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "raw_representation": { "const": "RAW_PACKET_AND_NATIVE" } } },
+      "then": {
+        "properties": {
+          "raw_file": { "type": "string", "minLength": 1 },
+          "decoded_native_file": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "raw_representation": { "const": "RAW_PACKET_ONLY" } } },
+      "then": {
+        "properties": {
+          "raw_file": { "type": "string", "minLength": 1 },
+          "decoded_native_file": { "type": "null" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "raw_representation": { "const": "DECODED_NATIVE_ONLY" } } },
+      "then": {
+        "properties": {
+          "raw_file": { "type": "null" },
+          "decoded_native_file": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "raw_representation": { "const": "SCALAR_ONLY" } } },
+      "then": {
+        "properties": {
+          "raw_file": { "type": "string", "minLength": 1 },
+          "decoded_native_file": { "type": "null" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "raw_representation": { "const": "PREPROCESSED_ONLY" } } },
+      "then": {
+        "properties": {
+          "raw_file": { "type": "string", "minLength": 1 },
+          "decoded_native_file": { "type": "null" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "raw_representation": { "const": "SCREENSHOT_ONLY" } } },
+      "then": {
+        "properties": {
+          "raw_file": { "type": "string", "minLength": 1 },
+          "decoded_native_file": { "type": "null" }
+        }
+      }
+    }
+  ]
+}

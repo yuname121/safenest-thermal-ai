@@ -1,0 +1,19 @@
+{
+  "candidate_lock_status": "OFFLINE_INT8_CANDIDATE_LOCKED_WITH_LIMITATIONS",
+  "conversion_performed": false,
+  "locked_test_available": false,
+  "mode": "FULL_EXPERIMENT",
+  "phase": "T-B5",
+  "production_model_changed": false,
+  "profile_checksum": "c333d38de170eb7acb6245adf23d536f09effe75db620afde7ab1000c8406877",
+  "real_role": "REAL_EVAL_DEVELOPMENT",
+  "real_used_for_selection": false,
+  "recalibration_performed": false,
+  "robustness_case_count": 12,
+  "schema_version": "1.0",
+  "selection_role": "VALIDATION",
+  "status": "FINALIZED_WITH_LIMITATIONS",
+  "t_b6_started": false,
+  "t_c_started": false,
+  "training_performed": false
+}

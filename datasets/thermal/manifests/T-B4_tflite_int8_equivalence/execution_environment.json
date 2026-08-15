@@ -1,0 +1,29 @@
+{
+  "backend": {
+    "apple_silicon": true,
+    "backend_selected": "CPU",
+    "gpu_optional": true,
+    "gpu_visible": false,
+    "machine": "arm64",
+    "numpy": "1.26.4",
+    "physical_devices": [
+      {
+        "device_type": "CPU",
+        "name": "/physical_device:CPU:0"
+      }
+    ],
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.9.6",
+    "system": "Darwin",
+    "tensorflow": "2.20.0"
+  },
+  "canonical_root": "CONFIGURABLE_EXTERNAL_SSD_CANONICAL_ROOT",
+  "gpu_required": false,
+  "mode": "FULL_EXPERIMENT",
+  "origin_main": "0625603f319b18cd6ad86b33dcca5ce2147ac2af",
+  "output_root": "EXTERNAL_SSD_SAFE_NEST_AI_THERMAL_EXPERIMENTS_T_B4",
+  "phase": "T-B4",
+  "repo_commit": "3758f135b094f3c2f2cc6119373e005b72fed7d4",
+  "schema_version": "1.0",
+  "tensorflow": "2.20.0"
+}

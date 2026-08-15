@@ -1,0 +1,33 @@
+{
+  "downstream": {
+    "T-A4": "original label semantics/ambiguity only",
+    "T-A5": "subject/session/grouping and split policy",
+    "T-A6": "full conversion, duplicate/integrity audit",
+    "T-B": "temporal architecture/event metrics",
+    "T-C": "Thermal-44 temporal hardware contract"
+  },
+  "limitations": [
+    "SDT source FPS and acquisition timestamps are not verifiable from the distributed archive/schema.",
+    "Source frame indices and filename order are provenance identifiers, not timestamps or temporal adjacency.",
+    "No subject, session, recording, sequence, or event identifier is retained by the active source schema.",
+    "LYING is an original posture label and is not converted into a fall event or fall boundary.",
+    "No sequence, event, or temporal window is constructed; arbitrary frame counts/durations are prohibited.",
+    "Archive index gaps, duplicate content, and near-duplicates cannot be mapped to acquisition drops without a timeline; full duplicate audit is deferred to T-A6.",
+    "Historical thermal_prep.py posture-to-model mapping is legacy evidence only and is not used by T-A3.",
+    "Train/validation split placeholders remain unhydrated; T-A3 does not hydrate or reconstruct them.",
+    "T-A2 geometry identity is inherited; full conversion and SafeNest grouping/splits remain later-phase work.",
+    "Thermal-44 temporal and hardware behavior remains deferred to T-C."
+  ],
+  "not_verifiable": [
+    "source_fps",
+    "timestamps",
+    "temporal_order",
+    "sequence_boundaries",
+    "fall_event_onset_end",
+    "window_duration",
+    "event_level_performance"
+  ],
+  "phase": "T-A3",
+  "schema_version": "1.0",
+  "status": "PASS_WITH_LIMITATIONS"
+}

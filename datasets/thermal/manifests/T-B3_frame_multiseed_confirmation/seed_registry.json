@@ -1,0 +1,24 @@
+{
+  "extra_seeds": [],
+  "phase": "T-B3",
+  "required_seeds": [
+    20260813,
+    20260814,
+    20260815
+  ],
+  "schema_version": "1.0",
+  "seed_20260813": {
+    "source": "REUSED_VERIFIED_T_B1_RESULT",
+    "status": "REUSED_VERIFIED"
+  },
+  "seed_20260814": {
+    "source": "NEW_TRAINING",
+    "status": "FINALIZED"
+  },
+  "seed_20260815": {
+    "source": "NEW_TRAINING",
+    "status": "FINALIZED"
+  },
+  "seed_selection_after_metrics": false,
+  "seed_set_frozen": true
+}

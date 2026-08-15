@@ -1,0 +1,8 @@
+{
+  "canonical_payloads_tracked": false,
+  "output_root": "EXTERNAL_SSD_SAFE_NEST_AI_THERMAL_EXPERIMENTS_T_B5",
+  "phase": "T-B5",
+  "profile_checksum": "c333d38de170eb7acb6245adf23d536f09effe75db620afde7ab1000c8406877",
+  "schema_version": "1.0",
+  "status": "PASS_WITH_LIMITATIONS_PENDING_VALIDATOR"
+}

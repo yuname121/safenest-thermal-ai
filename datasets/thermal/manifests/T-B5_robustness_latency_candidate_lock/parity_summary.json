@@ -1,0 +1,437 @@
+{
+  "clean_cross_artifact": {
+    "FLOAT_KERAS__FULL_INT8": {
+      "argmax_agreement": 0.99609375,
+      "confusion_matrix_difference": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          -2
+        ]
+      ],
+      "disagreement_count": 2,
+      "float_metrics": {
+        "accuracy": 0.998046875,
+        "balanced_accuracy": 0.9986979166666666,
+        "class_order": [
+          "NOT_HUMAN",
+          "HUMAN_NORMAL",
+          "HUMAN_FALL"
+        ],
+        "confusion_matrix": [
+          [
+            128,
+            0,
+            0
+          ],
+          [
+            1,
+            255,
+            0
+          ],
+          [
+            0,
+            0,
+            128
+          ]
+        ],
+        "h_fall_posture_proxy_recall": 1.0,
+        "macro_f1": 0.998050667417972,
+        "per_class": {
+          "HUMAN_FALL": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 128
+          },
+          "HUMAN_NORMAL": {
+            "f1": 0.9980430528375733,
+            "precision": 1.0,
+            "recall": 0.99609375,
+            "support": 256
+          },
+          "NOT_HUMAN": {
+            "f1": 0.9961089494163424,
+            "precision": 0.9922480620155039,
+            "recall": 1.0,
+            "support": 128
+          }
+        },
+        "prediction_distribution": {
+          "HUMAN_FALL": 128,
+          "HUMAN_NORMAL": 255,
+          "NOT_HUMAN": 129
+        },
+        "sample_count": 512
+      },
+      "metric_delta_other_minus_float": {
+        "accuracy": -0.00390625,
+        "balanced_accuracy": -0.005208333333333259,
+        "h_fall_posture_proxy_recall": -0.015625,
+        "macro_f1": -0.0039216739339931195
+      },
+      "other_metrics": {
+        "accuracy": 0.994140625,
+        "balanced_accuracy": 0.9934895833333334,
+        "class_order": [
+          "NOT_HUMAN",
+          "HUMAN_NORMAL",
+          "HUMAN_FALL"
+        ],
+        "confusion_matrix": [
+          [
+            128,
+            0,
+            0
+          ],
+          [
+            1,
+            255,
+            0
+          ],
+          [
+            0,
+            2,
+            126
+          ]
+        ],
+        "h_fall_posture_proxy_recall": 0.984375,
+        "macro_f1": 0.9941289934839789,
+        "per_class": {
+          "HUMAN_FALL": {
+            "f1": 0.9921259842519685,
+            "precision": 1.0,
+            "recall": 0.984375,
+            "support": 128
+          },
+          "HUMAN_NORMAL": {
+            "f1": 0.9941520467836258,
+            "precision": 0.9922178988326849,
+            "recall": 0.99609375,
+            "support": 256
+          },
+          "NOT_HUMAN": {
+            "f1": 0.9961089494163424,
+            "precision": 0.9922480620155039,
+            "recall": 1.0,
+            "support": 128
+          }
+        },
+        "prediction_distribution": {
+          "HUMAN_FALL": 126,
+          "HUMAN_NORMAL": 257,
+          "NOT_HUMAN": 129
+        },
+        "sample_count": 512
+      },
+      "per_class_probability_mae": {
+        "HUMAN_FALL": 0.003800809790052322,
+        "HUMAN_NORMAL": 0.005023475344271973,
+        "NOT_HUMAN": 0.0012128167439400806
+      },
+      "probability_mae": 0.0033457006260881245,
+      "probability_max_absolute_error": 0.5893602967262268,
+      "sample_count": 512
+    },
+    "FLOAT_KERAS__TFLITE_FP32": {
+      "argmax_agreement": 1.0,
+      "confusion_matrix_difference": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "disagreement_count": 0,
+      "float_metrics": {
+        "accuracy": 0.998046875,
+        "balanced_accuracy": 0.9986979166666666,
+        "class_order": [
+          "NOT_HUMAN",
+          "HUMAN_NORMAL",
+          "HUMAN_FALL"
+        ],
+        "confusion_matrix": [
+          [
+            128,
+            0,
+            0
+          ],
+          [
+            1,
+            255,
+            0
+          ],
+          [
+            0,
+            0,
+            128
+          ]
+        ],
+        "h_fall_posture_proxy_recall": 1.0,
+        "macro_f1": 0.998050667417972,
+        "per_class": {
+          "HUMAN_FALL": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 128
+          },
+          "HUMAN_NORMAL": {
+            "f1": 0.9980430528375733,
+            "precision": 1.0,
+            "recall": 0.99609375,
+            "support": 256
+          },
+          "NOT_HUMAN": {
+            "f1": 0.9961089494163424,
+            "precision": 0.9922480620155039,
+            "recall": 1.0,
+            "support": 128
+          }
+        },
+        "prediction_distribution": {
+          "HUMAN_FALL": 128,
+          "HUMAN_NORMAL": 255,
+          "NOT_HUMAN": 129
+        },
+        "sample_count": 512
+      },
+      "metric_delta_other_minus_float": {
+        "accuracy": 0.0,
+        "balanced_accuracy": 0.0,
+        "h_fall_posture_proxy_recall": 0.0,
+        "macro_f1": 0.0
+      },
+      "other_metrics": {
+        "accuracy": 0.998046875,
+        "balanced_accuracy": 0.9986979166666666,
+        "class_order": [
+          "NOT_HUMAN",
+          "HUMAN_NORMAL",
+          "HUMAN_FALL"
+        ],
+        "confusion_matrix": [
+          [
+            128,
+            0,
+            0
+          ],
+          [
+            1,
+            255,
+            0
+          ],
+          [
+            0,
+            0,
+            128
+          ]
+        ],
+        "h_fall_posture_proxy_recall": 1.0,
+        "macro_f1": 0.998050667417972,
+        "per_class": {
+          "HUMAN_FALL": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 128
+          },
+          "HUMAN_NORMAL": {
+            "f1": 0.9980430528375733,
+            "precision": 1.0,
+            "recall": 0.99609375,
+            "support": 256
+          },
+          "NOT_HUMAN": {
+            "f1": 0.9961089494163424,
+            "precision": 0.9922480620155039,
+            "recall": 1.0,
+            "support": 128
+          }
+        },
+        "prediction_distribution": {
+          "HUMAN_FALL": 128,
+          "HUMAN_NORMAL": 255,
+          "NOT_HUMAN": 129
+        },
+        "sample_count": 512
+      },
+      "per_class_probability_mae": {
+        "HUMAN_FALL": 6.671125859030192e-09,
+        "HUMAN_NORMAL": 6.734371897138252e-09,
+        "NOT_HUMAN": 1.6298920551946404e-09
+      },
+      "probability_mae": 5.011796603787694e-09,
+      "probability_max_absolute_error": 7.152557373046875e-07,
+      "sample_count": 512
+    },
+    "TFLITE_FP32__FULL_INT8": {
+      "argmax_agreement": 0.99609375,
+      "confusion_matrix_difference": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          -2
+        ]
+      ],
+      "disagreement_count": 2,
+      "float_metrics": {
+        "accuracy": 0.998046875,
+        "balanced_accuracy": 0.9986979166666666,
+        "class_order": [
+          "NOT_HUMAN",
+          "HUMAN_NORMAL",
+          "HUMAN_FALL"
+        ],
+        "confusion_matrix": [
+          [
+            128,
+            0,
+            0
+          ],
+          [
+            1,
+            255,
+            0
+          ],
+          [
+            0,
+            0,
+            128
+          ]
+        ],
+        "h_fall_posture_proxy_recall": 1.0,
+        "macro_f1": 0.998050667417972,
+        "per_class": {
+          "HUMAN_FALL": {
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "support": 128
+          },
+          "HUMAN_NORMAL": {
+            "f1": 0.9980430528375733,
+            "precision": 1.0,
+            "recall": 0.99609375,
+            "support": 256
+          },
+          "NOT_HUMAN": {
+            "f1": 0.9961089494163424,
+            "precision": 0.9922480620155039,
+            "recall": 1.0,
+            "support": 128
+          }
+        },
+        "prediction_distribution": {
+          "HUMAN_FALL": 128,
+          "HUMAN_NORMAL": 255,
+          "NOT_HUMAN": 129
+        },
+        "sample_count": 512
+      },
+      "metric_delta_other_minus_float": {
+        "accuracy": -0.00390625,
+        "balanced_accuracy": -0.005208333333333259,
+        "h_fall_posture_proxy_recall": -0.015625,
+        "macro_f1": -0.0039216739339931195
+      },
+      "other_metrics": {
+        "accuracy": 0.994140625,
+        "balanced_accuracy": 0.9934895833333334,
+        "class_order": [
+          "NOT_HUMAN",
+          "HUMAN_NORMAL",
+          "HUMAN_FALL"
+        ],
+        "confusion_matrix": [
+          [
+            128,
+            0,
+            0
+          ],
+          [
+            1,
+            255,
+            0
+          ],
+          [
+            0,
+            2,
+            126
+          ]
+        ],
+        "h_fall_posture_proxy_recall": 0.984375,
+        "macro_f1": 0.9941289934839789,
+        "per_class": {
+          "HUMAN_FALL": {
+            "f1": 0.9921259842519685,
+            "precision": 1.0,
+            "recall": 0.984375,
+            "support": 128
+          },
+          "HUMAN_NORMAL": {
+            "f1": 0.9941520467836258,
+            "precision": 0.9922178988326849,
+            "recall": 0.99609375,
+            "support": 256
+          },
+          "NOT_HUMAN": {
+            "f1": 0.9961089494163424,
+            "precision": 0.9922480620155039,
+            "recall": 1.0,
+            "support": 128
+          }
+        },
+        "prediction_distribution": {
+          "HUMAN_FALL": 126,
+          "HUMAN_NORMAL": 257,
+          "NOT_HUMAN": 129
+        },
+        "sample_count": 512
+      },
+      "per_class_probability_mae": {
+        "HUMAN_FALL": 0.0038008082540250533,
+        "HUMAN_NORMAL": 0.005023474857210006,
+        "NOT_HUMAN": 0.0012128158126764707
+      },
+      "probability_mae": 0.0033456996413038435,
+      "probability_max_absolute_error": 0.5893600583076477,
+      "sample_count": 512
+    }
+  },
+  "perturbation_cases": 12,
+  "phase": "T-B5",
+  "real_used_for_selection": false,
+  "schema_version": "1.0"
+}

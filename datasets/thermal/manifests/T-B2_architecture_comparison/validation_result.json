@@ -1,0 +1,250 @@
+{
+  "error_count": 0,
+  "errors": [],
+  "evidence_validation": "PASS",
+  "full_experiment": "FINALIZED",
+  "mode": "FULL_EXPERIMENT",
+  "overall_outcome": "T_B2_COMPLETE_WITH_LIMITATIONS",
+  "phase": "T-B2",
+  "predecessors": {
+    "T-A6": {
+      "error_count": 0,
+      "errors": [],
+      "evidence_validation": "PASS",
+      "full_t_a6_gate": "T_A6_FULL_COMPLETE_WITH_LIMITATIONS",
+      "mode": "FULL_DATASET",
+      "overall_outcome": "PASS_WITH_LIMITATIONS",
+      "phase": "T-A6_COLAB_STAGE2",
+      "predecessors": {
+        "T-A0": {
+          "evidence_validation": "PASS",
+          "overall_outcome": "PASS_WITH_LIMITATIONS"
+        },
+        "T-A1": {
+          "evidence_validation": "PASS",
+          "overall_outcome": "PASS_WITH_LIMITATIONS"
+        },
+        "T-A2": {
+          "evidence_validation": "PASS",
+          "overall_outcome": "PASS_WITH_LIMITATIONS"
+        },
+        "T-A3": {
+          "evidence_validation": "PASS",
+          "overall_outcome": "PASS_WITH_LIMITATIONS"
+        },
+        "T-A4": {
+          "evidence_validation": "PASS",
+          "overall_outcome": "PASS_WITH_LIMITATIONS"
+        },
+        "T-A5": {
+          "evidence_validation": "PASS",
+          "overall_outcome": "PASS_WITH_LIMITATIONS"
+        }
+      },
+      "schema_version": "1.0",
+      "stage1_gate": "T_A6_STAGE1_COMPLETE",
+      "stage1_gate_source": "REAL_EVAL_DEVELOPMENT role independently validated inside the Stage-2 bundle",
+      "stage2_validation": {
+        "error_count": 0,
+        "errors": [],
+        "evidence_validation": "PASS",
+        "full_t_a6_gate": "T_A6_FULL_COMPLETE_WITH_LIMITATIONS",
+        "overall_outcome": "PASS_WITH_LIMITATIONS",
+        "phase": "T-A6_COLAB_STAGE2",
+        "schema_version": "1.0",
+        "t_b_authorized": false,
+        "warning_count": 0,
+        "warnings": []
+      },
+      "t_b_authorized": false,
+      "warning_count": 0,
+      "warnings": []
+    },
+    "T-B0": {
+      "error_count": 0,
+      "errors": [],
+      "evidence_validation": "PASS",
+      "full_training_performed": false,
+      "new_trained_model_generated": false,
+      "overall_outcome": "PASS_WITH_LIMITATIONS",
+      "phase": "T-B0",
+      "schema_version": "1.0",
+      "t_a6_gate": "T_A6_FULL_COMPLETE_WITH_LIMITATIONS",
+      "t_b0_gate": "T_B0_COMPLETE_WITH_LIMITATIONS",
+      "t_b1_authorized": "YES_WITH_LIMITATIONS",
+      "warning_count": 3,
+      "warnings": [
+        {
+          "code": "GROUPING_NOT_VERIFIABLE",
+          "location": "dataset_authority.json",
+          "message": "Subject/session/event generalization remains unavailable from source provenance."
+        },
+        {
+          "code": "NEAR_DUPLICATE_OVERLAP",
+          "location": "near_duplicate_sensitivity_policy.json",
+          "message": "14,514 TRAIN-VALIDATION near-duplicate pairs require disclosure."
+        },
+        {
+          "code": "NO_PRISTINE_LOCKED_TEST",
+          "location": "evaluation_role_policy.json",
+          "message": "REAL_EVAL_DEVELOPMENT is not an untouched final test."
+        }
+      ]
+    },
+    "T-B1": {
+      "error_count": 0,
+      "errors": [],
+      "evidence_validation": "PASS",
+      "full_experiment": "FINALIZED",
+      "full_training_performed": true,
+      "new_trained_model_generated": true,
+      "overall_outcome": "T_B1_FULL_COMPLETE_WITH_LIMITATIONS",
+      "performance_winner_selected": true,
+      "phase": "T-B1",
+      "predecessors": {
+        "T-A6": {
+          "error_count": 0,
+          "errors": [],
+          "evidence_validation": "PASS",
+          "full_t_a6_gate": "T_A6_FULL_COMPLETE_WITH_LIMITATIONS",
+          "mode": "FULL_DATASET",
+          "overall_outcome": "PASS_WITH_LIMITATIONS",
+          "phase": "T-A6_COLAB_STAGE2",
+          "predecessors": {
+            "T-A0": {
+              "evidence_validation": "PASS",
+              "overall_outcome": "PASS_WITH_LIMITATIONS"
+            },
+            "T-A1": {
+              "evidence_validation": "PASS",
+              "overall_outcome": "PASS_WITH_LIMITATIONS"
+            },
+            "T-A2": {
+              "evidence_validation": "PASS",
+              "overall_outcome": "PASS_WITH_LIMITATIONS"
+            },
+            "T-A3": {
+              "evidence_validation": "PASS",
+              "overall_outcome": "PASS_WITH_LIMITATIONS"
+            },
+            "T-A4": {
+              "evidence_validation": "PASS",
+              "overall_outcome": "PASS_WITH_LIMITATIONS"
+            },
+            "T-A5": {
+              "evidence_validation": "PASS",
+              "overall_outcome": "PASS_WITH_LIMITATIONS"
+            }
+          },
+          "schema_version": "1.0",
+          "stage1_gate": "T_A6_STAGE1_COMPLETE",
+          "stage1_gate_source": "REAL_EVAL_DEVELOPMENT role independently validated inside the Stage-2 bundle",
+          "stage2_validation": {
+            "error_count": 0,
+            "errors": [],
+            "evidence_validation": "PASS",
+            "full_t_a6_gate": "T_A6_FULL_COMPLETE_WITH_LIMITATIONS",
+            "overall_outcome": "PASS_WITH_LIMITATIONS",
+            "phase": "T-A6_COLAB_STAGE2",
+            "schema_version": "1.0",
+            "t_b_authorized": false,
+            "warning_count": 0,
+            "warnings": []
+          },
+          "t_b_authorized": false,
+          "warning_count": 0,
+          "warnings": []
+        },
+        "T-B0": {
+          "error_count": 0,
+          "errors": [],
+          "evidence_validation": "PASS",
+          "full_training_performed": false,
+          "new_trained_model_generated": false,
+          "overall_outcome": "PASS_WITH_LIMITATIONS",
+          "phase": "T-B0",
+          "schema_version": "1.0",
+          "t_a6_gate": "T_A6_FULL_COMPLETE_WITH_LIMITATIONS",
+          "t_b0_gate": "T_B0_COMPLETE_WITH_LIMITATIONS",
+          "t_b1_authorized": "YES_WITH_LIMITATIONS",
+          "warning_count": 3,
+          "warnings": [
+            {
+              "code": "GROUPING_NOT_VERIFIABLE",
+              "location": "dataset_authority.json",
+              "message": "Subject/session/event generalization remains unavailable from source provenance."
+            },
+            {
+              "code": "NEAR_DUPLICATE_OVERLAP",
+              "location": "near_duplicate_sensitivity_policy.json",
+              "message": "14,514 TRAIN-VALIDATION near-duplicate pairs require disclosure."
+            },
+            {
+              "code": "NO_PRISTINE_LOCKED_TEST",
+              "location": "evaluation_role_policy.json",
+              "message": "REAL_EVAL_DEVELOPMENT is not an untouched final test."
+            }
+          ]
+        }
+      },
+      "real_role": "REAL_EVAL_DEVELOPMENT",
+      "schema_version": "1.0",
+      "stage": "FULL_EXPERIMENT",
+      "t_b2_authorized": "YES_WITH_LIMITATIONS",
+      "warning_count": 6,
+      "warnings": [
+        {
+          "code": "CHECKPOINT_EXTERNAL_NOT_TRACKED",
+          "location": "checkpoints/P0_CANONICAL_CELSIUS_DIRECT.weights.h5",
+          "message": "Compact Git evidence preserves the checkpoint SHA but not bulk checkpoint bytes."
+        },
+        {
+          "code": "CHECKPOINT_EXTERNAL_NOT_TRACKED",
+          "location": "checkpoints/P1_TRAIN_FITTED_GLOBAL_ZSCORE.weights.h5",
+          "message": "Compact Git evidence preserves the checkpoint SHA but not bulk checkpoint bytes."
+        },
+        {
+          "code": "CHECKPOINT_EXTERNAL_NOT_TRACKED",
+          "location": "checkpoints/P2_LEGACY_PER_FRAME_MINMAX.weights.h5",
+          "message": "Compact Git evidence preserves the checkpoint SHA but not bulk checkpoint bytes."
+        },
+        {
+          "code": "GROUPING_NOT_VERIFIABLE",
+          "location": "limitations.json",
+          "message": "Subject/session/event generalization remains unavailable."
+        },
+        {
+          "code": "NEAR_DUPLICATE_OVERLAP",
+          "location": "limitations.json",
+          "message": "14,514 TRAIN-VALIDATION near-duplicate pairs remain disclosed."
+        },
+        {
+          "code": "NO_PRISTINE_LOCKED_TEST",
+          "location": "limitations.json",
+          "message": "REAL_EVAL_DEVELOPMENT is not an untouched final test."
+        }
+      ],
+      "winner_profile_id": "P1_TRAIN_FITTED_GLOBAL_ZSCORE"
+    }
+  },
+  "schema_version": "1.0",
+  "t_b3_authorized": false,
+  "warning_count": 3,
+  "warnings": [
+    {
+      "code": "GROUPING_NOT_VERIFIABLE",
+      "location": "limitations.json",
+      "message": "Subject/session/event generalization remains unavailable."
+    },
+    {
+      "code": "NEAR_DUPLICATE_OVERLAP",
+      "location": "limitations.json",
+      "message": "14,514 TRAIN-VALIDATION near-duplicate pairs remain disclosed."
+    },
+    {
+      "code": "NO_PRISTINE_LOCKED_TEST",
+      "location": "real_eval_development.json",
+      "message": "REAL_EVAL_DEVELOPMENT is not an untouched final test."
+    }
+  ]
+}

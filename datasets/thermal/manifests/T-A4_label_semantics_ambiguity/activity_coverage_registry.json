@@ -1,0 +1,101 @@
+{
+  "entries": {
+    "AMBIGUOUS_BOUNDARY_FRAME": {
+      "claim_scope": "SOURCE_LABEL_OR_TEMPORAL_EVIDENCE_ONLY",
+      "source_count": 0,
+      "status": "NOT_VERIFIABLE_NO_TEMPORAL_EVENT",
+      "treated_as_negative": false
+    },
+    "BENDING": {
+      "claim_scope": "SOURCE_LABEL_OR_TEMPORAL_EVIDENCE_ONLY",
+      "source_count": 0,
+      "status": "NOT_REPRESENTED_BY_SELECTED_SOURCE",
+      "treated_as_negative": false
+    },
+    "EMPTY_ROOM": {
+      "claim_scope": "SOURCE_LABEL_OR_TEMPORAL_EVIDENCE_ONLY",
+      "source_count": 2000,
+      "status": "REPRESENTED_BY_VERIFIED_SOURCE_LABEL",
+      "treated_as_negative": false
+    },
+    "ENTERING": {
+      "claim_scope": "SOURCE_LABEL_OR_TEMPORAL_EVIDENCE_ONLY",
+      "source_count": 0,
+      "status": "NOT_REPRESENTED_BY_SELECTED_SOURCE",
+      "treated_as_negative": false
+    },
+    "EXITING": {
+      "claim_scope": "SOURCE_LABEL_OR_TEMPORAL_EVIDENCE_ONLY",
+      "source_count": 0,
+      "status": "NOT_REPRESENTED_BY_SELECTED_SOURCE",
+      "treated_as_negative": false
+    },
+    "FALL_IMPACT": {
+      "claim_scope": "SOURCE_LABEL_OR_TEMPORAL_EVIDENCE_ONLY",
+      "source_count": 0,
+      "status": "NOT_VERIFIABLE_NO_TEMPORAL_EVENT",
+      "treated_as_negative": false
+    },
+    "FALL_TRANSITION": {
+      "claim_scope": "SOURCE_LABEL_OR_TEMPORAL_EVIDENCE_ONLY",
+      "source_count": 0,
+      "status": "NOT_VERIFIABLE_NO_TEMPORAL_EVENT",
+      "treated_as_negative": false
+    },
+    "KNEELING": {
+      "claim_scope": "SOURCE_LABEL_OR_TEMPORAL_EVIDENCE_ONLY",
+      "source_count": 0,
+      "status": "NOT_REPRESENTED_BY_SELECTED_SOURCE",
+      "treated_as_negative": false
+    },
+    "LYING": {
+      "claim_scope": "SOURCE_LABEL_OR_TEMPORAL_EVIDENCE_ONLY",
+      "source_count": 2000,
+      "status": "REPRESENTED_BY_VERIFIED_SOURCE_LABEL",
+      "treated_as_negative": false
+    },
+    "PARTIAL_BODY": {
+      "claim_scope": "SOURCE_LABEL_OR_TEMPORAL_EVIDENCE_ONLY",
+      "source_count": 0,
+      "status": "NOT_VERIFIABLE_FROM_SELECTED_SOURCE_LABELS",
+      "treated_as_negative": false
+    },
+    "POST_FALL_INTERVAL": {
+      "claim_scope": "SOURCE_LABEL_OR_TEMPORAL_EVIDENCE_ONLY",
+      "source_count": 0,
+      "status": "NOT_VERIFIABLE_NO_TEMPORAL_EVENT",
+      "treated_as_negative": false
+    },
+    "RECOVERY": {
+      "claim_scope": "SOURCE_LABEL_OR_TEMPORAL_EVIDENCE_ONLY",
+      "source_count": 0,
+      "status": "NOT_VERIFIABLE_NO_TEMPORAL_EVENT",
+      "treated_as_negative": false
+    },
+    "SITTING": {
+      "claim_scope": "SOURCE_LABEL_OR_TEMPORAL_EVIDENCE_ONLY",
+      "source_count": 2000,
+      "status": "REPRESENTED_BY_VERIFIED_SOURCE_LABEL",
+      "treated_as_negative": false
+    },
+    "STANDING": {
+      "claim_scope": "SOURCE_LABEL_OR_TEMPORAL_EVIDENCE_ONLY",
+      "source_count": 2000,
+      "status": "REPRESENTED_BY_VERIFIED_SOURCE_LABEL",
+      "treated_as_negative": false
+    },
+    "WALKING": {
+      "claim_scope": "SOURCE_LABEL_OR_TEMPORAL_EVIDENCE_ONLY",
+      "source_count": 0,
+      "status": "NOT_REPRESENTED_BY_SELECTED_SOURCE",
+      "treated_as_negative": false
+    }
+  },
+  "hard_negative_coverage": "NOT_ESTABLISHED_FOR_UNSUPPORTED_ACTIVITIES",
+  "natural_fall_event_status": "NOT_REPRESENTED_OR_NOT_VERIFIABLE",
+  "phase": "T-A4",
+  "schema_version": "1.0",
+  "source_dataset_id": "local_sdt_zenodo_4124309",
+  "staged_fall_event_status": "NOT_REPRESENTED_OR_NOT_VERIFIABLE",
+  "unsupported_activity_policy": "ABSENCE_OF_A_LABEL_IS_NOT_A_NEGATIVE_EXAMPLE"
+}

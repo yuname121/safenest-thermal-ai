@@ -1,0 +1,15 @@
+{
+  "branch": "feature/thermal-t-b4-float-tflite-int8-equivalence",
+  "calibration_frozen": true,
+  "checkpoint_verified": true,
+  "origin_main": "c65d2e32e6f14089790a8c576312eb9873e367f7",
+  "output_root": "EXTERNAL_SSD_SAFE_NEST_AI_THERMAL_EXPERIMENTS_T_B4",
+  "phase": "T-B4",
+  "predecessors_pass": true,
+  "repo_commit": "c65d2e32e6f14089790a8c576312eb9873e367f7",
+  "schema_version": "1.0",
+  "status": "T_B4_CONVERSION_READY",
+  "t_b5_started": false,
+  "t_c_started": false,
+  "temperature_policy_frozen": true
+}

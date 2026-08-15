@@ -1,0 +1,22 @@
+{
+  "blocking": {
+    "candidate_pair_order": "lexicographic ascending (left_index,right_index)",
+    "fingerprint": "SHA256(little-endian int16 quantized coarse grid)",
+    "max_candidate_pairs": 200000,
+    "quantization_step_celsius": 2.0,
+    "sample_grid": "canonical_frame[::8,::8]"
+  },
+  "confirmation_thresholds": {
+    "mae_celsius_max": 0.2,
+    "max_abs_difference_celsius_max": 1.0,
+    "mean_temperature_difference_celsius_max": 0.2,
+    "rmse_celsius_max": 0.3
+  },
+  "exhaustiveness_claim": "DETERMINISTIC_SCREENING_NOT_EXHAUSTIVE",
+  "label_independent": true,
+  "model_independent": true,
+  "no_label_or_model_tuning": true,
+  "profile_id": "THERMAL_T_A6_NEAR_DUPLICATE_SCREEN_V1",
+  "scope": "WITHIN_ROLE_ONLY_UNTIL_COLAB_STAGE_2",
+  "version": "1.0"
+}

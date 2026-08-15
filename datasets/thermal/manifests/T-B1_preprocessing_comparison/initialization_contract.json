@@ -1,0 +1,26 @@
+{
+  "candidate_id": "SMALL_CNN_BASELINE_V1",
+  "different_backend_bit_identity_claim": false,
+  "fingerprint_algorithm": "SHA-256 over canonical ordered layer-name, shape, dtype, and contiguous weight bytes",
+  "initial_weight_fingerprint": "72a9805e1772aa0ee0a414fb7d41bc17ea0d183fa29e0e43049b22e0d5d35058",
+  "multi_seed_confirmation": {
+    "executed_in_stage1": false,
+    "required_phase": "T-B3_OR_LATER",
+    "seed_list": [
+      20260813,
+      20260814,
+      20260815
+    ]
+  },
+  "phase": "T-B1",
+  "primary_seed": 20260813,
+  "same_initial_weights_required_for_profiles": true,
+  "schema_version": "1.0",
+  "seed_bindings": {
+    "numpy": 20260813,
+    "python": 20260813,
+    "shuffle": 20260813,
+    "tensorflow": 20260813,
+    "weight_initialization": 20260813
+  }
+}

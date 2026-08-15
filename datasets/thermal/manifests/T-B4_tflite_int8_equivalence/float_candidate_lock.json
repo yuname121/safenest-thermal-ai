@@ -1,0 +1,19 @@
+{
+  "architecture_fingerprint": "937fceb88900a779d67a8e407cebc3362cc21346721f92cea5ae8de1413aba2a",
+  "candidate_changed": false,
+  "candidate_id": "SMALL_CNN_BASELINE_V1",
+  "checkpoint": {
+    "logical_path": "experiments/T-B1/T-B1_execution_result/checkpoints/P1_TRAIN_FITTED_GLOBAL_ZSCORE.weights.h5",
+    "materialization": "PERSISTENT_EXTERNAL_SSD",
+    "sha256": "7aba32fe8d0e241546429bdc3e8cd059b10d4d8f548e9e12c4085abeba308a75",
+    "size_bytes": 3777416
+  },
+  "checkpoint_verified_before_conversion": true,
+  "inherited_real_macro_f1": 0.593926523563344,
+  "inherited_validation_macro_f1": 0.9951295332536425,
+  "parameter_count": 312131,
+  "phase": "T-B4",
+  "reference_seed": 20260813,
+  "retraining": false,
+  "schema_version": "1.0"
+}

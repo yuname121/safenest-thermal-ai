@@ -1,0 +1,36 @@
+{
+  "available_evidence": [
+    "original posture label only"
+  ],
+  "during_fall_range": "NOT_VERIFIABLE",
+  "eligible": false,
+  "fall_end": "NOT_VERIFIABLE",
+  "fall_onset": "NOT_VERIFIABLE",
+  "fall_transition": "NOT_VERIFIABLE",
+  "label_semantics": {
+    "EMPTY_ROOM": "BACKGROUND_CONTROL",
+    "LYING": "POSTURE_ONLY_NOT_A_FALL_EVENT",
+    "SITTING": "POSTURE",
+    "STANDING": "POSTURE"
+  },
+  "lying_is_fall_event": false,
+  "phase": "T-A3",
+  "policy_id": "THERMAL_T_A3_EVENT_POLICY_001",
+  "post_fall_range": "NOT_VERIFIABLE",
+  "pre_fall_range": "NOT_VERIFIABLE",
+  "required_evidence": [
+    "verified sequence",
+    "event identifier or annotation",
+    "fall transition",
+    "onset",
+    "end",
+    "pre/during/post context"
+  ],
+  "safe_to_construct": false,
+  "schema_version": "1.0",
+  "status": "TEMPORAL_EVENT_NOT_VERIFIABLE",
+  "unsupported_request_behavior": {
+    "behavior": "FAIL_CLOSED",
+    "error_code": "SOURCE_EVENT_BOUNDARY_UNAVAILABLE"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "main_commit_at_execution": "6cfaeeec26b7c455ab38bcad172b24b63d6c4ac2",
+  "phase": "T-B2",
+  "schema_version": "1.0",
+  "t_b1_p1_winner": {
+    "candidate_id": "SMALL_CNN_BASELINE_V1",
+    "real_macro_f1": 0.593926523563344,
+    "statistics_checksum": "10b5da044ef33f26715544c3d4bf56e9d999d6c65139e931f6997583b3f5b816",
+    "validation_macro_f1": 0.9951295332536425
+  },
+  "validators": {
+    "T-A6": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "PASS_WITH_LIMITATIONS"
+    },
+    "T-B0": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "PASS_WITH_LIMITATIONS"
+    },
+    "T-B1": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "T_B1_FULL_COMPLETE_WITH_LIMITATIONS"
+    }
+  }
+}

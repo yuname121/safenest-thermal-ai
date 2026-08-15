@@ -1,0 +1,128 @@
+{
+  "audit_scope": "WITHIN_ROLE_AND_CROSS_ROLE",
+  "audit_sha256": "2edf98444ad50f4eb7b32d21f5e9cd7654711677b29058af255e3bba6a0c5ea3",
+  "cross_role": {
+    "canonical_frame_hashes": {
+      "TRAIN__REAL_EVAL_DEVELOPMENT": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "TRAIN__VALIDATION": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "VALIDATION__REAL_EVAL_DEVELOPMENT": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      }
+    },
+    "decoded_frame_hashes": {
+      "TRAIN__REAL_EVAL_DEVELOPMENT": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "TRAIN__VALIDATION": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "VALIDATION__REAL_EVAL_DEVELOPMENT": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      }
+    },
+    "source_member_byte_hashes": {
+      "TRAIN__REAL_EVAL_DEVELOPMENT": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "TRAIN__VALIDATION": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "VALIDATION__REAL_EVAL_DEVELOPMENT": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      }
+    }
+  },
+  "duplicate_policy": "PRESERVE_BOTH_PROVENANCE_RECORDS_AND_FLAG_DUPLICATE_CONTENT",
+  "exclusions_caused_by_duplicates": 0,
+  "layers": {
+    "canonical_frame_hashes": "canonical_frame_hash",
+    "decoded_frame_hashes": "source_frame_sha256",
+    "source_member_byte_hashes": "source_member_sha256"
+  },
+  "phase": "T-A6_COLAB_STAGE2",
+  "schema_version": "1.0",
+  "within_role": {
+    "canonical_frame_hashes": {
+      "REAL_EVAL_DEVELOPMENT": {
+        "duplicate_cluster_count": 0,
+        "duplicate_sample_count": 0,
+        "witnesses": []
+      },
+      "TRAIN": {
+        "duplicate_cluster_count": 0,
+        "duplicate_sample_count": 0,
+        "witnesses": []
+      },
+      "VALIDATION": {
+        "duplicate_cluster_count": 0,
+        "duplicate_sample_count": 0,
+        "witnesses": []
+      }
+    },
+    "decoded_frame_hashes": {
+      "REAL_EVAL_DEVELOPMENT": {
+        "duplicate_cluster_count": 0,
+        "duplicate_sample_count": 0,
+        "witnesses": []
+      },
+      "TRAIN": {
+        "duplicate_cluster_count": 0,
+        "duplicate_sample_count": 0,
+        "witnesses": []
+      },
+      "VALIDATION": {
+        "duplicate_cluster_count": 0,
+        "duplicate_sample_count": 0,
+        "witnesses": []
+      }
+    },
+    "source_member_byte_hashes": {
+      "REAL_EVAL_DEVELOPMENT": {
+        "duplicate_cluster_count": 0,
+        "duplicate_sample_count": 0,
+        "witnesses": []
+      },
+      "TRAIN": {
+        "duplicate_cluster_count": 0,
+        "duplicate_sample_count": 0,
+        "witnesses": []
+      },
+      "VALIDATION": {
+        "duplicate_cluster_count": 0,
+        "duplicate_sample_count": 0,
+        "witnesses": []
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "all_candidates_require_same_role_policy": true,
+  "all_new_artifacts_absent": true,
+  "architecture_proliferation_policy": "No additional family enters comparison without a separately reviewed T-B0 amendment.",
+  "candidate_count": 3,
+  "candidates": [
+    {
+      "architecture_source": "existing artifact plus thermal_train.py historical script",
+      "artifact_path": "models/thermal/thermal_fall_int8_v0.1.0.tflite",
+      "artifact_sha256": "5b56da8d127ccef85f30b6459cc0cfe2d86490e41f3caa5bd2a7b70bbc46ae84",
+      "candidate_id": "LEGACY_DEPLOYED_REFERENCE",
+      "input_contract": "existing normalized int8 NHWC [1,62,80,1]",
+      "parameter_count_target": 312131,
+      "reason_for_inclusion": "Compatibility and historical reference only; T-A6 lineage is not assigned.",
+      "role": "LEGACY_REFERENCE",
+      "status": "REGISTERED_REFERENCE_NOT_RETRAINED",
+      "tflite_compatible": true,
+      "trainable_in_t_b": false,
+      "winner_eligible": false
+    },
+    {
+      "architecture_source": "T-B0 preregistration: Conv2D(16,3x3,same)-MaxPool(2x2)-Conv2D(32,3x3,same)-MaxPool(2x2)-Flatten-Dense(32)-Dense(3)",
+      "artifact_path": null,
+      "artifact_sha256": null,
+      "candidate_id": "SMALL_CNN_BASELINE_V1",
+      "input_contract": "single-channel NHWC [1,62,80,1] after one registered preprocessing profile",
+      "operations_latency_consideration": "two spatial convolutions, two pools, two dense layers; suitable for initial TFLite feasibility",
+      "parameter_count_bound": "<= 312131 trainable parameters",
+      "parameter_count_target": 312131,
+      "reason_for_inclusion": "Small repository-consistent frame CNN and controlled baseline matching the existing historical architecture family.",
+      "role": "REPRODUCIBLE_TRAINABLE_BASELINE",
+      "status": "PREREGISTERED_NOT_TRAINED",
+      "tflite_compatible": true,
+      "trainable_in_t_b": true,
+      "winner_eligible": true
+    },
+    {
+      "architecture_source": "T-B0 preregistration: Conv2D(8,3x3,same)-MaxPool-DepthwiseSeparableConv2D(16,3x3,same)-MaxPool-GlobalAveragePooling2D-Dense(3)",
+      "artifact_path": null,
+      "artifact_sha256": null,
+      "candidate_id": "DEPTHWISE_SEPARABLE_CNN_V1",
+      "input_contract": "single-channel NHWC [1,62,80,1] after one registered preprocessing profile",
+      "operations_latency_consideration": "depthwise separable spatial block and global average pooling reduce dense memory pressure for Raspberry Pi 5/TFLite follow-up",
+      "parameter_count_bound": "<= 30000 trainable parameters",
+      "parameter_count_target": "<= 30000",
+      "reason_for_inclusion": "One deployment-oriented alternative is sufficient to test whether a materially smaller model retains posture-proxy utility.",
+      "role": "DEPLOYMENT_EFFICIENT_TRAINABLE_CANDIDATE",
+      "status": "PREREGISTERED_NOT_TRAINED",
+      "tflite_compatible": true,
+      "trainable_in_t_b": true,
+      "winner_eligible": true
+    }
+  ],
+  "phase": "T-B0",
+  "schema_version": "1.0",
+  "trainable_candidate_count": 2
+}

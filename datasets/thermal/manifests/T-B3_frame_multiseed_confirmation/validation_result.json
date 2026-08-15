@@ -1,0 +1,52 @@
+{
+  "error_count": 0,
+  "errors": [],
+  "evidence_validation": "PASS",
+  "full_experiment": "FINALIZED",
+  "mode": "FULL_EXPERIMENT",
+  "overall_outcome": "T_B3_COMPLETE_WITH_LIMITATIONS",
+  "phase": "T-B3",
+  "predecessors": {
+    "T-A6": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "PASS_WITH_LIMITATIONS"
+    },
+    "T-B0": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "PASS_WITH_LIMITATIONS"
+    },
+    "T-B1": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "T_B1_FULL_COMPLETE_WITH_LIMITATIONS"
+    },
+    "T-B2": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "T_B2_COMPLETE_WITH_LIMITATIONS"
+    }
+  },
+  "schema_version": "1.0",
+  "t_b4_authorized": "YES_WITH_LIMITATIONS",
+  "warning_count": 4,
+  "warnings": [
+    {
+      "code": "GROUPING_NOT_VERIFIABLE",
+      "location": "limitations.json",
+      "message": "Subject/session/event generalization remains unavailable."
+    },
+    {
+      "code": "NEAR_DUPLICATE_OVERLAP",
+      "location": "dataset_lock.json",
+      "message": "14,514 TRAIN-VALIDATION near-duplicate pairs remain disclosed."
+    },
+    {
+      "code": "NEAR_DUPLICATE_OVERLAP",
+      "location": "limitations.json",
+      "message": "14,514 TRAIN-VALIDATION near-duplicate pairs remain disclosed."
+    },
+    {
+      "code": "NO_PRISTINE_LOCKED_TEST",
+      "location": "limitations.json",
+      "message": "REAL_EVAL_DEVELOPMENT is not an untouched final test."
+    }
+  ]
+}

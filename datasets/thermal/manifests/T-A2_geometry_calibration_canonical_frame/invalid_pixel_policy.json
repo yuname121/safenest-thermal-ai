@@ -1,0 +1,19 @@
+{
+  "canonical_padding": "NOT_USED_BY_SELECTED_PROFILE; G2 diagnostic candidate uses explicit false mask and NaN only",
+  "fully_invalid_frame": "FAIL_CLOSED",
+  "interpolation_over_invalid_source": "FORBIDDEN",
+  "phase": "T-A2",
+  "schema_version": "1.0",
+  "source_invalid_sentinel": "NONE_VERIFIED_BY_SDT",
+  "source_nan_inf": "FAIL_CLOSED",
+  "source_partial_invalid_mask": "FAIL_CLOSED; no inpainting or neighbor replacement",
+  "synthetic_normal_values_introduced": false,
+  "t_a1_inherited_policy": "T-A1 rejects fully constant 0/65535 frames and flags partial container extrema; no sensor sentinel is invented.",
+  "validity_states": [
+    "SOURCE_VALUE_VALID",
+    "SOURCE_VALUE_WARNING",
+    "SOURCE_VALUE_INVALID",
+    "CANONICAL_VALUE_DERIVED",
+    "CANONICAL_VALUE_INVALID"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "artifact_sha256_first": "cd696e68aeec063cbc8185719b4f4dad3d038cb3d28eec0d3701b8311e4ad8f1",
+  "artifact_sha256_second": "cd696e68aeec063cbc8185719b4f4dad3d038cb3d28eec0d3701b8311e4ad8f1",
+  "audit_sha256": "3e1791e8955d83ffea68b7f9201853c5d9f80eac5f99df9df59fd35df5c47e3f",
+  "full_second_conversion": true,
+  "ordering_deterministic": true,
+  "provenance_sha256_first": "c9d12f12d845d218e5636dad84a4a094e869faa29d95feb4a6f69603c195e550",
+  "provenance_sha256_second": "c9d12f12d845d218e5636dad84a4a094e869faa29d95feb4a6f69603c195e550",
+  "repeated_checksum_match": true,
+  "status": "PASS",
+  "verification_method": "full conversion plus finalized artifact/provenance alignment"
+}

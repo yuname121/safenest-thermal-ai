@@ -1,0 +1,32 @@
+{
+  "band_count": 8,
+  "boundaries_celsius": [
+    22.000973048902328,
+    22.135347909312095,
+    22.290408343557388,
+    22.364061538778966,
+    22.446656128475745,
+    22.571299602908475,
+    22.97650950137646,
+    23.845811488311135,
+    27.385130533095328
+  ],
+  "boundary_method": "numpy.quantile_linear_on_all_TRAIN_frame_means",
+  "fit_role": "TRAIN",
+  "phase": "T-B4",
+  "policy_id": "T-B4_TRAIN_MEAN_QUANTILE_BANDS_8",
+  "quantiles": [
+    0.0,
+    0.125,
+    0.25,
+    0.375,
+    0.5,
+    0.625,
+    0.75,
+    0.875,
+    1.0
+  ],
+  "schema_version": "1.0",
+  "statistic": "per_frame_mean_celsius",
+  "validation_or_real_used": false
+}

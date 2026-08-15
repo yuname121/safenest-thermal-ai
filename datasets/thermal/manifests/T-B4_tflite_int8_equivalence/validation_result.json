@@ -1,0 +1,78 @@
+{
+  "correction": {
+    "former_artifact_id": "TFLITE_DYNAMIC_RANGE",
+    "former_artifact_sha256": "297de231e26ecf2d4cd4010bd10c08d4df3b6b0a531c69693daea353afb8127d",
+    "former_artifact_size_bytes": 317344,
+    "official_equivalence_chain": [
+      "FLOAT_KERAS",
+      "TFLITE_FP32",
+      "FULL_INT8"
+    ],
+    "true_fp32_artifact_id": "TFLITE_FP32",
+    "true_fp32_sha256": "fbe891520f07e0534b1a7074dc819d8ed44bca58b27e35c78916c3ddae73a779",
+    "true_fp32_size_bytes": 1252048
+  },
+  "error_count": 0,
+  "errors": [],
+  "evidence_validation": "PASS",
+  "mode": "FULL_EXPERIMENT",
+  "overall_outcome": "T_B4_COMPLETE_WITH_LIMITATIONS",
+  "phase": "T-B4",
+  "predecessors": {
+    "T-A6": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "PASS_WITH_LIMITATIONS"
+    },
+    "T-B0": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "PASS_WITH_LIMITATIONS"
+    },
+    "T-B1": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "T_B1_FULL_COMPLETE_WITH_LIMITATIONS"
+    },
+    "T-B2": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "T_B2_COMPLETE_WITH_LIMITATIONS"
+    },
+    "T-B3": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "T_B3_COMPLETE_WITH_LIMITATIONS"
+    }
+  },
+  "schema_version": "1.0",
+  "t_b5_authorized": "YES_WITH_LIMITATIONS",
+  "warning_count": 6,
+  "warnings": [
+    {
+      "code": "GROUPING_NOT_VERIFIABLE",
+      "location": "limitations.json",
+      "message": "Subject/session/event generalization is not verifiable."
+    },
+    {
+      "code": "NEAR_DUPLICATE_OVERLAP",
+      "location": "dataset_lock.json",
+      "message": "14,514 TRAIN-VALIDATION near-duplicate pairs remain disclosed."
+    },
+    {
+      "code": "POSTURE_PROXY",
+      "location": "limitations.json",
+      "message": "HUMAN_FALL remains a Lying-derived posture proxy, not temporal fall ground truth."
+    },
+    {
+      "code": "REAL_NOT_LOCKED_TEST",
+      "location": "real_development_parity.json",
+      "message": "REAL_EVAL_DEVELOPMENT is not pristine LOCKED_TEST."
+    },
+    {
+      "code": "SATURATION_IS_DESCRIPTIVE",
+      "location": "input_saturation_audit.json",
+      "message": "No post-hoc absolute saturation acceptance threshold was invented."
+    },
+    {
+      "code": "THERMAL44_DEFERRED",
+      "location": "limitations.json",
+      "message": "Thermal-44 validation remains deferred to T-C."
+    }
+  ]
+}

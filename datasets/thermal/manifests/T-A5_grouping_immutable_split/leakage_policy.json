@@ -1,0 +1,25 @@
+{
+  "cross_role_frame_overlap_count": 0,
+  "cross_role_member_overlap_count": 0,
+  "generalization_claim": "NOT_VERIFIABLE",
+  "model_metrics_used": false,
+  "near_duplicate_audit": "DEFERRED_T_A6",
+  "phase": "T-A5",
+  "policy_id": "THERMAL_SPLIT_POLICY_001",
+  "schema_version": "1.0",
+  "taxonomy": {
+    "camera_overlap": "NOT_VERIFIABLE_NO_PER_FRAME_CAMERA_KEY",
+    "derived_artifact_overlap": "CONTROLLED_BY_INHERITANCE_RULE",
+    "event_overlap": "NOT_VERIFIABLE_NO_EVENT_ID",
+    "exact_duplicate_content": "DEFERRED_T_A6",
+    "exact_source_member_overlap": "PROVEN_ZERO_FOR_T_A5_REAL_ASSIGNMENT_INVENTORY",
+    "near_duplicate_content": "DEFERRED_T_A6",
+    "recording_overlap": "NOT_VERIFIABLE_NO_RECORDING_ID",
+    "scene_overlap": "NOT_VERIFIABLE_NO_AUTHORITATIVE_SCENE_KEY",
+    "sequence_overlap": "NOT_VERIFIABLE_NO_SEQUENCE_ID",
+    "session_overlap": "NOT_VERIFIABLE_NO_SESSION_ID",
+    "source_frame_id_overlap": "PROVEN_ZERO_FOR_T_A5_REAL_ASSIGNMENT_INVENTORY",
+    "subject_overlap": "NOT_VERIFIABLE_NO_SUBJECT_ID",
+    "unknown_dependency": "NOT_VERIFIABLE"
+  }
+}

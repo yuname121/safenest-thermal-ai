@@ -1,0 +1,22 @@
+{
+  "acceptance_threshold_status": "NO_PREEXISTING_ABSOLUTE_ACCEPTANCE_THRESHOLD",
+  "equivalence_contract": "EQUIVALENCE_MEASURED_NO_PREEXISTING_ABSOLUTE_ACCEPTANCE_THRESHOLD",
+  "factor_changed": "EXPORT_AND_QUANTIZATION_ONLY",
+  "legacy_model_replacement": false,
+  "new_split_created": false,
+  "objective": "FROZEN_FLOAT_TO_TFLITE_FP32_TO_FULL_INT8_EQUIVALENCE_AND_QUANTIZATION_AUDIT",
+  "p1_profile": "P1_TRAIN_FITTED_GLOBAL_ZSCORE",
+  "phase": "T-B4",
+  "protocol_id": "THERMAL_T_B4_FLOAT_TFLITE_FP32_FULL_INT8_EQUIVALENCE_001",
+  "real_policy": "POST_ARTIFACT_FIXED_DEVELOPMENT_DIAGNOSTIC_ONLY",
+  "real_used_for_calibration": false,
+  "reference_candidate_id": "SMALL_CNN_BASELINE_V1",
+  "reference_seed": 20260813,
+  "retraining": false,
+  "runtime_manifest_modified": false,
+  "schema_version": "1.0",
+  "t_b5_started": false,
+  "t_c_started": false,
+  "training": "PROHIBITED",
+  "validation_used_for_calibration": false
+}

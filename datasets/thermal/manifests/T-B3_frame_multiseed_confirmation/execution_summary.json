@@ -1,0 +1,33 @@
+{
+  "bundle_artifacts": [
+    "seed_20260813_summary.json",
+    "seed_20260814_summary.json",
+    "seed_20260815_summary.json",
+    "multiseed_aggregate.json",
+    "candidate_checkpoint_policy.json",
+    "limitations.json",
+    "execution_environment.json",
+    "execution_summary.json"
+  ],
+  "candidate_changed": false,
+  "full_training_performed": true,
+  "mode": "FULL_EXPERIMENT",
+  "new_trained_model_generated": true,
+  "new_training_seeds": [
+    20260814,
+    20260815
+  ],
+  "next_phase_started": false,
+  "phase": "T-B3",
+  "real_evaluations": 0,
+  "schema_version": "1.0",
+  "seed_20260813_source": "REUSED_VERIFIED_T_B1_RESULT",
+  "seed_count": 3,
+  "seeds": [
+    20260813,
+    20260814,
+    20260815
+  ],
+  "status": "FINALIZED",
+  "t_b4_started": false
+}

@@ -1,0 +1,13 @@
+{
+  "license": "LICENSE_NONCOMMERCIAL_RESTRICTION_MANUAL_REVIEW_REQUIRED_FOR_RELEASE",
+  "locked_test_available": false,
+  "near_duplicate_pairs": 14514,
+  "phase": "T-B1",
+  "posture_proxy": "LYING_TO_HUMAN_FALL_DERIVED_POSTURE_PROXY",
+  "schema_version": "1.0",
+  "sensitivity_subset": "SENSITIVITY_SUBSET_NOT_MATERIALIZABLE_FROM_CURRENT_COMPACT_EVIDENCE",
+  "subject_generalization": "NOT_VERIFIABLE",
+  "synthetic_real_domain_gap": "LARGE_SYNTHETIC_TO_REAL_DOMAIN_GAP_OBSERVED_NOT_DEPLOYMENT_VALIDATION",
+  "t_b2_authorized": "YES_WITH_LIMITATIONS",
+  "thermal44_domain": "THERMAL44_DOMAIN_UNVERIFIED_DEFERRED_TO_T-C"
+}

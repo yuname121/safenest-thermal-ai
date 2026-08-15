@@ -1,0 +1,20 @@
+{
+  "boundary_fraction": 3.5282258064516127e-07,
+  "frames_with_boundary_value": 14,
+  "frames_with_required_clipping": 6,
+  "interpretation": "BOUNDARY_OCCUPANCY_AND_REQUIRED_CLIPPING_REPORTED; NO_POST_HOC_ACCEPTANCE_THRESHOLD",
+  "lower_boundary_count": 14,
+  "output_boundary_fraction": 0.9812083333333333,
+  "output_dequantized_max": 0.99609375,
+  "output_dequantized_min": 0.0,
+  "output_lower_boundary_count": 15730,
+  "output_total_elements": 24000,
+  "output_upper_boundary_count": 7819,
+  "phase": "T-B4",
+  "required_clipping_count": 6,
+  "required_clipping_fraction": 1.5120967741935485e-07,
+  "role": "VALIDATION",
+  "schema_version": "1.0",
+  "total_elements": 39680000,
+  "upper_boundary_count": 0
+}

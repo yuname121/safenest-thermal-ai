@@ -1,0 +1,10 @@
+{
+  "cross_domain_near_duplicates": "PENDING_COLAB_STAGE2",
+  "status": "PENDING_COLAB_STAGE2",
+  "subject_session_event_generalization": "NOT_VERIFIABLE_SOURCE_PROVENANCE_ABSENT",
+  "train_to_real_exact": "PENDING_COLAB_STAGE2",
+  "train_to_validation_exact": "PENDING_COLAB_STAGE2",
+  "validation_to_real_exact": "PENDING_COLAB_STAGE2",
+  "within_real_exact": "REPORTED_IN_REAL_EXACT_DUPLICATE_AUDIT",
+  "within_real_near": "REPORTED_IN_REAL_NEAR_DUPLICATE_AUDIT"
+}

@@ -1,0 +1,23 @@
+{
+  "broad_exception_swallowing": false,
+  "fail_closed_cases": {
+    "archive_identity_mismatch": "SOURCE_ARCHIVE_IDENTITY_MISMATCH",
+    "archive_missing": "SOURCE_ARCHIVE_NOT_FOUND",
+    "archive_not_materialized": "SOURCE_ARCHIVE_NOT_MATERIALIZED",
+    "bbox_invalid": "BBOX_INVALID",
+    "duplicate_frame_or_member": "SOURCE_FRAME_DUPLICATE or SOURCE_MEMBER_DUPLICATE",
+    "frame_label_mismatch": "FRAME_LABEL_LINKAGE_FAILED",
+    "invalid_label": "LABEL_PARSE_FAILED or LABEL_VALUE_INVALID",
+    "missing_label": "LABEL_FILE_MISSING",
+    "nonfinite_numeric_path": "FRAME_NONFINITE",
+    "path_traversal": "SOURCE_MEMBER_UNEXPECTED or PATH_POLICY_VIOLATION",
+    "truncated_png": "PNG_TRUNCATED",
+    "wrong_channel": "FRAME_CHANNEL_MISMATCH",
+    "wrong_dtype_or_bit_depth": "FRAME_DTYPE_MISMATCH",
+    "wrong_shape": "FRAME_SHAPE_MISMATCH"
+  },
+  "phase": "T-A1",
+  "reader_skips_invalid_samples": false,
+  "saturation_extreme_policy": "Fully constant 0 or 65535 frames fail closed; partial container extrema and other constant frames are flagged; physical saturation threshold NOT_VERIFIABLE",
+  "schema_version": "1.0"
+}

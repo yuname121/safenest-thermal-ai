@@ -1,0 +1,15 @@
+{
+  "full_t_a6_gate": "T_A6_FULL_COMPLETE_WITH_LIMITATIONS",
+  "grouping_limitation": "SUBJECT_SESSION_SEQUENCE_EVENT_NOT_VERIFIABLE_SOURCE_PROVENANCE_ABSENT",
+  "locked_test_available": false,
+  "message": "synthetic TRAIN/VALIDATION and real development reference converted, audited, and determinism-replayed",
+  "phase": "T-A6_COLAB_STAGE2",
+  "roles": [
+    "TRAIN",
+    "VALIDATION",
+    "REAL_EVAL_DEVELOPMENT"
+  ],
+  "schema_version": "1.0",
+  "status": "FULL_AUDIT_COMPLETE_WITH_LIMITATIONS",
+  "t_b_authorized": false
+}

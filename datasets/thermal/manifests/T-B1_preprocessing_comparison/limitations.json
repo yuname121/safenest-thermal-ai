@@ -1,0 +1,20 @@
+{
+  "clinical_or_safety_claim": false,
+  "event_generalization": "NOT_VERIFIABLE",
+  "full_experiment_status": "PENDING_EXTERNAL_SSD_EXECUTION",
+  "human_fall_semantics": "DERIVED_POSTURE_PROXY",
+  "locked_test_available": false,
+  "near_duplicate_pairs": 14514,
+  "near_duplicate_profile": "THERMAL_T_A6_NEAR_DUPLICATE_SCREEN_V1",
+  "official_validation_retained": true,
+  "phase": "T-B1",
+  "raw_sdt_zip_required": false,
+  "real_role": "REAL_EVAL_DEVELOPMENT_ONLY",
+  "schema_version": "1.0",
+  "sensitivity_subset": "SENSITIVITY_SUBSET_NOT_MATERIALIZABLE_FROM_CURRENT_COMPACT_EVIDENCE",
+  "session_generalization": "NOT_VERIFIABLE",
+  "stage1_metrics": "FIXTURE_ONLY_METRICS_ARE_NOT_PROJECT_EVIDENCE",
+  "subject_generalization": "NOT_VERIFIABLE",
+  "temporal_fall_ground_truth": false,
+  "thermal44_equivalence": "DEFERRED_TO_T-C"
+}

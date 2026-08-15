@@ -1,0 +1,2421 @@
+{
+  "audit_scope": "WITHIN_REAL_EVAL_DEVELOPMENT",
+  "audit_sha256": "5f0c15f947e6ea8d1a632fd0e2ea4e0c1971d9f248ee7e532e9c1cc00aa51590",
+  "blocking_key_count": 7281,
+  "candidate_pair_count": 53213,
+  "candidate_pairs_truncated": false,
+  "confirmed_cluster_sample_count": 412,
+  "confirmed_clusters": [
+    {
+      "sample_indices": [
+        6063,
+        6064
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6157,
+        6158
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6161,
+        6163,
+        6164
+      ],
+      "size": 3
+    },
+    {
+      "sample_indices": [
+        6166,
+        6167,
+        6168,
+        6169,
+        6170,
+        6171,
+        6172,
+        6173,
+        6174,
+        6175,
+        6176,
+        6177,
+        6178,
+        6179
+      ],
+      "size": 14
+    },
+    {
+      "sample_indices": [
+        6184,
+        6185
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6188,
+        6189
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6190,
+        6191
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6217,
+        6218
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6220,
+        6221,
+        6222
+      ],
+      "size": 3
+    },
+    {
+      "sample_indices": [
+        6223,
+        6224,
+        6225,
+        6226,
+        6227
+      ],
+      "size": 5
+    },
+    {
+      "sample_indices": [
+        6229,
+        6230
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6253,
+        6254
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6264,
+        6265
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6283,
+        6284
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6292,
+        6293,
+        6294
+      ],
+      "size": 3
+    },
+    {
+      "sample_indices": [
+        6304,
+        6319
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6320,
+        6321
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6322,
+        6323,
+        6324
+      ],
+      "size": 3
+    },
+    {
+      "sample_indices": [
+        6417,
+        6418
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6451,
+        6452
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6472,
+        6474,
+        6511,
+        6512
+      ],
+      "size": 4
+    },
+    {
+      "sample_indices": [
+        6475,
+        6476
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6477,
+        6478,
+        6479,
+        6480,
+        6510
+      ],
+      "size": 5
+    },
+    {
+      "sample_indices": [
+        6482,
+        6483
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6503,
+        6504
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6507,
+        6508
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6530,
+        6531,
+        6532
+      ],
+      "size": 3
+    },
+    {
+      "sample_indices": [
+        6547,
+        6548,
+        6551,
+        6552
+      ],
+      "size": 4
+    },
+    {
+      "sample_indices": [
+        6554,
+        6579
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6555,
+        6556,
+        6557,
+        6558
+      ],
+      "size": 4
+    },
+    {
+      "sample_indices": [
+        6561,
+        6562,
+        6563
+      ],
+      "size": 3
+    },
+    {
+      "sample_indices": [
+        6564,
+        6565,
+        6566,
+        6567
+      ],
+      "size": 4
+    },
+    {
+      "sample_indices": [
+        6570,
+        6572
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6573,
+        6574
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6577,
+        6578
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6605,
+        6606
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6610,
+        6612
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6630,
+        6631
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6637,
+        6638
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6644,
+        6645
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6654,
+        6669,
+        6670,
+        6671,
+        6672,
+        6673,
+        6675,
+        6676,
+        6677,
+        6678,
+        6679,
+        6680,
+        6681,
+        6682,
+        6683,
+        6684,
+        6685
+      ],
+      "size": 17
+    },
+    {
+      "sample_indices": [
+        6655,
+        6656
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6659,
+        6660,
+        6666,
+        6667
+      ],
+      "size": 4
+    },
+    {
+      "sample_indices": [
+        6661,
+        6662
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6726,
+        6727,
+        6728,
+        6729,
+        6730,
+        6882,
+        6883,
+        6884,
+        6887,
+        6888,
+        6889,
+        6890,
+        6891,
+        6892,
+        6893,
+        6894,
+        6896,
+        6897,
+        6898,
+        6899,
+        6900,
+        7199,
+        7221,
+        7222,
+        7223,
+        7224,
+        7229,
+        7234,
+        7235,
+        7236,
+        7237,
+        7238,
+        7282,
+        7318,
+        7319,
+        7575,
+        7576,
+        7577,
+        7578,
+        7579,
+        7580,
+        7581,
+        7582,
+        7593,
+        7594,
+        7595,
+        7596,
+        7645,
+        7670,
+        7671,
+        7672,
+        7673,
+        7674,
+        7675,
+        7676,
+        7677,
+        7678,
+        7679,
+        7680,
+        7681,
+        7682,
+        7683,
+        7684,
+        7685,
+        7686,
+        7687,
+        7688,
+        7689,
+        7690,
+        7691,
+        7699,
+        7704,
+        7705,
+        7706,
+        7707,
+        7708,
+        7727,
+        7728,
+        7729,
+        7730,
+        7731,
+        7732,
+        7738,
+        7739,
+        7740,
+        7741,
+        7742,
+        7743,
+        7744,
+        7745,
+        7746,
+        7747,
+        7748,
+        7749,
+        7750,
+        7758,
+        7759,
+        7760,
+        7761,
+        7762,
+        7763,
+        7767,
+        7768,
+        7769,
+        7770,
+        7771,
+        7772,
+        7773,
+        7774,
+        7775,
+        7776,
+        7778,
+        7779,
+        7780,
+        7781,
+        7782,
+        7783,
+        7800,
+        7801,
+        7802,
+        7803,
+        7804,
+        7805,
+        7806,
+        7807,
+        7808,
+        7809,
+        7810,
+        7814,
+        7815,
+        7816,
+        7823,
+        7825,
+        7826,
+        7828,
+        7829,
+        7833,
+        7834,
+        7835,
+        7837,
+        7838,
+        7839,
+        7840,
+        7841,
+        7842,
+        7843,
+        7844,
+        7845,
+        7847,
+        7848,
+        7849,
+        7850,
+        7851,
+        7852,
+        7853,
+        7854,
+        7855,
+        7856,
+        7857,
+        7862,
+        7863,
+        7864,
+        7865,
+        7866,
+        7867,
+        7868,
+        7871,
+        7874,
+        7881,
+        7886,
+        7887,
+        7899,
+        7900,
+        7901,
+        7963,
+        7970,
+        7971,
+        7972,
+        7973,
+        7974,
+        7975,
+        7978,
+        7979,
+        7980,
+        7981,
+        7982,
+        7983,
+        7984,
+        7985,
+        7986,
+        7987,
+        7988,
+        7989,
+        7990,
+        7991,
+        7992,
+        7993,
+        7994,
+        7995,
+        7997,
+        7998,
+        7999
+      ],
+      "size": 202
+    },
+    {
+      "sample_indices": [
+        6732,
+        6733,
+        6734
+      ],
+      "size": 3
+    },
+    {
+      "sample_indices": [
+        6796,
+        6797
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6825,
+        6826
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6851,
+        6852
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6886,
+        7858
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6909,
+        6910
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6912,
+        6915
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        6986,
+        6992
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        7190,
+        7191
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        7211,
+        7212,
+        7213
+      ],
+      "size": 3
+    },
+    {
+      "sample_indices": [
+        7227,
+        7622,
+        7642,
+        7643,
+        7709,
+        7822,
+        7827
+      ],
+      "size": 7
+    },
+    {
+      "sample_indices": [
+        7240,
+        7241,
+        7242
+      ],
+      "size": 3
+    },
+    {
+      "sample_indices": [
+        7284,
+        7291,
+        7295
+      ],
+      "size": 3
+    },
+    {
+      "sample_indices": [
+        7288,
+        7293
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        7289,
+        7290,
+        7292
+      ],
+      "size": 3
+    },
+    {
+      "sample_indices": [
+        7365,
+        7366
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        7409,
+        7410
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        7486,
+        7487,
+        7488
+      ],
+      "size": 3
+    },
+    {
+      "sample_indices": [
+        7584,
+        7585
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        7615,
+        7694
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        7698,
+        7870
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        7711,
+        7712,
+        7836,
+        7846,
+        7885
+      ],
+      "size": 5
+    },
+    {
+      "sample_indices": [
+        7734,
+        7737
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        7764,
+        7765,
+        7766
+      ],
+      "size": 3
+    },
+    {
+      "sample_indices": [
+        7831,
+        7832
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        7890,
+        7892
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        7931,
+        7932
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        7947,
+        7948
+      ],
+      "size": 2
+    },
+    {
+      "sample_indices": [
+        7976,
+        7977
+      ],
+      "size": 2
+    }
+  ],
+  "confirmed_pair_count": 3143,
+  "confirmed_pairs": [
+    {
+      "left_index": 6063,
+      "mae_celsius": 0.06002296324699156,
+      "max_abs_difference_celsius": 0.7199001312255859,
+      "mean_temperature_difference_celsius": 0.026611934938738813,
+      "right_index": 6064,
+      "rmse_celsius": 0.09255164703212443
+    },
+    {
+      "left_index": 6157,
+      "mae_celsius": 0.06705513615762033,
+      "max_abs_difference_celsius": 0.8553428649902344,
+      "mean_temperature_difference_celsius": 0.028910750727501267,
+      "right_index": 6158,
+      "rmse_celsius": 0.12257082408054494
+    },
+    {
+      "left_index": 6161,
+      "mae_celsius": 0.12200574605695663,
+      "max_abs_difference_celsius": 0.9899578094482422,
+      "mean_temperature_difference_celsius": 0.11587252270791026,
+      "right_index": 6164,
+      "rmse_celsius": 0.15374921445065515
+    },
+    {
+      "left_index": 6163,
+      "mae_celsius": 0.04449662123956988,
+      "max_abs_difference_celsius": 0.782318115234375,
+      "mean_temperature_difference_celsius": 0.008210830919203715,
+      "right_index": 6164,
+      "rmse_celsius": 0.08507561299789765
+    },
+    {
+      "left_index": 6166,
+      "mae_celsius": 0.04692162852133474,
+      "max_abs_difference_celsius": 0.5037097930908203,
+      "mean_temperature_difference_celsius": 0.01759756226693554,
+      "right_index": 6167,
+      "rmse_celsius": 0.06971725411431456
+    },
+    {
+      "left_index": 6166,
+      "mae_celsius": 0.09146922826766968,
+      "max_abs_difference_celsius": 0.8938312530517578,
+      "mean_temperature_difference_celsius": 0.03540249293850195,
+      "right_index": 6168,
+      "rmse_celsius": 0.12378252262908339
+    },
+    {
+      "left_index": 6166,
+      "mae_celsius": 0.11545538171645134,
+      "max_abs_difference_celsius": 0.9447364807128906,
+      "mean_temperature_difference_celsius": 0.010361183458758916,
+      "right_index": 6169,
+      "rmse_celsius": 0.16653750461696262
+    },
+    {
+      "left_index": 6167,
+      "mae_celsius": 0.07742329758982505,
+      "max_abs_difference_celsius": 0.8882865905761719,
+      "mean_temperature_difference_celsius": 0.05300005520543749,
+      "right_index": 6168,
+      "rmse_celsius": 0.1056990258676104
+    },
+    {
+      "left_index": 6167,
+      "mae_celsius": 0.09688149459900394,
+      "max_abs_difference_celsius": 0.9479827880859375,
+      "mean_temperature_difference_celsius": 0.0072363788081766245,
+      "right_index": 6169,
+      "rmse_celsius": 0.14257918931628347
+    },
+    {
+      "left_index": 6168,
+      "mae_celsius": 0.07870546079451038,
+      "max_abs_difference_celsius": 0.9090919494628906,
+      "mean_temperature_difference_celsius": 0.045763676397260866,
+      "right_index": 6169,
+      "rmse_celsius": 0.1189971817507974
+    },
+    {
+      "left_index": 6169,
+      "mae_celsius": 0.06491738327087894,
+      "max_abs_difference_celsius": 0.9072780609130859,
+      "mean_temperature_difference_celsius": 0.045875592770116214,
+      "right_index": 6170,
+      "rmse_celsius": 0.1051814409276885
+    },
+    {
+      "left_index": 6169,
+      "mae_celsius": 0.1450609403271829,
+      "max_abs_difference_celsius": 0.8971576690673828,
+      "mean_temperature_difference_celsius": 0.1348893900071424,
+      "right_index": 6173,
+      "rmse_celsius": 0.18097606068204491
+    },
+    {
+      "left_index": 6169,
+      "mae_celsius": 0.13955756156675278,
+      "max_abs_difference_celsius": 0.8959064483642578,
+      "mean_temperature_difference_celsius": 0.1275631227800922,
+      "right_index": 6174,
+      "rmse_celsius": 0.17397816147786063
+    },
+    {
+      "left_index": 6170,
+      "mae_celsius": 0.047146617212603166,
+      "max_abs_difference_celsius": 0.5629844665527344,
+      "mean_temperature_difference_celsius": 0.038204572277685145,
+      "right_index": 6171,
+      "rmse_celsius": 0.0767221579419542
+    },
+    {
+      "left_index": 6170,
+      "mae_celsius": 0.06695738723201136,
+      "max_abs_difference_celsius": 0.7210884094238281,
+      "mean_temperature_difference_celsius": 0.04768384079779153,
+      "right_index": 6172,
+      "rmse_celsius": 0.09591000171415714
+    },
+    {
+      "left_index": 6170,
+      "mae_celsius": 0.1021740936463879,
+      "max_abs_difference_celsius": 0.8496570587158203,
+      "mean_temperature_difference_celsius": 0.08901379723702618,
+      "right_index": 6173,
+      "rmse_celsius": 0.13755382955851045
+    },
+    {
+      "left_index": 6170,
+      "mae_celsius": 0.09978905531667893,
+      "max_abs_difference_celsius": 0.8636894226074219,
+      "mean_temperature_difference_celsius": 0.08168753000997597,
+      "right_index": 6174,
+      "rmse_celsius": 0.13161262557684106
+    },
+    {
+      "left_index": 6170,
+      "mae_celsius": 0.1102936121725267,
+      "max_abs_difference_celsius": 0.8422985076904297,
+      "mean_temperature_difference_celsius": 0.09595784987172706,
+      "right_index": 6175,
+      "rmse_celsius": 0.14167773141663814
+    },
+    {
+      "left_index": 6170,
+      "mae_celsius": 0.09490651661349882,
+      "max_abs_difference_celsius": 0.8047771453857422,
+      "mean_temperature_difference_celsius": 0.039963910272042824,
+      "right_index": 6176,
+      "rmse_celsius": 0.1283575391530309
+    },
+    {
+      "left_index": 6170,
+      "mae_celsius": 0.09917145929028912,
+      "max_abs_difference_celsius": 0.8018531799316406,
+      "mean_temperature_difference_celsius": 0.05687059587047827,
+      "right_index": 6177,
+      "rmse_celsius": 0.13536746708206238
+    },
+    {
+      "left_index": 6170,
+      "mae_celsius": 0.10618122777631206,
+      "max_abs_difference_celsius": 0.8166332244873047,
+      "mean_temperature_difference_celsius": 0.07307578825181338,
+      "right_index": 6178,
+      "rmse_celsius": 0.14281702891867126
+    },
+    {
+      "left_index": 6170,
+      "mae_celsius": 0.10404183095501315,
+      "max_abs_difference_celsius": 0.8884258270263672,
+      "mean_temperature_difference_celsius": 0.06295558714097638,
+      "right_index": 6179,
+      "rmse_celsius": 0.14175725966741964
+    },
+    {
+      "left_index": 6171,
+      "mae_celsius": 0.03892963124859718,
+      "max_abs_difference_celsius": 0.5771369934082031,
+      "mean_temperature_difference_celsius": 0.009479268520106388,
+      "right_index": 6172,
+      "rmse_celsius": 0.0627430190661417
+    },
+    {
+      "left_index": 6171,
+      "mae_celsius": 0.07341941864259781,
+      "max_abs_difference_celsius": 0.7981643676757812,
+      "mean_temperature_difference_celsius": 0.05080922495934104,
+      "right_index": 6173,
+      "rmse_celsius": 0.11220931465040349
+    },
+    {
+      "left_index": 6171,
+      "mae_celsius": 0.07673323654359387,
+      "max_abs_difference_celsius": 0.7249984741210938,
+      "mean_temperature_difference_celsius": 0.04348295773229083,
+      "right_index": 6174,
+      "rmse_celsius": 0.11032195871967393
+    },
+    {
+      "left_index": 6171,
+      "mae_celsius": 0.08082394369186893,
+      "max_abs_difference_celsius": 0.6516742706298828,
+      "mean_temperature_difference_celsius": 0.05775327759404192,
+      "right_index": 6175,
+      "rmse_celsius": 0.10801740769985446
+    },
+    {
+      "left_index": 6171,
+      "mae_celsius": 0.07601725093780025,
+      "max_abs_difference_celsius": 0.592559814453125,
+      "mean_temperature_difference_celsius": 0.0017593379943576792,
+      "right_index": 6176,
+      "rmse_celsius": 0.10039749248237125
+    },
+    {
+      "left_index": 6171,
+      "mae_celsius": 0.07802789903456164,
+      "max_abs_difference_celsius": 0.6222972869873047,
+      "mean_temperature_difference_celsius": 0.018666023592793124,
+      "right_index": 6177,
+      "rmse_celsius": 0.10570194430749447
+    },
+    {
+      "left_index": 6171,
+      "mae_celsius": 0.0809164777878792,
+      "max_abs_difference_celsius": 0.6368541717529297,
+      "mean_temperature_difference_celsius": 0.034871215974128233,
+      "right_index": 6178,
+      "rmse_celsius": 0.10881588153121764
+    },
+    {
+      "left_index": 6171,
+      "mae_celsius": 0.07794808341610816,
+      "max_abs_difference_celsius": 0.6048393249511719,
+      "mean_temperature_difference_celsius": 0.024751014863291232,
+      "right_index": 6179,
+      "rmse_celsius": 0.10483758424126806
+    },
+    {
+      "left_index": 6172,
+      "mae_celsius": 0.050094627949499315,
+      "max_abs_difference_celsius": 0.6369762420654297,
+      "mean_temperature_difference_celsius": 0.04132995643923465,
+      "right_index": 6173,
+      "rmse_celsius": 0.07804819873323009
+    },
+    {
+      "left_index": 6172,
+      "mae_celsius": 0.057322178348418205,
+      "max_abs_difference_celsius": 0.5318737030029297,
+      "mean_temperature_difference_celsius": 0.03400368921218444,
+      "right_index": 6174,
+      "rmse_celsius": 0.0790657252055236
+    },
+    {
+      "left_index": 6172,
+      "mae_celsius": 0.06392864219604,
+      "max_abs_difference_celsius": 0.42842674255371094,
+      "mean_temperature_difference_celsius": 0.04827400907393553,
+      "right_index": 6175,
+      "rmse_celsius": 0.08125091361349585
+    },
+    {
+      "left_index": 6172,
+      "mae_celsius": 0.06678532477348081,
+      "max_abs_difference_celsius": 0.5450191497802734,
+      "mean_temperature_difference_celsius": 0.007719930525748708,
+      "right_index": 6176,
+      "rmse_celsius": 0.08847481206509553
+    },
+    {
+      "left_index": 6172,
+      "mae_celsius": 0.06548423651726015,
+      "max_abs_difference_celsius": 0.5824604034423828,
+      "mean_temperature_difference_celsius": 0.009186755072686736,
+      "right_index": 6177,
+      "rmse_celsius": 0.08680232335324778
+    },
+    {
+      "left_index": 6172,
+      "mae_celsius": 0.06732660301270023,
+      "max_abs_difference_celsius": 0.5230655670166016,
+      "mean_temperature_difference_celsius": 0.025391947454021846,
+      "right_index": 6178,
+      "rmse_celsius": 0.08835904988058779
+    },
+    {
+      "left_index": 6172,
+      "mae_celsius": 0.0695668593529732,
+      "max_abs_difference_celsius": 0.6588497161865234,
+      "mean_temperature_difference_celsius": 0.015271746343184844,
+      "right_index": 6179,
+      "rmse_celsius": 0.09575498559752346
+    },
+    {
+      "left_index": 6173,
+      "mae_celsius": 0.031738632340585035,
+      "max_abs_difference_celsius": 0.27375030517578125,
+      "mean_temperature_difference_celsius": 0.007326267227050209,
+      "right_index": 6174,
+      "rmse_celsius": 0.046907532907835385
+    },
+    {
+      "left_index": 6173,
+      "mae_celsius": 0.045242974065965225,
+      "max_abs_difference_celsius": 0.6515922546386719,
+      "mean_temperature_difference_celsius": 0.006944052634700881,
+      "right_index": 6175,
+      "rmse_celsius": 0.06728989178034579
+    },
+    {
+      "left_index": 6173,
+      "mae_celsius": 0.08202009239504414,
+      "max_abs_difference_celsius": 0.7452430725097656,
+      "mean_temperature_difference_celsius": 0.04904988696498336,
+      "right_index": 6176,
+      "rmse_celsius": 0.11822542469804777
+    },
+    {
+      "left_index": 6173,
+      "mae_celsius": 0.07333491925270327,
+      "max_abs_difference_celsius": 0.7017345428466797,
+      "mean_temperature_difference_celsius": 0.03214320136654791,
+      "right_index": 6177,
+      "rmse_celsius": 0.10345023096135836
+    },
+    {
+      "left_index": 6173,
+      "mae_celsius": 0.0680533678300919,
+      "max_abs_difference_celsius": 0.735626220703125,
+      "mean_temperature_difference_celsius": 0.015938008985212804,
+      "right_index": 6178,
+      "rmse_celsius": 0.09824929027663869
+    },
+    {
+      "left_index": 6173,
+      "mae_celsius": 0.07760288869180987,
+      "max_abs_difference_celsius": 0.9206867218017578,
+      "mean_temperature_difference_celsius": 0.026058210096049805,
+      "right_index": 6179,
+      "rmse_celsius": 0.12130826772932525
+    },
+    {
+      "left_index": 6174,
+      "mae_celsius": 0.03380655204096148,
+      "max_abs_difference_celsius": 0.717498779296875,
+      "mean_temperature_difference_celsius": 0.01427031986175109,
+      "right_index": 6175,
+      "rmse_celsius": 0.05829783989919507
+    },
+    {
+      "left_index": 6174,
+      "mae_celsius": 0.07645123620187083,
+      "max_abs_difference_celsius": 0.7689723968505859,
+      "mean_temperature_difference_celsius": 0.04172361973793315,
+      "right_index": 6176,
+      "rmse_celsius": 0.11057002602211495
+    },
+    {
+      "left_index": 6174,
+      "mae_celsius": 0.06951188771955429,
+      "max_abs_difference_celsius": 0.7489719390869141,
+      "mean_temperature_difference_celsius": 0.024816934139497704,
+      "right_index": 6177,
+      "rmse_celsius": 0.09819166604552303
+    },
+    {
+      "left_index": 6174,
+      "mae_celsius": 0.06530131024699057,
+      "max_abs_difference_celsius": 0.8074989318847656,
+      "mean_temperature_difference_celsius": 0.008611741758162594,
+      "right_index": 6178,
+      "rmse_celsius": 0.09448742123481418
+    },
+    {
+      "left_index": 6174,
+      "mae_celsius": 0.07525295480605095,
+      "max_abs_difference_celsius": 0.8610076904296875,
+      "mean_temperature_difference_celsius": 0.018731942868999596,
+      "right_index": 6179,
+      "rmse_celsius": 0.11683771020813595
+    },
+    {
+      "left_index": 6175,
+      "mae_celsius": 0.07202404122198781,
+      "max_abs_difference_celsius": 0.5310287475585938,
+      "mean_temperature_difference_celsius": 0.05599393959968424,
+      "right_index": 6176,
+      "rmse_celsius": 0.09617151776835756
+    },
+    {
+      "left_index": 6175,
+      "mae_celsius": 0.06351932248761577,
+      "max_abs_difference_celsius": 0.5727825164794922,
+      "mean_temperature_difference_celsius": 0.039087254001248795,
+      "right_index": 6177,
+      "rmse_celsius": 0.08262587911955672
+    },
+    {
+      "left_index": 6175,
+      "mae_celsius": 0.05745441067603327,
+      "max_abs_difference_celsius": 0.48872947692871094,
+      "mean_temperature_difference_celsius": 0.022882061619913685,
+      "right_index": 6178,
+      "rmse_celsius": 0.07532321746268308
+    },
+    {
+      "left_index": 6175,
+      "mae_celsius": 0.06873329454852689,
+      "max_abs_difference_celsius": 0.6381244659423828,
+      "mean_temperature_difference_celsius": 0.03300226273075069,
+      "right_index": 6179,
+      "rmse_celsius": 0.09741924988653264
+    },
+    {
+      "left_index": 6176,
+      "mae_celsius": 0.03621990180784656,
+      "max_abs_difference_celsius": 0.36274147033691406,
+      "mean_temperature_difference_celsius": 0.016906685598435445,
+      "right_index": 6177,
+      "rmse_celsius": 0.05472540093880241
+    },
+    {
+      "left_index": 6176,
+      "mae_celsius": 0.04859853060014786,
+      "max_abs_difference_celsius": 0.36580657958984375,
+      "mean_temperature_difference_celsius": 0.033111877979770554,
+      "right_index": 6178,
+      "rmse_celsius": 0.06717916936718084
+    },
+    {
+      "left_index": 6176,
+      "mae_celsius": 0.056807938314253285,
+      "max_abs_difference_celsius": 0.42241859436035156,
+      "mean_temperature_difference_celsius": 0.022991676868933553,
+      "right_index": 6179,
+      "rmse_celsius": 0.07549916695960424
+    },
+    {
+      "left_index": 6177,
+      "mae_celsius": 0.022119523632910944,
+      "max_abs_difference_celsius": 0.24080657958984375,
+      "mean_temperature_difference_celsius": 0.01620519238133511,
+      "right_index": 6178,
+      "rmse_celsius": 0.03499786606261692
+    },
+    {
+      "left_index": 6177,
+      "mae_celsius": 0.04695826653511293,
+      "max_abs_difference_celsius": 0.49677276611328125,
+      "mean_temperature_difference_celsius": 0.006084991270498108,
+      "right_index": 6179,
+      "rmse_celsius": 0.06803140998319984
+    },
+    {
+      "left_index": 6178,
+      "mae_celsius": 0.039633861664802796,
+      "max_abs_difference_celsius": 0.5203018188476562,
+      "mean_temperature_difference_celsius": 0.010120201110837002,
+      "right_index": 6179,
+      "rmse_celsius": 0.06270169813154293
+    },
+    {
+      "left_index": 6184,
+      "mae_celsius": 0.03443960835856776,
+      "max_abs_difference_celsius": 0.47016143798828125,
+      "mean_temperature_difference_celsius": 0.013512636000111655,
+      "right_index": 6185,
+      "rmse_celsius": 0.05946142318136309
+    },
+    {
+      "left_index": 6188,
+      "mae_celsius": 0.07696401919088056,
+      "max_abs_difference_celsius": 0.9931049346923828,
+      "mean_temperature_difference_celsius": 0.05433783761916544,
+      "right_index": 6189,
+      "rmse_celsius": 0.11871894944345414
+    },
+    {
+      "left_index": 6190,
+      "mae_celsius": 0.05420979069125268,
+      "max_abs_difference_celsius": 0.6550407409667969,
+      "mean_temperature_difference_celsius": 0.027405544250239444,
+      "right_index": 6191,
+      "rmse_celsius": 0.08380630789669294
+    },
+    {
+      "left_index": 6217,
+      "mae_celsius": 0.03925151517314296,
+      "max_abs_difference_celsius": 0.9000015258789062,
+      "mean_temperature_difference_celsius": 0.006019007775091012,
+      "right_index": 6218,
+      "rmse_celsius": 0.07886084164804519
+    },
+    {
+      "left_index": 6220,
+      "mae_celsius": 0.07358497304301108,
+      "max_abs_difference_celsius": 0.9198780059814453,
+      "mean_temperature_difference_celsius": 0.06332139392053193,
+      "right_index": 6221,
+      "rmse_celsius": 0.11467555638753459
+    },
+    {
+      "left_index": 6220,
+      "mae_celsius": 0.11575516808417535,
+      "max_abs_difference_celsius": 0.9467735290527344,
+      "mean_temperature_difference_celsius": 0.10812163660603247,
+      "right_index": 6222,
+      "rmse_celsius": 0.15459285041264528
+    },
+    {
+      "left_index": 6221,
+      "mae_celsius": 0.06221006877960697,
+      "max_abs_difference_celsius": 0.9689521789550781,
+      "mean_temperature_difference_celsius": 0.044800242685500535,
+      "right_index": 6222,
+      "rmse_celsius": 0.10882637565522994
+    },
+    {
+      "left_index": 6223,
+      "mae_celsius": 0.06516704443962343,
+      "max_abs_difference_celsius": 0.9024181365966797,
+      "mean_temperature_difference_celsius": 0.006547155303337604,
+      "right_index": 6224,
+      "rmse_celsius": 0.11520894272565024
+    },
+    {
+      "left_index": 6224,
+      "mae_celsius": 0.06414572308140416,
+      "max_abs_difference_celsius": 0.8734874725341797,
+      "mean_temperature_difference_celsius": 0.003031183442764984,
+      "right_index": 6225,
+      "rmse_celsius": 0.11333852639196765
+    },
+    {
+      "left_index": 6224,
+      "mae_celsius": 0.08384300970262097,
+      "max_abs_difference_celsius": 0.9044551849365234,
+      "mean_temperature_difference_celsius": 0.009743119824317859,
+      "right_index": 6226,
+      "rmse_celsius": 0.14068884784858432
+    },
+    {
+      "left_index": 6224,
+      "mae_celsius": 0.09061898146906207,
+      "max_abs_difference_celsius": 0.9278430938720703,
+      "mean_temperature_difference_celsius": 0.00971336018654867,
+      "right_index": 6227,
+      "rmse_celsius": 0.1369823463951611
+    },
+    {
+      "left_index": 6225,
+      "mae_celsius": 0.03321791810374106,
+      "max_abs_difference_celsius": 0.5537490844726562,
+      "mean_temperature_difference_celsius": 0.006711936381552874,
+      "right_index": 6226,
+      "rmse_celsius": 0.062044622350470334
+    },
+    {
+      "left_index": 6225,
+      "mae_celsius": 0.06329857610887096,
+      "max_abs_difference_celsius": 0.8955650329589844,
+      "mean_temperature_difference_celsius": 0.006682176743783685,
+      "right_index": 6227,
+      "rmse_celsius": 0.1035354043927703
+    },
+    {
+      "left_index": 6226,
+      "mae_celsius": 0.05225205921357678,
+      "max_abs_difference_celsius": 0.9218349456787109,
+      "mean_temperature_difference_celsius": 2.9759637769188885e-05,
+      "right_index": 6227,
+      "rmse_celsius": 0.10114865927285042
+    },
+    {
+      "left_index": 6229,
+      "mae_celsius": 0.047426927089691165,
+      "max_abs_difference_celsius": 0.6330642700195312,
+      "mean_temperature_difference_celsius": 0.01298815473433379,
+      "right_index": 6230,
+      "rmse_celsius": 0.07723424180923005
+    },
+    {
+      "left_index": 6253,
+      "mae_celsius": 0.0510546741947051,
+      "max_abs_difference_celsius": 0.7872371673583984,
+      "mean_temperature_difference_celsius": 0.0018141096638082388,
+      "right_index": 6254,
+      "rmse_celsius": 0.08499234035627758
+    },
+    {
+      "left_index": 6264,
+      "mae_celsius": 0.03557309143004879,
+      "max_abs_difference_celsius": 0.7832450866699219,
+      "mean_temperature_difference_celsius": 0.01814831264557526,
+      "right_index": 6265,
+      "rmse_celsius": 0.07162235665163276
+    },
+    {
+      "left_index": 6283,
+      "mae_celsius": 0.050049058083565,
+      "max_abs_difference_celsius": 0.6364116668701172,
+      "mean_temperature_difference_celsius": 0.016891056491481038,
+      "right_index": 6284,
+      "rmse_celsius": 0.07445579822069447
+    },
+    {
+      "left_index": 6292,
+      "mae_celsius": 0.04526742196852161,
+      "max_abs_difference_celsius": 0.6489524841308594,
+      "mean_temperature_difference_celsius": 0.024410353168363486,
+      "right_index": 6293,
+      "rmse_celsius": 0.07058938308279415
+    },
+    {
+      "left_index": 6292,
+      "mae_celsius": 0.053958790533004265,
+      "max_abs_difference_celsius": 0.5340919494628906,
+      "mean_temperature_difference_celsius": 0.014278179599394036,
+      "right_index": 6294,
+      "rmse_celsius": 0.07308349960264271
+    },
+    {
+      "left_index": 6293,
+      "mae_celsius": 0.03747819469821068,
+      "max_abs_difference_celsius": 0.5967540740966797,
+      "mean_temperature_difference_celsius": 0.01013217356896945,
+      "right_index": 6294,
+      "rmse_celsius": 0.060653623708586325
+    },
+    {
+      "left_index": 6304,
+      "mae_celsius": 0.09547433622421757,
+      "max_abs_difference_celsius": 0.9600009918212891,
+      "mean_temperature_difference_celsius": 0.023034707192451265,
+      "right_index": 6319,
+      "rmse_celsius": 0.13233996589450478
+    },
+    {
+      "left_index": 6320,
+      "mae_celsius": 0.051911272156623105,
+      "max_abs_difference_celsius": 0.9080238342285156,
+      "mean_temperature_difference_celsius": 0.008978642571356943,
+      "right_index": 6321,
+      "rmse_celsius": 0.09606959049108392
+    },
+    {
+      "left_index": 6322,
+      "mae_celsius": 0.03959344125563099,
+      "max_abs_difference_celsius": 0.7566947937011719,
+      "mean_temperature_difference_celsius": 0.009632219037701617,
+      "right_index": 6323,
+      "rmse_celsius": 0.07761072075127488
+    },
+    {
+      "left_index": 6323,
+      "mae_celsius": 0.06751548859380907,
+      "max_abs_difference_celsius": 0.9795761108398438,
+      "mean_temperature_difference_celsius": 0.014495915751304267,
+      "right_index": 6324,
+      "rmse_celsius": 0.11946702177421836
+    },
+    {
+      "left_index": 6417,
+      "mae_celsius": 0.0598798317293967,
+      "max_abs_difference_celsius": 0.9427814483642578,
+      "mean_temperature_difference_celsius": 0.029454504674482962,
+      "right_index": 6418,
+      "rmse_celsius": 0.10680478645167815
+    },
+    {
+      "left_index": 6451,
+      "mae_celsius": 0.06631179894170454,
+      "max_abs_difference_celsius": 0.9752216339111328,
+      "mean_temperature_difference_celsius": 0.014448720024478945,
+      "right_index": 6452,
+      "rmse_celsius": 0.11767337726547578
+    },
+    {
+      "left_index": 6472,
+      "mae_celsius": 0.17132087830574283,
+      "max_abs_difference_celsius": 0.9032268524169922,
+      "mean_temperature_difference_celsius": 0.14697741308519596,
+      "right_index": 6511,
+      "rmse_celsius": 0.21856734841054645
+    },
+    {
+      "left_index": 6472,
+      "mae_celsius": 0.1703216229715655,
+      "max_abs_difference_celsius": 0.9780845642089844,
+      "mean_temperature_difference_celsius": 0.1397392211421824,
+      "right_index": 6512,
+      "rmse_celsius": 0.2233676285639861
+    },
+    {
+      "left_index": 6474,
+      "mae_celsius": 0.11131140608941355,
+      "max_abs_difference_celsius": 0.9920158386230469,
+      "mean_temperature_difference_celsius": 0.03423873263020383,
+      "right_index": 6511,
+      "rmse_celsius": 0.15226646756422602
+    },
+    {
+      "left_index": 6474,
+      "mae_celsius": 0.09461594666204144,
+      "max_abs_difference_celsius": 0.9283866882324219,
+      "mean_temperature_difference_celsius": 0.027000540687190266,
+      "right_index": 6512,
+      "rmse_celsius": 0.12340364513390746
+    },
+    {
+      "left_index": 6475,
+      "mae_celsius": 0.04487955993221652,
+      "max_abs_difference_celsius": 0.9303417205810547,
+      "mean_temperature_difference_celsius": 0.0030095788740354124,
+      "right_index": 6476,
+      "rmse_celsius": 0.09367365613448443
+    },
+    {
+      "left_index": 6477,
+      "mae_celsius": 0.056766650753636516,
+      "max_abs_difference_celsius": 0.8365135192871094,
+      "mean_temperature_difference_celsius": 0.01947010332538568,
+      "right_index": 6478,
+      "rmse_celsius": 0.09646802096948043
+    },
+    {
+      "left_index": 6477,
+      "mae_celsius": 0.10557485549680648,
+      "max_abs_difference_celsius": 0.8554439544677734,
+      "mean_temperature_difference_celsius": 0.05529155423564447,
+      "right_index": 6510,
+      "rmse_celsius": 0.135536426969624
+    },
+    {
+      "left_index": 6478,
+      "mae_celsius": 0.06702008439648537,
+      "max_abs_difference_celsius": 0.9811477661132812,
+      "mean_temperature_difference_celsius": 0.019286436034786192,
+      "right_index": 6479,
+      "rmse_celsius": 0.1179013822417856
+    },
+    {
+      "left_index": 6478,
+      "mae_celsius": 0.09215792725163122,
+      "max_abs_difference_celsius": 0.9324588775634766,
+      "mean_temperature_difference_celsius": 0.010797254116301502,
+      "right_index": 6480,
+      "rmse_celsius": 0.14438553831794304
+    },
+    {
+      "left_index": 6478,
+      "mae_celsius": 0.0981019627663397,
+      "max_abs_difference_celsius": 0.8061294555664062,
+      "mean_temperature_difference_celsius": 0.03582145091025879,
+      "right_index": 6510,
+      "rmse_celsius": 0.13163573825673536
+    },
+    {
+      "left_index": 6479,
+      "mae_celsius": 0.049764832373588315,
+      "max_abs_difference_celsius": 0.7549800872802734,
+      "mean_temperature_difference_celsius": 0.00848918191848469,
+      "right_index": 6480,
+      "rmse_celsius": 0.08135897128253074
+    },
+    {
+      "left_index": 6482,
+      "mae_celsius": 0.047607070399868875,
+      "max_abs_difference_celsius": 0.7483062744140625,
+      "mean_temperature_difference_celsius": 0.009498416223834738,
+      "right_index": 6483,
+      "rmse_celsius": 0.08285404745874554
+    },
+    {
+      "left_index": 6503,
+      "mae_celsius": 0.04926891249995078,
+      "max_abs_difference_celsius": 0.6896381378173828,
+      "mean_temperature_difference_celsius": 0.006344855216241285,
+      "right_index": 6504,
+      "rmse_celsius": 0.07951179909769482
+    },
+    {
+      "left_index": 6507,
+      "mae_celsius": 0.06086649971623575,
+      "max_abs_difference_celsius": 0.9629230499267578,
+      "mean_temperature_difference_celsius": 0.007483646177476544,
+      "right_index": 6508,
+      "rmse_celsius": 0.11251503829573173
+    },
+    {
+      "left_index": 6511,
+      "mae_celsius": 0.05954490707766625,
+      "max_abs_difference_celsius": 0.8733482360839844,
+      "mean_temperature_difference_celsius": 0.007238191943013561,
+      "right_index": 6512,
+      "rmse_celsius": 0.100553581317564
+    },
+    {
+      "left_index": 6530,
+      "mae_celsius": 0.03374083388236261,
+      "max_abs_difference_celsius": 0.6061496734619141,
+      "mean_temperature_difference_celsius": 0.027152067230595378,
+      "right_index": 6531,
+      "rmse_celsius": 0.061983269003898146
+    },
+    {
+      "left_index": 6530,
+      "mae_celsius": 0.07062722136897426,
+      "max_abs_difference_celsius": 0.9172382354736328,
+      "mean_temperature_difference_celsius": 0.02481664957538854,
+      "right_index": 6532,
+      "rmse_celsius": 0.11048431730720806
+    },
+    {
+      "left_index": 6531,
+      "mae_celsius": 0.05378950334364368,
+      "max_abs_difference_celsius": 0.9318161010742188,
+      "mean_temperature_difference_celsius": 0.0023354176552068395,
+      "right_index": 6532,
+      "rmse_celsius": 0.08966781082780918
+    },
+    {
+      "left_index": 6547,
+      "mae_celsius": 0.04110176601717549,
+      "max_abs_difference_celsius": 0.5985679626464844,
+      "mean_temperature_difference_celsius": 0.016188737269370534,
+      "right_index": 6548,
+      "rmse_celsius": 0.0693625526079461
+    },
+    {
+      "left_index": 6547,
+      "mae_celsius": 0.11264097652127666,
+      "max_abs_difference_celsius": 0.9680042266845703,
+      "mean_temperature_difference_celsius": 0.07553772272602188,
+      "right_index": 6551,
+      "rmse_celsius": 0.16250117463804792
+    },
+    {
+      "left_index": 6551,
+      "mae_celsius": 0.11043722052727976,
+      "max_abs_difference_celsius": 0.9201011657714844,
+      "mean_temperature_difference_celsius": 0.05693679201987578,
+      "right_index": 6552,
+      "rmse_celsius": 0.173061014499146
+    },
+    {
+      "left_index": 6554,
+      "mae_celsius": 0.1505500389683631,
+      "max_abs_difference_celsius": 0.9233684539794922,
+      "mean_temperature_difference_celsius": 0.050396215146587764,
+      "right_index": 6579,
+      "rmse_celsius": 0.19753847023383575
+    },
+    {
+      "left_index": 6555,
+      "mae_celsius": 0.08196033700819938,
+      "max_abs_difference_celsius": 0.9874801635742188,
+      "mean_temperature_difference_celsius": 0.06027400224439461,
+      "right_index": 6556,
+      "rmse_celsius": 0.13404430588737304
+    },
+    {
+      "left_index": 6555,
+      "mae_celsius": 0.1022676775532384,
+      "max_abs_difference_celsius": 0.8377017974853516,
+      "mean_temperature_difference_celsius": 0.06429791065954404,
+      "right_index": 6557,
+      "rmse_celsius": 0.14478634570715135
+    },
+    {
+      "left_index": 6555,
+      "mae_celsius": 0.10833967116571241,
+      "max_abs_difference_celsius": 0.9719371795654297,
+      "mean_temperature_difference_celsius": 0.030913413724590555,
+      "right_index": 6558,
+      "rmse_celsius": 0.15678206811666603
+    },
+    {
+      "left_index": 6556,
+      "mae_celsius": 0.06268096470063733,
+      "max_abs_difference_celsius": 0.6871376037597656,
+      "mean_temperature_difference_celsius": 0.004023908415149435,
+      "right_index": 6557,
+      "rmse_celsius": 0.08816316744937594
+    },
+    {
+      "left_index": 6561,
+      "mae_celsius": 0.06307980437432566,
+      "max_abs_difference_celsius": 0.8331871032714844,
+      "mean_temperature_difference_celsius": 0.024209081357525974,
+      "right_index": 6562,
+      "rmse_celsius": 0.10167275159001067
+    },
+    {
+      "left_index": 6561,
+      "mae_celsius": 0.09030769371217297,
+      "max_abs_difference_celsius": 0.9810695648193359,
+      "mean_temperature_difference_celsius": 0.036903772431035264,
+      "right_index": 6563,
+      "rmse_celsius": 0.1347622481650339
+    },
+    {
+      "left_index": 6562,
+      "mae_celsius": 0.056778074079944243,
+      "max_abs_difference_celsius": 0.8491535186767578,
+      "mean_temperature_difference_celsius": 0.01269469107350929,
+      "right_index": 6563,
+      "rmse_celsius": 0.08728257855872087
+    },
+    {
+      "left_index": 6564,
+      "mae_celsius": 0.06959244282014908,
+      "max_abs_difference_celsius": 0.8917140960693359,
+      "mean_temperature_difference_celsius": 0.04247427986514296,
+      "right_index": 6565,
+      "rmse_celsius": 0.11005149599387473
+    },
+    {
+      "left_index": 6564,
+      "mae_celsius": 0.09448075025312362,
+      "max_abs_difference_celsius": 0.9714317321777344,
+      "mean_temperature_difference_celsius": 0.05046684165154858,
+      "right_index": 6566,
+      "rmse_celsius": 0.13958866806404124
+    },
+    {
+      "left_index": 6565,
+      "mae_celsius": 0.04055896151450372,
+      "max_abs_difference_celsius": 0.6136493682861328,
+      "mean_temperature_difference_celsius": 0.007992561786405616,
+      "right_index": 6566,
+      "rmse_celsius": 0.06465357266218423
+    },
+    {
+      "left_index": 6565,
+      "mae_celsius": 0.08150378734834733,
+      "max_abs_difference_celsius": 0.8599987030029297,
+      "mean_temperature_difference_celsius": 0.03615760880131802,
+      "right_index": 6567,
+      "rmse_celsius": 0.12185105733944804
+    },
+    {
+      "left_index": 6566,
+      "mae_celsius": 0.06757565582952192,
+      "max_abs_difference_celsius": 0.7806243896484375,
+      "mean_temperature_difference_celsius": 0.044150170587723636,
+      "right_index": 6567,
+      "rmse_celsius": 0.09922182299972485
+    },
+    {
+      "left_index": 6570,
+      "mae_celsius": 0.10386269054105204,
+      "max_abs_difference_celsius": 0.9838905334472656,
+      "mean_temperature_difference_celsius": 0.01884312514335562,
+      "right_index": 6572,
+      "rmse_celsius": 0.1565154343564701
+    },
+    {
+      "left_index": 6573,
+      "mae_celsius": 0.058987854757616594,
+      "max_abs_difference_celsius": 0.47907257080078125,
+      "mean_temperature_difference_celsius": 0.03803436025496154,
+      "right_index": 6574,
+      "rmse_celsius": 0.08566538435273878
+    },
+    {
+      "left_index": 6577,
+      "mae_celsius": 0.11924164218287314,
+      "max_abs_difference_celsius": 0.9735488891601562,
+      "mean_temperature_difference_celsius": 0.017565271931310633,
+      "right_index": 6578,
+      "rmse_celsius": 0.17913317347230887
+    },
+    {
+      "left_index": 6605,
+      "mae_celsius": 0.046561611083246045,
+      "max_abs_difference_celsius": 0.8391933441162109,
+      "mean_temperature_difference_celsius": 0.020360306001478534,
+      "right_index": 6606,
+      "rmse_celsius": 0.0813310944647971
+    },
+    {
+      "left_index": 6610,
+      "mae_celsius": 0.09693879927358319,
+      "max_abs_difference_celsius": 0.6897163391113281,
+      "mean_temperature_difference_celsius": 0.01244714337010322,
+      "right_index": 6612,
+      "rmse_celsius": 0.13072118066911517
+    },
+    {
+      "left_index": 6630,
+      "mae_celsius": 0.045650227992765365,
+      "max_abs_difference_celsius": 0.8721160888671875,
+      "mean_temperature_difference_celsius": 0.01088664416343832,
+      "right_index": 6631,
+      "rmse_celsius": 0.09689508202415573
+    },
+    {
+      "left_index": 6637,
+      "mae_celsius": 0.041645374221186485,
+      "max_abs_difference_celsius": 0.8949794769287109,
+      "mean_temperature_difference_celsius": 0.004144378246799363,
+      "right_index": 6638,
+      "rmse_celsius": 0.08249071768014825
+    },
+    {
+      "left_index": 6644,
+      "mae_celsius": 0.02805016848348802,
+      "max_abs_difference_celsius": 0.7124996185302734,
+      "mean_temperature_difference_celsius": 0.004297683700439592,
+      "right_index": 6645,
+      "rmse_celsius": 0.05688932378805098
+    },
+    {
+      "left_index": 6654,
+      "mae_celsius": 0.1393289073821037,
+      "max_abs_difference_celsius": 0.9524993896484375,
+      "mean_temperature_difference_celsius": 0.07724265821518372,
+      "right_index": 6669,
+      "rmse_celsius": 0.18811694940184356
+    },
+    {
+      "left_index": 6655,
+      "mae_celsius": 0.08924522938266877,
+      "max_abs_difference_celsius": 0.9872970581054688,
+      "mean_temperature_difference_celsius": 0.007699309625934347,
+      "right_index": 6656,
+      "rmse_celsius": 0.15778474823864092
+    },
+    {
+      "left_index": 6659,
+      "mae_celsius": 0.06485143784553773,
+      "max_abs_difference_celsius": 0.8630847930908203,
+      "mean_temperature_difference_celsius": 0.027561009314752027,
+      "right_index": 6660,
+      "rmse_celsius": 0.10226966900530175
+    },
+    {
+      "left_index": 6659,
+      "mae_celsius": 0.11116623493932909,
+      "max_abs_difference_celsius": 0.8637905120849609,
+      "mean_temperature_difference_celsius": 0.0735440923321633,
+      "right_index": 6666,
+      "rmse_celsius": 0.14581945621542067
+    },
+    {
+      "left_index": 6659,
+      "mae_celsius": 0.09870561322858257,
+      "max_abs_difference_celsius": 0.9766731262207031,
+      "mean_temperature_difference_celsius": 0.06190381280837798,
+      "right_index": 6667,
+      "rmse_celsius": 0.14282046247324812
+    },
+    {
+      "left_index": 6660,
+      "mae_celsius": 0.09998281309681555,
+      "max_abs_difference_celsius": 0.9164714813232422,
+      "mean_temperature_difference_celsius": 0.045983083017411275,
+      "right_index": 6666,
+      "rmse_celsius": 0.14269515846331718
+    },
+    {
+      "left_index": 6661,
+      "mae_celsius": 0.054174706628245695,
+      "max_abs_difference_celsius": 0.8564929962158203,
+      "mean_temperature_difference_celsius": 0.02180363939654484,
+      "right_index": 6662,
+      "rmse_celsius": 0.08814447648389116
+    },
+    {
+      "left_index": 6669,
+      "mae_celsius": 0.06140169866623417,
+      "max_abs_difference_celsius": 0.7443962097167969,
+      "mean_temperature_difference_celsius": 0.02234658887309493,
+      "right_index": 6670,
+      "rmse_celsius": 0.09911077091288541
+    },
+    {
+      "left_index": 6669,
+      "mae_celsius": 0.1540387095943574,
+      "max_abs_difference_celsius": 0.890625,
+      "mean_temperature_difference_celsius": 0.024781796624584018,
+      "right_index": 6676,
+      "rmse_celsius": 0.20086095666491038
+    },
+    {
+      "left_index": 6670,
+      "mae_celsius": 0.05781057111678585,
+      "max_abs_difference_celsius": 0.9224796295166016,
+      "mean_temperature_difference_celsius": 0.02445044132970864,
+      "right_index": 6671,
+      "rmse_celsius": 0.10529433690950368
+    },
+    {
+      "left_index": 6670,
+      "mae_celsius": 0.13978618152679936,
+      "max_abs_difference_celsius": 0.9535293579101562,
+      "mean_temperature_difference_celsius": 0.04712838549767895,
+      "right_index": 6676,
+      "rmse_celsius": 0.18372958096046046
+    },
+    {
+      "left_index": 6671,
+      "mae_celsius": 0.03470358733207949,
+      "max_abs_difference_celsius": 0.7244167327880859,
+      "mean_temperature_difference_celsius": 0.017920258352830842,
+      "right_index": 6672,
+      "rmse_celsius": 0.06776362755437322
+    },
+    {
+      "left_index": 6671,
+      "mae_celsius": 0.063298745693699,
+      "max_abs_difference_celsius": 0.7210292816162109,
+      "mean_temperature_difference_celsius": 0.00394049190705914,
+      "right_index": 6673,
+      "rmse_celsius": 0.10120797667913874
+    },
+    {
+      "left_index": 6671,
+      "mae_celsius": 0.11768488883972168,
+      "max_abs_difference_celsius": 0.9145755767822266,
+      "mean_temperature_difference_celsius": 0.053658171622984696,
+      "right_index": 6675,
+      "rmse_celsius": 0.15591476781316563
+    },
+    {
+      "left_index": 6671,
+      "mae_celsius": 0.13525341595372847,
+      "max_abs_difference_celsius": 0.9724597930908203,
+      "mean_temperature_difference_celsius": 0.02267794416797031,
+      "right_index": 6676,
+      "rmse_celsius": 0.1891256689476355
+    },
+    {
+      "left_index": 6672,
+      "mae_celsius": 0.04703715001383135,
+      "max_abs_difference_celsius": 0.6624984741210938,
+      "mean_temperature_difference_celsius": 0.013979766445771702,
+      "right_index": 6673,
+      "rmse_celsius": 0.07502262020336348
+    },
+    {
+      "left_index": 6672,
+      "mae_celsius": 0.11341594380717124,
+      "max_abs_difference_celsius": 0.8608055114746094,
+      "mean_temperature_difference_celsius": 0.07157842997581554,
+      "right_index": 6675,
+      "rmse_celsius": 0.1477549901178425
+    },
+    {
+      "left_index": 6673,
+      "mae_celsius": 0.09277863464047832,
+      "max_abs_difference_celsius": 0.8983249664306641,
+      "mean_temperature_difference_celsius": 0.05759866353004384,
+      "right_index": 6675,
+      "rmse_celsius": 0.12819392235063937
+    },
+    {
+      "left_index": 6676,
+      "mae_celsius": 0.14490032465227187,
+      "max_abs_difference_celsius": 0.9829845428466797,
+      "mean_temperature_difference_celsius": 0.012860381603243098,
+      "right_index": 6684,
+      "rmse_celsius": 0.20436027989090258
+    },
+    {
+      "left_index": 6677,
+      "mae_celsius": 0.04637608412773379,
+      "max_abs_difference_celsius": 0.7155838012695312,
+      "mean_temperature_difference_celsius": 0.0062285573251799065,
+      "right_index": 6678,
+      "rmse_celsius": 0.07723951911332504
+    },
+    {
+      "left_index": 6677,
+      "mae_celsius": 0.06716144161839639,
+      "max_abs_difference_celsius": 0.7939510345458984,
+      "mean_temperature_difference_celsius": 0.034138521840496594,
+      "right_index": 6679,
+      "rmse_celsius": 0.10034076404479816
+    },
+    {
+      "left_index": 6677,
+      "mae_celsius": 0.0922820637303014,
+      "max_abs_difference_celsius": 0.8342952728271484,
+      "mean_temperature_difference_celsius": 0.06532322514441802,
+      "right_index": 6680,
+      "rmse_celsius": 0.1309982113976047
+    },
+    {
+      "left_index": 6677,
+      "mae_celsius": 0.08945179370141798,
+      "max_abs_difference_celsius": 0.8040733337402344,
+      "mean_temperature_difference_celsius": 0.05680831555397248,
+      "right_index": 6681,
+      "rmse_celsius": 0.12476811213169427
+    },
+    {
+      "left_index": 6677,
+      "mae_celsius": 0.08705239449777911,
+      "max_abs_difference_celsius": 0.7470760345458984,
+      "mean_temperature_difference_celsius": 0.05227289353647535,
+      "right_index": 6682,
+      "rmse_celsius": 0.12214950308766162
+    },
+    {
+      "left_index": 6677,
+      "mae_celsius": 0.06960758432265252,
+      "max_abs_difference_celsius": 0.8470363616943359,
+      "mean_temperature_difference_celsius": 0.030920957365342616,
+      "right_index": 6683,
+      "rmse_celsius": 0.09556395924556146
+    },
+    {
+      "left_index": 6677,
+      "mae_celsius": 0.07822958577063775,
+      "max_abs_difference_celsius": 0.9958667755126953,
+      "mean_temperature_difference_celsius": 0.020268144915181807,
+      "right_index": 6684,
+      "rmse_celsius": 0.12119114486343063
+    },
+    {
+      "left_index": 6678,
+      "mae_celsius": 0.05028595962832051,
+      "max_abs_difference_celsius": 0.6362686157226562,
+      "mean_temperature_difference_celsius": 0.027909964515316688,
+      "right_index": 6679,
+      "rmse_celsius": 0.08565594187231823
+    },
+    {
+      "left_index": 6678,
+      "mae_celsius": 0.08432877179115049,
+      "max_abs_difference_celsius": 0.8054428100585938,
+      "mean_temperature_difference_celsius": 0.05909466781923811,
+      "right_index": 6680,
+      "rmse_celsius": 0.12639357090240738
+    },
+    {
+      "left_index": 6678,
+      "mae_celsius": 0.08118008298258628,
+      "max_abs_difference_celsius": 0.7723178863525391,
+      "mean_temperature_difference_celsius": 0.05057975822879257,
+      "right_index": 6681,
+      "rmse_celsius": 0.11525208771791429
+    },
+    {
+      "left_index": 6678,
+      "mae_celsius": 0.08816293631830523,
+      "max_abs_difference_celsius": 0.9033870697021484,
+      "mean_temperature_difference_celsius": 0.046044336211295445,
+      "right_index": 6682,
+      "rmse_celsius": 0.13507225858269709
+    },
+    {
+      "left_index": 6678,
+      "mae_celsius": 0.06429969495342623,
+      "max_abs_difference_celsius": 0.5805435180664062,
+      "mean_temperature_difference_celsius": 0.02469240004016271,
+      "right_index": 6683,
+      "rmse_celsius": 0.0848347475046027
+    },
+    {
+      "left_index": 6678,
+      "mae_celsius": 0.06668340736819851,
+      "max_abs_difference_celsius": 0.6938514709472656,
+      "mean_temperature_difference_celsius": 0.0140395875900019,
+      "right_index": 6684,
+      "rmse_celsius": 0.09452416977648889
+    },
+    {
+      "left_index": 6679,
+      "mae_celsius": 0.050076627731323244,
+      "max_abs_difference_celsius": 0.5920562744140625,
+      "mean_temperature_difference_celsius": 0.031184703303921424,
+      "right_index": 6680,
+      "rmse_celsius": 0.07482914062376511
+    },
+    {
+      "left_index": 6679,
+      "mae_celsius": 0.053082126955832205,
+      "max_abs_difference_celsius": 0.45272254943847656,
+      "mean_temperature_difference_celsius": 0.022669793713475883,
+      "right_index": 6681,
+      "rmse_celsius": 0.07148612000208399
+    },
+    {
+      "left_index": 6679,
+      "mae_celsius": 0.06448492696208338,
+      "max_abs_difference_celsius": 0.8496379852294922,
+      "mean_temperature_difference_celsius": 0.018134371695978757,
+      "right_index": 6682,
+      "rmse_celsius": 0.09924758875091536
+    },
+    {
+      "left_index": 6679,
+      "mae_celsius": 0.06360228177039853,
+      "max_abs_difference_celsius": 0.9246578216552734,
+      "mean_temperature_difference_celsius": 0.003217564475153978,
+      "right_index": 6683,
+      "rmse_celsius": 0.0976509149503828
+    },
+    {
+      "left_index": 6679,
+      "mae_celsius": 0.06595905288573234,
+      "max_abs_difference_celsius": 0.855926513671875,
+      "mean_temperature_difference_celsius": 0.013870376925314787,
+      "right_index": 6684,
+      "rmse_celsius": 0.1029981677926497
+    },
+    {
+      "left_index": 6680,
+      "mae_celsius": 0.029444332276621174,
+      "max_abs_difference_celsius": 0.46118927001953125,
+      "mean_temperature_difference_celsius": 0.00851490959044554,
+      "right_index": 6681,
+      "rmse_celsius": 0.0469135584514023
+    },
+    {
+      "left_index": 6680,
+      "mae_celsius": 0.05230256511319068,
+      "max_abs_difference_celsius": 0.7739715576171875,
+      "mean_temperature_difference_celsius": 0.013050331607942667,
+      "right_index": 6682,
+      "rmse_celsius": 0.08597697696610675
+    },
+    {
+      "left_index": 6680,
+      "mae_celsius": 0.06978736039130919,
+      "max_abs_difference_celsius": 0.9605236053466797,
+      "mean_temperature_difference_celsius": 0.0344022677790754,
+      "right_index": 6683,
+      "rmse_celsius": 0.11506399039164145
+    },
+    {
+      "left_index": 6680,
+      "mae_celsius": 0.07714422210570304,
+      "max_abs_difference_celsius": 0.9052410125732422,
+      "mean_temperature_difference_celsius": 0.04505508022923621,
+      "right_index": 6684,
+      "rmse_celsius": 0.12242853107402148
+    },
+    {
+      "left_index": 6681,
+      "mae_celsius": 0.044579025237790997,
+      "max_abs_difference_celsius": 0.8407058715820312,
+      "mean_temperature_difference_celsius": 0.004535422017497126,
+      "right_index": 6682,
+      "rmse_celsius": 0.08915895616673833
+    },
+    {
+      "left_index": 6681,
+      "mae_celsius": 0.06206667769339777,
+      "max_abs_difference_celsius": 0.9444160461425781,
+      "mean_temperature_difference_celsius": 0.02588735818862986,
+      "right_index": 6683,
+      "rmse_celsius": 0.10413566793503333
+    },
+    {
+      "left_index": 6681,
+      "mae_celsius": 0.06858107351487683,
+      "max_abs_difference_celsius": 0.8921756744384766,
+      "mean_temperature_difference_celsius": 0.03654017063879067,
+      "right_index": 6684,
+      "rmse_celsius": 0.10942115549618218
+    },
+    {
+      "left_index": 6682,
+      "mae_celsius": 0.05178417736484158,
+      "max_abs_difference_celsius": 0.9237499237060547,
+      "mean_temperature_difference_celsius": 0.021351936171132735,
+      "right_index": 6683,
+      "rmse_celsius": 0.111261943736588
+    },
+    {
+      "left_index": 6683,
+      "mae_celsius": 0.03652004772616971,
+      "max_abs_difference_celsius": 0.7789115905761719,
+      "mean_temperature_difference_celsius": 0.010652812450160809,
+      "right_index": 6684,
+      "rmse_celsius": 0.07674849132263235
+    },
+    {
+      "left_index": 6684,
+      "mae_celsius": 0.04756622891272268,
+      "max_abs_difference_celsius": 0.8391342163085938,
+      "mean_temperature_difference_celsius": 0.001473471041649077,
+      "right_index": 6685,
+      "rmse_celsius": 0.08622877991984065
+    },
+    {
+      "left_index": 6726,
+      "mae_celsius": 0.11598740047024142,
+      "max_abs_difference_celsius": 0.90631103515625,
+      "mean_temperature_difference_celsius": 0.038408008313947306,
+      "right_index": 6727,
+      "rmse_celsius": 0.1778605994840438
+    },
+    {
+      "left_index": 6727,
+      "mae_celsius": 0.08371969884441745,
+      "max_abs_difference_celsius": 0.8375396728515625,
+      "mean_temperature_difference_celsius": 0.053382369779772176,
+      "right_index": 6728,
+      "rmse_celsius": 0.11937647147095672
+    },
+    {
+      "left_index": 6727,
+      "mae_celsius": 0.1069771078325087,
+      "max_abs_difference_celsius": 0.9648780822753906,
+      "mean_temperature_difference_celsius": 0.04504630373370233,
+      "right_index": 6729,
+      "rmse_celsius": 0.1487033755000789
+    },
+    {
+      "left_index": 6728,
+      "mae_celsius": 0.05037594726008754,
+      "max_abs_difference_celsius": 0.7462902069091797,
+      "mean_temperature_difference_celsius": 0.008336066046069845,
+      "right_index": 6729,
+      "rmse_celsius": 0.0809800934897533
+    },
+    {
+      "left_index": 6728,
+      "mae_celsius": 0.08858532251850251,
+      "max_abs_difference_celsius": 0.907501220703125,
+      "mean_temperature_difference_celsius": 0.04343665838241506,
+      "right_index": 6730,
+      "rmse_celsius": 0.13662118907371357
+    },
+    {
+      "left_index": 6728,
+      "mae_celsius": 0.18432436758472073,
+      "max_abs_difference_celsius": 0.7889728546142578,
+      "mean_temperature_difference_celsius": 0.11563156189457047,
+      "right_index": 7803,
+      "rmse_celsius": 0.22101135643752323
+    },
+    {
+      "left_index": 6728,
+      "mae_celsius": 0.1821081446063134,
+      "max_abs_difference_celsius": 0.7693347930908203,
+      "mean_temperature_difference_celsius": 0.09470645535376576,
+      "right_index": 7804,
+      "rmse_celsius": 0.22217336371374227
+    },
+    {
+      "left_index": 6728,
+      "mae_celsius": 0.1843097709840344,
+      "max_abs_difference_celsius": 0.7606048583984375,
+      "mean_temperature_difference_celsius": 0.0933269639169012,
+      "right_index": 7805,
+      "rmse_celsius": 0.22535876237473934
+    },
+    {
+      "left_index": 6728,
+      "mae_celsius": 0.17015845429512763,
+      "max_abs_difference_celsius": 0.7586097717285156,
+      "mean_temperature_difference_celsius": 0.07396260807590949,
+      "right_index": 7806,
+      "rmse_celsius": 0.20994763738047428
+    },
+    {
+      "left_index": 6728,
+      "mae_celsius": 0.19257209800904798,
+      "max_abs_difference_celsius": 0.9524993896484375,
+      "mean_temperature_difference_celsius": 0.1681167029565387,
+      "right_index": 7807,
+      "rmse_celsius": 0.23038536805552817
+    },
+    {
+      "left_index": 6729,
+      "mae_celsius": 0.05492987632751465,
+      "max_abs_difference_celsius": 0.668609619140625,
+      "mean_temperature_difference_celsius": 0.035100592336345215,
+      "right_index": 6730,
+      "rmse_celsius": 0.09028328834077388
+    },
+    {
+      "left_index": 6729,
+      "mae_celsius": 0.18274292984316426,
+      "max_abs_difference_celsius": 0.9021987915039062,
+      "mean_temperature_difference_celsius": 0.056688707490121004,
+      "right_index": 7731,
+      "rmse_celsius": 0.23751683433710497
+    },
+    {
+      "left_index": 6729,
+      "mae_celsius": 0.17216997338879492,
+      "max_abs_difference_celsius": 0.9612712860107422,
+      "mean_temperature_difference_celsius": 0.07797935816549639,
+      "right_index": 7732,
+      "rmse_celsius": 0.20801190372191417
+    },
+    {
+      "left_index": 6729,
+      "mae_celsius": 0.17068436645692395,
+      "max_abs_difference_celsius": 0.7855453491210938,
+      "mean_temperature_difference_celsius": 0.12396762794064031,
+      "right_index": 7803,
+      "rmse_celsius": 0.2045303151393792
+    },
+    {
+      "left_index": 6729,
+      "mae_celsius": 0.16708067963200232,
+      "max_abs_difference_celsius": 0.7540321350097656,
+      "mean_temperature_difference_celsius": 0.10304252139983561,
+      "right_index": 7804,
+      "rmse_celsius": 0.20291757750221942
+    },
+    {
+      "left_index": 6729,
+      "mae_celsius": 0.16898906730836438,
+      "max_abs_difference_celsius": 0.7373790740966797,
+      "mean_temperature_difference_celsius": 0.10166302996297105,
+      "right_index": 7805,
+      "rmse_celsius": 0.2058230761734381
+    },
+    {
+      "left_index": 6729,
+      "mae_celsius": 0.15656854721807664,
+      "max_abs_difference_celsius": 0.7339725494384766,
+      "mean_temperature_difference_celsius": 0.08229867412197933,
+      "right_index": 7806,
+      "rmse_celsius": 0.19241850815482597
+    },
+    {
+      "left_index": 6729,
+      "mae_celsius": 0.1992817432649674,
+      "max_abs_difference_celsius": 0.9754848480224609,
+      "mean_temperature_difference_celsius": 0.17645276900260853,
+      "right_index": 7807,
+      "rmse_celsius": 0.2410494233666824
+    },
+    {
+      "left_index": 6729,
+      "mae_celsius": 0.19811219130792926,
+      "max_abs_difference_celsius": 0.9578418731689453,
+      "mean_temperature_difference_celsius": 0.04842210777344391,
+      "right_index": 7842,
+      "rmse_celsius": 0.2718150204946742
+    },
+    {
+      "left_index": 6730,
+      "mae_celsius": 0.18520406100057787,
+      "max_abs_difference_celsius": 0.7596168518066406,
+      "mean_temperature_difference_celsius": 0.11307995050184161,
+      "right_index": 7732,
+      "rmse_celsius": 0.220671544751833
+    },
+    {
+      "left_index": 6730,
+      "mae_celsius": 0.1995145832338641,
+      "max_abs_difference_celsius": 0.9814319610595703,
+      "mean_temperature_difference_celsius": 0.14784820348985406,
+      "right_index": 7746,
+      "rmse_celsius": 0.2466431845588704
+    },
+    {
+      "left_index": 6730,
+      "mae_celsius": 0.178896765939651,
+      "max_abs_difference_celsius": 0.8074798583984375,
+      "mean_temperature_difference_celsius": 0.15906822027698553,
+      "right_index": 7803,
+      "rmse_celsius": 0.21122806332989444
+    },
+    {
+      "left_index": 6730,
+      "mae_celsius": 0.16890444101825838,
+      "max_abs_difference_celsius": 0.7759666442871094,
+      "mean_temperature_difference_celsius": 0.13814311373618082,
+      "right_index": 7804,
+      "rmse_celsius": 0.20208701017263483
+    },
+    {
+      "left_index": 6730,
+      "mae_celsius": 0.16994676320783553,
+      "max_abs_difference_celsius": 0.7669963836669922,
+      "mean_temperature_difference_celsius": 0.13676362229931627,
+      "right_index": 7805,
+      "rmse_celsius": 0.20350206368795093
+    },
+    {
+      "left_index": 6730,
+      "mae_celsius": 0.16053841190953408,
+      "max_abs_difference_celsius": 0.7494754791259766,
+      "mean_temperature_difference_celsius": 0.11739926645832455,
+      "right_index": 7806,
+      "rmse_celsius": 0.19572445702299548
+    },
+    {
+      "left_index": 6732,
+      "mae_celsius": 0.04493362288321218,
+      "max_abs_difference_celsius": 0.5594558715820312,
+      "mean_temperature_difference_celsius": 0.002268852726103887,
+      "right_index": 6733,
+      "rmse_celsius": 0.06789910203080891
+    }
+  ],
+  "confirmed_pairs_total": 3143,
+  "confirmed_pairs_truncated": true,
+  "exhaustiveness_claim": "DETERMINISTIC_SCREENING_NOT_EXHAUSTIVE",
+  "profile": {
+    "blocking": {
+      "candidate_pair_order": "lexicographic ascending (left_index,right_index)",
+      "fingerprint": "SHA256(little-endian int16 quantized coarse grid)",
+      "max_candidate_pairs": 200000,
+      "quantization_step_celsius": 2.0,
+      "sample_grid": "canonical_frame[::8,::8]"
+    },
+    "confirmation_thresholds": {
+      "mae_celsius_max": 0.2,
+      "max_abs_difference_celsius_max": 1.0,
+      "mean_temperature_difference_celsius_max": 0.2,
+      "rmse_celsius_max": 0.3
+    },
+    "exhaustiveness_claim": "DETERMINISTIC_SCREENING_NOT_EXHAUSTIVE",
+    "label_independent": true,
+    "model_independent": true,
+    "no_label_or_model_tuning": true,
+    "profile_id": "THERMAL_T_A6_NEAR_DUPLICATE_SCREEN_V1",
+    "scope": "WITHIN_ROLE_ONLY_UNTIL_COLAB_STAGE_2",
+    "version": "1.0"
+  },
+  "sample_count": 8000
+}

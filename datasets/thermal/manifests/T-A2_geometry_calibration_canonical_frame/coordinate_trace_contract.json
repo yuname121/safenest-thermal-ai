@@ -1,0 +1,131 @@
+{
+  "crop_xyxy_exclusive": [
+    10,
+    0,
+    630,
+    480
+  ],
+  "forward_equation": "source_y = crop_top + (canonical_row + 0.5) * crop_height / resize_height - 0.5; source_x analogous",
+  "inverse_equation": "canonical_row = pad_top + (source_y - crop_top + 0.5) * resize_height / crop_height - 0.5; canonical_col analogous",
+  "phase": "T-A2",
+  "profile_id": "G1_FIXED_ASPECT_CROP_BILINEAR",
+  "schema_version": "1.0",
+  "support_semantics": "BILINEAR support; coordinate_mapping=HALF_PIXEL_CENTER; edge_handling=EDGE_CLAMPING; explicit_antialias_prefilter=NO_EXPLICIT_ANTIALIAS_PREFILTER",
+  "synthetic_fixture_checks": {
+    "asymmetric_hot_region": "PASS_FIXED_MAPPING",
+    "corner_markers": "PASS_SOURCE_ORDER_PRESERVED",
+    "horizontal_gradient": "PASS_NO_TRANSPOSE_OR_HORIZONTAL_FLIP",
+    "vertical_gradient": "PASS_NO_ROTATION_OR_VERTICAL_FLIP"
+  },
+  "witnesses": [
+    {
+      "canonical_coordinate": [
+        0,
+        0
+      ],
+      "source_coordinate": [
+        3.370967741935484,
+        13.375
+      ],
+      "source_support": [
+        [
+          3,
+          13
+        ],
+        [
+          3,
+          14
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          4,
+          14
+        ]
+      ],
+      "status": "MEASURED_SOURCE_SUPPORT"
+    },
+    {
+      "canonical_coordinate": [
+        31,
+        40
+      ],
+      "source_coordinate": [
+        243.3709677419355,
+        323.375
+      ],
+      "source_support": [
+        [
+          243,
+          323
+        ],
+        [
+          243,
+          324
+        ],
+        [
+          244,
+          323
+        ],
+        [
+          244,
+          324
+        ]
+      ],
+      "status": "MEASURED_SOURCE_SUPPORT"
+    },
+    {
+      "canonical_coordinate": [
+        61,
+        79
+      ],
+      "source_coordinate": [
+        475.6290322580645,
+        625.625
+      ],
+      "source_support": [
+        [
+          475,
+          625
+        ],
+        [
+          475,
+          626
+        ],
+        [
+          476,
+          625
+        ],
+        [
+          476,
+          626
+        ]
+      ],
+      "status": "MEASURED_SOURCE_SUPPORT"
+    },
+    {
+      "canonical_coordinate": [
+        -0.4354166666666667,
+        -0.43548387096774194
+      ],
+      "source_coordinate": [
+        0,
+        10
+      ],
+      "status": "MEASURED_CANONICAL_COORDINATE"
+    },
+    {
+      "canonical_coordinate": [
+        61.43541666666667,
+        79.43548387096774
+      ],
+      "source_coordinate": [
+        479,
+        629
+      ],
+      "status": "MEASURED_CANONICAL_COORDINATE"
+    }
+  ]
+}

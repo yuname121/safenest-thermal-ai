@@ -1,0 +1,77 @@
+{
+  "candidate_metrics_content_sha256": "536e40f3d4600a10cf03dfe7d80acb82ace08a11a2fae9bb155381adc84ef6a6",
+  "limitations": [
+    "Thermal-44 physical orientation remains unverified; this is a software canonical convention only.",
+    "The selected profile is a software canonical frame and does not establish hardware packet ordering.",
+    "Source label bboxes are clipped to the distributed frame before candidate-crop loss is measured."
+  ],
+  "model_performance_used": false,
+  "phase": "T-A2",
+  "physical_dtype": "float32",
+  "physical_unit": "CELSIUS",
+  "profile": {
+    "candidate_id": "G1_FIXED_ASPECT_CROP_BILINEAR",
+    "canonical_dtype": "float32",
+    "canonical_shape": [
+      62,
+      80
+    ],
+    "canonical_unit": "CELSIUS",
+    "coordinate_convention": "row-major; pixel centers at integer source coordinates; output center maps with half-pixel formula",
+    "coordinate_mapping": "HALF_PIXEL_CENTER",
+    "crop_xyxy": [
+      10,
+      0,
+      630,
+      480
+    ],
+    "edge_handling": "EDGE_CLAMPING",
+    "explicit_antialias_prefilter": "NO_EXPLICIT_ANTIALIAS_PREFILTER",
+    "geometry_policy": "FIXED_ASPECT_CROP",
+    "horizontal_flip": false,
+    "interpolation": "bilinear",
+    "interpolation_semantics": "BILINEAR",
+    "invalid_pixel_policy": "FAIL_CLOSED_SOURCE_INVALID; EDGE_CLAMPING",
+    "padding_tblr": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "profile_id": "G1_FIXED_ASPECT_CROP_BILINEAR",
+    "resize_shape": [
+      62,
+      80
+    ],
+    "rotation": 0,
+    "source_shape": [
+      480,
+      640
+    ],
+    "source_unit": "CELSIUS",
+    "vertical_flip": false
+  },
+  "profile_id": "G1_FIXED_ASPECT_CROP_BILINEAR",
+  "schema_version": "1.0",
+  "selection_derivation": "winner = independently reproducible policy ranking of the nine candidate metric records",
+  "selection_policy_content_sha256": "79fddd8c458bb6eed99dc74c39d2b746e45d4806e9b0e4da32bead6abf8a4bc1",
+  "selection_policy_id": "THERMAL_T_A2_GEOMETRY_SELECTION_POLICY_002",
+  "selection_policy_version": "2.0",
+  "selection_status": "GEOMETRY_PROFILE_SELECTED_WITH_LIMITATIONS",
+  "source_orientation": {
+    "array_column_direction": "column 0 is left / increasing column moves right",
+    "array_row_direction": "row 0 is top / increasing row moves down",
+    "evidence": [
+      "official SDT image_t documentation",
+      "labels bbox coordinate bounds",
+      "asymmetric synthetic coordinate fixtures",
+      "visual spot check"
+    ],
+    "exif_orientation": "NOT_APPLICABLE_PNG",
+    "horizontal_flip": false,
+    "origin": "top-left pixel-center convention",
+    "rotation": 0,
+    "status": "SOURCE_ORIENTATION_AS_STORED",
+    "vertical_flip": false
+  }
+}

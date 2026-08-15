@@ -1,0 +1,10 @@
+{
+  "cross_partition_duplicate_audits": "PENDING_COLAB_STAGE2",
+  "grouping": "subject/session/sequence/event identifiers are absent; generalization is NOT_VERIFIABLE",
+  "legacy_npz": "LEGACY_NON_AUTHORITATIVE_NOT_USED",
+  "model_metrics": "NONE_GENERATED",
+  "phase_scope": "STAGE1_ONLY",
+  "real_source": "test.zip only; source is already used for development and is not LOCKED_TEST",
+  "synthetic_payload": "train and validation remain untouched on Mac and require Colab Stage 2",
+  "thermal44": "THERMAL44_COMPARISON_NOT_VERIFIABLE; hardware contract remains T-C"
+}

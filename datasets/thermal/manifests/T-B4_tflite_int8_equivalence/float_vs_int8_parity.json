@@ -1,0 +1,146 @@
+{
+  "argmax_agreement": 0.997125,
+  "confusion_matrix_difference": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      3,
+      3,
+      -6
+    ],
+    [
+      0,
+      12,
+      -12
+    ]
+  ],
+  "disagreement_count": 23,
+  "float_metrics": {
+    "accuracy": 0.995125,
+    "balanced_accuracy": 0.99575,
+    "class_order": [
+      "NOT_HUMAN",
+      "HUMAN_NORMAL",
+      "HUMAN_FALL"
+    ],
+    "confusion_matrix": [
+      [
+        2000,
+        0,
+        0
+      ],
+      [
+        5,
+        3973,
+        22
+      ],
+      [
+        0,
+        12,
+        1988
+      ]
+    ],
+    "h_fall_posture_proxy_recall": 0.994,
+    "macro_f1": 0.9951295332536425,
+    "per_class": {
+      "HUMAN_FALL": {
+        "f1": 0.9915211970074813,
+        "precision": 0.9890547263681592,
+        "recall": 0.994,
+        "support": 2000
+      },
+      "HUMAN_NORMAL": {
+        "f1": 0.9951158422041327,
+        "precision": 0.9969887076537014,
+        "recall": 0.99325,
+        "support": 4000
+      },
+      "NOT_HUMAN": {
+        "f1": 0.9987515605493134,
+        "precision": 0.9975062344139651,
+        "recall": 1.0,
+        "support": 2000
+      }
+    },
+    "prediction_distribution": {
+      "HUMAN_FALL": 2010,
+      "HUMAN_NORMAL": 3985,
+      "NOT_HUMAN": 2005
+    },
+    "sample_count": 8000
+  },
+  "metric_delta_other_minus_float": {
+    "accuracy": -0.0011250000000000426,
+    "balanced_accuracy": -0.0017499999999999183,
+    "h_fall_posture_proxy_recall": -0.006000000000000005,
+    "macro_f1": -0.0011348826083733554
+  },
+  "other_metrics": {
+    "accuracy": 0.994,
+    "balanced_accuracy": 0.9940000000000001,
+    "class_order": [
+      "NOT_HUMAN",
+      "HUMAN_NORMAL",
+      "HUMAN_FALL"
+    ],
+    "confusion_matrix": [
+      [
+        2000,
+        0,
+        0
+      ],
+      [
+        8,
+        3976,
+        16
+      ],
+      [
+        0,
+        24,
+        1976
+      ]
+    ],
+    "h_fall_posture_proxy_recall": 0.988,
+    "macro_f1": 0.9939946506452692,
+    "per_class": {
+      "HUMAN_FALL": {
+        "f1": 0.9899799599198397,
+        "precision": 0.9919678714859438,
+        "recall": 0.988,
+        "support": 2000
+      },
+      "HUMAN_NORMAL": {
+        "f1": 0.994,
+        "precision": 0.994,
+        "recall": 0.994,
+        "support": 4000
+      },
+      "NOT_HUMAN": {
+        "f1": 0.998003992015968,
+        "precision": 0.9960159362549801,
+        "recall": 1.0,
+        "support": 2000
+      }
+    },
+    "prediction_distribution": {
+      "HUMAN_FALL": 1992,
+      "HUMAN_NORMAL": 4000,
+      "NOT_HUMAN": 2008
+    },
+    "sample_count": 8000
+  },
+  "per_class_probability_mae": {
+    "HUMAN_FALL": 0.0031827595813076716,
+    "HUMAN_NORMAL": 0.004484226047467668,
+    "NOT_HUMAN": 0.001326953976266364
+  },
+  "phase": "T-B4",
+  "probability_mae": 0.0029979798683472344,
+  "probability_max_absolute_error": 0.8184627704322338,
+  "role": "VALIDATION",
+  "sample_count": 8000,
+  "schema_version": "1.0"
+}

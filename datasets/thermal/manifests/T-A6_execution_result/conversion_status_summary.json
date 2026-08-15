@@ -1,0 +1,54 @@
+{
+  "phase": "T-A6_COLAB_STAGE2",
+  "roles": {
+    "REAL_EVAL_DEVELOPMENT": {
+      "canonical_rows": 8000,
+      "expected_source_frames": 8000,
+      "finalized_status": "FINALIZED",
+      "reconciliation": {
+        "canonical_equals_success_plus_warning": true,
+        "status_sum_equals_expected": true
+      },
+      "source_frames_measured": 8000,
+      "status_counts": {
+        "EXCLUDED": 0,
+        "FAILED": 0,
+        "SUCCESS": 8000,
+        "SUCCESS_WITH_WARNING": 0
+      }
+    },
+    "TRAIN": {
+      "canonical_rows": 32000,
+      "expected_source_frames": 32000,
+      "finalized_status": "FINALIZED",
+      "reconciliation": {
+        "canonical_equals_success_plus_warning": true,
+        "status_sum_equals_expected": true
+      },
+      "source_frames_measured": 32000,
+      "status_counts": {
+        "EXCLUDED": 0,
+        "FAILED": 0,
+        "SUCCESS": 32000,
+        "SUCCESS_WITH_WARNING": 0
+      }
+    },
+    "VALIDATION": {
+      "canonical_rows": 8000,
+      "expected_source_frames": 8000,
+      "finalized_status": "FINALIZED",
+      "reconciliation": {
+        "canonical_equals_success_plus_warning": true,
+        "status_sum_equals_expected": true
+      },
+      "source_frames_measured": 8000,
+      "status_counts": {
+        "EXCLUDED": 0,
+        "FAILED": 0,
+        "SUCCESS": 8000,
+        "SUCCESS_WITH_WARNING": 0
+      }
+    }
+  },
+  "schema_version": "1.0"
+}

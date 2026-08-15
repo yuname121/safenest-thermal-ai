@@ -1,0 +1,60 @@
+{
+  "camera_count": "NOT_VERIFIABLE",
+  "event_count": "NOT_VERIFIABLE",
+  "model_metrics_used": false,
+  "phase": "T-A5",
+  "policy_id": "THERMAL_SPLIT_POLICY_001",
+  "real_test_frame_count": 8000,
+  "roles": {
+    "LOCKED_TEST": {
+      "count": 0,
+      "grouping": "NOT_AVAILABLE",
+      "materialization": "NOT_AVAILABLE",
+      "sample_inventory": "NOT_AVAILABLE",
+      "source_domain": "NONE",
+      "source_split": "NONE"
+    },
+    "REAL_EVAL_DEVELOPMENT": {
+      "compatibility_target_counts": {
+        "HUMAN_FALL": 2000,
+        "HUMAN_NORMAL": 4000,
+        "NOT_HUMAN": 2000
+      },
+      "count": 8000,
+      "grouping": "OFFICIAL_SOURCE_PARTITION_ONLY",
+      "materialization": "LOCALLY_MATERIALIZED",
+      "original_label_counts": {
+        "EMPTY_ROOM": 2000,
+        "LYING": 2000,
+        "SITTING": 2000,
+        "STANDING": 2000
+      },
+      "sample_inventory": "FULL_MEMBER_AND_LABEL_INVENTORY_VERIFIED",
+      "source_domain": "REAL",
+      "source_split": "test"
+    },
+    "TRAIN": {
+      "count": 32000,
+      "grouping": "NOT_VERIFIABLE",
+      "materialization": "LOCAL_CLOUD_PLACEHOLDER",
+      "sample_inventory": "SAMPLE_LEVEL_INVENTORY_PENDING_MATERIALIZATION",
+      "source_domain": "SYNTHETIC",
+      "source_split": "train"
+    },
+    "VALIDATION": {
+      "count": 8000,
+      "grouping": "NOT_VERIFIABLE",
+      "materialization": "LOCAL_CLOUD_PLACEHOLDER",
+      "sample_inventory": "SAMPLE_LEVEL_INVENTORY_PENDING_MATERIALIZATION",
+      "source_domain": "SYNTHETIC",
+      "source_split": "validation"
+    }
+  },
+  "scene_count": "NOT_VERIFIABLE",
+  "schema_version": "1.0",
+  "sequence_count": "NOT_VERIFIABLE",
+  "session_count": "NOT_VERIFIABLE",
+  "source_partition_preserved": true,
+  "subject_count": "NOT_VERIFIABLE",
+  "total_planned_samples": 40000
+}

@@ -1,0 +1,23 @@
+{
+  "error_count": 0,
+  "errors": [],
+  "evidence_validation": "PASS",
+  "overall_outcome": "PASS_WITH_LIMITATIONS",
+  "phase": "T-A3",
+  "schema_version": "1.0",
+  "t_a0_outcome": "PASS_WITH_LIMITATIONS",
+  "t_a0_validation": "PASS",
+  "t_a1_outcome": "PASS_WITH_LIMITATIONS",
+  "t_a1_validation": "PASS",
+  "t_a2_outcome": "PASS_WITH_LIMITATIONS",
+  "t_a2_validation": "PASS",
+  "t_a4_authorized": true,
+  "warning_count": 1,
+  "warnings": [
+    {
+      "code": "STATIC_FRAME_ONLY",
+      "location": "capabilities",
+      "message": "SDT supports only frame-level T-A3 evidence."
+    }
+  ]
+}

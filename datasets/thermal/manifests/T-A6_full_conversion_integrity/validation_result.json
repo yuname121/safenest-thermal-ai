@@ -1,0 +1,46 @@
+{
+  "error_count": 0,
+  "errors": [],
+  "evidence_validation": "PASS",
+  "full_t_a6_gate": "NOT_YET_COMPLETE",
+  "mode": "REAL_STAGE1",
+  "overall_outcome": "PASS_WITH_LIMITATIONS",
+  "phase": "T-A6_STAGE1",
+  "predecessors": {
+    "T-A0": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "PASS_WITH_LIMITATIONS"
+    },
+    "T-A1": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "PASS_WITH_LIMITATIONS"
+    },
+    "T-A2": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "PASS_WITH_LIMITATIONS"
+    },
+    "T-A3": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "PASS_WITH_LIMITATIONS"
+    },
+    "T-A4": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "PASS_WITH_LIMITATIONS"
+    },
+    "T-A5": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "PASS_WITH_LIMITATIONS"
+    }
+  },
+  "schema_version": "1.0",
+  "stage1_gate": "T_A6_STAGE1_COMPLETE",
+  "t_b_authorized": false,
+  "warning_count": 1,
+  "warnings": [
+    {
+      "code": "LEGACY_NPZ_NOT_PRESENT_IN_WORKTREE",
+      "location": "datasets/thermal/processed_thermal_80x62.npz",
+      "message": "legacy NPZ was not used"
+    }
+  ]
+}

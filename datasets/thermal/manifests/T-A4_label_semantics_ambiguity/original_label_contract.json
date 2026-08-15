@@ -1,0 +1,32 @@
+{
+  "archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+  "archive_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+  "bbox_semantics": "labels.txt source bbox preserved as provenance/geometry evidence; never used to redefine posture or fall semantics",
+  "dataset_id": "local_sdt_zenodo_4124309",
+  "doi": "doi:10.5281/zenodo.4124309",
+  "original_labels": {
+    "0": "LYING",
+    "1": "SITTING",
+    "2": "STANDING",
+    "3": "EMPTY_ROOM"
+  },
+  "phase": "T-A4",
+  "schema_version": "1.0",
+  "source_label_counts": {
+    "0": 2000,
+    "1": 2000,
+    "2": 2000,
+    "3": 2000
+  },
+  "source_label_fields": [
+    "original_label_id",
+    "original_label_name",
+    "original_bbox",
+    "source_frame_index",
+    "source_member"
+  ],
+  "source_label_status": "VERIFIED_IMMUTABLE_SOURCE_ANNOTATION",
+  "source_labels_modified": false,
+  "source_split": "test",
+  "unknown_source_label_behavior": "FAIL_CLOSED_SOURCE_LABEL_UNKNOWN"
+}

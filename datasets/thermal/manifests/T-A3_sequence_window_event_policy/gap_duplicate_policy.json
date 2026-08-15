@@ -1,0 +1,35 @@
+{
+  "archive_identity": {
+    "materialization_state": "LOCALLY_MATERIALIZED",
+    "md5": "d59a739f3b5ecf373c94046fb94cd94f",
+    "path": "datasets/raw_archives/thermal_split_zips/test.zip",
+    "sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+    "size_bytes": 1740348425
+  },
+  "duplicate_member_index_status": "STRUCTURAL_SOURCE_FAILURE",
+  "duplicate_member_name_status": "STRUCTURAL_SOURCE_FAILURE",
+  "exact_duplicate_content_semantics": "PRESERVE_BOTH_PROVENANCE_RECORDS_AND_FLAG_DUPLICATE_CONTENT; DO_NOT_INFER_ADJACENCY",
+  "full_duplicate_audit_deferred_to": "T-A6",
+  "index_gap_interpretation": "STRUCTURAL_ARCHIVE_PROVENANCE_ONLY; NOT_A_DROPPED_ACQUISITION_FRAME",
+  "index_gap_status": "SOURCE_MEMBER_INDEX_GAP",
+  "near_duplicate_semantics": "DO_NOT_INFER_TEMPORAL_ADJACENCY; FULL_AUDIT_DEFERRED_T_A6",
+  "phase": "T-A3",
+  "schema_version": "1.0",
+  "structural_member_index": {
+    "continuous": true,
+    "duplicate_indices": [],
+    "duplicate_member_names": [],
+    "index_base": 0,
+    "index_last": 7999,
+    "index_relationship": {
+      "depth_indices": "0..7999 continuous",
+      "label_indices": "labels.txt row 0..7999",
+      "missing_intersections": [],
+      "thermal_indices": "0..7999 continuous",
+      "unexpected_indices": []
+    },
+    "missing_indices": []
+  },
+  "temporal_dropped_frame_status": "TEMPORAL_DROPPED_FRAME_NOT_VERIFIABLE",
+  "temporal_large_gap_status": "TEMPORAL_GAP_NOT_VERIFIABLE"
+}

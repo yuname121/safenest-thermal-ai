@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://safenest.local/schemas/thermal-real-capture/validation-result-v1.json",
+  "title": "SafeNest Thermal real capture validation result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "validator",
+    "validated_path",
+    "capture_status",
+    "raw_evidence_classification",
+    "temporal_provenance_status",
+    "frame_count",
+    "valid_frame_count",
+    "invalid_frame_count",
+    "timing_coverage",
+    "packet_loss_summary",
+    "annotation_coverage",
+    "raw_integrity_status",
+    "checksum_status",
+    "limitations",
+    "model_use_eligibility",
+    "errors",
+    "warnings"
+  ],
+  "properties": {
+    "schema_version": { "const": "safenest.thermal.real_capture.validation_result.v1" },
+    "validator": { "type": "string", "minLength": 1 },
+    "validated_path": { "type": "string", "minLength": 1 },
+    "collection_id": { "type": ["string", "null"] },
+    "subject_id": { "type": ["string", "null"] },
+    "session_id": { "type": ["string", "null"] },
+    "capture_status": {
+      "type": "string",
+      "enum": ["CAPTURE_STRUCTURE_VALID", "CAPTURE_STRUCTURE_VALID_WITH_LIMITATIONS", "CAPTURE_INVALID"]
+    },
+    "raw_evidence_classification": {
+      "type": "string",
+      "enum": ["FULL_FRAME_RAW", "MIXED_FULL_FRAME_AND_LIMITED", "SCALAR_ONLY_LIMITED", "PREPROCESSED_ONLY_INSUFFICIENT", "UNKNOWN_OR_EMPTY"]
+    },
+    "temporal_provenance_status": {
+      "type": "string",
+      "enum": ["TEMPORAL_PROVENANCE_VERIFIED", "TEMPORAL_ORDER_ONLY", "TEMPORAL_PROVENANCE_INSUFFICIENT", "TEMPORAL_PROVENANCE_MIXED"]
+    },
+    "frame_count": { "type": "integer", "minimum": 0 },
+    "valid_frame_count": { "type": "integer", "minimum": 0 },
+    "invalid_frame_count": { "type": "integer", "minimum": 0 },
+    "timing_coverage": { "type": "object" },
+    "packet_loss_summary": { "type": "object" },
+    "annotation_coverage": { "type": "object" },
+    "raw_integrity_status": { "type": "string", "enum": ["PASS", "PASS_WITH_LIMITATIONS", "FAIL", "NOT_ASSESSED"] },
+    "checksum_status": { "type": "string", "enum": ["PASS", "FAIL", "NOT_ASSESSED"] },
+    "limitations": { "type": "array", "items": { "type": "string" } },
+    "model_use_eligibility": { "const": "NOT_AUTHORIZED_BY_CAPTURE_VALIDATOR" },
+    "errors": { "type": "array", "items": { "type": "object" } },
+    "warnings": { "type": "array", "items": { "type": "object" } },
+    "sessions": { "type": "array", "items": { "type": "object" } }
+  }
+}

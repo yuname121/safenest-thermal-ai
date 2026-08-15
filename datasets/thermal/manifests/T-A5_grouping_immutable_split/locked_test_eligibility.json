@@ -1,0 +1,25 @@
+{
+  "access_history_entry_count": 5,
+  "access_types": [
+    "GEOMETRY_SELECTION",
+    "RAW_UNIT_AND_READER_PILOT",
+    "SEMANTIC_POLICY_SELECTION",
+    "SOURCE_IDENTITY_AND_INVENTORY",
+    "TEMPORAL_CAPABILITY_ANALYSIS"
+  ],
+  "current_pristine_locked_test_available": "NO",
+  "disqualification_reason": "USED_FOR_PREPROCESSING_GEOMETRY_SELECTION",
+  "future_t_b_final_unbiased_lock": "NOT_AVAILABLE_UNTIL_INDEPENDENT_HOLDOUT",
+  "geometry_selection_access": true,
+  "no_renaming_can_restore_pristine_status": true,
+  "phase": "T-A5",
+  "pristine_locked_test_eligible": false,
+  "schema_version": "1.0",
+  "semantic_policy_selection_access": true,
+  "source_dataset_id": "local_sdt_zenodo_4124309",
+  "source_domain": "REAL",
+  "source_split": "test",
+  "status": "DISQUALIFIED_BY_PRIOR_ACCESS",
+  "train_partition_locked_test_status": "NOT_APPLICABLE_SYNTHETIC_TRAIN_PARTITION",
+  "validation_partition_locked_test_status": "NOT_APPLICABLE_SYNTHETIC_VALIDATION_PARTITION"
+}

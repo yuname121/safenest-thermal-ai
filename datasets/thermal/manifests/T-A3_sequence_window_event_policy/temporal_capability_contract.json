@@ -1,0 +1,344 @@
+{
+  "capabilities": {
+    "EVENT_LEVEL": {
+      "actual_identifiers": [],
+      "grouping_available": false,
+      "reason": "LYING is a posture label and does not identify a fall transition, onset, impact, or end.",
+      "required_identifiers": [
+        "sequence_id",
+        "event_id or defensible event annotation",
+        "onset",
+        "end",
+        "pre_post_context"
+      ],
+      "safe_to_construct": false,
+      "source_evidence": [
+        "T-A1 source schema has no event identifier or boundaries",
+        "official SDT labels are posture labels"
+      ],
+      "status": "TEMPORAL_EVENT_NOT_VERIFIABLE",
+      "supported": false,
+      "temporal_ordering_available": false,
+      "timestamp_available": false
+    },
+    "FRAME_LEVEL": {
+      "actual_identifiers": [
+        "dataset_id",
+        "split",
+        "archive_path",
+        "archive_sha256",
+        "member_name",
+        "frame_index",
+        "pose_label",
+        "bbox",
+        "raw_hash",
+        "canonical_hash",
+        "geometry_profile_id"
+      ],
+      "grouping_available": false,
+      "reason": "One verified image_t member is one frame-level sample; no temporal claim is attached.",
+      "required_identifiers": [
+        "source_dataset_id",
+        "source_split",
+        "source_archive_path",
+        "source_archive_sha256",
+        "source_member_name",
+        "source_frame_index",
+        "source_pose_label",
+        "source_bbox",
+        "raw_encoded_frame_sha256",
+        "canonical_frame_hash",
+        "t_a2_geometry_profile_id"
+      ],
+      "safe_to_construct": true,
+      "source_evidence": [
+        "T-A1 reader and frame provenance contract",
+        "T-A2 canonical-frame pilot"
+      ],
+      "status": "SUPPORTED",
+      "supported": true,
+      "temporal_ordering_available": false,
+      "timestamp_available": false
+    },
+    "SEQUENCE_LEVEL": {
+      "actual_identifiers": [],
+      "grouping_available": false,
+      "reason": "Archive indices and neighboring filenames are provenance only, not verified sequence continuity.",
+      "required_identifiers": [
+        "sequence_id or recording_id",
+        "verified_temporal_order",
+        "timestamp_or_verified_cadence"
+      ],
+      "safe_to_construct": false,
+      "source_evidence": [
+        "T-A1 source schema has no sequence/recording identifier",
+        "SDT official documentation does not document clips or cadence"
+      ],
+      "status": "TEMPORAL_SEQUENCE_NOT_VERIFIABLE",
+      "supported": false,
+      "temporal_ordering_available": false,
+      "timestamp_available": false
+    },
+    "WINDOW_LEVEL": {
+      "actual_identifiers": [],
+      "grouping_available": false,
+      "reason": "A frame count or duration would have no verified temporal unit for this source.",
+      "required_identifiers": [
+        "verified_timeline",
+        "window_duration_or_frame_count",
+        "gap_policy",
+        "duplicate_policy",
+        "boundary_policy"
+      ],
+      "safe_to_construct": false,
+      "source_evidence": [
+        "No verified SDT timeline, cadence, sequence, or window unit"
+      ],
+      "status": "WINDOWING_NOT_APPLICABLE_TO_SOURCE",
+      "supported": false,
+      "temporal_ordering_available": false,
+      "timestamp_available": false
+    }
+  },
+  "event_identifiers": {
+    "availability": "ABSENT"
+  },
+  "evidence_categories": [
+    "LOCALLY_MEASURED",
+    "VALIDATOR_INHERITED",
+    "OFFICIAL_EXTERNAL_SOURCE_VERIFIED",
+    "UNKNOWN",
+    "NOT_APPLICABLE"
+  ],
+  "fall_event_boundaries": {
+    "availability": "NOT_VERIFIABLE"
+  },
+  "model_performance_used": false,
+  "phase": "T-A3",
+  "policy": {
+    "capabilities": {
+      "EVENT_LEVEL": {
+        "actual_identifiers": [],
+        "grouping_available": false,
+        "reason": "LYING is a posture label and does not identify a fall transition, onset, impact, or end.",
+        "required_identifiers": [
+          "sequence_id",
+          "event_id or defensible event annotation",
+          "onset",
+          "end",
+          "pre_post_context"
+        ],
+        "safe_to_construct": false,
+        "source_evidence": [
+          "T-A1 source schema has no event identifier or boundaries",
+          "official SDT labels are posture labels"
+        ],
+        "status": "TEMPORAL_EVENT_NOT_VERIFIABLE",
+        "supported": false,
+        "temporal_ordering_available": false,
+        "timestamp_available": false
+      },
+      "FRAME_LEVEL": {
+        "actual_identifiers": [
+          "dataset_id",
+          "split",
+          "archive_path",
+          "archive_sha256",
+          "member_name",
+          "frame_index",
+          "pose_label",
+          "bbox",
+          "raw_hash",
+          "canonical_hash",
+          "geometry_profile_id"
+        ],
+        "grouping_available": false,
+        "reason": "One verified image_t member is one frame-level sample; no temporal claim is attached.",
+        "required_identifiers": [
+          "source_dataset_id",
+          "source_split",
+          "source_archive_path",
+          "source_archive_sha256",
+          "source_member_name",
+          "source_frame_index",
+          "source_pose_label",
+          "source_bbox",
+          "raw_encoded_frame_sha256",
+          "canonical_frame_hash",
+          "t_a2_geometry_profile_id"
+        ],
+        "safe_to_construct": true,
+        "source_evidence": [
+          "T-A1 reader and frame provenance contract",
+          "T-A2 canonical-frame pilot"
+        ],
+        "status": "SUPPORTED",
+        "supported": true,
+        "temporal_ordering_available": false,
+        "timestamp_available": false
+      },
+      "SEQUENCE_LEVEL": {
+        "actual_identifiers": [],
+        "grouping_available": false,
+        "reason": "Archive indices and neighboring filenames are provenance only, not verified sequence continuity.",
+        "required_identifiers": [
+          "sequence_id or recording_id",
+          "verified_temporal_order",
+          "timestamp_or_verified_cadence"
+        ],
+        "safe_to_construct": false,
+        "source_evidence": [
+          "T-A1 source schema has no sequence/recording identifier",
+          "SDT official documentation does not document clips or cadence"
+        ],
+        "status": "TEMPORAL_SEQUENCE_NOT_VERIFIABLE",
+        "supported": false,
+        "temporal_ordering_available": false,
+        "timestamp_available": false
+      },
+      "WINDOW_LEVEL": {
+        "actual_identifiers": [],
+        "grouping_available": false,
+        "reason": "A frame count or duration would have no verified temporal unit for this source.",
+        "required_identifiers": [
+          "verified_timeline",
+          "window_duration_or_frame_count",
+          "gap_policy",
+          "duplicate_policy",
+          "boundary_policy"
+        ],
+        "safe_to_construct": false,
+        "source_evidence": [
+          "No verified SDT timeline, cadence, sequence, or window unit"
+        ],
+        "status": "WINDOWING_NOT_APPLICABLE_TO_SOURCE",
+        "supported": false,
+        "temporal_ordering_available": false,
+        "timestamp_available": false
+      }
+    },
+    "downstream_boundary": "T-A3 freezes source temporal evidence only; T-A4 owns original-label ambiguity and T-A5 owns grouping/splits.",
+    "gap_drop_duplicate_policy": {
+      "archive_index_gap": "SOURCE_MEMBER_INDEX_GAP",
+      "duplicate_member_index": "STRUCTURAL_SOURCE_FAILURE",
+      "duplicate_member_name": "STRUCTURAL_SOURCE_FAILURE",
+      "exact_duplicate_content": "PRESERVE_BOTH_PROVENANCE_RECORDS_AND_FLAG_DUPLICATE_CONTENT; DO_NOT_INFER_ADJACENCY",
+      "large_temporal_gap": "TEMPORAL_GAP_NOT_VERIFIABLE",
+      "near_duplicate_content": "DO_NOT_INFER_TEMPORAL_ADJACENCY; FULL_AUDIT_DEFERRED_T_A6",
+      "temporal_dropped_frame": "TEMPORAL_DROPPED_FRAME_NOT_VERIFIABLE"
+    },
+    "model_performance_used": false,
+    "official_split_policy": {
+      "current_source_split": "test",
+      "safe_nest_split_owner": "T-A5",
+      "safenest_split_created": false,
+      "source_split_preserved": true
+    },
+    "phase": "T-A3",
+    "policy_id": "THERMAL_TEMPORAL_POLICY_001",
+    "policy_version": "1.0",
+    "schema_version": "1.0",
+    "source": {
+      "archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+      "archive_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+      "dataset_id": "local_sdt_zenodo_4124309",
+      "doi": "doi:10.5281/zenodo.4124309",
+      "source_split": "test"
+    },
+    "source_frame_semantics": {
+      "filename_order_is_temporal_order": false,
+      "frame_index_role": "PROVENANCE_IDENTIFIER_ONLY",
+      "index_is_timestamp": false,
+      "lying_is_fall_event": false,
+      "member_name_role": "PROVENANCE_IDENTIFIER_ONLY",
+      "original_labels": {
+        "0": "LYING",
+        "1": "SITTING",
+        "2": "STANDING",
+        "3": "EMPTY_ROOM"
+      }
+    },
+    "temporal_evidence": {
+      "event_identity": {
+        "identifiers": [
+          "event_id"
+        ],
+        "status": "SOURCE_EVENT_STATUS_ABSENT"
+      },
+      "fall_boundaries": {
+        "end": "NOT_VERIFIABLE",
+        "impact": "NOT_VERIFIABLE",
+        "onset": "NOT_VERIFIABLE",
+        "status": "FALL_EVENT_BOUNDARY_NOT_VERIFIABLE"
+      },
+      "sequence_identity": {
+        "identifiers": [
+          "sequence_id",
+          "recording_id",
+          "clip_id",
+          "trial_id"
+        ],
+        "status": "SOURCE_SEQUENCE_STATUS_ABSENT"
+      },
+      "session_identity": {
+        "identifiers": [
+          "session_id"
+        ],
+        "status": "SOURCE_SESSION_STATUS_ABSENT"
+      },
+      "source_fps": {
+        "evidence": "No SDT-specific distributed acquisition rate or timestamp cadence is documented or stored.",
+        "status": "SOURCE_FRAME_RATE_NOT_VERIFIABLE",
+        "value": "NOT_VERIFIABLE"
+      },
+      "temporal_ordering": {
+        "status": "TEMPORAL_ORDER_NOT_VERIFIABLE",
+        "structural_index_order": "MEASURED_ONLY_AS_ARCHIVE_PROVENANCE"
+      },
+      "timestamps": {
+        "fields": "ABSENT",
+        "reliability": "NOT_APPLICABLE",
+        "status": "SOURCE_TIMESTAMP_ABSENT"
+      }
+    },
+    "unsupported_inference": [
+      "FRAME_INDEX_TO_TIMESTAMP",
+      "FRAME_INDEX_TO_FPS",
+      "FILENAME_ORDER_TO_TEMPORAL_ORDER",
+      "POSE_RUN_TO_SEQUENCE",
+      "LYING_TO_FALL_EVENT",
+      "IMAGE_SIMILARITY_TO_SEQUENCE",
+      "DEPTH_SIMILARITY_TO_SEQUENCE",
+      "MODEL_OUTPUT_TO_TEMPORAL_ORDER",
+      "SYNTHETIC_TIMESTAMP_OR_WINDOW"
+    ]
+  },
+  "safenest_split_created": false,
+  "schema_version": "1.0",
+  "sequence_identifiers": {
+    "availability": "ABSENT"
+  },
+  "session_identifiers": {
+    "availability": "ABSENT"
+  },
+  "source_dtype": "uint16",
+  "source_fps": {
+    "status": "NOT_VERIFIABLE",
+    "value": "NOT_VERIFIABLE"
+  },
+  "source_frame_shape": [
+    480,
+    640
+  ],
+  "source_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+  "source_split_preserved": true,
+  "source_unit": "KELVIN_CENTIUNITS",
+  "temporal_ordering": {
+    "availability": "NOT_VERIFIABLE",
+    "structural_index_only": true
+  },
+  "timestamps": {
+    "availability": "ABSENT",
+    "reliability": "NOT_APPLICABLE"
+  }
+}

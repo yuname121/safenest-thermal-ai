@@ -1,0 +1,16 @@
+{
+  "commercial_use": "NOT_AUTHORIZED_BY_T-B0; requires separate terms review",
+  "doi": "doi:10.5281/zenodo.4124309",
+  "evidence_ref": "datasets/thermal/manifests/T-A0_source_identity/source_license_evidence.json",
+  "license_status": "VERIFIED_ACCEPTABLE_WITH_NONCOMMERCIAL_RESEARCH_RESTRICTION",
+  "official_source": "https://zenodo.org/records/4124309",
+  "phase": "T-B0",
+  "raw_redistribution": "NOT_AUTHORIZED_BY_T-B0; requires separate terms review",
+  "registration_or_access": "Official distribution access; large local placeholders require owner authorization before hydration.",
+  "remaining_action": "Obtain manual legal/terms review before commercial use, raw redistribution or public artifact release.",
+  "required_attribution": true,
+  "schema_version": "1.0",
+  "source_id": "local_sdt_zenodo_4124309",
+  "trained_model_redistribution": "NOT_CLEARED_BY_T-B0; model release terms require manual review",
+  "training_and_evaluation": "Permitted for SafeNest non-commercial research/model-training use under the stricter official terms, with citation and attribution."
+}

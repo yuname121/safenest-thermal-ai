@@ -1,0 +1,21 @@
+{
+  "absolute_equivalence_threshold": "NOT_PREEXISTING",
+  "former_fp32_artifact": "TFLITE_DYNAMIC_RANGE_DIAGNOSTIC_ONLY",
+  "former_fp32_size_anomaly": "OPTIMIZE_DEFAULT_DYNAMIC_RANGE_QUANTIZED_FLOAT_IO",
+  "human_fall_semantics": "LYING_TO_HUMAN_FALL_DERIVED_POSTURE_PROXY_NOT_TEMPORAL_EVENT_GROUND_TRUTH",
+  "locked_test_available": false,
+  "near_duplicate_pairs_train_validation": 14514,
+  "next_phase_started": false,
+  "phase": "T-B4",
+  "pi_latency": "NOT_MEASURED",
+  "real_role": "REAL_EVAL_DEVELOPMENT_NOT_LOCKED_TEST",
+  "schema_version": "1.0",
+  "subject_session_event_generalization": "NOT_VERIFIABLE",
+  "synthetic_real_gap": 0.40120300969029854,
+  "synthetic_real_gap_interpretation": "OBSERVED_DEVELOPMENT_GAP_SEPARATE_FROM_QUANTIZATION_GAP",
+  "t_b5_started": false,
+  "t_c_started": false,
+  "temporal_event_parity": "NOT_EVALUATED_FRAME_LEVEL_ONLY",
+  "thermal44_validation": "NOT_PERFORMED_DEFERRED_TO_T-C",
+  "true_fp32_equivalence_stage": "UNQUANTIZED_NO_OPTIMIZATIONS"
+}

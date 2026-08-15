@@ -1,0 +1,33 @@
+{
+  "balanced_accuracy": {
+    "formula": "arithmetic mean and minimum over the three frozen seeds",
+    "mean": 0.9954722222222222,
+    "worst": 0.9947499999999999
+  },
+  "best_seed_cherry_picking": "PROHIBITED",
+  "human_fall_posture_proxy_recall": {
+    "formula": "arithmetic mean and minimum over the three frozen seeds",
+    "mean": 0.9926666666666667,
+    "worst": 0.991
+  },
+  "macro_f1": {
+    "formula": "population standard deviation (ddof=0) over the three frozen seeds",
+    "maximum": 0.9956265742029635,
+    "mean": 0.9950440600852722,
+    "minimum": 0.9943760727992105,
+    "range": 0.001250501403753046,
+    "std": 0.0005140802058567209
+  },
+  "metric": "VALIDATION",
+  "phase": "T-B3",
+  "real_used_for_selection": false,
+  "schema_version": "1.0",
+  "seed_count": 3,
+  "seeds": [
+    20260813,
+    20260814,
+    20260815
+  ],
+  "stability_characterization": "STABILITY_CHARACTERIZED",
+  "stability_threshold_predefined": false
+}

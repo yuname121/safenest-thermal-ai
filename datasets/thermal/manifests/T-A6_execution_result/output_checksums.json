@@ -1,0 +1,21 @@
+{
+  "phase": "T-A6_COLAB_STAGE2",
+  "roles": {
+    "REAL_EVAL_DEVELOPMENT": {
+      "artifact_sha256": "cd696e68aeec063cbc8185719b4f4dad3d038cb3d28eec0d3701b8311e4ad8f1",
+      "ledger_sha256": "74d30a53db14d8f68fe1a47aab2d00aa7172df47861b31e7b8e1f2384a558480",
+      "provenance_sha256": "c9d12f12d845d218e5636dad84a4a094e869faa29d95feb4a6f69603c195e550"
+    },
+    "TRAIN": {
+      "artifact_sha256": "749c847fc9ab50ea5eee8827f0d47b5ebaa48165732a382c59f8b96c565b9d93",
+      "ledger_sha256": "9f0147f50a8222e4dd22d1c640ee5ac3eeef419b0ee969ef81d1d52810bf44a5",
+      "provenance_sha256": "b4ec8228e35703bac3319ca218a69fdef43013ea44b23376da4929b274d24888"
+    },
+    "VALIDATION": {
+      "artifact_sha256": "5d16451702c1bccfa945d9188d9b29a26ce11c8b33bf7a0dfbb25bfa86d74610",
+      "ledger_sha256": "0cc2ce092260a6be893780a18d53a989dfbe485b2d5b1ddd684b4e9266cb44f6",
+      "provenance_sha256": "48ebd03ca6f8d738ad7048aa72d4c454fd821140aa887971c27c5b49c1d7ec63"
+    }
+  },
+  "schema_version": "1.0"
+}

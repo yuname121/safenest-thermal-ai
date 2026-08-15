@@ -1,0 +1,33 @@
+{
+  "absolute_temperature_preserved": false,
+  "audit_basis": "REPOSITORY_CODE_VERIFIED",
+  "audit_status": "COMPLETE_WITH_COMPATIBILITY_LIMITATION",
+  "canonical_celsius_directly_consumed": false,
+  "channel_layout": "NHWC",
+  "clipping": "ONLY_CONSTANT_FRAME_CLIP_TO_0_1; non-constant output is mathematically [0,1]",
+  "code_path": "inference/thermal_interpreter.py",
+  "dtype_conversion": "float32 before preprocessing; int8 after preprocessing",
+  "epsilon": "NONE_EXPLICIT; range > 0 branch",
+  "fit_partition": "NONE",
+  "function": "ThermalInterpreter._prepare_float_frame",
+  "mismatch_with_t_a6": "T-A6 canonical Celsius values are physically meaningful and generally outside [0,1]; runtime converts each frame to a relative min-max image before inference.",
+  "model_calibration_semantic": "Existing model manifest declares normalized_thermal_frame; this does not establish T-A6 canonical-data training lineage.",
+  "observed_order": [
+    "convert input to float32",
+    "accept (62,80), (62,80,1), or (1,62,80,1)",
+    "reject non-finite values",
+    "compute per-frame minimum and maximum",
+    "if range extends outside [0,1], apply (x-min)/(max-min)",
+    "if constant frame, clip to [0,1]",
+    "expand/retain NHWC shape",
+    "quantize with TFLite input scale and zero point"
+  ],
+  "per_frame": true,
+  "phase": "T-B0",
+  "quantization": {
+    "formula": "round(normalized_float / input_scale + input_zero_point), then int8 clip",
+    "input_scale": 0.003921568859368563,
+    "input_zero_point": -128
+  },
+  "schema_version": "1.0"
+}

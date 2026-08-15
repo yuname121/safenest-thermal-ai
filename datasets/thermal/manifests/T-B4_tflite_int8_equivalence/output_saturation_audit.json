@@ -1,0 +1,11 @@
+{
+  "boundary_fraction": 0.9812083333333333,
+  "dequantized_max": 0.99609375,
+  "dequantized_min": 0.0,
+  "lower_boundary_count": 15730,
+  "phase": "T-B4",
+  "role": "VALIDATION",
+  "schema_version": "1.0",
+  "total_elements": 24000,
+  "upper_boundary_count": 7819
+}

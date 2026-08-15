@@ -1,0 +1,42 @@
+{
+  "mandatory_gates": {
+    "compatible_with_t_a6": true,
+    "deterministic": true,
+    "handles_prior_access": true,
+    "no_model_metrics_used": true,
+    "preserves_official_partitions": true,
+    "separates_source_domains": true,
+    "supports_t_b_hygiene": true,
+    "uses_frame_hash_split": false,
+    "uses_frame_random_split": false
+  },
+  "model_metrics_used": false,
+  "phase": "T-A5",
+  "policy_id": "THERMAL_SPLIT_SELECTION_POLICY_001",
+  "ranking_order": [
+    "provenance_independence",
+    "official_partition_preservation",
+    "no_cross_group_overlap",
+    "no_retroactive_locked_test",
+    "no_frame_random_leakage",
+    "source_domain_transparency",
+    "deterministic_assignment",
+    "t_a6_compatibility",
+    "t_b_hygiene",
+    "candidate_id"
+  ],
+  "schema_version": "1.0",
+  "selection_criteria": [
+    "PROVENANCE_SUPPORTED_INDEPENDENCE",
+    "OFFICIAL_SOURCE_PARTITION_PRESERVATION",
+    "NO_CROSS_GROUP_OVERLAP",
+    "NO_RETROACTIVE_PRISTINE_HOLDOUT_CLAIM",
+    "NO_FRAME_RANDOM_OR_HASH_LEAKAGE",
+    "SOURCE_DOMAIN_TRANSPARENCY",
+    "DETERMINISTIC_ASSIGNMENT",
+    "T_A6_PROVENANCE_COMPATIBILITY",
+    "T_B_EVALUATION_HYGIENE"
+  ],
+  "tie_break_rule": "LEXICOGRAPHIC_DESCENDING_DECLARED_METRICS_THEN_ASCENDING_CANDIDATE_ID",
+  "winner_is_not_predeclared": true
+}

@@ -1,0 +1,28 @@
+{
+  "phase": "T-B4",
+  "predecessors": {
+    "T-A6": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "PASS_WITH_LIMITATIONS"
+    },
+    "T-B0": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "PASS_WITH_LIMITATIONS"
+    },
+    "T-B1": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "T_B1_FULL_COMPLETE_WITH_LIMITATIONS"
+    },
+    "T-B2": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "T_B2_COMPLETE_WITH_LIMITATIONS"
+    },
+    "T-B3": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "T_B3_COMPLETE_WITH_LIMITATIONS"
+    }
+  },
+  "schema_version": "1.0",
+  "t_b3_merge_required": true,
+  "t_b3_merge_verified": true
+}

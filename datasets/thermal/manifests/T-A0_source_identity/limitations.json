@@ -1,0 +1,58 @@
+{
+  "documentation_discrepancy": {
+    "corrected_interpretation": "NO_APPROVED_CANONICAL_REAL_THERMAL_EVALUATION_DATASET",
+    "local_payload_exists": true,
+    "roadmap_claim": "Thermal real evaluation dataset absent",
+    "roadmap_modified": false
+  },
+  "limitations": [
+    {
+      "id": "T-A0-L001",
+      "issue": "Family A identity, license, labels and prefix meanings are unverified.",
+      "status": "OPEN"
+    },
+    {
+      "id": "T-A0-L002",
+      "issue": "SDT lying is mapped to HUMAN_FALL only as derived post-fall lying-posture evidence; it never proves a temporal fall event by itself.",
+      "status": "ACCEPTED_LIMITATION"
+    },
+    {
+      "id": "T-A0-L003",
+      "issue": "SDT official CC-BY-4.0 metadata conflicts with non-commercial-research-only record text; this selection applies the stricter non-commercial research, citation and attribution conditions.",
+      "status": "ACCEPTED_RESTRICTIVE_COMMON_DENOMINATOR"
+    },
+    {
+      "id": "T-A0-L004",
+      "issue": "SDT has no subject/session/event IDs. T-A1 must preserve the official synthetic train / synthetic validation / real test split exactly; subject-wise and event-level generalization remain not verifiable.",
+      "status": "ACCEPTED_GROUPING_LIMITATION"
+    },
+    {
+      "id": "T-A0-L005",
+      "issue": "Legacy NPZ retains only X/y and mixes official splits and heuristic labels.",
+      "status": "OPEN"
+    },
+    {
+      "id": "T-A0-L006",
+      "issue": "SDT train and validation payloads are dataless multi-GB placeholders.",
+      "status": "LARGE_DOWNLOAD_AUTHORIZATION_REQUIRED"
+    },
+    {
+      "id": "T-A0-L007",
+      "issue": "MUVIM and Thermal Fall 66 require external access and terms review.",
+      "status": "ACCESS_BLOCKED"
+    },
+    {
+      "id": "T-A0-L008",
+      "issue": "eHomeSeniors lacks documented normal/ADL sequences and explicit repeated-fall boundaries.",
+      "status": "OPEN"
+    },
+    {
+      "id": "T-A0-L009",
+      "issue": "Thermal-44 units, dtype, endianness, conversion, invalid pixels, packet size and real driver remain unverified.",
+      "status": "DEFERRED_T_C"
+    }
+  ],
+  "overall_outcome": "PASS_WITH_LIMITATIONS",
+  "phase": "T-A0",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,69 @@
+{
+  "candidates": [
+    {
+      "artifact": "P1_TRAIN_FITTED_GLOBAL_ZSCORE_FLOAT_CHECKPOINT",
+      "candidate_id": "FLOAT_KERAS",
+      "eligible": true,
+      "real_used_for_selection": false,
+      "stage": "F0"
+    },
+    {
+      "artifact_id": "TFLITE_FP32",
+      "candidate_id": "TFLITE_FP32",
+      "conversion_policy": {
+        "builtin_only": true,
+        "dynamic_range_quantization": false,
+        "float16_enabled": false,
+        "optimizations": [],
+        "quantization_mode": "NONE",
+        "representative_dataset_attached": false
+      },
+      "eligible": true,
+      "real_used_for_selection": false,
+      "sha256": "fbe891520f07e0534b1a7074dc819d8ed44bca58b27e35c78916c3ddae73a779",
+      "size_bytes": 1252048,
+      "stage": "F1"
+    },
+    {
+      "artifact_id": "FULL_INT8",
+      "candidate_id": "FULL_INT8",
+      "conversion_policy": {
+        "builtin_only": true,
+        "dynamic_range_quantization": false,
+        "float16_enabled": false,
+        "optimizations": [
+          "DEFAULT"
+        ],
+        "quantization_mode": "FULL_INT8",
+        "representative_dataset_attached": true
+      },
+      "eligible": true,
+      "real_used_for_selection": false,
+      "sha256": "fa9730c29535477a3994c11e664474a0ca0116afaaa172889f47446ab2ac46be",
+      "size_bytes": 318280,
+      "stage": "F2"
+    },
+    {
+      "candidate_id": "TFLITE_DYNAMIC_RANGE",
+      "eligible": false,
+      "reason": "DYNAMIC_RANGE_DIAGNOSTIC_ONLY",
+      "sha256": "297de231e26ecf2d4cd4010bd10c08d4df3b6b0a531c69693daea353afb8127d",
+      "size_bytes": 317344,
+      "stage": "DIAGNOSTIC_ONLY"
+    }
+  ],
+  "frozen_model_contract": {
+    "architecture": "SMALL_CNN_BASELINE_V1",
+    "architecture_fingerprint": "937fceb88900a779d67a8e407cebc3362cc21346721f92cea5ae8de1413aba2a",
+    "float_checkpoint_sha256": "7aba32fe8d0e241546429bdc3e8cd059b10d4d8f548e9e12c4085abeba308a75",
+    "float_checkpoint_size_bytes": 3777416,
+    "p1_profile": "P1_TRAIN_FITTED_GLOBAL_ZSCORE",
+    "recalibration": false,
+    "representative_calibration_fit_role": "TRAIN",
+    "retraining": false,
+    "seed": 20260813
+  },
+  "phase": "T-B5",
+  "schema_version": "1.0",
+  "selection_role": "VALIDATION"
+}

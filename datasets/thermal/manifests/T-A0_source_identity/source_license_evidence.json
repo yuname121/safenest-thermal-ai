@@ -1,0 +1,91 @@
+{
+  "access_date": "2026-08-10",
+  "license_decisions": [
+    {
+      "candidate_id": "local_sdt_zenodo_4124309",
+      "reason": "The official record explicitly permits non-commercial research and documents synthetic training use. The stricter statement governs; attribution/citation are required, and commercial use or raw redistribution needs separate review.",
+      "status": "VERIFIED_ACCEPTABLE_WITH_NONCOMMERCIAL_RESEARCH_RESTRICTION"
+    },
+    {
+      "candidate_id": "external_ehomeseniors_2019",
+      "reason": "CC BY 4.0 covers the article/publisher supplement context, but a separate dataset license statement was not found.",
+      "status": "NEEDS_MANUAL_REVIEW"
+    },
+    {
+      "candidate_id": "external_muvim_2022",
+      "reason": "Terms require access request.",
+      "status": "LICENSE_UNVERIFIED"
+    },
+    {
+      "candidate_id": "external_thermal_fall_66",
+      "reason": "Terms require access request.",
+      "status": "LICENSE_UNVERIFIED"
+    }
+  ],
+  "phase": "T-A0",
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "category": "OFFICIAL_PUBLICATION",
+      "source_id": "ehomeseniors_paper",
+      "url": "https://doi.org/10.3390/s19204565",
+      "verified_claims": [
+        "six volunteers",
+        "two thermal sensors",
+        "CSV/MAT schema",
+        "staged-fall protocol",
+        "subject-bearing file names",
+        "publisher supplement location"
+      ]
+    },
+    {
+      "category": "OFFICIAL_PUBLICATION",
+      "source_id": "muvim_paper",
+      "url": "https://doi.org/10.1109/ACCESS.2022.3211939",
+      "verified_claims": [
+        "thermal/IR/depth/RGB modalities",
+        "30 younger fall/ADL subjects",
+        "10 older ADL subjects",
+        "three FLIR ONE Gen 3 cameras",
+        "author-request access"
+      ]
+    },
+    {
+      "category": "OFFICIAL_DATASET_API",
+      "source_id": "sdt_api",
+      "url": "https://zenodo.org/api/records/4124309",
+      "verified_claims": [
+        "DOI",
+        "version",
+        "file sizes",
+        "official MD5 values",
+        "CC-BY-4.0 metadata",
+        "non-commercial research text"
+      ]
+    },
+    {
+      "category": "OFFICIAL_DATASET_DOCUMENTATION",
+      "source_id": "sdt_readme",
+      "url": "https://zenodo.org/records/4124309/files/readme.md?download=1",
+      "verified_claims": [
+        "image_t thermal",
+        "image_d depth",
+        "Kelvin encoding",
+        "depth millimetres",
+        "sensor models",
+        "pose labels",
+        "split sizes",
+        "synthetic versus real splits"
+      ]
+    },
+    {
+      "category": "OFFICIAL_PUBLICATION_LANDING_PAGE",
+      "source_id": "thermal_fall_66_publisher",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0952197625018214",
+      "verified_claims": [
+        "66-subject thermal fall dataset claim",
+        "data available on request"
+      ]
+    }
+  ]
+}

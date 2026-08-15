@@ -1,0 +1,7 @@
+{
+  "fit_role": null,
+  "operation": "LEGACY_PER_FRAME_MINMAX",
+  "profile_id": "P2_LEGACY_PER_FRAME_MINMAX",
+  "schema_version": "1.0",
+  "source_contract": "ThermalInterpreter._prepare_float_frame"
+}

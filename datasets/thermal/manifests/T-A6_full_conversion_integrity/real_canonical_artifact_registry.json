@@ -1,0 +1,20 @@
+{
+  "artifact_path": "datasets/thermal/artifacts/T-A6_real_eval_development/real_eval_development_canonical.npy",
+  "artifact_sha256": "cd696e68aeec063cbc8185719b4f4dad3d038cb3d28eec0d3701b8311e4ad8f1",
+  "artifact_size_bytes": 158720128,
+  "checksum_status": "LOCKED",
+  "dtype": "float32",
+  "finalized_status": "FINALIZED",
+  "partial_files_rejected": true,
+  "provenance_path": "datasets/thermal/artifacts/T-A6_real_eval_development/real_eval_development_provenance.jsonl",
+  "provenance_sha256": "c9d12f12d845d218e5636dad84a4a094e869faa29d95feb4a6f69603c195e550",
+  "provenance_size_bytes": 29655857,
+  "safenest_role": "REAL_EVAL_DEVELOPMENT",
+  "shape": [
+    8000,
+    62,
+    80
+  ],
+  "status": "FINALIZED",
+  "unit": "CELSIUS"
+}

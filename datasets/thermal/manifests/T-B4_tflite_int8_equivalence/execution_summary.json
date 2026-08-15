@@ -1,0 +1,21 @@
+{
+  "calibration_samples": 512,
+  "candidate_changed": false,
+  "conversion_performed": true,
+  "correction_performed": true,
+  "former_fp32_reclassified": "TFLITE_DYNAMIC_RANGE",
+  "former_fp32_sha256": "297de231e26ecf2d4cd4010bd10c08d4df3b6b0a531c69693daea353afb8127d",
+  "former_fp32_size_bytes": 317344,
+  "full_int8_preserved": true,
+  "full_int8_sha256": "fa9730c29535477a3994c11e664474a0ca0116afaaa172889f47446ab2ac46be",
+  "mode": "FULL_EXPERIMENT",
+  "phase": "T-B4",
+  "real_samples": 8000,
+  "retraining_performed": false,
+  "schema_version": "1.0",
+  "status": "FINALIZED",
+  "t_b5_started": false,
+  "t_c_started": false,
+  "true_fp32_generated": true,
+  "validation_samples": 8000
+}

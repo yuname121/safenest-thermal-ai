@@ -1,0 +1,859 @@
+{
+  "all_four_source_classes_represented": true,
+  "class_counts": {
+    "0": 3,
+    "1": 3,
+    "2": 3,
+    "3": 3
+  },
+  "phase": "T-A1",
+  "pilot_frame_count": 12,
+  "pilot_indices": [
+    0,
+    1000,
+    1999,
+    2000,
+    3000,
+    3999,
+    4000,
+    5000,
+    5999,
+    6000,
+    7000,
+    7999
+  ],
+  "pilot_records": [
+    {
+      "celsius_max": 32.84,
+      "celsius_min": 23.38,
+      "decoded_byte_order": "=",
+      "distributed_frame_shape": [
+        480,
+        640
+      ],
+      "encoded_max": 30599,
+      "encoded_min": 29653,
+      "native_sensor_shape": [
+        120,
+        160
+      ],
+      "quality_flags": [],
+      "raw_encoded_frame_sha256": "215f7629b5f27ecbe8ff3cd51fc46baa454b35517a7de1fd0d112256b5e9b34d",
+      "repeated_decode_equal": true,
+      "source_archive_md5": "d59a739f3b5ecf373c94046fb94cd94f",
+      "source_archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+      "source_archive_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+      "source_archive_size_bytes": 1740348425,
+      "source_bbox": [
+        183.5,
+        165.5,
+        440.5,
+        428.5
+      ],
+      "source_dataset_id": "local_sdt_zenodo_4124309",
+      "source_doi": "10.5281/zenodo.4124309",
+      "source_dtype": "uint16",
+      "source_event_status": "ABSENT",
+      "source_frame_index": 0,
+      "source_member_crc32": "b50e020e",
+      "source_member_index": 8001,
+      "source_member_name": "test/image_t_0.png",
+      "source_member_sha256": "67daac01f2b70673e33e5ebfb5d54966273bad4c03cc6172e66513d04c8bd685",
+      "source_pose_label": 0,
+      "source_pose_name": "LYING",
+      "source_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+      "source_sequence_status": "ABSENT",
+      "source_session_status": "ABSENT",
+      "source_split": "test",
+      "source_subject_status": "ABSENT",
+      "source_temperature_encoding": "kelvin_centiunits; kelvin=raw/100; celsius=(raw-27315)/100",
+      "source_timestamp_status": "ABSENT",
+      "unit_conversion_witnesses": [
+        {
+          "celsius": 25.18,
+          "column": 0,
+          "encoded_uint16": 29833,
+          "kelvin": 298.33,
+          "row": 0
+        },
+        {
+          "celsius": 25.6,
+          "column": 320,
+          "encoded_uint16": 29875,
+          "kelvin": 298.75,
+          "row": 240
+        },
+        {
+          "celsius": 24.16,
+          "column": 639,
+          "encoded_uint16": 29731,
+          "kelvin": 297.31,
+          "row": 479
+        }
+      ]
+    },
+    {
+      "celsius_max": 34.32,
+      "celsius_min": 22.46,
+      "decoded_byte_order": "=",
+      "distributed_frame_shape": [
+        480,
+        640
+      ],
+      "encoded_max": 30747,
+      "encoded_min": 29561,
+      "native_sensor_shape": [
+        120,
+        160
+      ],
+      "quality_flags": [],
+      "raw_encoded_frame_sha256": "cdf0af080d806561470f443ccd21307fe49519982b23ad601e144352d3a65ab5",
+      "repeated_decode_equal": true,
+      "source_archive_md5": "d59a739f3b5ecf373c94046fb94cd94f",
+      "source_archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+      "source_archive_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+      "source_archive_size_bytes": 1740348425,
+      "source_bbox": [
+        106.5,
+        144.5,
+        460.5,
+        474.5
+      ],
+      "source_dataset_id": "local_sdt_zenodo_4124309",
+      "source_doi": "10.5281/zenodo.4124309",
+      "source_dtype": "uint16",
+      "source_event_status": "ABSENT",
+      "source_frame_index": 1000,
+      "source_member_crc32": "39082572",
+      "source_member_index": 8005,
+      "source_member_name": "test/image_t_1000.png",
+      "source_member_sha256": "3cff1cfd995b9941fdf969bcfd0627dd53b88b4468c39e5ac5a493717b92619d",
+      "source_pose_label": 0,
+      "source_pose_name": "LYING",
+      "source_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+      "source_sequence_status": "ABSENT",
+      "source_session_status": "ABSENT",
+      "source_split": "test",
+      "source_subject_status": "ABSENT",
+      "source_temperature_encoding": "kelvin_centiunits; kelvin=raw/100; celsius=(raw-27315)/100",
+      "source_timestamp_status": "ABSENT",
+      "unit_conversion_witnesses": [
+        {
+          "celsius": 25.35,
+          "column": 0,
+          "encoded_uint16": 29850,
+          "kelvin": 298.5,
+          "row": 0
+        },
+        {
+          "celsius": 29.43,
+          "column": 320,
+          "encoded_uint16": 30258,
+          "kelvin": 302.58,
+          "row": 240
+        },
+        {
+          "celsius": 23.99,
+          "column": 639,
+          "encoded_uint16": 29714,
+          "kelvin": 297.14,
+          "row": 479
+        }
+      ]
+    },
+    {
+      "celsius_max": 34.52,
+      "celsius_min": 21.55,
+      "decoded_byte_order": "=",
+      "distributed_frame_shape": [
+        480,
+        640
+      ],
+      "encoded_max": 30767,
+      "encoded_min": 29470,
+      "native_sensor_shape": [
+        120,
+        160
+      ],
+      "quality_flags": [],
+      "raw_encoded_frame_sha256": "fc686fc090616a5f9d6b6c4b6d83a81b703db386060b1b1c5388afb0bdc21f44",
+      "repeated_decode_equal": true,
+      "source_archive_md5": "d59a739f3b5ecf373c94046fb94cd94f",
+      "source_archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+      "source_archive_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+      "source_archive_size_bytes": 1740348425,
+      "source_bbox": [
+        51.5,
+        264.5,
+        432.5,
+        456.5
+      ],
+      "source_dataset_id": "local_sdt_zenodo_4124309",
+      "source_doi": "10.5281/zenodo.4124309",
+      "source_dtype": "uint16",
+      "source_event_status": "ABSENT",
+      "source_frame_index": 1999,
+      "source_member_crc32": "982749f2",
+      "source_member_index": 9112,
+      "source_member_name": "test/image_t_1999.png",
+      "source_member_sha256": "29dd25a3d035383436d00c58affea980bd8a91ca1dbf394aaefe5f432289334f",
+      "source_pose_label": 0,
+      "source_pose_name": "LYING",
+      "source_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+      "source_sequence_status": "ABSENT",
+      "source_session_status": "ABSENT",
+      "source_split": "test",
+      "source_subject_status": "ABSENT",
+      "source_temperature_encoding": "kelvin_centiunits; kelvin=raw/100; celsius=(raw-27315)/100",
+      "source_timestamp_status": "ABSENT",
+      "unit_conversion_witnesses": [
+        {
+          "celsius": 24.79,
+          "column": 0,
+          "encoded_uint16": 29794,
+          "kelvin": 297.94,
+          "row": 0
+        },
+        {
+          "celsius": 23.95,
+          "column": 320,
+          "encoded_uint16": 29710,
+          "kelvin": 297.1,
+          "row": 240
+        },
+        {
+          "celsius": 25.52,
+          "column": 639,
+          "encoded_uint16": 29867,
+          "kelvin": 298.67,
+          "row": 479
+        }
+      ]
+    },
+    {
+      "celsius_max": 34.19,
+      "celsius_min": 24.14,
+      "decoded_byte_order": "=",
+      "distributed_frame_shape": [
+        480,
+        640
+      ],
+      "encoded_max": 30734,
+      "encoded_min": 29729,
+      "native_sensor_shape": [
+        120,
+        160
+      ],
+      "quality_flags": [],
+      "raw_encoded_frame_sha256": "f7763e788872b5e720bdbf2bf3debdbb439397b4d78269e0d621f5f59b3f74de",
+      "repeated_decode_equal": true,
+      "source_archive_md5": "d59a739f3b5ecf373c94046fb94cd94f",
+      "source_archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+      "source_archive_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+      "source_archive_size_bytes": 1740348425,
+      "source_bbox": [
+        241.5,
+        31.5,
+        403.5,
+        354.5
+      ],
+      "source_dataset_id": "local_sdt_zenodo_4124309",
+      "source_doi": "10.5281/zenodo.4124309",
+      "source_dtype": "uint16",
+      "source_event_status": "ABSENT",
+      "source_frame_index": 2000,
+      "source_member_crc32": "8d5dfcc0",
+      "source_member_index": 9116,
+      "source_member_name": "test/image_t_2000.png",
+      "source_member_sha256": "19fd15b70c86809827f4075fc5d48ccff4827d4a4f80436067fdf4855ff6496e",
+      "source_pose_label": 1,
+      "source_pose_name": "SITTING",
+      "source_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+      "source_sequence_status": "ABSENT",
+      "source_session_status": "ABSENT",
+      "source_split": "test",
+      "source_subject_status": "ABSENT",
+      "source_temperature_encoding": "kelvin_centiunits; kelvin=raw/100; celsius=(raw-27315)/100",
+      "source_timestamp_status": "ABSENT",
+      "unit_conversion_witnesses": [
+        {
+          "celsius": 26.07,
+          "column": 0,
+          "encoded_uint16": 29922,
+          "kelvin": 299.22,
+          "row": 0
+        },
+        {
+          "celsius": 26.14,
+          "column": 320,
+          "encoded_uint16": 29929,
+          "kelvin": 299.29,
+          "row": 240
+        },
+        {
+          "celsius": 25.14,
+          "column": 639,
+          "encoded_uint16": 29829,
+          "kelvin": 298.29,
+          "row": 479
+        }
+      ]
+    },
+    {
+      "celsius_max": 30.07,
+      "celsius_min": 20.94,
+      "decoded_byte_order": "=",
+      "distributed_frame_shape": [
+        480,
+        640
+      ],
+      "encoded_max": 30322,
+      "encoded_min": 29409,
+      "native_sensor_shape": [
+        120,
+        160
+      ],
+      "quality_flags": [],
+      "raw_encoded_frame_sha256": "3623174846919308e73d8242f1e81250fa38e27d29fc9580bda509cabb144178",
+      "repeated_decode_equal": true,
+      "source_archive_md5": "d59a739f3b5ecf373c94046fb94cd94f",
+      "source_archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+      "source_archive_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+      "source_archive_size_bytes": 1740348425,
+      "source_bbox": [
+        181.5,
+        98.5,
+        351.5,
+        314.5
+      ],
+      "source_dataset_id": "local_sdt_zenodo_4124309",
+      "source_doi": "10.5281/zenodo.4124309",
+      "source_dtype": "uint16",
+      "source_event_status": "ABSENT",
+      "source_frame_index": 3000,
+      "source_member_crc32": "4e4b2ee0",
+      "source_member_index": 10227,
+      "source_member_name": "test/image_t_3000.png",
+      "source_member_sha256": "3ff8bb7e2e5eff8646b5ffc5da23b2764a0cd11f8c54e9039855858785f36b51",
+      "source_pose_label": 1,
+      "source_pose_name": "SITTING",
+      "source_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+      "source_sequence_status": "ABSENT",
+      "source_session_status": "ABSENT",
+      "source_split": "test",
+      "source_subject_status": "ABSENT",
+      "source_temperature_encoding": "kelvin_centiunits; kelvin=raw/100; celsius=(raw-27315)/100",
+      "source_timestamp_status": "ABSENT",
+      "unit_conversion_witnesses": [
+        {
+          "celsius": 25.21,
+          "column": 0,
+          "encoded_uint16": 29836,
+          "kelvin": 298.36,
+          "row": 0
+        },
+        {
+          "celsius": 23.53,
+          "column": 320,
+          "encoded_uint16": 29668,
+          "kelvin": 296.68,
+          "row": 240
+        },
+        {
+          "celsius": 22.82,
+          "column": 639,
+          "encoded_uint16": 29597,
+          "kelvin": 295.97,
+          "row": 479
+        }
+      ]
+    },
+    {
+      "celsius_max": 34.26,
+      "celsius_min": 21.78,
+      "decoded_byte_order": "=",
+      "distributed_frame_shape": [
+        480,
+        640
+      ],
+      "encoded_max": 30741,
+      "encoded_min": 29493,
+      "native_sensor_shape": [
+        120,
+        160
+      ],
+      "quality_flags": [],
+      "raw_encoded_frame_sha256": "8af54e9f8877d8dee8d54c7f2edf2c345b2563c2e2b26b85938cab5dcef3f1e5",
+      "repeated_decode_equal": true,
+      "source_archive_md5": "d59a739f3b5ecf373c94046fb94cd94f",
+      "source_archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+      "source_archive_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+      "source_archive_size_bytes": 1740348425,
+      "source_bbox": [
+        181.5,
+        99.5,
+        377.5,
+        471.5
+      ],
+      "source_dataset_id": "local_sdt_zenodo_4124309",
+      "source_doi": "10.5281/zenodo.4124309",
+      "source_dtype": "uint16",
+      "source_event_status": "ABSENT",
+      "source_frame_index": 3999,
+      "source_member_crc32": "4e77ea34",
+      "source_member_index": 11334,
+      "source_member_name": "test/image_t_3999.png",
+      "source_member_sha256": "5cbe141412ac9c2d00e450f85bafc84b57a9ae198710a47d80532f5d23dc5271",
+      "source_pose_label": 1,
+      "source_pose_name": "SITTING",
+      "source_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+      "source_sequence_status": "ABSENT",
+      "source_session_status": "ABSENT",
+      "source_split": "test",
+      "source_subject_status": "ABSENT",
+      "source_temperature_encoding": "kelvin_centiunits; kelvin=raw/100; celsius=(raw-27315)/100",
+      "source_timestamp_status": "ABSENT",
+      "unit_conversion_witnesses": [
+        {
+          "celsius": 25.56,
+          "column": 0,
+          "encoded_uint16": 29871,
+          "kelvin": 298.71,
+          "row": 0
+        },
+        {
+          "celsius": 29.47,
+          "column": 320,
+          "encoded_uint16": 30262,
+          "kelvin": 302.62,
+          "row": 240
+        },
+        {
+          "celsius": 25.66,
+          "column": 639,
+          "encoded_uint16": 29881,
+          "kelvin": 298.81,
+          "row": 479
+        }
+      ]
+    },
+    {
+      "celsius_max": 34.63,
+      "celsius_min": 23.32,
+      "decoded_byte_order": "=",
+      "distributed_frame_shape": [
+        480,
+        640
+      ],
+      "encoded_max": 30778,
+      "encoded_min": 29647,
+      "native_sensor_shape": [
+        120,
+        160
+      ],
+      "quality_flags": [],
+      "raw_encoded_frame_sha256": "b6bc6ba1f1d8d5022f3c5090ba342742cc6acfd75a55cba12bd65a873624a0fe",
+      "repeated_decode_equal": true,
+      "source_archive_md5": "d59a739f3b5ecf373c94046fb94cd94f",
+      "source_archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+      "source_archive_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+      "source_archive_size_bytes": 1740348425,
+      "source_bbox": [
+        9.5,
+        74.5,
+        368.5,
+        468.5
+      ],
+      "source_dataset_id": "local_sdt_zenodo_4124309",
+      "source_doi": "10.5281/zenodo.4124309",
+      "source_dtype": "uint16",
+      "source_event_status": "ABSENT",
+      "source_frame_index": 4000,
+      "source_member_crc32": "58a9d291",
+      "source_member_index": 11338,
+      "source_member_name": "test/image_t_4000.png",
+      "source_member_sha256": "d919004e4f94772b75ecc6d550753ccbdb631c01248922887309338d51a49e70",
+      "source_pose_label": 2,
+      "source_pose_name": "STANDING",
+      "source_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+      "source_sequence_status": "ABSENT",
+      "source_session_status": "ABSENT",
+      "source_split": "test",
+      "source_subject_status": "ABSENT",
+      "source_temperature_encoding": "kelvin_centiunits; kelvin=raw/100; celsius=(raw-27315)/100",
+      "source_timestamp_status": "ABSENT",
+      "unit_conversion_witnesses": [
+        {
+          "celsius": 24.64,
+          "column": 0,
+          "encoded_uint16": 29779,
+          "kelvin": 297.79,
+          "row": 0
+        },
+        {
+          "celsius": 26.33,
+          "column": 320,
+          "encoded_uint16": 29948,
+          "kelvin": 299.48,
+          "row": 240
+        },
+        {
+          "celsius": 24.16,
+          "column": 639,
+          "encoded_uint16": 29731,
+          "kelvin": 297.31,
+          "row": 479
+        }
+      ]
+    },
+    {
+      "celsius_max": 32.47,
+      "celsius_min": 19.62,
+      "decoded_byte_order": "=",
+      "distributed_frame_shape": [
+        480,
+        640
+      ],
+      "encoded_max": 30562,
+      "encoded_min": 29277,
+      "native_sensor_shape": [
+        120,
+        160
+      ],
+      "quality_flags": [],
+      "raw_encoded_frame_sha256": "babb123de8380a7ef69d46c781d7f042b06e036652eb7612f5d280cb8d8b82ab",
+      "repeated_decode_equal": true,
+      "source_archive_md5": "d59a739f3b5ecf373c94046fb94cd94f",
+      "source_archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+      "source_archive_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+      "source_archive_size_bytes": 1740348425,
+      "source_bbox": [
+        296.5,
+        181.5,
+        488.5,
+        480.5
+      ],
+      "source_dataset_id": "local_sdt_zenodo_4124309",
+      "source_doi": "10.5281/zenodo.4124309",
+      "source_dtype": "uint16",
+      "source_event_status": "ABSENT",
+      "source_frame_index": 5000,
+      "source_member_crc32": "91c65547",
+      "source_member_index": 12449,
+      "source_member_name": "test/image_t_5000.png",
+      "source_member_sha256": "3fd25dd6f01775da4a01d83b3f2312d91bbbe806c1422a2cde8470c4379adcd5",
+      "source_pose_label": 2,
+      "source_pose_name": "STANDING",
+      "source_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+      "source_sequence_status": "ABSENT",
+      "source_session_status": "ABSENT",
+      "source_split": "test",
+      "source_subject_status": "ABSENT",
+      "source_temperature_encoding": "kelvin_centiunits; kelvin=raw/100; celsius=(raw-27315)/100",
+      "source_timestamp_status": "ABSENT",
+      "unit_conversion_witnesses": [
+        {
+          "celsius": 25.58,
+          "column": 0,
+          "encoded_uint16": 29873,
+          "kelvin": 298.73,
+          "row": 0
+        },
+        {
+          "celsius": 25.91,
+          "column": 320,
+          "encoded_uint16": 29906,
+          "kelvin": 299.06,
+          "row": 240
+        },
+        {
+          "celsius": 22.84,
+          "column": 639,
+          "encoded_uint16": 29599,
+          "kelvin": 295.99,
+          "row": 479
+        }
+      ]
+    },
+    {
+      "celsius_max": 34.99,
+      "celsius_min": 21.53,
+      "decoded_byte_order": "=",
+      "distributed_frame_shape": [
+        480,
+        640
+      ],
+      "encoded_max": 30814,
+      "encoded_min": 29468,
+      "native_sensor_shape": [
+        120,
+        160
+      ],
+      "quality_flags": [],
+      "raw_encoded_frame_sha256": "7cf06781e6732cc9b8585278a4cd17028b43ac506a90c69ccd583d367a7e8689",
+      "repeated_decode_equal": true,
+      "source_archive_md5": "d59a739f3b5ecf373c94046fb94cd94f",
+      "source_archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+      "source_archive_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+      "source_archive_size_bytes": 1740348425,
+      "source_bbox": [
+        237.5,
+        54.5,
+        509.5,
+        477.5
+      ],
+      "source_dataset_id": "local_sdt_zenodo_4124309",
+      "source_doi": "10.5281/zenodo.4124309",
+      "source_dtype": "uint16",
+      "source_event_status": "ABSENT",
+      "source_frame_index": 5999,
+      "source_member_crc32": "4da87b85",
+      "source_member_index": 13556,
+      "source_member_name": "test/image_t_5999.png",
+      "source_member_sha256": "dd457cabd4e4682f6ce16a82749b221650a196a9e8b88839932307bd9021c9e2",
+      "source_pose_label": 2,
+      "source_pose_name": "STANDING",
+      "source_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+      "source_sequence_status": "ABSENT",
+      "source_session_status": "ABSENT",
+      "source_split": "test",
+      "source_subject_status": "ABSENT",
+      "source_temperature_encoding": "kelvin_centiunits; kelvin=raw/100; celsius=(raw-27315)/100",
+      "source_timestamp_status": "ABSENT",
+      "unit_conversion_witnesses": [
+        {
+          "celsius": 24.62,
+          "column": 0,
+          "encoded_uint16": 29777,
+          "kelvin": 297.77,
+          "row": 0
+        },
+        {
+          "celsius": 29.55,
+          "column": 320,
+          "encoded_uint16": 30270,
+          "kelvin": 302.7,
+          "row": 240
+        },
+        {
+          "celsius": 24.95,
+          "column": 639,
+          "encoded_uint16": 29810,
+          "kelvin": 298.1,
+          "row": 479
+        }
+      ]
+    },
+    {
+      "celsius_max": 22.6,
+      "celsius_min": 20.03,
+      "decoded_byte_order": "=",
+      "distributed_frame_shape": [
+        480,
+        640
+      ],
+      "encoded_max": 29575,
+      "encoded_min": 29318,
+      "native_sensor_shape": [
+        120,
+        160
+      ],
+      "quality_flags": [],
+      "raw_encoded_frame_sha256": "2d10f5580e3797e97debf6a1e6f59e06192321048a3d2da2cccead92317ca515",
+      "repeated_decode_equal": true,
+      "source_archive_md5": "d59a739f3b5ecf373c94046fb94cd94f",
+      "source_archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+      "source_archive_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+      "source_archive_size_bytes": 1740348425,
+      "source_bbox": [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "source_dataset_id": "local_sdt_zenodo_4124309",
+      "source_doi": "10.5281/zenodo.4124309",
+      "source_dtype": "uint16",
+      "source_event_status": "ABSENT",
+      "source_frame_index": 6000,
+      "source_member_crc32": "5df20400",
+      "source_member_index": 13560,
+      "source_member_name": "test/image_t_6000.png",
+      "source_member_sha256": "835239cc41da85ef4f2f80d2a7b17fa6f96a609c10940b24abb546ae073bca17",
+      "source_pose_label": 3,
+      "source_pose_name": "EMPTY_ROOM",
+      "source_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+      "source_sequence_status": "ABSENT",
+      "source_session_status": "ABSENT",
+      "source_split": "test",
+      "source_subject_status": "ABSENT",
+      "source_temperature_encoding": "kelvin_centiunits; kelvin=raw/100; celsius=(raw-27315)/100",
+      "source_timestamp_status": "ABSENT",
+      "unit_conversion_witnesses": [
+        {
+          "celsius": 21.3,
+          "column": 0,
+          "encoded_uint16": 29445,
+          "kelvin": 294.45,
+          "row": 0
+        },
+        {
+          "celsius": 21.03,
+          "column": 320,
+          "encoded_uint16": 29418,
+          "kelvin": 294.18,
+          "row": 240
+        },
+        {
+          "celsius": 21.69,
+          "column": 639,
+          "encoded_uint16": 29484,
+          "kelvin": 294.84,
+          "row": 479
+        }
+      ]
+    },
+    {
+      "celsius_max": 25.97,
+      "celsius_min": 20.88,
+      "decoded_byte_order": "=",
+      "distributed_frame_shape": [
+        480,
+        640
+      ],
+      "encoded_max": 29912,
+      "encoded_min": 29403,
+      "native_sensor_shape": [
+        120,
+        160
+      ],
+      "quality_flags": [],
+      "raw_encoded_frame_sha256": "266e825a72918cc6cd36931e5332d659dfa5f080e8f643700331f2fd75530b3b",
+      "repeated_decode_equal": true,
+      "source_archive_md5": "d59a739f3b5ecf373c94046fb94cd94f",
+      "source_archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+      "source_archive_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+      "source_archive_size_bytes": 1740348425,
+      "source_bbox": [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "source_dataset_id": "local_sdt_zenodo_4124309",
+      "source_doi": "10.5281/zenodo.4124309",
+      "source_dtype": "uint16",
+      "source_event_status": "ABSENT",
+      "source_frame_index": 7000,
+      "source_member_crc32": "8d9c27fc",
+      "source_member_index": 14671,
+      "source_member_name": "test/image_t_7000.png",
+      "source_member_sha256": "f08076948b6d72e2f8f140c6b1729951543d255cb4fe2e9bd7a342376c03d8ef",
+      "source_pose_label": 3,
+      "source_pose_name": "EMPTY_ROOM",
+      "source_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+      "source_sequence_status": "ABSENT",
+      "source_session_status": "ABSENT",
+      "source_split": "test",
+      "source_subject_status": "ABSENT",
+      "source_temperature_encoding": "kelvin_centiunits; kelvin=raw/100; celsius=(raw-27315)/100",
+      "source_timestamp_status": "ABSENT",
+      "unit_conversion_witnesses": [
+        {
+          "celsius": 23.08,
+          "column": 0,
+          "encoded_uint16": 29623,
+          "kelvin": 296.23,
+          "row": 0
+        },
+        {
+          "celsius": 22.31,
+          "column": 320,
+          "encoded_uint16": 29546,
+          "kelvin": 295.46,
+          "row": 240
+        },
+        {
+          "celsius": 23.65,
+          "column": 639,
+          "encoded_uint16": 29680,
+          "kelvin": 296.8,
+          "row": 479
+        }
+      ]
+    },
+    {
+      "celsius_max": 25.35,
+      "celsius_min": 23.48,
+      "decoded_byte_order": "=",
+      "distributed_frame_shape": [
+        480,
+        640
+      ],
+      "encoded_max": 29850,
+      "encoded_min": 29663,
+      "native_sensor_shape": [
+        120,
+        160
+      ],
+      "quality_flags": [],
+      "raw_encoded_frame_sha256": "96a858dfe933f6835b4f1b87d0f9f09ae7466062378216d36cfb65924bf9333e",
+      "repeated_decode_equal": true,
+      "source_archive_md5": "d59a739f3b5ecf373c94046fb94cd94f",
+      "source_archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+      "source_archive_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+      "source_archive_size_bytes": 1740348425,
+      "source_bbox": [
+        -1.0,
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "source_dataset_id": "local_sdt_zenodo_4124309",
+      "source_doi": "10.5281/zenodo.4124309",
+      "source_dtype": "uint16",
+      "source_event_status": "ABSENT",
+      "source_frame_index": 7999,
+      "source_member_crc32": "213dcb5a",
+      "source_member_index": 15778,
+      "source_member_name": "test/image_t_7999.png",
+      "source_member_sha256": "22c17ddb00ac248ef55a60b2c7bc5c047ce7c2b01954e9b98859d3620e4a979b",
+      "source_pose_label": 3,
+      "source_pose_name": "EMPTY_ROOM",
+      "source_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+      "source_sequence_status": "ABSENT",
+      "source_session_status": "ABSENT",
+      "source_split": "test",
+      "source_subject_status": "ABSENT",
+      "source_temperature_encoding": "kelvin_centiunits; kelvin=raw/100; celsius=(raw-27315)/100",
+      "source_timestamp_status": "ABSENT",
+      "unit_conversion_witnesses": [
+        {
+          "celsius": 25.21,
+          "column": 0,
+          "encoded_uint16": 29836,
+          "kelvin": 298.36,
+          "row": 0
+        },
+        {
+          "celsius": 23.95,
+          "column": 320,
+          "encoded_uint16": 29710,
+          "kelvin": 297.1,
+          "row": 240
+        },
+        {
+          "celsius": 24.03,
+          "column": 639,
+          "encoded_uint16": 29718,
+          "kelvin": 297.18,
+          "row": 479
+        }
+      ]
+    }
+  ],
+  "repeat_decode_deterministic": true,
+  "schema_version": "1.0",
+  "selection_rule": "For each original source pose class in ascending label order, choose the first, middle (floor(n/2)), and last label-row index.",
+  "source_label_semantics_preserved": true
+}

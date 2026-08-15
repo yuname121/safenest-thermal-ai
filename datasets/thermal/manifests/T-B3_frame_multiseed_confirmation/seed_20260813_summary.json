@@ -1,0 +1,75 @@
+{
+  "architecture_fingerprint": "937fceb88900a779d67a8e407cebc3362cc21346721f92cea5ae8de1413aba2a",
+  "best_epoch": 15,
+  "candidate_id": "SMALL_CNN_BASELINE_V1",
+  "checkpoint": {
+    "logical_path": "checkpoints/P1_TRAIN_FITTED_GLOBAL_ZSCORE.weights.h5",
+    "materialization": "PERSISTENT_EXTERNAL_OUTPUT",
+    "sha256": "7aba32fe8d0e241546429bdc3e8cd059b10d4d8f548e9e12c4085abeba308a75",
+    "size_bytes": 3777416
+  },
+  "finalized": true,
+  "initialization_fingerprint": "72a9805e1772aa0ee0a414fb7d41bc17ea0d183fa29e0e43049b22e0d5d35058",
+  "parameter_count": 312131,
+  "phase": "T-B3",
+  "profile_id": "P1_TRAIN_FITTED_GLOBAL_ZSCORE",
+  "real_evaluated": false,
+  "real_metric_for_selection": false,
+  "schema_version": "1.0",
+  "seed": 20260813,
+  "source": "REUSED_VERIFIED_T_B1_RESULT",
+  "validation_metrics": {
+    "accuracy": 0.995125,
+    "balanced_accuracy": 0.99575,
+    "class_order": [
+      "NOT_HUMAN",
+      "HUMAN_NORMAL",
+      "HUMAN_FALL"
+    ],
+    "confusion_matrix": [
+      [
+        2000,
+        0,
+        0
+      ],
+      [
+        5,
+        3973,
+        22
+      ],
+      [
+        0,
+        12,
+        1988
+      ]
+    ],
+    "h_fall_posture_proxy_recall": 0.994,
+    "macro_f1": 0.9951295332536425,
+    "per_class": {
+      "HUMAN_FALL": {
+        "f1": 0.9915211970074813,
+        "precision": 0.9890547263681592,
+        "recall": 0.994,
+        "support": 2000
+      },
+      "HUMAN_NORMAL": {
+        "f1": 0.9951158422041327,
+        "precision": 0.9969887076537014,
+        "recall": 0.99325,
+        "support": 4000
+      },
+      "NOT_HUMAN": {
+        "f1": 0.9987515605493134,
+        "precision": 0.9975062344139651,
+        "recall": 1.0,
+        "support": 2000
+      }
+    },
+    "prediction_distribution": {
+      "HUMAN_FALL": 2010,
+      "HUMAN_NORMAL": 3985,
+      "NOT_HUMAN": 2005
+    },
+    "sample_count": 8000
+  }
+}

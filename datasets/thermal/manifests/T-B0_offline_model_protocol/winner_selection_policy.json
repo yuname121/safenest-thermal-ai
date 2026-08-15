@@ -1,0 +1,39 @@
+{
+  "eligible_candidates": "TRAINABLE_T_B_CANDIDATES_ONLY",
+  "evaluation_role": "VALIDATION",
+  "excluded_candidates": [
+    "LEGACY_DEPLOYED_REFERENCE"
+  ],
+  "human_fall_safety_floor": {
+    "applied": false,
+    "reason": "HUMAN_FALL is a derived posture proxy rather than temporal or safety ground truth; a safety threshold requires a separately justified policy."
+  },
+  "near_duplicate_sensitivity": {
+    "policy_ref": "near_duplicate_sensitivity_policy.json",
+    "reported_as_secondary_diagnostic": true,
+    "used_for_winner_selection": false
+  },
+  "phase": "T-B0",
+  "primary_metric": "macro_f1",
+  "ranking_order": [
+    "highest_validation_macro_f1",
+    "highest_validation_balanced_accuracy",
+    "highest_validation_HUMAN_FALL_recall",
+    "lowest_trainable_parameter_count",
+    "lowest_tflite_artifact_size_bytes",
+    "lexicographically_smallest_candidate_id"
+  ],
+  "real_evaluation": {
+    "evaluation_after_validation_selection_preferred": true,
+    "used_as_tie_breaker": false,
+    "used_for_winner_selection": false
+  },
+  "rule_frozen_before_training": true,
+  "schema_version": "1.0",
+  "secondary_metrics": [
+    "balanced_accuracy",
+    "per_class_recall.HUMAN_FALL"
+  ],
+  "tie_tolerance": 1e-05,
+  "winner_declaration_in_t_b0": false
+}

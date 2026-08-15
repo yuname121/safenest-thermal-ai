@@ -1,0 +1,26 @@
+{
+  "augmentation": "NONE",
+  "bulk_artifact_boundary": "Git-ignored local artifact; compact checksums and summaries are tracked",
+  "canonical_dtype": "float32_little_endian",
+  "canonical_order": "source frame index ascending, zero based",
+  "canonical_shape": [
+    62,
+    80
+  ],
+  "canonical_unit": "CELSIUS",
+  "geometry_profile_id": "G1_FIXED_ASPECT_CROP_BILINEAR",
+  "legacy_npz_authority": "LEGACY_NON_AUTHORITATIVE_NOT_USED",
+  "model_dependency": "NONE",
+  "normalization": "NONE_T_A6_PHYSICAL_ARTIFACT",
+  "phase": "T-A6_STAGE1",
+  "physical_conversion": "celsius=(uint16_kelvin_centiunits-27315)/100",
+  "provenance_format": "JSONL_V1_ONE_ROW_PER_CANONICAL_SAMPLE",
+  "raw_reader_contract": "T-A1_SOURCE_FRAME_PROVENANCE_CONTRACT",
+  "safenest_role": "REAL_EVAL_DEVELOPMENT",
+  "schema_version": "1.0",
+  "source_dataset_id": "local_sdt_zenodo_4124309",
+  "source_doi": "doi:10.5281/zenodo.4124309",
+  "source_domain": "REAL",
+  "source_partition": "test",
+  "storage_format": "NPY_MEMMAP_V1_LITTLE_ENDIAN_FLOAT32"
+}

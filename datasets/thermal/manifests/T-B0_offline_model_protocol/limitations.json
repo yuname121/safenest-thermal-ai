@@ -1,0 +1,49 @@
+{
+  "full_training_performed": false,
+  "limitations": [
+    {
+      "code": "NO_PRISTINE_LOCKED_TEST",
+      "description": "The SDT real test partition was accessed during A-stage geometry and semantic development and remains REAL_EVAL_DEVELOPMENT only.",
+      "status": "INTRINSIC_NON_BLOCKING"
+    },
+    {
+      "code": "GROUPING_NOT_VERIFIABLE",
+      "description": "Subject, session, recording, sequence, event, timestamp/FPS, scene and camera identifiers are not sufficiently distributed.",
+      "status": "INTRINSIC_NON_BLOCKING"
+    },
+    {
+      "code": "POSTURE_PROXY_NOT_EVENT_GROUND_TRUTH",
+      "description": "LYING -> HUMAN_FALL is a derived frame-level posture proxy and cannot support temporal fall-event or safety claims.",
+      "status": "INTRINSIC_NON_BLOCKING"
+    },
+    {
+      "code": "TRAIN_VALIDATION_NEAR_DUPLICATE_OVERLAP",
+      "description": "T-A6 measured 14,514 TRAIN-VALIDATION near-duplicate pairs under a deterministic non-exhaustive screen.",
+      "status": "INTRINSIC_NON_BLOCKING_WITH_MANDATORY_DISCLOSURE"
+    },
+    {
+      "code": "SENSITIVITY_SUBSET_NOT_MATERIALIZABLE_FROM_CURRENT_COMPACT_EVIDENCE",
+      "description": "The compact bundle has counts and truncated witnesses but not the complete implicated VALIDATION index set.",
+      "status": "BOUNDED_FOR_LATER_RECOMPUTATION"
+    },
+    {
+      "code": "LEGACY_RUNTIME_PREPROCESSING_MISMATCH",
+      "description": "The deployed reference performs per-frame min-max normalization while T-A6 canonical data is Celsius float32.",
+      "status": "REQUIRES_T-B1_CONTROLLED_COMPARISON"
+    },
+    {
+      "code": "THERMAL44_DOMAIN_UNVERIFIED",
+      "description": "Thermal-44 packet, orientation, invalid-pixel, hardware latency and domain-equivalence facts remain unknown.",
+      "status": "DEFERRED_TO_T-C"
+    },
+    {
+      "code": "LICENSE_NONCOMMERCIAL_RESTRICTION",
+      "description": "Commercial use, raw redistribution and public model-artifact release are not cleared by T-B0.",
+      "status": "MANUAL_REVIEW_REQUIRED_FOR_RELEASE"
+    }
+  ],
+  "new_model_generated": false,
+  "phase": "T-B0",
+  "schema_version": "1.0",
+  "t_b1_authorization_is_conditional": true
+}

@@ -1,0 +1,33 @@
+{
+  "difficult_valid_frames_not_auto_excluded": true,
+  "quality": {
+    "channel_mismatch": 0,
+    "constant_canonical": 0,
+    "constant_source": 0,
+    "corrupt": 0,
+    "dtype_mismatch": 0,
+    "full_extreme": 0,
+    "full_invalid": 0,
+    "nonfinite": 0,
+    "partial_extreme_warnings": 0,
+    "shape_mismatch": 0,
+    "silent_skips": 0,
+    "temperature_distribution": {
+      "finite_pixel_count": 39680000,
+      "frame_maximum_p99": 35.16240539550781,
+      "frame_mean_p01": 20.742431080818175,
+      "frame_mean_p50": 24.226159711614734,
+      "frame_mean_p99": 26.020483127236368,
+      "frame_minimum_p01": 19.484200191497802,
+      "maximum_celsius": 36.17790222167969,
+      "mean_celsius": 24.046884845543822,
+      "minimum_celsius": 18.418468475341797,
+      "std_celsius": 1.8435828784710004
+    },
+    "truncated": 0,
+    "warning_code_counts": {}
+  },
+  "source_frame_count": 8000,
+  "status": "PASS",
+  "threshold_policy": "NO_INVENTED_THERMAL44_SATURATION_THRESHOLDS"
+}

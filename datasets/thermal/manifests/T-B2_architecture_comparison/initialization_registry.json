@@ -1,0 +1,20 @@
+{
+  "candidates": [
+    {
+      "architecture_fingerprint": "937fceb88900a779d67a8e407cebc3362cc21346721f92cea5ae8de1413aba2a",
+      "candidate_id": "SMALL_CNN_BASELINE_V1",
+      "initial_weight_fingerprint": "72a9805e1772aa0ee0a414fb7d41bc17ea0d183fa29e0e43049b22e0d5d35058",
+      "source": "T-B1_REUSED"
+    },
+    {
+      "architecture_fingerprint": "3057cc8ba5272315d5bc6a0716f756e54767685d5cb3f4a7935e8862f31478d3",
+      "candidate_id": "DEPTHWISE_SEPARABLE_CNN_V1",
+      "initial_weight_fingerprint": "daed44596571500cddf80731d992f4684d88fe1074e729581b127eb0c88c30a0",
+      "source": "T-B2_NEW_TRAINING"
+    }
+  ],
+  "primary_seed": 20260813,
+  "same_initial_weight_sha_required": false,
+  "schema_version": "1.0",
+  "seed_policy": "SAME_PRIMARY_SEED_DETERMINISTIC_PER_ARCHITECTURE"
+}

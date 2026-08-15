@@ -1,0 +1,22 @@
+{
+  "lying_semantics": "DERIVED_POSTURE_PROXY_NOT_EVENT_GROUND_TRUTH",
+  "mapping": {
+    "EMPTY_ROOM": "NOT_HUMAN",
+    "LYING": "HUMAN_FALL",
+    "SITTING": "HUMAN_NORMAL",
+    "STANDING": "HUMAN_NORMAL"
+  },
+  "schema_version": "1.0",
+  "source_labels": [
+    "EMPTY_ROOM",
+    "SITTING",
+    "STANDING",
+    "LYING"
+  ],
+  "source_labels_immutable": true,
+  "target_class_order": [
+    "NOT_HUMAN",
+    "HUMAN_NORMAL",
+    "HUMAN_FALL"
+  ]
+}

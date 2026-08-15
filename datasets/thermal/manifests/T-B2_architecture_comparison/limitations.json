@@ -1,0 +1,17 @@
+{
+  "device_domain_validation": "NOT_PERFORMED_DEFERRED_TO_T-C",
+  "event_independent": "NOT_VERIFIABLE",
+  "human_fall_semantics": "LYING_TO_HUMAN_FALL_DERIVED_POSTURE_PROXY_NOT_TEMPORAL_EVENT_GROUND_TRUTH",
+  "locked_test_available": false,
+  "near_duplicate_pairs_train_validation": 14514,
+  "next_phase_started": false,
+  "phase": "T-B2",
+  "schema_version": "1.0",
+  "session_independent": "NOT_VERIFIABLE",
+  "subject_independent": "NOT_VERIFIABLE",
+  "synthetic_real_gap": 0.40120300969029854,
+  "synthetic_real_gap_interpretation": "OBSERVED_DEVELOPMENT_GAP_NOT_CAUSALLY_ATTRIBUTED",
+  "temporal_fall": "NOT_VERIFIED",
+  "validation_near_saturation": true,
+  "validation_near_saturation_note": "VALIDATION is synthetic and near saturation; small differences do not establish broad superiority."
+}

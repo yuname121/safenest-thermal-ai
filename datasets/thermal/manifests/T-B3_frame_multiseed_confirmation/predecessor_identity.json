@@ -1,0 +1,37 @@
+{
+  "main_commit_at_execution": "22f745ac2f730e3a6c73d0a335c3e12644b03913",
+  "origin_main_at_execution": "22f745ac2f730e3a6c73d0a335c3e12644b03913",
+  "phase": "T-B3",
+  "required_winner": {
+    "architecture_fingerprint": "937fceb88900a779d67a8e407cebc3362cc21346721f92cea5ae8de1413aba2a",
+    "candidate_id": "SMALL_CNN_BASELINE_V1",
+    "parameter_count": 312131
+  },
+  "roadmap_reconciliation": {
+    "next_work": "FRAME_ONLY_MULTI_SEED_CONFIRMATION",
+    "reconciliation_present": true,
+    "reconciliation_report_path": "docs/reports/20260814_Codex_Thermal_Post_T-B2_Pre_T-B3_Reconciliation_01.md",
+    "roadmap_path": "docs/20260810_ChatGPT_SafeNest_Multisensor_Parallel_Execution_Roadmap_01.md",
+    "temporal_training_authorized": false
+  },
+  "schema_version": "1.0",
+  "temporal_feasibility": "NOT_SUPPORTED_BY_CURRENT_DATASET_PROVENANCE",
+  "validators": {
+    "T-A6": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "PASS_WITH_LIMITATIONS"
+    },
+    "T-B0": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "PASS_WITH_LIMITATIONS"
+    },
+    "T-B1": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "T_B1_FULL_COMPLETE_WITH_LIMITATIONS"
+    },
+    "T-B2": {
+      "evidence_validation": "PASS",
+      "overall_outcome": "T_B2_COMPLETE_WITH_LIMITATIONS"
+    }
+  }
+}

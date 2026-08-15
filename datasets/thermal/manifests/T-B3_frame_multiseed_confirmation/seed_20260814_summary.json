@@ -1,0 +1,87 @@
+{
+  "architecture_fingerprint": "937fceb88900a779d67a8e407cebc3362cc21346721f92cea5ae8de1413aba2a",
+  "best_epoch": 11,
+  "candidate_id": "SMALL_CNN_BASELINE_V1",
+  "checkpoint": {
+    "logical_path": "checkpoints/seed_20260814.weights.h5",
+    "materialization": "PERSISTENT_EXTERNAL_OUTPUT",
+    "sha256": "b33dff436c22a5a3e76f65c77250c63a3f48b979109648683a7a69049ce94836",
+    "size_bytes": 3777416
+  },
+  "finalized": true,
+  "history_keys": [
+    "accuracy",
+    "learning_rate",
+    "loss",
+    "val_accuracy",
+    "val_balanced_accuracy",
+    "val_human_fall_posture_proxy_recall",
+    "val_loss",
+    "val_macro_f1"
+  ],
+  "initial_weight_fingerprint": "eb73925f44a4d7e8114d61a52dafed50bb1f87fd6f50c4aad40ae021adcd17e6",
+  "initialization_fingerprint": "eb73925f44a4d7e8114d61a52dafed50bb1f87fd6f50c4aad40ae021adcd17e6",
+  "parameter_count": 312131,
+  "phase": "T-B3",
+  "profile_id": "P1_TRAIN_FITTED_GLOBAL_ZSCORE",
+  "real_evaluated": false,
+  "real_metric_for_selection": false,
+  "schema_version": "1.0",
+  "seed": 20260814,
+  "source": "NEW_TRAINING",
+  "status": "VALIDATION_COMPLETE",
+  "validation_metrics": {
+    "accuracy": 0.995625,
+    "balanced_accuracy": 0.9959166666666667,
+    "class_order": [
+      "NOT_HUMAN",
+      "HUMAN_NORMAL",
+      "HUMAN_FALL"
+    ],
+    "confusion_matrix": [
+      [
+        2000,
+        0,
+        0
+      ],
+      [
+        3,
+        3979,
+        18
+      ],
+      [
+        0,
+        14,
+        1986
+      ]
+    ],
+    "h_fall_posture_proxy_recall": 0.993,
+    "macro_f1": 0.9956265742029635,
+    "per_class": {
+      "HUMAN_FALL": {
+        "f1": 0.992007992007992,
+        "precision": 0.9910179640718563,
+        "recall": 0.993,
+        "support": 2000
+      },
+      "HUMAN_NORMAL": {
+        "f1": 0.9956211685224573,
+        "precision": 0.9964938642624593,
+        "recall": 0.99475,
+        "support": 4000
+      },
+      "NOT_HUMAN": {
+        "f1": 0.9992505620784412,
+        "precision": 0.9985022466300549,
+        "recall": 1.0,
+        "support": 2000
+      }
+    },
+    "prediction_distribution": {
+      "HUMAN_FALL": 2004,
+      "HUMAN_NORMAL": 3993,
+      "NOT_HUMAN": 2003
+    },
+    "sample_count": 8000
+  }
+}

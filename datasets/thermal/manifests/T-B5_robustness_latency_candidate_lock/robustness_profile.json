@@ -1,0 +1,89 @@
+{
+  "absolute_pass_threshold": "NO_PREEXISTING_ABSOLUTE_PASS_THRESHOLD",
+  "families": [
+    {
+      "classification": "MODEL_INPUT_PERTURBATION",
+      "device_claim": "NOT_THERMAL44_VALIDATION",
+      "family_id": "AMBIENT_OFFSET",
+      "injection": "canonical_celsius_before_P1",
+      "levels": [
+        -2.0,
+        2.0
+      ],
+      "unit": "Celsius"
+    },
+    {
+      "classification": "MODEL_INPUT_PERTURBATION",
+      "device_claim": "SYNTHETIC_MASK_ONLY",
+      "family_id": "DEAD_PIXEL",
+      "levels": [
+        0.01,
+        0.05
+      ],
+      "mask_seed": 20260815,
+      "replacement": "per_frame_mean_celsius",
+      "unit": "fraction"
+    },
+    {
+      "classification": "MODEL_INPUT_PERTURBATION",
+      "device_claim": "SYNTHETIC_MASK_ONLY",
+      "family_id": "PARTIAL_OCCLUSION",
+      "fill": "per_frame_mean_celsius",
+      "levels": [
+        0.05,
+        0.15
+      ],
+      "mask": "deterministic_centered_rectangle_with_seeded_offset",
+      "unit": "frame_area_fraction"
+    },
+    {
+      "classification": "MODEL_INPUT_PERTURBATION",
+      "device_claim": "SYNTHETIC_HOT_REGION_ONLY",
+      "family_id": "HOT_OBJECT",
+      "levels": [
+        5.0,
+        10.0
+      ],
+      "region": "deterministic_centered_rectangle_with_seeded_offset",
+      "unit": "Celsius_delta"
+    },
+    {
+      "classification": "PIPELINE_CONTRACT_FAULT",
+      "device_claim": "RUNTIME_CONTRACT_ONLY",
+      "family_id": "MISSING_FRAME",
+      "inference": "FORBIDDEN",
+      "levels": [
+        "single_frame"
+      ],
+      "policy": "FAIL_CLOSED_NO_ZERO_LAST_MEAN_REPLACEMENT"
+    },
+    {
+      "classification": "MODEL_INPUT_PERTURBATION",
+      "device_claim": "THERMAL44_ORIENTATION_DEFERRED_TO_T-C",
+      "family_id": "ORIENTATION_ERROR",
+      "levels": [
+        "horizontal_flip",
+        "vertical_flip",
+        "rotate_180"
+      ],
+      "transform": "numpy_deterministic_geometric_transform"
+    }
+  ],
+  "locked_test_available": false,
+  "phase": "T-B5",
+  "production_runtime_changed": false,
+  "profile_checksum": "c333d38de170eb7acb6245adf23d536f09effe75db620afde7ab1000c8406877",
+  "profile_id": "THERMAL_T_B5_ROBUSTNESS_PROFILE_001",
+  "real_role_used": false,
+  "sample_count": 512,
+  "sample_index_algorithm": "numpy.linspace(0, VALIDATION_rows-1, 512, dtype=int64)",
+  "schema_version": "1.0",
+  "seed": 20260815,
+  "selection_role": "VALIDATION",
+  "unsupported_temporal_faults": [
+    "timestamp_jitter",
+    "sequence_reorder",
+    "temporal_dropout",
+    "motion_burst"
+  ]
+}

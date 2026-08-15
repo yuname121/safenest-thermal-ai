@@ -1,0 +1,74 @@
+{
+  "canonical_artifacts_mutated": false,
+  "implementation_module": "datasets/thermal/t_b1_preprocessing.py",
+  "learned_statistics_from_validation_or_real": false,
+  "phase": "T-B1",
+  "profile_order_frozen": true,
+  "profile_selection_in_stage1": false,
+  "profiles": [
+    {
+      "absolute_temperature_preserved": true,
+      "constant_frame_behavior": "identity",
+      "fit_required": false,
+      "fit_role": "NONE",
+      "formula": "y = x",
+      "input": "T-A6 canonical float32 Celsius [N,62,80]",
+      "legacy_parity": "SCIENTIFIC_REFERENCE_NOT_LEGACY_CALIBRATED",
+      "output_dtype": "float32",
+      "output_shape": [
+        "N",
+        62,
+        80,
+        1
+      ],
+      "profile_id": "P0_CANONICAL_CELSIUS_DIRECT"
+    },
+    {
+      "absolute_temperature_preserved": "RELATIVE_AFTER_TRAIN_FITTED_CENTER_AND_SCALE",
+      "constant_frame_behavior": "same global statistics",
+      "fit_required": true,
+      "fit_role": "TRAIN",
+      "formula": "y = (x - mean_TRAIN) / max(std_TRAIN, 1e-6)",
+      "input": "T-A6 canonical float32 Celsius [N,62,80]",
+      "output_dtype": "float32",
+      "output_shape": [
+        "N",
+        62,
+        80,
+        1
+      ],
+      "profile_id": "P1_TRAIN_FITTED_GLOBAL_ZSCORE",
+      "real_fit_allowed": false,
+      "statistics_persisted": [
+        "mean",
+        "std",
+        "effective_std",
+        "fit_sample_count",
+        "fit_pixel_count",
+        "fit_role",
+        "train_artifact_sha256",
+        "statistics_sha256"
+      ],
+      "statistics_scope": "one scalar mean/std over all TRAIN pixels",
+      "validation_fit_allowed": false
+    },
+    {
+      "absolute_temperature_preserved": false,
+      "constant_frame_behavior": "clip to [0,1] when normalization branch is entered",
+      "fit_required": false,
+      "fit_role": "NONE",
+      "formula": "legacy runtime: if min<0 or max>1, (x-min)/(max-min); constant branch clip(x,0,1); otherwise preserve [0,1]",
+      "input": "T-A6 canonical float32 Celsius or explicitly identified legacy frame",
+      "legacy_parity": "EXACT_THERMAL_INTERPRETER_PREPARATION_BEHAVIOR",
+      "output_dtype": "float32",
+      "output_shape": [
+        "N",
+        62,
+        80,
+        1
+      ],
+      "profile_id": "P2_LEGACY_PER_FRAME_MINMAX"
+    }
+  ],
+  "schema_version": "1.0"
+}

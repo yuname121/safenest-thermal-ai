@@ -1,0 +1,316 @@
+{
+  "audit_sha256": "a028b4dcb7a12eafdc48713e3a4e83bd380976aaaa1d64a89df0ee8c0c7292c5",
+  "canonical_content_leakage": {
+    "TRAIN__REAL_EVAL_DEVELOPMENT": {
+      "canonical_content_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "decoded_frame_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "source_member_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      }
+    },
+    "TRAIN__VALIDATION": {
+      "canonical_content_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "decoded_frame_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "source_member_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      }
+    },
+    "VALIDATION__REAL_EVAL_DEVELOPMENT": {
+      "canonical_content_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "decoded_frame_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "source_member_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      }
+    }
+  },
+  "event_leakage": {
+    "reason": "SOURCE_PROVENANCE_ABSENT",
+    "status": "NOT_VERIFIABLE"
+  },
+  "exact_content_leakage": {
+    "TRAIN__REAL_EVAL_DEVELOPMENT": {
+      "canonical_content_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "decoded_frame_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "source_member_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      }
+    },
+    "TRAIN__VALIDATION": {
+      "canonical_content_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "decoded_frame_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "source_member_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      }
+    },
+    "VALIDATION__REAL_EVAL_DEVELOPMENT": {
+      "canonical_content_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "decoded_frame_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "source_member_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      }
+    }
+  },
+  "grouping_limitation": "SUBJECT_SESSION_SEQUENCE_EVENT_NOT_VERIFIABLE_SOURCE_PROVENANCE_ABSENT",
+  "near_duplicate_screening": {
+    "audit_sha256": "a450c06fc9aaa1fdcd940802c2907850fb1efda338a61f594c7513b8cc32058e",
+    "cross_role_confirmed_pair_count": 14514,
+    "status": "MEASURED"
+  },
+  "overall_measurable_leakage_status": "PASS_WITH_LIMITATIONS",
+  "phase": "T-A6_COLAB_STAGE2",
+  "schema_version": "1.0",
+  "sequence_leakage": {
+    "reason": "SOURCE_PROVENANCE_ABSENT",
+    "status": "NOT_VERIFIABLE"
+  },
+  "session_leakage": {
+    "reason": "SOURCE_PROVENANCE_ABSENT",
+    "status": "NOT_VERIFIABLE"
+  },
+  "source_frame_id_overlap": {
+    "TRAIN__REAL_EVAL_DEVELOPMENT": {
+      "overlap_cluster_count": 0,
+      "overlap_sample_count_left": 0,
+      "overlap_sample_count_right": 0,
+      "witnesses": []
+    },
+    "TRAIN__VALIDATION": {
+      "overlap_cluster_count": 0,
+      "overlap_sample_count_left": 0,
+      "overlap_sample_count_right": 0,
+      "witnesses": []
+    },
+    "VALIDATION__REAL_EVAL_DEVELOPMENT": {
+      "overlap_cluster_count": 0,
+      "overlap_sample_count_left": 0,
+      "overlap_sample_count_right": 0,
+      "witnesses": []
+    }
+  },
+  "source_identity_overlap": {
+    "TRAIN__REAL_EVAL_DEVELOPMENT": {
+      "source_archive_identity": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "source_frame_id": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "source_member_identity": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      }
+    },
+    "TRAIN__VALIDATION": {
+      "source_archive_identity": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "source_frame_id": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "source_member_identity": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      }
+    },
+    "VALIDATION__REAL_EVAL_DEVELOPMENT": {
+      "source_archive_identity": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "source_frame_id": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "source_member_identity": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      }
+    }
+  },
+  "source_member_identity_overlap": {
+    "TRAIN__REAL_EVAL_DEVELOPMENT": {
+      "overlap_cluster_count": 0,
+      "overlap_sample_count_left": 0,
+      "overlap_sample_count_right": 0,
+      "witnesses": []
+    },
+    "TRAIN__VALIDATION": {
+      "overlap_cluster_count": 0,
+      "overlap_sample_count_left": 0,
+      "overlap_sample_count_right": 0,
+      "witnesses": []
+    },
+    "VALIDATION__REAL_EVAL_DEVELOPMENT": {
+      "overlap_cluster_count": 0,
+      "overlap_sample_count_left": 0,
+      "overlap_sample_count_right": 0,
+      "witnesses": []
+    }
+  },
+  "source_member_leakage": {
+    "TRAIN__REAL_EVAL_DEVELOPMENT": {
+      "canonical_content_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "decoded_frame_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "source_member_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      }
+    },
+    "TRAIN__VALIDATION": {
+      "canonical_content_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "decoded_frame_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "source_member_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      }
+    },
+    "VALIDATION__REAL_EVAL_DEVELOPMENT": {
+      "canonical_content_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "decoded_frame_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      },
+      "source_member_leakage": {
+        "overlap_cluster_count": 0,
+        "overlap_sample_count_left": 0,
+        "overlap_sample_count_right": 0,
+        "witnesses": []
+      }
+    }
+  },
+  "subject_leakage": {
+    "reason": "SOURCE_PROVENANCE_ABSENT",
+    "status": "NOT_VERIFIABLE"
+  }
+}

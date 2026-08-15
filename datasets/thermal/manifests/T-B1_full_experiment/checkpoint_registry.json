@@ -1,0 +1,35 @@
+{
+  "bulk_checkpoints_tracked_in_git": false,
+  "checkpoint_count": 3,
+  "checkpoints": [
+    {
+      "logical_path": "checkpoints/P0_CANONICAL_CELSIUS_DIRECT.weights.h5",
+      "materialization": "PERSISTENT_EXTERNAL_OUTPUT",
+      "profile_id": "P0_CANONICAL_CELSIUS_DIRECT",
+      "sha256": "94ac046af2346b6f23d8d46570ac03eec451f91c5650dcb4137b46b8f37b0ad0",
+      "size_bytes": 3777416
+    },
+    {
+      "logical_path": "checkpoints/P1_TRAIN_FITTED_GLOBAL_ZSCORE.weights.h5",
+      "materialization": "PERSISTENT_EXTERNAL_OUTPUT",
+      "profile_id": "P1_TRAIN_FITTED_GLOBAL_ZSCORE",
+      "sha256": "7aba32fe8d0e241546429bdc3e8cd059b10d4d8f548e9e12c4085abeba308a75",
+      "size_bytes": 3777416
+    },
+    {
+      "logical_path": "checkpoints/P2_LEGACY_PER_FRAME_MINMAX.weights.h5",
+      "materialization": "PERSISTENT_EXTERNAL_OUTPUT",
+      "profile_id": "P2_LEGACY_PER_FRAME_MINMAX",
+      "sha256": "5c92fdaabef31450d9def5ce97f0ccf9b5f8a3b66f1bf28aa6029810495f36ce",
+      "size_bytes": 3777416
+    }
+  ],
+  "schema_version": "1.0",
+  "storage_scope": "EXTERNAL_SSD_NOT_TRACKED",
+  "winner_checkpoint": {
+    "logical_path": "checkpoints/P1_TRAIN_FITTED_GLOBAL_ZSCORE.weights.h5",
+    "materialization": "PERSISTENT_EXTERNAL_OUTPUT",
+    "sha256": "7aba32fe8d0e241546429bdc3e8cd059b10d4d8f548e9e12c4085abeba308a75",
+    "size_bytes": 3777416
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "candidate_count": 6,
+  "error_count": 0,
+  "errors": [],
+  "evidence_validation": "PASS",
+  "local_asset_count": 4,
+  "overall_outcome": "PASS_WITH_LIMITATIONS",
+  "phase": "T-A0",
+  "schema_version": "1.0",
+  "selected_candidate_id": "local_sdt_zenodo_4124309",
+  "t_a1_authorized": true,
+  "warning_count": 0,
+  "warnings": []
+}

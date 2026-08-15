@@ -1,0 +1,40 @@
+{
+  "latency_policy": {
+    "acquisition_excluded_or_separately_reported": true,
+    "desktop_is_not_rpi5_proxy": true,
+    "preprocessing_included": true,
+    "repeated_runs_recorded": true,
+    "warmup_runs_recorded": true
+  },
+  "measurements_available_in_t_b0": false,
+  "phase": "T-B0",
+  "required_later_measurements": {
+    "desktop_latency": "measured separately from device latency",
+    "input_dtype": "measured TFLite tensor dtype",
+    "operator_set": "measured TFLite operators and select-ops status",
+    "output_dtype": "measured TFLite tensor dtype",
+    "parameter_count": "integer trainable parameter count",
+    "peak_working_memory": "measured where tooling permits",
+    "quantization_state": "float, dynamic-range, or full-int8 with scales and zero points",
+    "rpi5_compatibility": "actual import/invoke evidence, not desktop inference",
+    "rpi5_latency": "measured only on actual Raspberry Pi 5 hardware",
+    "tflite_artifact_size_bytes": "measured file size",
+    "tflite_sha256": "measured artifact checksum"
+  },
+  "schema_version": "1.0",
+  "tflite_readiness": {
+    "class_map_checksum_required": true,
+    "conversion_in_t_b0": false,
+    "float_to_tflite_equivalence_required": "T-B4",
+    "int8_conversion_required": "T-B4",
+    "shape_contract_required": true
+  },
+  "thermal44_boundary": {
+    "domain_equivalence_claim": false,
+    "endianness": "DEFERRED_TO_T-C",
+    "hardware_latency": "DEFERRED_TO_T-C",
+    "invalid_pixel_semantics": "DEFERRED_TO_T-C",
+    "orientation": "DEFERRED_TO_T-C",
+    "packet_dtype": "DEFERRED_TO_T-C"
+  }
+}

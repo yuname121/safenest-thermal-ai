@@ -1,0 +1,38 @@
+{
+  "boundary_stop": "Canonical physical frame ends here. No per-frame min-max, z-score, scaler, int8 encoding, or model inference is part of T-A2.",
+  "contract_id": "thermal_canonical_physical_frame_v1",
+  "hash_method": "canonical frame SHA-256 = little-endian float32 C-order bytes followed by uint8 validity-mask bytes",
+  "input": {
+    "dataset_id": "local_sdt_zenodo_4124309",
+    "doi": "doi:10.5281/zenodo.4124309",
+    "dtype": "uint16_encoded_source",
+    "shape": [
+      480,
+      640
+    ],
+    "source_hash_preserved": true,
+    "split": "test",
+    "unit": "KELVIN_CENTIUNITS"
+  },
+  "output": {
+    "dtype": "float32",
+    "profile_id": "G1_FIXED_ASPECT_CROP_BILINEAR",
+    "shape": [
+      62,
+      80
+    ],
+    "unit": "CELSIUS",
+    "validity_mask": "boolean; selected-profile measured pixels are true and any declared padding is false"
+  },
+  "phase": "T-A2",
+  "provenance_required": [
+    "source_frame_index",
+    "source_member_name",
+    "source_encoded_frame_sha256",
+    "geometry_profile_id",
+    "canonical_frame_hash",
+    "validity_status"
+  ],
+  "schema_version": "1.0",
+  "source_and_canonical_are_distinct": true
+}

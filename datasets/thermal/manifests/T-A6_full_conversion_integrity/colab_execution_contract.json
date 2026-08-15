@@ -1,0 +1,43 @@
+{
+  "auto_start": false,
+  "core_converter_path": "datasets/thermal/canonical_converter.py",
+  "drive_output_root": "ARGUMENT_OR_THERMAL_A6_DRIVE_OUTPUT_ROOT",
+  "drive_raw_root": "ARGUMENT_OR_THERMAL_A6_DRIVE_RAW_ROOT",
+  "execution_result_bundle": [
+    "execution_summary.json",
+    "source_identity.json",
+    "canonical_artifact_registry.json",
+    "conversion_status_summary.json",
+    "output_checksums.json",
+    "quality_audit_summary.json",
+    "exact_duplicate_audit.json",
+    "near_duplicate_audit.json",
+    "cross_role_leakage_audit.json",
+    "determinism_summary.json",
+    "execution_environment.json"
+  ],
+  "gpu_required": false,
+  "heavy_io": "DRIVE_RAW_TO_CONTENT_STAGING_PREFERRED",
+  "incomplete_source_code": "SOURCE_PAYLOAD_INCOMPLETE",
+  "multipart_reconstruction": "FORMAT_IDENTIFICATION_REQUIRED_BEFORE_REASSEMBLY",
+  "phase": "T-A6_STAGE1",
+  "required_synthetic_files": [
+    "datasets/raw_archives/thermal_split_zips/train.zip.001",
+    "datasets/raw_archives/thermal_split_zips/train.zip.002",
+    "datasets/raw_archives/thermal_split_zips/train.zip.003",
+    "datasets/raw_archives/thermal_split_zips/train.zip.004",
+    "datasets/raw_archives/thermal_split_zips/validation.zip"
+  ],
+  "resume": "PARTITION_LEDGER_AND_ATOMIC_FINALIZATION",
+  "runner_path": "scripts/run_thermal_t_a6_colab.py",
+  "startup_checks": [
+    "drive_mounted",
+    "required_files_exist",
+    "readable",
+    "stable_sizes",
+    "storage_available",
+    "output_writable",
+    "git_identity"
+  ],
+  "work_root": "ARGUMENT_OR_THERMAL_A6_WORK_ROOT"
+}

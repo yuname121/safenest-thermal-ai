@@ -1,0 +1,92 @@
+{
+  "capture_end_time": "2026-08-14T10:00:01.160+09:00",
+  "capture_start_time": "2026-08-14T10:00:00.000+09:00",
+  "collection_id": "example_static_not_measurement",
+  "environment": {
+    "ambient_temperature_c": null,
+    "ambient_temperature_status": "UNKNOWN",
+    "background_variation": "SYNTHETIC_EXAMPLE",
+    "clothing_or_ppe": null,
+    "lighting_or_heat_sources": null,
+    "notes": "EXAMPLE / NOT REAL MEASUREMENT.",
+    "occlusion_condition": "NONE"
+  },
+  "operator_code": "OP_EXAMPLE",
+  "quality": {
+    "decode_failure_count": null,
+    "duplicate_counter_count": null,
+    "expected_frame_count": 2,
+    "packet_loss_count": null,
+    "received_frame_count": 2,
+    "sequence_gap_count": null
+  },
+  "recording_id": "recording_S001_001",
+  "role_governance": {
+    "locked_test_status": "NOT_LOCKED_TEST",
+    "model_access_status": "DEVELOPMENT_ALLOWED",
+    "role": "DEVICE_CONTRACT_PILOT",
+    "split_frozen_at": null
+  },
+  "safety": {
+    "fall_like_capture_authorized": false,
+    "safety_control_status": "NOT_APPLICABLE",
+    "uncontrolled_free_fall_experiment": false
+  },
+  "schema_version": "safenest.thermal.real_capture.session.v1",
+  "sensor": {
+    "collector_git_commit": null,
+    "collector_software_version": "EXAMPLE_ONLY",
+    "configured_fps": 6.25,
+    "firmware_version": null,
+    "mount_angle_deg": null,
+    "mount_height_m": null,
+    "native_dtype": "uint16",
+    "native_height": 62,
+    "native_width": 80,
+    "orientation": "UNKNOWN",
+    "raw_encoding": "BIG_ENDIAN_UINT16_EXAMPLE_ONLY",
+    "raw_unit_claim": "UNKNOWN_NOT_VERIFIED",
+    "sensor_hardware_revision": null,
+    "sensor_model": "UNKNOWN_EXAMPLE_SENSOR",
+    "sensor_serial_or_pseudonymous_device_id": "DEVICE_EXAMPLE_001",
+    "sensor_to_subject_distance_m": null,
+    "sensor_vendor": "UNKNOWN",
+    "unit_verification_status": "NOT_VERIFIED",
+    "verified_fps_status": "CONFIGURED_ONLY"
+  },
+  "sequence_id": null,
+  "session_id": "session_S001_001",
+  "storage": {
+    "annotations_file": "annotations.jsonl",
+    "checksums_file": "checksums.sha256",
+    "decoded_native_root": "decoded_native",
+    "frames_file": "frames.jsonl",
+    "model_input_root": null,
+    "raw_root": "raw"
+  },
+  "subject_id": "S001",
+  "temporal_evidence_claim": {
+    "claimed_status": null,
+    "filename_order_used_as_time": false,
+    "source": "EXPLICIT_HOST_RECEIVE_ORDER_ONLY"
+  },
+  "timezone": "+09:00",
+  "timing": {
+    "continuous_session": true,
+    "device_monotonic_status": "UNKNOWN",
+    "host_receive_monotonic_status": "PRESENT_EXAMPLE_ONLY",
+    "host_wall_clock_status": "PRESENT_EXAMPLE_ONLY",
+    "sensor_sequence_counter_status": "UNKNOWN",
+    "sensor_timestamp_status": "UNKNOWN",
+    "timestamp_source_policy": "Keep sensor, device, and host clocks separate; this example has only host placeholders."
+  },
+  "transport": {
+    "full_frame_status": "PRESERVED",
+    "protocol": "SYNTHETIC_EXAMPLE_PROTOCOL",
+    "protocol_version": "EXAMPLE",
+    "raw_packet_bytes_preserved": true,
+    "scalar_thermal_max_status": "UNKNOWN",
+    "transport_latency_status": "UNKNOWN",
+    "transport_path": "EXAMPLE_ONLY"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "derived_target_requires_scope": true,
+  "phase": "T-A4",
+  "schema_version": "1.0",
+  "scope_escalation": "FAIL_CLOSED",
+  "scopes": {
+    "FRAME_LEVEL_FALL_COMPATIBILITY_PROXY_ONLY": "Frame-level compatibility with historical fall output; not a fall event.",
+    "FRAME_LEVEL_POSTURE_PROXY": "Frame-level posture compatibility only; not safety state.",
+    "FRAME_LEVEL_PRESENCE_ONLY": "No annotated human in the represented frame; no outside-FOV claim.",
+    "NOT_SAFETY_GROUND_TRUTH": "Cannot establish worker safety, injury, unconsciousness, or emergency.",
+    "NOT_TEMPORAL_EVENT_GROUND_TRUTH": "Cannot support transition, onset, impact, end, or post-fall timing.",
+    "SOURCE_POSTURE_ONLY": "Original SDT posture/presence annotation only."
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "dynamic_range": {
+    "artifact_id": "TFLITE_DYNAMIC_RANGE",
+    "builtin_only": true,
+    "conversion": {
+      "dynamic_range_quantization": true,
+      "float16_enabled": false,
+      "optimizations": [
+        "DEFAULT"
+      ],
+      "quantization_mode": "DYNAMIC_RANGE",
+      "representative_dataset_attached": false,
+      "select_tf_ops": false,
+      "supported_ops": [
+        "TFLITE_BUILTINS"
+      ]
+    },
+    "counts": {
+      "CONV_2D": 2,
+      "DELEGATE": 1,
+      "FULLY_CONNECTED": 2,
+      "MAX_POOL_2D": 2,
+      "RESHAPE": 1,
+      "SOFTMAX": 1
+    },
+    "diagnostic_only": true,
+    "internal_dtype_counts": {
+      "float32": 15,
+      "int32": 1,
+      "int8": 2
+    },
+    "ops": [
+      "CONV_2D",
+      "MAX_POOL_2D",
+      "CONV_2D",
+      "MAX_POOL_2D",
+      "RESHAPE",
+      "FULLY_CONNECTED",
+      "FULLY_CONNECTED",
+      "SOFTMAX",
+      "DELEGATE"
+    ],
+    "quantized_parameter_tensor_count": 2,
+    "quantized_tensor_count": 2
+  },
+  "float32": {
+    "builtin_only": true,
+    "counts": {
+      "CONV_2D": 2,
+      "DELEGATE": 1,
+      "FULLY_CONNECTED": 2,
+      "MAX_POOL_2D": 2,
+      "RESHAPE": 1,
+      "SOFTMAX": 1
+    },
+    "internal_dtype_counts": {
+      "float32": 17,
+      "int32": 1
+    },
+    "ops": [
+      "CONV_2D",
+      "MAX_POOL_2D",
+      "CONV_2D",
+      "MAX_POOL_2D",
+      "RESHAPE",
+      "FULLY_CONNECTED",
+      "FULLY_CONNECTED",
+      "SOFTMAX",
+      "DELEGATE"
+    ],
+    "quantized_parameter_tensor_count": 0,
+    "quantized_tensor_count": 0
+  },
+  "full_int8": {
+    "builtin_only": true,
+    "counts": {
+      "CONV_2D": 2,
+      "DELEGATE": 1,
+      "FULLY_CONNECTED": 2,
+      "MAX_POOL_2D": 2,
+      "RESHAPE": 1,
+      "SOFTMAX": 1
+    },
+    "internal_dtype_counts": {
+      "int32": 5,
+      "int8": 13
+    },
+    "ops": [
+      "CONV_2D",
+      "MAX_POOL_2D",
+      "CONV_2D",
+      "MAX_POOL_2D",
+      "RESHAPE",
+      "FULLY_CONNECTED",
+      "FULLY_CONNECTED",
+      "SOFTMAX",
+      "DELEGATE"
+    ],
+    "quantized_parameter_tensor_count": 4,
+    "quantized_tensor_count": 13
+  },
+  "phase": "T-B4",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,133 @@
+{
+  "access_date": "2026-08-10",
+  "local_measurements": {
+    "archive_identity": {
+      "materialization_state": "LOCALLY_MATERIALIZED",
+      "md5": "d59a739f3b5ecf373c94046fb94cd94f",
+      "path": "datasets/raw_archives/thermal_split_zips/test.zip",
+      "sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+      "size_bytes": 1740348425
+    },
+    "bounded_png_metadata": {
+      "method": "bounded direct member read; no extraction; deterministic pilot members only",
+      "png_chunk_counts": {
+        "IDAT": 226,
+        "IEND": 12,
+        "IHDR": 12,
+        "tIME": 12
+      },
+      "sampled_member_count": 12,
+      "sampled_members": [
+        "test/image_t_0.png",
+        "test/image_t_1090.png",
+        "test/image_t_1272.png",
+        "test/image_t_1454.png",
+        "test/image_t_1636.png",
+        "test/image_t_1817.png",
+        "test/image_t_182.png",
+        "test/image_t_1999.png",
+        "test/image_t_363.png",
+        "test/image_t_545.png",
+        "test/image_t_727.png",
+        "test/image_t_909.png"
+      ],
+      "timestamp_metadata_status": "PRESENT_BUT_NOT_TREATED_AS_ACQUISITION_TIMELINE",
+      "timestamp_or_metadata_chunk_counts": {
+        "tIME": 12
+      }
+    },
+    "depth_member_count": 8000,
+    "duplicate_member_names": [],
+    "duplicate_thermal_indices": [],
+    "index_continuity": true,
+    "label_class_counts": {
+      "0": 2000,
+      "1": 2000,
+      "2": 2000,
+      "3": 2000
+    },
+    "label_row_count": 8000,
+    "thermal_member_count": 8000
+  },
+  "phase": "T-A3",
+  "schema_version": "1.0",
+  "source_records": [
+    {
+      "access_date": "2026-08-10",
+      "category": "OFFICIAL_EXTERNAL_SOURCE_VERIFIED",
+      "evidence_id": "OFFICIAL_ZENODO_SDT_4124309",
+      "publisher": "TU Wien / Zenodo",
+      "source_title": "SDT: A Dataset for Developing Fall Detection Algorithms using Depth and Thermal Images",
+      "source_url": "https://zenodo.org/records/4124309",
+      "stable_identifier": "doi:10.5281/zenodo.4124309",
+      "temporal_schema_claim": "The official record describes image pairs and pose labels; no source FPS, timestamp, sequence, session, or event-boundary field is documented in the published record examined for T-A3.",
+      "verified_claims": [
+        "8,000 real depth/thermal image pairs are distributed for the test portion",
+        "pose labels and bounding boxes are distributed",
+        "non-commercial research use and citation/attribution conditions are stated"
+      ]
+    },
+    {
+      "access_date": "2026-08-10",
+      "category": "OFFICIAL_EXTERNAL_SOURCE_VERIFIED",
+      "evidence_id": "OFFICIAL_TUWIEN_SDT_DOCUMENTATION",
+      "publisher": "TU Wien Computer Vision Lab",
+      "source_title": "SDT dataset documentation",
+      "source_url": "https://cvl.tuwien.ac.at/research/cvl-databases/sdt-icip/",
+      "stable_identifier": "SDT-ICIP-2020",
+      "temporal_schema_claim": "The documentation examined is image/pose oriented and does not document a timestamped sequence or fall-event boundary schema.",
+      "verified_claims": [
+        "the dataset contains synthetic and real depth/thermal images",
+        "the documented real capture uses an Orbbec Astra and FLIR Lepton 3.5",
+        "the source classes are lying, sitting, standing, and empty-room control"
+      ]
+    },
+    {
+      "access_date": "2026-08-10",
+      "category": "OFFICIAL_EXTERNAL_SOURCE_VERIFIED",
+      "evidence_id": "OFFICIAL_SDT_PAPER",
+      "publisher": "IEEE ICIP 2020",
+      "source_title": "SDT: A Dataset for Developing Fall Detection Algorithms using Depth and Thermal Images",
+      "source_url": "https://doi.org/10.1109/ICIP40778.2020.9191284",
+      "stable_identifier": "doi:10.1109/ICIP40778.2020.9191284",
+      "temporal_schema_claim": "No reproducible temporal acquisition fields or event onset/end annotations were identified in the source evidence used for this phase.",
+      "verified_claims": [
+        "the publication describes the dataset and pose-class image task"
+      ]
+    },
+    {
+      "access_date": "2026-08-10",
+      "category": "REPOSITORY_CODE_VERIFIED",
+      "evidence_id": "LOCAL_T_A1_SCHEMA_AND_READER",
+      "source_url": "datasets/thermal/raw_reader.py",
+      "stable_identifier": "local_sdt_zenodo_4124309",
+      "temporal_schema_claim": "The active reader does not emit timestamp, FPS, sequence, session, recording, or event identifiers.",
+      "verified_claims": [
+        "image_t member and labels row are linked one-to-one by zero-based source frame index",
+        "source timestamp/subject/session/sequence/event statuses are explicitly ABSENT",
+        "archive index continuity is structural inventory evidence only"
+      ]
+    },
+    {
+      "access_date": "2026-08-10",
+      "category": "VALIDATOR_INHERITED",
+      "evidence_id": "LOCAL_T_A2_SELECTED_PROFILE",
+      "source_url": "datasets/thermal/manifests/T-A2_geometry_calibration_canonical_frame/selected_geometry_profile.json",
+      "stable_identifier": "G1_FIXED_ASPECT_CROP_BILINEAR",
+      "temporal_schema_claim": "T-A2 geometry identity is retained; T-A3 does not create a split, window, label remap, or model input contract.",
+      "verified_claims": [
+        "T-A2 selected a deterministic 62x80 float32 Celsius canonical frame profile"
+      ]
+    }
+  ],
+  "source_schema_conclusion": "Frame-level identity is reproducible. Temporal sequence, event, and window construction remain NOT_VERIFIABLE/NOT_APPLICABLE because the active source schema and official docs do not provide the needed evidence.",
+  "temporal_fields": {
+    "event_id": "ABSENT",
+    "fall_event_boundaries": "NOT_VERIFIABLE",
+    "sequence_id": "ABSENT",
+    "session_id": "ABSENT",
+    "source_fps": "NOT_VERIFIABLE",
+    "source_timestamp": "ABSENT",
+    "timestamp_reliability": "NOT_APPLICABLE"
+  }
+}

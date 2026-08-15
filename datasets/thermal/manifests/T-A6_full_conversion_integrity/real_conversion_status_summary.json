@@ -1,0 +1,25 @@
+{
+  "canonical_rows": 8000,
+  "expected_source_frames": 8000,
+  "finalized_status": "FINALIZED",
+  "phase": "T-A6_STAGE1",
+  "reconciliation": {
+    "canonical_rows_equals_success_plus_warning": true,
+    "expected_equals_status_sum": true
+  },
+  "safenest_role": "REAL_EVAL_DEVELOPMENT",
+  "source_domain": "REAL",
+  "source_frames_measured": 8000,
+  "source_split": "test",
+  "stage1_status": {
+    "code": "REAL_CONVERSION_FINALIZED",
+    "gate": "CONVERSION_COMPLETE",
+    "message": "all real source rows were converted and finalized"
+  },
+  "status_counts": {
+    "EXCLUDED": 0,
+    "FAILED": 0,
+    "SUCCESS": 8000,
+    "SUCCESS_WITH_WARNING": 0
+  }
+}

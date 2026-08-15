@@ -1,0 +1,199 @@
+{
+  "architecture_only_factor": true,
+  "baseline": {
+    "architecture_fingerprint": "937fceb88900a779d67a8e407cebc3362cc21346721f92cea5ae8de1413aba2a",
+    "baseline_source": "REUSED_VERIFIED_T_B1_P1_RESULT",
+    "best_epoch": 15,
+    "candidate_id": "SMALL_CNN_BASELINE_V1",
+    "checkpoint": {
+      "logical_path": "checkpoints/P1_TRAIN_FITTED_GLOBAL_ZSCORE.weights.h5",
+      "materialization": "PERSISTENT_EXTERNAL_OUTPUT",
+      "sha256": "7aba32fe8d0e241546429bdc3e8cd059b10d4d8f548e9e12c4085abeba308a75",
+      "size_bytes": 3777416
+    },
+    "parameter_count": 312131,
+    "retrained": false,
+    "reused": true,
+    "validation_metrics": {
+      "accuracy": 0.995125,
+      "balanced_accuracy": 0.99575,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          2000,
+          0,
+          0
+        ],
+        [
+          5,
+          3973,
+          22
+        ],
+        [
+          0,
+          12,
+          1988
+        ]
+      ],
+      "h_fall_posture_proxy_recall": 0.994,
+      "macro_f1": 0.9951295332536425,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.9915211970074813,
+          "precision": 0.9890547263681592,
+          "recall": 0.994,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.9951158422041327,
+          "precision": 0.9969887076537014,
+          "recall": 0.99325,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.9987515605493134,
+          "precision": 0.9975062344139651,
+          "recall": 1.0,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 2010,
+        "HUMAN_NORMAL": 3985,
+        "NOT_HUMAN": 2005
+      },
+      "sample_count": 8000
+    }
+  },
+  "depthwise": {
+    "architecture_fingerprint": "3057cc8ba5272315d5bc6a0716f756e54767685d5cb3f4a7935e8862f31478d3",
+    "best_epoch": 20,
+    "candidate_id": "DEPTHWISE_SEPARABLE_CNN_V1",
+    "checkpoint": {
+      "logical_path": "checkpoints/DEPTHWISE_SEPARABLE_CNN_V1.weights.h5",
+      "materialization": "PERSISTENT_EXTERNAL_OUTPUT",
+      "sha256": "5b0a4b61555b44a990e4b967e55d6ba78355a662ac1a824eedb374c91ef9fbef",
+      "size_bytes": 34520
+    },
+    "initial_weight_fingerprint": "daed44596571500cddf80731d992f4684d88fe1074e729581b127eb0c88c30a0",
+    "parameter_count": 347,
+    "seed": 20260813,
+    "status": "VALIDATION_COMPLETE",
+    "validation_metrics": {
+      "accuracy": 0.922375,
+      "balanced_accuracy": 0.9129999999999999,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          1893,
+          105,
+          2
+        ],
+        [
+          17,
+          3802,
+          181
+        ],
+        [
+          2,
+          314,
+          1684
+        ]
+      ],
+      "h_fall_posture_proxy_recall": 0.842,
+      "macro_f1": 0.9212330380736017,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.8709594000517196,
+          "precision": 0.901981788966256,
+          "recall": 0.842,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.9249483031261404,
+          "precision": 0.9007344231224829,
+          "recall": 0.9505,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.9677914110429449,
+          "precision": 0.9900627615062761,
+          "recall": 0.9465,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1867,
+        "HUMAN_NORMAL": 4221,
+        "NOT_HUMAN": 1912
+      },
+      "sample_count": 8000
+    }
+  },
+  "independent_tuning": false,
+  "phase": "T-B2",
+  "real_used_during_training": false,
+  "schema_version": "1.0",
+  "training_contract": {
+    "augmentation": {
+      "allowed_partition": "TRAIN_ONLY",
+      "baseline": "DISABLED",
+      "later_ablation_owner": "T-B1",
+      "temporal_event_fabrication": false,
+      "thermal_physical_semantics_required": true
+    },
+    "baseline_budget": {
+      "architecture_specific_budget_exception": "NONE_WITHIN_T-B0_REGISTERED_CANDIDATES",
+      "batch_size": 64,
+      "early_stopping": {
+        "mode": "max",
+        "monitor": "validation_macro_f1",
+        "patience": 5,
+        "restore_best_weights": true
+      },
+      "initial_learning_rate": 0.001,
+      "learning_rate_schedule": {
+        "factor": 0.5,
+        "minimum_learning_rate": 1e-06,
+        "mode": "max",
+        "monitor": "validation_macro_f1",
+        "patience": 3,
+        "type": "ReduceLROnPlateau"
+      },
+      "loss": "unweighted_sparse_categorical_crossentropy",
+      "maximum_epochs": 20,
+      "maximum_tuning_trials_per_candidate_profile": 1,
+      "optimizer": "Adam"
+    },
+    "class_imbalance": {
+      "baseline": "UNWEIGHTED_CROSS_ENTROPY",
+      "class_weight": "DISABLED_IN_BASELINE",
+      "focal_loss": "DISABLED_IN_BASELINE",
+      "later_ablation_owner": "T-B2",
+      "oversampling": "DISABLED_IN_BASELINE",
+      "train_distribution": {
+        "HUMAN_FALL": 8000,
+        "HUMAN_NORMAL": 16000,
+        "NOT_HUMAN": 8000
+      }
+    },
+    "fairness_rules": {
+      "no_unreported_extra_trials": true,
+      "preprocessing_profile_is_recorded_as_factor": true,
+      "real_not_used_for_tuning": true,
+      "same_budget_dimensions_across_candidates": true,
+      "validation_not_used_for_weight_fitting": true
+    },
+    "phase": "T-B0",
+    "schema_version": "1.0",
+    "training_executed_in_t_b0": false
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "archive_identity": {
+    "materialization_state": "LOCALLY_MATERIALIZED",
+    "md5": "d59a739f3b5ecf373c94046fb94cd94f",
+    "path": "datasets/raw_archives/thermal_split_zips/test.zip",
+    "sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+    "size_bytes": 1740348425
+  },
+  "archive_materialization_status": "LOCALLY_MATERIALIZED",
+  "archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+  "bbox_schema": "labels.txt row: pose,xMin,yMin,xMax,yMax; floating half-pixel coordinates may reach width/height + 0.5; EMPTY_ROOM uses -1,-1,-1,-1",
+  "channels": 1,
+  "dataset_doi": "doi:10.5281/zenodo.4124309",
+  "dataset_id": "local_sdt_zenodo_4124309",
+  "decoded_byte_order": "HOST_NATIVE_SEMANTIC_UINT16; canonical frame hash uses little-endian <u2 bytes",
+  "decoded_dtype": "uint16",
+  "depth_frame_count": 8000,
+  "depth_member_pattern": "test/image_d_(\\d+)\\.png",
+  "distributed_frame_shape": [
+    480,
+    640
+  ],
+  "event_availability": "ABSENT",
+  "label_row_count": 8000,
+  "labels_member_path": "test/labels.txt",
+  "native_thermal_sensor_shape": [
+    120,
+    160
+  ],
+  "phase": "T-A1",
+  "physical_encoding": "official SDT documentation: Kelvin centiunits; FLIR 16/14-bit wording retained without imposing a guessed 14-bit mask",
+  "physical_unit_conversion": {
+    "celsius": "(encoded_uint16 - 27315) / 100",
+    "kelvin": "encoded_uint16 / 100"
+  },
+  "png_bit_depth": 16,
+  "profile_id": "thermal_sdt_test_raw_v1",
+  "representation_class": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+  "sequence_availability": "ABSENT",
+  "session_availability": "ABSENT",
+  "source_labels": {
+    "0": "LYING",
+    "1": "SITTING",
+    "2": "STANDING",
+    "3": "EMPTY_ROOM"
+  },
+  "source_split": "test",
+  "source_split_semantics": "real sensor test split; official split retained",
+  "subject_availability": "ABSENT",
+  "thermal_frame_count": 8000,
+  "thermal_member_pattern": "test/image_t_(\\d+)\\.png",
+  "timestamp_availability": "ABSENT"
+}

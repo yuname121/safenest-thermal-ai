@@ -1,0 +1,50 @@
+{
+  "apple_silicon_metal_detected_when_available": true,
+  "bit_identical_cpu_metal_claim": false,
+  "budget": {
+    "augmentation": "DISABLED",
+    "batch_size": 64,
+    "class_weighting": "DISABLED",
+    "focal_loss": "DISABLED",
+    "initial_learning_rate": 0.001,
+    "loss": "unweighted_sparse_categorical_crossentropy",
+    "maximum_epochs": 20,
+    "maximum_tuning_trials_per_profile": 1,
+    "optimizer": "Adam",
+    "oversampling": "DISABLED"
+  },
+  "cpu_supported": true,
+  "early_stopping": {
+    "keras_log_alias": "val_macro_f1",
+    "mode": "max",
+    "monitor": "validation_macro_f1",
+    "patience": 5,
+    "restore_best_weights": true
+  },
+  "fixture_smoke": {
+    "allowed": true,
+    "metrics_are_not_project_evidence": true,
+    "one_epoch_or_less": true
+  },
+  "full_execute_requires_owner_authorization": true,
+  "gpu_optional": true,
+  "initial_weight_fingerprint_required": true,
+  "lr_scheduler": {
+    "factor": 0.5,
+    "keras_log_alias": "val_macro_f1",
+    "minimum_learning_rate": 1e-06,
+    "mode": "max",
+    "monitor": "validation_macro_f1",
+    "patience": 3,
+    "type": "ReduceLROnPlateau"
+  },
+  "phase": "T-B1",
+  "schema_version": "1.0",
+  "seed_bindings": {
+    "data_shuffle": 20260813,
+    "numpy": 20260813,
+    "python": 20260813,
+    "tensorflow": 20260813,
+    "weight_initialization": 20260813
+  }
+}

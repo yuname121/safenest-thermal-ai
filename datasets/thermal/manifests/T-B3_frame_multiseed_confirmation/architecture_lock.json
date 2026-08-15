@@ -1,0 +1,10 @@
+{
+  "architecture_fingerprint": "937fceb88900a779d67a8e407cebc3362cc21346721f92cea5ae8de1413aba2a",
+  "candidate_id": "SMALL_CNN_BASELINE_V1",
+  "modified": false,
+  "parameter_count": 312131,
+  "phase": "T-B3",
+  "schema_version": "1.0",
+  "source": "REUSED_VERIFIED_T_B2_ARCHITECTURE_WINNER",
+  "temporal_layers": false
+}

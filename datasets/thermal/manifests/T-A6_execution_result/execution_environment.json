@@ -1,0 +1,15 @@
+{
+  "git": {
+    "branch": "main",
+    "commit": "62fd6873466ccb507a76f3a64b3ce02cd1ce6a5e",
+    "user_email": null,
+    "user_name": null
+  },
+  "gpu_required": false,
+  "numpy": "2.0.2",
+  "phase": "T-A6_COLAB_STAGE2",
+  "pillow": "11.3.0",
+  "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+  "runner": "scripts/run_thermal_t_a6_colab.py",
+  "schema_version": "1.0"
+}

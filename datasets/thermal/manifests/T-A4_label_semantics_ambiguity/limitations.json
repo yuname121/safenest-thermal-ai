@@ -1,0 +1,33 @@
+{
+  "downstream": {
+    "T-A5": "grouping and split policy",
+    "T-A6": "full canonical conversion/integrity",
+    "T-B": "proxy-vs-runtime evaluation",
+    "T-C": "Thermal-44 device semantics",
+    "T-D": "gap-driven activity/hard-negative expansion"
+  },
+  "generalization": {
+    "event_generalization": "NOT_VERIFIABLE",
+    "session_generalization": "NOT_VERIFIABLE",
+    "subject_generalization": "NOT_VERIFIABLE",
+    "temporal_fall_event_performance": "NOT_VERIFIABLE"
+  },
+  "limitations": [
+    "SDT source labels are posture/presence annotations, not fall-event annotations.",
+    "LYING may map only to a DERIVED_POSTURE_PROXY compatibility target with explicit frame-only claim limits.",
+    "SITTING/STANDING may map only to a non-lying posture proxy and never general worker safety.",
+    "EMPTY_ROOM is scoped to the represented frame and does not prove no person exists outside the field of view.",
+    "BENDING, KNEELING, WALKING, transitions, impacts, post-fall intervals, and recovery are not represented or not verifiable.",
+    "No temporal event, sequence, split, model metric, risk threshold, hardware, clinical, or medical claim is created.",
+    "Subject/session/event generalization remains NOT_VERIFIABLE from T-A3."
+  ],
+  "phase": "T-A4",
+  "schema_version": "1.0",
+  "status": "PASS_WITH_LIMITATIONS",
+  "t_a3_inheritance": {
+    "event_level": "NOT_VERIFIABLE",
+    "frame_level": "SUPPORTED",
+    "sequence_level": "NOT_VERIFIABLE",
+    "window_level": "NOT_APPLICABLE"
+  }
+}

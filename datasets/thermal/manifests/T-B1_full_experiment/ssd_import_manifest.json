@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "phase": "T-B1",
+  "import_policy": "PRESERVATION_FIRST_NON_DESTRUCTIVE",
+  "ssd_mount_label": "SafeNestssd",
+  "source_downloads": [
+    {
+      "kind": "T-A6_EXECUTION_EVIDENCE_ARCHIVE",
+      "source_name": "T-A6_execution_result-20260813T173400Z-1-001.zip",
+      "archive_sha256": "8b30dc74e91024b4fd16a1e3ad879ea4414faad6f2952370a8e502b9ad6a11f3",
+      "preserved": true,
+      "imported_destination": "SafeNestAI/thermal/evidence/T-A6_execution_result"
+    },
+    {
+      "kind": "T-A6_CANONICAL_ARCHIVE",
+      "source_name": "T-A6_real_and_synthetic_canonical-20260813T173529Z-1-001.zip",
+      "archive_sha256": "a15c2c5ef07b5fc28c16c28cab820a4aaa7411fad4adbf3c8340c6625e7ac64d",
+      "preserved": true,
+      "imported_destination": "SafeNestAI/thermal/imported/T-A6_real_and_synthetic_canonical"
+    }
+  ],
+  "canonical_destination": "SafeNestAI/thermal/canonical",
+  "role_directories": ["TRAIN", "VALIDATION", "REAL_EVAL_DEVELOPMENT"],
+  "raw_sdt_archives": {
+    "organization": "LEFT_AT_ORIGINAL_SSD_ROOT",
+    "modified": false,
+    "concatenated": false,
+    "names": ["train.zip.001", "train.zip.002", "train.zip.003", "train.zip.004", "validation.zip", "test.zip"]
+  },
+  "canonical_tensors_tracked_in_git": false,
+  "raw_archives_tracked_in_git": false,
+  "bulk_checkpoints_tracked_in_git": false,
+  "destructive_deletion_performed": false
+}

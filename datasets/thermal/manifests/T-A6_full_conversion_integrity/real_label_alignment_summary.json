@@ -1,0 +1,27 @@
+{
+  "counts": {
+    "assignment_row_count": 8000,
+    "compatibility_target_counts": {
+      "HUMAN_FALL": 2000,
+      "HUMAN_NORMAL": 4000,
+      "NOT_HUMAN": 2000
+    },
+    "label_row_count": 8000,
+    "original_label_counts": {
+      "EMPTY_ROOM": 2000,
+      "LYING": 2000,
+      "SITTING": 2000,
+      "STANDING": 2000
+    },
+    "provenance_row_count": 8000,
+    "provenance_sha256": "c9d12f12d845d218e5636dad84a4a094e869faa29d95feb4a6f69603c195e550",
+    "tensor_assignment_1_to_1": true,
+    "tensor_label_1_to_1": true,
+    "tensor_provenance_1_to_1": true,
+    "tensor_row_count": 8000
+  },
+  "mapping_is_event_ground_truth": false,
+  "original_source_labels_retained": true,
+  "proxy_layer_separate": true,
+  "status": "PASS"
+}

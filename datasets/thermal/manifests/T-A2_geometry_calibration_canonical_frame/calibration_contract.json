@@ -1,0 +1,31 @@
+{
+  "ambient_reference_compensation": {
+    "applied": false,
+    "status": "NOT_APPLIED_NO_VERIFIED_PARAMETER_SOURCE"
+  },
+  "canonical_dtype_precision": {
+    "max_conversion_error_celsius": 1.8310546892053026e-06,
+    "mean_conversion_error_celsius": 4.780812340083614e-07,
+    "memory_bytes_per_frame": 19840,
+    "reference": "float64 SDT Celsius formula",
+    "selected_dtype": "float32",
+    "source_precision_preserved_relative_to_encoding": true,
+    "unit_resolution_celsius": 0.01
+  },
+  "hardware_specific_calibration": {
+    "applied": false,
+    "status": "DEFERRED_T_C"
+  },
+  "phase": "T-A2",
+  "reference_compensation": {
+    "applied": false,
+    "status": "NOT_APPLIED_NO_VERIFIED_PARAMETER_SOURCE"
+  },
+  "schema_version": "1.0",
+  "source_physical_conversion": {
+    "canonical_unit": "CELSIUS",
+    "formula": "(encoded_uint16 - 27315) / 100",
+    "source_unit": "KELVIN_CENTIUNITS"
+  },
+  "unsupported_constants_introduced": []
+}

@@ -1,0 +1,60 @@
+{
+  "comparison_views": {
+    "V0_OFFICIAL_VALIDATION": {
+      "canonical_partition_preserved": true,
+      "role": "VALIDATION",
+      "status": "FROZEN_PRIMARY_COMPARISON_VIEW",
+      "winner_selection_allowed": true
+    },
+    "V1_NEAR_DUPLICATE_SENSITIVITY": {
+      "canonical_partition_preserved": true,
+      "materialization_status": "SENSITIVITY_SUBSET_NOT_MATERIALIZABLE_FROM_CURRENT_COMPACT_EVIDENCE",
+      "role": "VALIDATION",
+      "split_reassignment": false,
+      "status": "FROZEN_SECONDARY_DIAGNOSTIC_VIEW",
+      "winner_selection_allowed": false
+    }
+  },
+  "hash_resplit": "PROHIBITED",
+  "legacy_npz_authority": "PROHIBITED",
+  "phase": "T-B0",
+  "random_resplit": "PROHIBITED",
+  "real_is_pristine": false,
+  "roles": {
+    "LOCKED_TEST": {
+      "available": false,
+      "model_selection": false,
+      "preprocessing_fit": false,
+      "weight_fitting": false,
+      "winner_selection": false
+    },
+    "REAL_EVAL_DEVELOPMENT": {
+      "class_weight_calculation": false,
+      "evaluation_order": "after validation-based candidate/winner selection where possible",
+      "final_test": false,
+      "locked_test": false,
+      "model_selection": false,
+      "preprocessing_fit": false,
+      "real_domain_reporting": true,
+      "weight_fitting": false,
+      "winner_selection": false
+    },
+    "TRAIN": {
+      "class_weight_calculation": true,
+      "model_selection": false,
+      "preprocessing_fit": true,
+      "real_domain_reporting": false,
+      "weight_fitting": true,
+      "winner_selection": false
+    },
+    "VALIDATION": {
+      "class_weight_calculation": false,
+      "model_selection": true,
+      "preprocessing_fit": false,
+      "real_domain_reporting": false,
+      "weight_fitting": false,
+      "winner_selection": true
+    }
+  },
+  "schema_version": "1.0"
+}

@@ -1,0 +1,14 @@
+{
+  "canonical_payloads_external": true,
+  "full_execution_authorized": true,
+  "origin_main": "7d30ec3769549269bc5180ac0d4b760ecb7cc6cd",
+  "output_root": "EXTERNAL_SSD_SAFE_NEST_AI_THERMAL_EXPERIMENTS_T_B5",
+  "phase": "T-B5",
+  "predecessors_pass": true,
+  "profile_checksum": "c333d38de170eb7acb6245adf23d536f09effe75db620afde7ab1000c8406877",
+  "repo_commit": "7d30ec3769549269bc5180ac0d4b760ecb7cc6cd",
+  "schema_version": "1.0",
+  "status": "T_B5_FULL_EXPERIMENT_READY",
+  "t_b6_started": false,
+  "t_c_started": false
+}

@@ -1,0 +1,15 @@
+{
+  "best_seed_cherry_picking": "PROHIBITED",
+  "candidate_changed_due_to_t_b3": false,
+  "phase": "T-B3",
+  "reason": "T-B3 measures stability and does not define a post-hoc checkpoint selection rule.",
+  "reference_candidate_id": "SMALL_CNN_BASELINE_V1",
+  "reference_checkpoint": {
+    "logical_path": "checkpoints/P1_TRAIN_FITTED_GLOBAL_ZSCORE.weights.h5",
+    "materialization": "PERSISTENT_EXTERNAL_OUTPUT",
+    "sha256": "7aba32fe8d0e241546429bdc3e8cd059b10d4d8f548e9e12c4085abeba308a75",
+    "size_bytes": 3777416
+  },
+  "reference_seed": 20260813,
+  "schema_version": "1.0"
+}

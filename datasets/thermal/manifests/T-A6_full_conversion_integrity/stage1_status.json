@@ -1,0 +1,14 @@
+{
+  "full_t_a6_gate": "NOT_YET_COMPLETE",
+  "mac_synthetic_payload_access": "PROHIBITED_STAGE_1",
+  "phase": "T-A6_STAGE1",
+  "reason": {
+    "code": "REAL_CONVERSION_FINALIZED",
+    "gate": "CONVERSION_COMPLETE",
+    "message": "all real source rows were converted and finalized"
+  },
+  "stage1_gate": "T_A6_STAGE1_COMPLETE",
+  "synthetic_train_status": "PENDING_COLAB_STAGE2",
+  "synthetic_validation_status": "PENDING_COLAB_STAGE2",
+  "t_b_authorized": false
+}

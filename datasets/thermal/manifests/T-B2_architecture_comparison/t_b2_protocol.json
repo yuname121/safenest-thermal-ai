@@ -1,0 +1,31 @@
+{
+  "architecture_candidates": [
+    "SMALL_CNN_BASELINE_V1",
+    "DEPTHWISE_SEPARABLE_CNN_V1"
+  ],
+  "factor_changed": "ARCHITECTURE",
+  "factors_frozen": [
+    "dataset",
+    "official_roles",
+    "target_mapping",
+    "p1_statistics",
+    "loss",
+    "optimizer",
+    "training_budget",
+    "augmentation",
+    "class_weighting",
+    "oversampling",
+    "focal_loss",
+    "seed",
+    "metric_policy",
+    "winner_policy"
+  ],
+  "locked_test_available": false,
+  "next_phase_started": false,
+  "phase": "T-B2",
+  "protocol_id": "THERMAL_T_B2_CONTROLLED_ARCHITECTURE_COMPARISON_001",
+  "real_policy": "SELECTED_WINNER_CHARACTERIZATION_AFTER_VALIDATION_ONLY",
+  "schema_version": "1.0",
+  "scope": "P1_FROZEN_ARCHITECTURE_ONLY_COMPARISON",
+  "selection_role": "VALIDATION"
+}

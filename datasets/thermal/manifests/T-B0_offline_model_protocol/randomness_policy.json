@@ -1,0 +1,43 @@
+{
+  "data_ordering": {
+    "real_order": "canonical order; no shuffle for development characterization",
+    "shuffle": "TRAIN only, seeded by data_shuffle seed after deterministic source ordering",
+    "source_order": "canonical sample index ascending within each official role",
+    "validation_order": "canonical order; no shuffle for metric reporting"
+  },
+  "determinism_requirements": {
+    "bit_identical_training_claim": false,
+    "enable_tensorflow_determinism_when_available": true,
+    "record_gpu_or_cpu_mode": true,
+    "record_numpy_version": true,
+    "record_platform": true,
+    "record_pythonhashseed": true,
+    "record_tensorflow_version": true
+  },
+  "initial_weight_fingerprints": {
+    "fingerprint": "SHA-256 over canonical sorted layer-name, shape, dtype and contiguous weight bytes",
+    "record_before_training": true,
+    "required_for_same_architecture_preprocessing_comparisons": true
+  },
+  "multi_seed_policy": {
+    "aggregation": "mean, standard deviation and worst seed for frozen validation metrics",
+    "executed_in_t_b0": false,
+    "minimum_seed_count": 3,
+    "required_phase": "T-B3 or later candidate confirmation",
+    "seed_list": [
+      20260813,
+      20260814,
+      20260815
+    ]
+  },
+  "phase": "T-B0",
+  "primary_seed": 20260813,
+  "schema_version": "1.0",
+  "seed_bindings": {
+    "data_shuffle": 20260813,
+    "numpy": 20260813,
+    "python": 20260813,
+    "tensorflow": 20260813,
+    "weight_initialization": 20260813
+  }
+}

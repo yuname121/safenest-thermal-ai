@@ -1,0 +1,40 @@
+{
+  "architecture": [
+    "Input(62,80,1)",
+    "Conv2D(16,3x3,same,relu)",
+    "MaxPooling2D(2x2)",
+    "Conv2D(32,3x3,same,relu)",
+    "MaxPooling2D(2x2)",
+    "Flatten",
+    "Dense(32,relu)",
+    "Dense(3,softmax)"
+  ],
+  "architecture_fingerprint": "937fceb88900a779d67a8e407cebc3362cc21346721f92cea5ae8de1413aba2a",
+  "candidate_id": "SMALL_CNN_BASELINE_V1",
+  "class_order": [
+    "NOT_HUMAN",
+    "HUMAN_NORMAL",
+    "HUMAN_FALL"
+  ],
+  "implementation_module": "datasets/thermal/t_b1_model.py",
+  "initial_weight_fingerprint": "72a9805e1772aa0ee0a414fb7d41bc17ea0d183fa29e0e43049b22e0d5d35058",
+  "input_dtype": "float32",
+  "input_shape": [
+    1,
+    62,
+    80,
+    1
+  ],
+  "legacy_model_replacement": false,
+  "legacy_reference": "models/thermal/thermal_fall_int8_v0.1.0.tflite remains LEGACY_DEPLOYED_REFERENCE and is not used for initialization.",
+  "output_dtype": "float32 probabilities",
+  "output_shape": [
+    1,
+    3
+  ],
+  "parameter_count_measured": 312131,
+  "parameter_count_target": 312131,
+  "phase": "T-B1",
+  "schema_version": "1.0",
+  "tflite_conversion_in_stage1": false
+}

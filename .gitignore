@@ -1,0 +1,25 @@
+# Python
+.venv/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local working output
+.tmp-*/
+.tmp*/
+artifacts/**
+!artifacts/.gitkeep
+data/raw/**
+!data/raw/.gitkeep
+data/canonical/**
+!data/canonical/.gitkeep
+data/real_capture/**
+!data/real_capture/.gitkeep
+
+# Model and data binaries are retained on the approved external artifact store.
+*.tflite
+*.h5
+*.keras
+*.npz
+*.npy
+*.zip

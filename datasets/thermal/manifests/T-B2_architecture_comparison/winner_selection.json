@@ -1,0 +1,135 @@
+{
+  "phase": "T-B2",
+  "real_used_for_selection": false,
+  "rule_id": "THERMAL_T_B0_WINNER_RULE_001",
+  "schema_version": "1.0",
+  "selection_input_metrics": [
+    {
+      "candidate_id": "SMALL_CNN_BASELINE_V1",
+      "parameter_count": 312131,
+      "validation_metrics": {
+        "accuracy": 0.995125,
+        "balanced_accuracy": 0.99575,
+        "class_order": [
+          "NOT_HUMAN",
+          "HUMAN_NORMAL",
+          "HUMAN_FALL"
+        ],
+        "confusion_matrix": [
+          [
+            2000,
+            0,
+            0
+          ],
+          [
+            5,
+            3973,
+            22
+          ],
+          [
+            0,
+            12,
+            1988
+          ]
+        ],
+        "h_fall_posture_proxy_recall": 0.994,
+        "macro_f1": 0.9951295332536425,
+        "per_class": {
+          "HUMAN_FALL": {
+            "f1": 0.9915211970074813,
+            "precision": 0.9890547263681592,
+            "recall": 0.994,
+            "support": 2000
+          },
+          "HUMAN_NORMAL": {
+            "f1": 0.9951158422041327,
+            "precision": 0.9969887076537014,
+            "recall": 0.99325,
+            "support": 4000
+          },
+          "NOT_HUMAN": {
+            "f1": 0.9987515605493134,
+            "precision": 0.9975062344139651,
+            "recall": 1.0,
+            "support": 2000
+          }
+        },
+        "prediction_distribution": {
+          "HUMAN_FALL": 2010,
+          "HUMAN_NORMAL": 3985,
+          "NOT_HUMAN": 2005
+        },
+        "sample_count": 8000
+      }
+    },
+    {
+      "candidate_id": "DEPTHWISE_SEPARABLE_CNN_V1",
+      "parameter_count": 347,
+      "validation_metrics": {
+        "accuracy": 0.922375,
+        "balanced_accuracy": 0.9129999999999999,
+        "class_order": [
+          "NOT_HUMAN",
+          "HUMAN_NORMAL",
+          "HUMAN_FALL"
+        ],
+        "confusion_matrix": [
+          [
+            1893,
+            105,
+            2
+          ],
+          [
+            17,
+            3802,
+            181
+          ],
+          [
+            2,
+            314,
+            1684
+          ]
+        ],
+        "h_fall_posture_proxy_recall": 0.842,
+        "macro_f1": 0.9212330380736017,
+        "per_class": {
+          "HUMAN_FALL": {
+            "f1": 0.8709594000517196,
+            "precision": 0.901981788966256,
+            "recall": 0.842,
+            "support": 2000
+          },
+          "HUMAN_NORMAL": {
+            "f1": 0.9249483031261404,
+            "precision": 0.9007344231224829,
+            "recall": 0.9505,
+            "support": 4000
+          },
+          "NOT_HUMAN": {
+            "f1": 0.9677914110429449,
+            "precision": 0.9900627615062761,
+            "recall": 0.9465,
+            "support": 2000
+          }
+        },
+        "prediction_distribution": {
+          "HUMAN_FALL": 1867,
+          "HUMAN_NORMAL": 4221,
+          "NOT_HUMAN": 1912
+        },
+        "sample_count": 8000
+      }
+    }
+  ],
+  "selection_role": "VALIDATION",
+  "tie": false,
+  "tie_break_level": "NONE_OR_FROZEN_RANKING_POLICY",
+  "tie_tolerance": 1e-05,
+  "winner_candidate_id": "SMALL_CNN_BASELINE_V1",
+  "winner_checkpoint": {
+    "logical_path": "checkpoints/P1_TRAIN_FITTED_GLOBAL_ZSCORE.weights.h5",
+    "materialization": "PERSISTENT_EXTERNAL_OUTPUT",
+    "sha256": "7aba32fe8d0e241546429bdc3e8cd059b10d4d8f548e9e12c4085abeba308a75",
+    "size_bytes": 3777416
+  }
+}

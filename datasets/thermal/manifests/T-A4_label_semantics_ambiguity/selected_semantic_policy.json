@@ -1,0 +1,98 @@
+{
+  "layer_a_original_source_annotation": {
+    "labels": {
+      "0": "LYING",
+      "1": "SITTING",
+      "2": "STANDING",
+      "3": "EMPTY_ROOM"
+    },
+    "meaning": "SDT pose/presence annotation exactly as distributed; no SafeNest fall or safety claim.",
+    "status": "IMMUTABLE_VERIFIED_SOURCE_ANNOTATION"
+  },
+  "layer_b_frame_evidence": {
+    "claim_scope": "FRAME_LEVEL_ONLY",
+    "evidence_labels": {
+      "EMPTY_ROOM": "NO_ANNOTATED_HUMAN_IN_REPRESENTED_FRAME",
+      "LYING": "HUMAN_LYING_POSTURE",
+      "SITTING": "HUMAN_SITTING_POSTURE",
+      "STANDING": "HUMAN_STANDING_POSTURE"
+    },
+    "fall_event_ground_truth": "NOT_VERIFIABLE",
+    "worker_safety_ground_truth": "NOT_SUPPORTED"
+  },
+  "layer_c_compatibility_proxy": {
+    "claim_scopes": {
+      "EMPTY_ROOM": [
+        "FRAME_LEVEL_PRESENCE_ONLY",
+        "NOT_SAFETY_GROUND_TRUTH"
+      ],
+      "LYING": [
+        "FRAME_LEVEL_FALL_COMPATIBILITY_PROXY_ONLY",
+        "NOT_TEMPORAL_EVENT_GROUND_TRUTH",
+        "NOT_SAFETY_GROUND_TRUTH"
+      ],
+      "SITTING": [
+        "FRAME_LEVEL_POSTURE_PROXY",
+        "NOT_SAFETY_GROUND_TRUTH"
+      ],
+      "STANDING": [
+        "FRAME_LEVEL_POSTURE_PROXY",
+        "NOT_SAFETY_GROUND_TRUTH"
+      ]
+    },
+    "enabled": true,
+    "mapping_types": {
+      "EMPTY_ROOM": "DIRECT_SOURCE_EQUIVALENT",
+      "LYING": "DERIVED_POSTURE_PROXY",
+      "SITTING": "DERIVED_POSTURE_PROXY",
+      "STANDING": "DERIVED_POSTURE_PROXY"
+    },
+    "runtime_class_map": {
+      "0": "NOT_HUMAN",
+      "1": "HUMAN_NORMAL",
+      "2": "HUMAN_FALL"
+    },
+    "targets": {
+      "EMPTY_ROOM": "NOT_HUMAN",
+      "LYING": "HUMAN_FALL",
+      "SITTING": "HUMAN_NORMAL",
+      "STANDING": "HUMAN_NORMAL"
+    }
+  },
+  "model_metrics_used": false,
+  "phase": "T-A4",
+  "policy_id": "THERMAL_LABEL_SEMANTIC_POLICY_001",
+  "policy_version": "1.0",
+  "risk_or_fusion_semantics": "NOT_DEFINED_BY_T_A4",
+  "schema_version": "1.0",
+  "selected_candidate_id": "L1_DUAL_LAYER_SOURCE_PLUS_PROXY",
+  "selection_derivation": "Independent lexicographic admissibility/ranking over the predeclared candidate set; no model metric.",
+  "selection_policy_content_sha256": "f208014787294d7386555914105112218ccc0724add776f654bad9964e397692",
+  "selection_policy_id": "THERMAL_LABEL_SELECTION_POLICY_001",
+  "selection_status": "SEMANTIC_POLICY_SELECTED_WITH_EXPLICIT_PROXY_LIMITATIONS",
+  "semantic_policy_content_sha256": "eb8f1d9d1913ec697b18de08bb6cdd597aabb123f506d02a1c5f1d8065955fe8",
+  "source": {
+    "archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+    "archive_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+    "dataset_id": "local_sdt_zenodo_4124309",
+    "doi": "doi:10.5281/zenodo.4124309",
+    "original_labels": {
+      "0": "LYING",
+      "1": "SITTING",
+      "2": "STANDING",
+      "3": "EMPTY_ROOM"
+    },
+    "source_split": "test"
+  },
+  "split_assigned": false,
+  "temporal_inheritance": {
+    "event_level": "NOT_VERIFIABLE",
+    "fall_end": "NOT_VERIFIABLE",
+    "fall_onset": "NOT_VERIFIABLE",
+    "frame_level": "SUPPORTED",
+    "sequence_level": "NOT_VERIFIABLE",
+    "t_a3_policy_id": "THERMAL_TEMPORAL_POLICY_001",
+    "transition_annotations": "NOT_APPLICABLE_NO_VERIFIED_TEMPORAL_EVENT",
+    "window_level": "NOT_APPLICABLE"
+  }
+}

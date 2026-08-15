@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://safenest.local/schemas/thermal-real-capture/annotation-v1.json",
+  "title": "SafeNest Thermal real capture annotation record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "annotation_id",
+    "collection_id",
+    "subject_id",
+    "session_id",
+    "annotation_scope",
+    "event_id",
+    "frame_id",
+    "source_annotation",
+    "derived_safenest_annotation",
+    "provenance",
+    "revision"
+  ],
+  "properties": {
+    "schema_version": { "const": "safenest.thermal.real_capture.annotation.v1" },
+    "annotation_id": { "type": "string", "minLength": 1 },
+    "collection_id": { "type": "string", "minLength": 1 },
+    "subject_id": { "type": "string", "minLength": 1 },
+    "session_id": { "type": "string", "minLength": 1 },
+    "annotation_scope": { "type": "string", "enum": ["FRAME", "SESSION", "EVENT"] },
+    "event_id": { "type": ["string", "null"] },
+    "frame_id": { "type": ["string", "null"] },
+    "frame_start_id": { "type": ["string", "null"] },
+    "frame_end_id": { "type": ["string", "null"] },
+    "source_annotation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "ground_truth_method", "confidence"],
+      "properties": {
+        "label": {
+          "type": "string",
+          "enum": ["EMPTY", "STANDING", "SITTING", "LYING", "UNKNOWN", "NOT_ANNOTATED"]
+        },
+        "ground_truth_method": { "type": "string", "minLength": 1 },
+        "confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "notes": { "type": "string" }
+      }
+    },
+    "derived_safenest_annotation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "mapping_type", "status"],
+      "properties": {
+        "label": {
+          "type": "string",
+          "enum": [
+            "HUMAN_LYING_POSTURE",
+            "HUMAN_SITTING_POSTURE",
+            "HUMAN_STANDING_POSTURE",
+            "NO_ANNOTATED_HUMAN_IN_REPRESENTED_FRAME",
+            "HUMAN_FALL",
+            "HUMAN_NORMAL",
+            "NOT_HUMAN",
+            "AMBIGUOUS",
+            "UNKNOWN",
+            "NOT_ASSIGNED"
+          ]
+        },
+        "mapping_type": { "type": "string", "minLength": 1 },
+        "status": { "type": "string", "enum": ["DERIVED_ONLY", "NOT_ASSIGNED", "UNKNOWN"] },
+        "notes": { "type": "string" }
+      }
+    },
+    "event_phase": {
+      "type": ["string", "null"],
+      "enum": ["PRE_EVENT", "FALL_TRANSITION", "POST_FALL_LYING", "RECOVERY", "NORMAL_ACTIVITY", "NOT_APPLICABLE", "UNKNOWN", null]
+    },
+    "phase_ranges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["phase", "start_frame_id", "end_frame_id"],
+        "properties": {
+          "phase": { "type": "string" },
+          "start_frame_id": { "type": "string", "minLength": 1 },
+          "end_frame_id": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["annotator_code", "annotation_time", "revision"],
+      "properties": {
+        "annotator_code": { "type": ["string", "null"] },
+        "annotation_time": { "type": ["string", "null"] },
+        "revision": { "type": "integer", "minimum": 1 },
+        "correction_of_annotation_id": { "type": ["string", "null"] },
+        "notes": { "type": "string" }
+      }
+    },
+    "revision": { "type": "integer", "minimum": 1 },
+    "notes": { "type": "string" }
+  }
+}

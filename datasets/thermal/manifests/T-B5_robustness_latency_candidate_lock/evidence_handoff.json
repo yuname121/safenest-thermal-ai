@@ -1,0 +1,11 @@
+{
+  "human_fall_semantics": "LYING_DERIVED_POSTURE_PROXY_NOT_TEMPORAL_FALL_GROUND_TRUTH",
+  "no_pristine_locked_test": true,
+  "offline_candidate": "FULL_INT8",
+  "offline_candidate_status": "OFFLINE_INT8_CANDIDATE_LOCKED_WITH_LIMITATIONS",
+  "phase": "T-B5",
+  "pi_status": "NOT_MEASURED",
+  "real_status": "REAL_EVAL_DEVELOPMENT_DIAGNOSTIC_ONLY",
+  "schema_version": "1.0",
+  "thermal44_status": "NOT_VALIDATED_DEFERRED_TO_T-C"
+}

@@ -1,0 +1,7 @@
+{
+  "fit_role": null,
+  "operation": "DIRECT_CANONICAL_VALUES_PLUS_CHANNEL",
+  "profile_id": "P0_CANONICAL_CELSIUS_DIRECT",
+  "schema_version": "1.0",
+  "unit": "CELSIUS"
+}

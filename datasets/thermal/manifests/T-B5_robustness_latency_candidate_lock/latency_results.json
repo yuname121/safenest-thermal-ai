@@ -1,0 +1,96 @@
+{
+  "candidates": {
+    "FULL_INT8": {
+      "delegate": "CPU_XNNPACK_IF_AVAILABLE",
+      "input_dtype": "int8",
+      "invoke_only": {
+        "max_us": 170.792,
+        "mean_us": 149.185835,
+        "median_us": 148.166,
+        "min_us": 147.542,
+        "p90_us": 149.2586,
+        "p95_us": 156.6417,
+        "p99_us": 168.04825,
+        "sample_count": 200,
+        "std_us": 3.6541645882164366
+      },
+      "output_dtype": "int8",
+      "preprocess_plus_invoke": {
+        "max_us": 185.75,
+        "mean_us": 159.927305,
+        "median_us": 158.458,
+        "min_us": 157.708,
+        "p90_us": 164.6836,
+        "p95_us": 169.93155,
+        "p99_us": 174.12841999999995,
+        "sample_count": 200,
+        "std_us": 4.029472475644299
+      },
+      "threads": 1
+    },
+    "TFLITE_FP32": {
+      "delegate": "CPU_XNNPACK_IF_AVAILABLE",
+      "input_dtype": "float32",
+      "invoke_only": {
+        "max_us": 245.959,
+        "mean_us": 216.791475,
+        "median_us": 215.25,
+        "min_us": 214.833,
+        "p90_us": 218.7961,
+        "p95_us": 221.90444999999997,
+        "p99_us": 236.06707999999995,
+        "sample_count": 200,
+        "std_us": 4.205423241408051
+      },
+      "output_dtype": "float32",
+      "preprocess_plus_invoke": {
+        "max_us": 257.459,
+        "mean_us": 227.05434499999998,
+        "median_us": 225.166,
+        "min_us": 224.541,
+        "p90_us": 231.10060000000001,
+        "p95_us": 236.96599999999998,
+        "p99_us": 247.95883,
+        "sample_count": 200,
+        "std_us": 4.8816134254952015
+      },
+      "threads": 1
+    }
+  },
+  "environment": {
+    "delegate": "CPU_XNNPACK_IF_AVAILABLE",
+    "gpu_delegate": false,
+    "machine": "arm64",
+    "pi_measured": false,
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.9.6",
+    "system": "Darwin",
+    "tensorflow": "2.20.0",
+    "threads": 1
+  },
+  "phase": "T-B5",
+  "protocol": {
+    "batch_size": 1,
+    "delegate": "CPU_XNNPACK_IF_AVAILABLE",
+    "gpu_delegate": false,
+    "host_scope": "MAC_HOST_ONLY",
+    "input_role": "VALIDATION",
+    "measured_iterations": 200,
+    "phase": "T-B5",
+    "pi_latency": "NOT_MEASURED",
+    "posthoc_tuning": false,
+    "protocol_id": "THERMAL_T_B5_MAC_LATENCY_001",
+    "sample_count": 64,
+    "schema_version": "1.0",
+    "thermal44_end_to_end": "NOT_MEASURED_DEFERRED_TO_T-C",
+    "threads": 1,
+    "timers": {
+      "invoke_only": "interpreter.set_tensor+invoke+get_tensor",
+      "preprocess_plus_invoke": "canonical_frame_to_P1_or_INT8_input_plus_invoke"
+    },
+    "units": "microseconds",
+    "warmup_iterations": 20
+  },
+  "role": "VALIDATION",
+  "schema_version": "1.0"
+}

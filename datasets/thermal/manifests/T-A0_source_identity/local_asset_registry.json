@@ -1,0 +1,331 @@
+{
+  "assets": [
+    {
+      "allocated_size_bytes": 132087808,
+      "asset_id": "family_a_fall_non_fall",
+      "checksum_status": {
+        "excluded_cloud_placeholders": 3025,
+        "method": "sha256(sorted(relative_path\\0logical_size\\0file_sha256\\n))",
+        "scope": "LOCALLY_ALLOCATED_FILES_ONLY",
+        "sha256": "7634e110681c92baf2cbb94f95011ea560033ca6d4746881b437482bba2e9a7f"
+      },
+      "existence": "PATH_EXISTS",
+      "git_ignore_rule": "/datasets/thermal/",
+      "git_ignore_state": "GIT_IGNORED_PAYLOAD",
+      "git_visibility": false,
+      "grouping_status": "GROUP_PROVENANCE_UNVERIFIED",
+      "inventory_summary": {
+        "cloud_placeholder_files": 3025,
+        "directory_count_including_root": 1,
+        "extension_counts": {
+          "png": 6748
+        },
+        "file_count": 6748,
+        "locally_allocated_files": 3723,
+        "locally_verified_modes": {
+          "RGB": 3723
+        },
+        "locally_verified_shapes": {
+          "230x226": 3723
+        },
+        "prefix_counts": {
+          "ILS_ILP": 2080,
+          "ILS_SP": 1502,
+          "SSJ_ILP": 1537,
+          "SSJ_SP": 1629
+        },
+        "prefix_materialization": {
+          "ILS_ILP": {
+            "cloud_placeholder": 931,
+            "locally_allocated": 1149,
+            "logical_bytes": 71377251
+          },
+          "ILS_SP": {
+            "cloud_placeholder": 671,
+            "locally_allocated": 831,
+            "logical_bytes": 52903215
+          },
+          "SSJ_ILP": {
+            "cloud_placeholder": 705,
+            "locally_allocated": 832,
+            "logical_bytes": 51880018
+          },
+          "SSJ_SP": {
+            "cloud_placeholder": 718,
+            "locally_allocated": 911,
+            "logical_bytes": 48745886
+          }
+        },
+        "prefix_meanings": {
+          "ILP": "UNKNOWN",
+          "ILS": "UNKNOWN",
+          "SP": "UNKNOWN",
+          "SSJ": "UNKNOWN"
+        }
+      },
+      "label_status": "LABEL_SEMANTICS_UNVERIFIED",
+      "license_status": "LICENSE_UNVERIFIED",
+      "locally_readable_status": "3723_READABLE_OFFLINE; 3025_LOCAL_CLOUD_PLACEHOLDER",
+      "logical_size_bytes": 224906370,
+      "materialization_state": "PARTIALLY_MATERIALIZED",
+      "observation_source": [
+        "OWNER_CONFIRMED_LOCAL_STATE",
+        "LOCALLY_MEASURED"
+      ],
+      "path": "datasets/thermal/raw_frames/Thermal_Dataset_Fall_Non_Fall",
+      "representation_status": "THERMAL_COLORIZED_RENDERING",
+      "source_identity_status": "SOURCE_IDENTITY_UNVERIFIED",
+      "warnings": [
+        "PARTIAL_MATERIALIZATION",
+        "RGB_NOT_RADIOMETRIC",
+        "PREFIX_MEANINGS_UNKNOWN"
+      ]
+    },
+    {
+      "allocated_size_bytes": 1740349440,
+      "asset_id": "family_b_sdt_split_archives",
+      "checksum_status": "MATERIALIZED_TEST_BYTE_IDENTITY_VERIFIED; PLACEHOLDERS_USE_OFFICIAL_MD5_ONLY",
+      "existence": "PATH_EXISTS",
+      "git_ignore_rule": "/datasets/raw_archives/",
+      "git_ignore_state": "GIT_IGNORED_PAYLOAD",
+      "git_visibility": false,
+      "grouping_status": "ACCEPTED_OFFICIAL_SPLIT_LIMITATION",
+      "inventory_summary": {
+        "entries": [
+          {
+            "allocated_size_bytes": 1740349440,
+            "local_md5": "d59a739f3b5ecf373c94046fb94cd94f",
+            "local_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+            "logical_size_bytes": 1740348425,
+            "materialization_state": "LOCALLY_MATERIALIZED",
+            "name": "test.zip",
+            "official_md5": "d59a739f3b5ecf373c94046fb94cd94f",
+            "readable_offline": true
+          },
+          {
+            "allocated_size_bytes": 0,
+            "local_checksum": "NOT_COMPUTED_TO_AVOID_HYDRATION",
+            "logical_size_bytes": 4194304000,
+            "materialization_state": "LOCAL_CLOUD_PLACEHOLDER",
+            "name": "train.zip.001",
+            "official_md5": "a7dfe81a1db58219da14db966d75cb2e",
+            "readable_offline": false
+          },
+          {
+            "allocated_size_bytes": 0,
+            "local_checksum": "NOT_COMPUTED_TO_AVOID_HYDRATION",
+            "logical_size_bytes": 4194304000,
+            "materialization_state": "LOCAL_CLOUD_PLACEHOLDER",
+            "name": "train.zip.002",
+            "official_md5": "5e56bf4c17a2ce2f4b5cb59881dd161e",
+            "readable_offline": false
+          },
+          {
+            "allocated_size_bytes": 0,
+            "local_checksum": "NOT_COMPUTED_TO_AVOID_HYDRATION",
+            "logical_size_bytes": 4194304000,
+            "materialization_state": "LOCAL_CLOUD_PLACEHOLDER",
+            "name": "train.zip.003",
+            "official_md5": "5f4c46025a46139db311382aa709a3a1",
+            "readable_offline": false
+          },
+          {
+            "allocated_size_bytes": 0,
+            "local_checksum": "NOT_COMPUTED_TO_AVOID_HYDRATION",
+            "logical_size_bytes": 1408015891,
+            "materialization_state": "LOCAL_CLOUD_PLACEHOLDER",
+            "name": "train.zip.004",
+            "official_md5": "fbc26a3785540ff269410cdc43d53eae",
+            "readable_offline": false
+          },
+          {
+            "allocated_size_bytes": 0,
+            "local_checksum": "NOT_COMPUTED_TO_AVOID_HYDRATION",
+            "logical_size_bytes": 3492475558,
+            "materialization_state": "LOCAL_CLOUD_PLACEHOLDER",
+            "name": "validation.zip",
+            "official_md5": "5464368b4798b50c59de3e06599b2677",
+            "readable_offline": false
+          }
+        ],
+        "test_archive": {
+          "directory_count": 1,
+          "file_count": 16001,
+          "image_d_files": 8000,
+          "image_t_files": 8000,
+          "label_files": 1,
+          "label_rows": 8000,
+          "member_count": 16002,
+          "sample_image_d": {
+            "dtype": "<u2",
+            "max": 7001,
+            "min": 0,
+            "mode": "I;16",
+            "shape": [
+              480,
+              640
+            ]
+          },
+          "sample_image_t": {
+            "dtype": "<u2",
+            "max": 30599,
+            "min": 29653,
+            "mode": "I;16",
+            "shape": [
+              480,
+              640
+            ]
+          },
+          "source_class_counts": {
+            "0": 2000,
+            "1": 2000,
+            "2": 2000,
+            "3": 2000
+          }
+        }
+      },
+      "label_status": "USABLE_POSE_LABELS; LYING_IS_DERIVED_POST_FALL_POSTURE_PROXY",
+      "license_status": "VERIFIED_ACCEPTABLE_WITH_NONCOMMERCIAL_RESEARCH_RESTRICTION",
+      "locally_readable_status": "test.zip READABLE_OFFLINE; train parts and validation.zip LOCAL_CLOUD_PLACEHOLDER",
+      "logical_size_bytes": 19223751874,
+      "materialization_state": "MIXED",
+      "observation_source": [
+        "OWNER_CONFIRMED_LOCAL_STATE",
+        "LOCALLY_MEASURED",
+        "OFFICIAL_EXTERNAL_SOURCE_VERIFIED"
+      ],
+      "path": "datasets/raw_archives/thermal_split_zips",
+      "representation_status": "MULTIMODAL: image_t RADIOMETRIC_TEMPERATURE; image_d DEPTH",
+      "source_identity_status": "VERIFIED_ZENODO_4124309",
+      "warnings": [
+        "LYING_PROXY_DOES_NOT_PROVE_FALL_EVENT",
+        "PRESERVE_OFFICIAL_SPLITS",
+        "TRAIN_VALIDATION_SYNTHETIC",
+        "NONCOMMERCIAL_RESEARCH_RESTRICTION",
+        "LARGE_DOWNLOAD_AUTHORIZATION_REQUIRED"
+      ]
+    },
+    {
+      "allocated_size_bytes": 330780672,
+      "asset_id": "family_c_processed_npz",
+      "checksum_status": {
+        "sha256": "3d6ad1eb2ed0438f0faaf83abed8b6e2c175074dfa031dcb4a5739c45984d06e"
+      },
+      "existence": "PATH_EXISTS",
+      "git_ignore_rule": "/datasets/thermal/",
+      "git_ignore_state": "GIT_IGNORED_PAYLOAD",
+      "git_visibility": false,
+      "grouping_status": "PROVENANCE_LOST",
+      "inventory_summary": {
+        "X": {
+          "dtype": "<f4",
+          "finite": true,
+          "max": 1.0,
+          "min": 0.0,
+          "shape": [
+            54218,
+            62,
+            80
+          ]
+        },
+        "array_keys": [
+          "X",
+          "y"
+        ],
+        "y": {
+          "class_counts": {
+            "0": 12003,
+            "1": 26792,
+            "2": 15423
+          },
+          "dtype": "<i4",
+          "shape": [
+            54218
+          ]
+        }
+      },
+      "label_status": "MIXED_SOURCE_LABELS_AND_HEURISTIC_LABELS",
+      "license_status": "MIXED_AND_UNVERIFIED",
+      "locally_readable_status": "READABLE_OFFLINE",
+      "logical_size_bytes": 330777971,
+      "materialization_state": "LOCALLY_MATERIALIZED",
+      "observation_source": [
+        "OWNER_CONFIRMED_LOCAL_STATE",
+        "LOCALLY_MEASURED",
+        "REPOSITORY_CODE_VERIFIED"
+      ],
+      "path": "datasets/thermal/processed_thermal_80x62.npz",
+      "representation_status": "NORMALIZED_THERMAL_MIXED_WITH_RENDERED_RGB_GRAYSCALE",
+      "source_identity_status": "PROCESSED_LINEAGE_PARTIALLY_RECONSTRUCTED",
+      "warnings": [
+        "NOT_T_A_CANONICAL",
+        "PROCESSED_LINEAGE_UNVERIFIED",
+        "ONLY_X_Y_RETAINED"
+      ]
+    },
+    {
+      "allocated_size_bytes": 57053184,
+      "asset_id": "family_d_additional_image_tree",
+      "checksum_status": {
+        "excluded_cloud_placeholders": 197,
+        "method": "sha256(sorted(relative_path\\0logical_size\\0file_sha256\\n))",
+        "scope": "LOCALLY_ALLOCATED_FILES_ONLY",
+        "sha256": "7c0a198994553c5dfde09aa7ad868650baee35960645c8403b4052c3fdaa5643"
+      },
+      "existence": "PATH_EXISTS",
+      "git_ignore_rule": "/datasets/thermal/",
+      "git_ignore_state": "GIT_IGNORED_PAYLOAD",
+      "git_visibility": false,
+      "grouping_status": "GROUP_PROVENANCE_UNVERIFIED",
+      "inventory_summary": {
+        "class_tree_counts": {
+          "human": {
+            "images": 211,
+            "json": 212
+          },
+          "not human": {
+            "images": 199,
+            "json": 198
+          }
+        },
+        "cloud_placeholder_images": 197,
+        "directory_count_including_root": 3,
+        "extensions": {
+          "jpeg": 384,
+          "json": 410,
+          "no_extension": 1,
+          "png": 26
+        },
+        "file_count_including_ds_store": 821,
+        "image_count": 410,
+        "json_count": 410,
+        "locally_allocated_images": 213,
+        "locally_verified_image_modes": {
+          "RGB": 199,
+          "RGBA": 14
+        }
+      },
+      "label_status": "VERIFIED_HUMAN_PRESENCE_ONLY_NOT_FALL",
+      "license_status": "LICENSE_UNVERIFIED",
+      "locally_readable_status": "ALL_410_JSON_READABLE; 213_OF_410_IMAGES_READABLE; 197_IMAGES_LOCAL_CLOUD_PLACEHOLDER",
+      "logical_size_bytes": 98992778,
+      "materialization_state": "PARTIALLY_MATERIALIZED",
+      "observation_source": [
+        "OWNER_CONFIRMED_LOCAL_STATE",
+        "LOCALLY_MEASURED"
+      ],
+      "path": "datasets/thermal/thermal image",
+      "representation_status": "THERMAL_COLORIZED_RENDERING_SCREENSHOTS_OR_EXPORTS",
+      "source_identity_status": "SOURCE_IDENTITY_UNVERIFIED",
+      "warnings": [
+        "PRESENCE_LABEL_NOT_FALL_LABEL",
+        "RGB_RENDERING_NOT_RADIOMETRIC",
+        "PARTIAL_MATERIALIZATION"
+      ]
+    }
+  ],
+  "inventory_date": "2026-08-10",
+  "phase": "T-A0",
+  "root_policy": "repository-relative POSIX paths only",
+  "schema_version": "1.0"
+}

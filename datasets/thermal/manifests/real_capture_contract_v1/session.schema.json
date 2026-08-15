@@ -1,0 +1,215 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://safenest.local/schemas/thermal-real-capture/session-v1.json",
+  "title": "SafeNest Thermal real capture session manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "collection_id",
+    "subject_id",
+    "session_id",
+    "recording_id",
+    "capture_start_time",
+    "capture_end_time",
+    "timezone",
+    "sensor",
+    "transport",
+    "timing",
+    "environment",
+    "storage",
+    "quality",
+    "role_governance"
+  ],
+  "properties": {
+    "schema_version": { "const": "safenest.thermal.real_capture.session.v1" },
+    "collection_id": { "type": "string", "minLength": 1 },
+    "subject_id": { "type": "string", "minLength": 1, "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "session_id": { "type": "string", "minLength": 1, "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "recording_id": { "type": ["string", "null"] },
+    "sequence_id": { "type": ["string", "null"] },
+    "capture_start_time": { "type": ["string", "null"] },
+    "capture_end_time": { "type": ["string", "null"] },
+    "timezone": { "type": ["string", "null"] },
+    "operator_code": { "type": ["string", "null"] },
+    "sensor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sensor_vendor",
+        "sensor_model",
+        "sensor_hardware_revision",
+        "sensor_serial_or_pseudonymous_device_id",
+        "firmware_version",
+        "collector_software_version",
+        "collector_git_commit",
+        "native_width",
+        "native_height",
+        "native_dtype",
+        "raw_encoding",
+        "raw_unit_claim",
+        "unit_verification_status",
+        "configured_fps",
+        "verified_fps_status",
+        "orientation",
+        "mount_height_m",
+        "mount_angle_deg",
+        "sensor_to_subject_distance_m"
+      ],
+      "properties": {
+        "sensor_vendor": { "type": ["string", "null"] },
+        "sensor_model": { "type": ["string", "null"] },
+        "sensor_hardware_revision": { "type": ["string", "null"] },
+        "sensor_serial_or_pseudonymous_device_id": { "type": ["string", "null"] },
+        "firmware_version": { "type": ["string", "null"] },
+        "collector_software_version": { "type": ["string", "null"] },
+        "collector_git_commit": { "type": ["string", "null"] },
+        "native_width": { "type": ["integer", "null"], "minimum": 1 },
+        "native_height": { "type": ["integer", "null"], "minimum": 1 },
+        "native_dtype": { "type": ["string", "null"] },
+        "raw_encoding": { "type": ["string", "null"] },
+        "raw_unit_claim": { "type": ["string", "null"] },
+        "unit_verification_status": {
+          "type": "string",
+          "enum": ["VERIFIED", "NOT_VERIFIED", "UNKNOWN", "NOT_APPLICABLE"]
+        },
+        "configured_fps": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "verified_fps_status": {
+          "type": "string",
+          "enum": ["VERIFIED", "CONFIGURED_ONLY", "NOT_VERIFIED", "UNKNOWN", "NOT_APPLICABLE"]
+        },
+        "orientation": { "type": ["string", "null"] },
+        "mount_height_m": { "type": ["number", "null"], "minimum": 0 },
+        "mount_angle_deg": { "type": ["number", "null"] },
+        "sensor_to_subject_distance_m": { "type": ["number", "null"], "minimum": 0 }
+      }
+    },
+    "transport": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["transport_path", "protocol", "full_frame_status", "scalar_thermal_max_status"],
+      "properties": {
+        "transport_path": { "type": ["string", "null"] },
+        "protocol": { "type": ["string", "null"] },
+        "protocol_version": { "type": ["string", "null"] },
+        "full_frame_status": {
+          "type": "string",
+          "enum": ["PRESERVED", "NOT_YET_AVAILABLE", "UNKNOWN"]
+        },
+        "scalar_thermal_max_status": {
+          "type": "string",
+          "enum": ["PRESENT", "ABSENT", "UNKNOWN"]
+        },
+        "raw_packet_bytes_preserved": { "type": ["boolean", "null"] },
+        "transport_latency_status": { "type": ["string", "null"] }
+      }
+    },
+    "timing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "continuous_session",
+        "sensor_timestamp_status",
+        "sensor_sequence_counter_status",
+        "device_monotonic_status",
+        "host_receive_monotonic_status",
+        "host_wall_clock_status",
+        "timestamp_source_policy"
+      ],
+      "properties": {
+        "continuous_session": { "type": ["boolean", "null"] },
+        "sensor_timestamp_status": { "type": "string" },
+        "sensor_sequence_counter_status": { "type": "string" },
+        "device_monotonic_status": { "type": "string" },
+        "host_receive_monotonic_status": { "type": "string" },
+        "host_wall_clock_status": { "type": "string" },
+        "timestamp_source_policy": { "type": "string", "minLength": 1 },
+        "effective_fps": { "type": ["number", "null"], "exclusiveMinimum": 0 }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "room_code": { "type": ["string", "null"] },
+        "ambient_temperature_c": { "type": ["number", "null"] },
+        "ambient_temperature_status": { "type": "string" },
+        "lighting_or_heat_sources": { "type": ["string", "null"] },
+        "background_variation": { "type": ["string", "null"] },
+        "clothing_or_ppe": { "type": ["string", "null"] },
+        "occlusion_condition": { "type": ["string", "null"] },
+        "notes": { "type": "string" }
+      }
+    },
+    "storage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["frames_file", "annotations_file", "checksums_file", "raw_root", "decoded_native_root"],
+      "properties": {
+        "frames_file": { "type": "string", "minLength": 1 },
+        "annotations_file": { "type": "string", "minLength": 1 },
+        "checksums_file": { "type": "string", "minLength": 1 },
+        "raw_root": { "type": "string", "minLength": 1 },
+        "decoded_native_root": { "type": "string", "minLength": 1 },
+        "model_input_root": { "type": ["string", "null"] }
+      }
+    },
+    "quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["expected_frame_count", "received_frame_count"],
+      "properties": {
+        "expected_frame_count": { "type": ["integer", "null"], "minimum": 0 },
+        "received_frame_count": { "type": "integer", "minimum": 0 },
+        "sequence_gap_count": { "type": ["integer", "null"], "minimum": 0 },
+        "duplicate_counter_count": { "type": ["integer", "null"], "minimum": 0 },
+        "decode_failure_count": { "type": ["integer", "null"], "minimum": 0 },
+        "packet_loss_count": { "type": ["integer", "null"], "minimum": 0 }
+      }
+    },
+    "role_governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "model_access_status", "locked_test_status"],
+      "properties": {
+        "role": {
+          "type": "string",
+          "enum": [
+            "DEVICE_CONTRACT_PILOT",
+            "REAL_DEVELOPMENT",
+            "FUTURE_TRAIN_CANDIDATE",
+            "REAL_LOCKED_TEST"
+          ]
+        },
+        "model_access_status": {
+          "type": "string",
+          "enum": ["UNTOUCHED", "DEVELOPMENT_ALLOWED", "UNKNOWN"]
+        },
+        "locked_test_status": {
+          "type": "string",
+          "enum": ["NOT_LOCKED_TEST", "LOCKED_TEST_UNTOUCHED", "LOCKED_TEST_COMPROMISED"]
+        },
+        "split_frozen_at": { "type": ["string", "null"] }
+      }
+    },
+    "temporal_evidence_claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "claimed_status": { "type": ["string", "null"] },
+        "source": { "type": ["string", "null"] },
+        "filename_order_used_as_time": { "const": false }
+      }
+    },
+    "safety": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fall_like_capture_authorized": { "type": ["boolean", "null"] },
+        "safety_control_status": { "type": ["string", "null"] },
+        "uncontrolled_free_fall_experiment": { "const": false }
+      }
+    },
+    "notes": { "type": "string" }
+  }
+}

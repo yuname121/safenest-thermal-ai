@@ -1,0 +1,30 @@
+{
+  "available_evidence": [
+    "structural member index",
+    "one-to-one labels linkage"
+  ],
+  "eligible": false,
+  "forbidden_inferences": [
+    "index adjacency is frame adjacency",
+    "filename order is temporal order",
+    "pose runs form a sequence",
+    "image similarity forms a sequence"
+  ],
+  "frame_adjacency_claim": "NOT_VERIFIABLE",
+  "grouping_rule": "No sequence is constructed. Member filename/index and neighboring numbers are provenance identifiers only.",
+  "phase": "T-A3",
+  "policy_id": "THERMAL_T_A3_SEQUENCE_POLICY_001",
+  "required_evidence": [
+    "sequence_id or recording_id",
+    "verified acquisition order",
+    "timestamp or documented cadence",
+    "gap and duplicate semantics"
+  ],
+  "safe_to_construct": false,
+  "schema_version": "1.0",
+  "status": "TEMPORAL_SEQUENCE_NOT_VERIFIABLE",
+  "unsupported_request_behavior": {
+    "behavior": "FAIL_CLOSED",
+    "error_code": "TEMPORAL_SEQUENCE_UNAVAILABLE"
+  }
+}

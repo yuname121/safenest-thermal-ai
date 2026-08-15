@@ -1,0 +1,66 @@
+{
+  "blockers": [],
+  "candidate_specific_decisions": {
+    "external_ehomeseniors_2019": "NEEDS_MANUAL_REVIEW",
+    "external_muvim_2022": "ACCESS_BLOCKED",
+    "external_thermal_fall_66": "ACCESS_BLOCKED",
+    "local_additional_human_not_human": "REJECTED_PROVENANCE",
+    "local_family_a_fall_non_fall_png": "REJECTED_PROVENANCE",
+    "local_sdt_zenodo_4124309": "SELECTED"
+  },
+  "canonical_source_name": "SDT Dataset | Synthetic Depth & Thermal Dataset for Person Detection and Pose Classification",
+  "decision_date": "2026-08-10",
+  "grouping_unit": "OFFICIAL_SOURCE_SPLIT; synthetic train, synthetic validation, real test; accepted limitation because subject/session/event IDs are absent",
+  "label_semantics": "Original lying/sitting/standing/empty labels are preserved. SafeNest derives lying -> HUMAN_FALL as post-fall lying-posture evidence, not a fall-event assertion.",
+  "license": "Stricter common denominator: non-commercial research use with citation/attribution; Zenodo metadata separately states CC-BY-4.0",
+  "limitations": [
+    "No temporal fall onset/end labels.",
+    "No subject/session/sequence/event IDs.",
+    "Synthetic train/validation versus real test domain gap.",
+    "Non-commercial research restriction governs use.",
+    "No frame-random resplit; do not use the legacy mixed NPZ as canonical input."
+  ],
+  "limitations_requiring_enforcement": [
+    "LARGE_DOWNLOAD_AUTHORIZATION_REQUIRED before placeholder hydration",
+    "PRESERVE_OFFICIAL_SOURCE_SPLITS",
+    "GENERALIZATION_PERFORMANCE_NOT_VERIFIABLE",
+    "EVENT_LEVEL_FALL_PERFORMANCE_NOT_VERIFIABLE",
+    "NONCOMMERCIAL_RESEARCH_USE_ONLY_UNLESS_TERMS_ARE_CLEARED"
+  ],
+  "minimum_selection_rules": {
+    "acceptable_license_and_terms": true,
+    "deterministic_inventory": true,
+    "known_representation": true,
+    "safe_reader_without_guessing": true,
+    "usable_grouping_provenance_or_accepted_limitation": true,
+    "usable_label_semantics": true,
+    "verified_source_identity": true
+  },
+  "official_source": "https://zenodo.org/records/4124309",
+  "overall_decision": "LOCAL_DATASET_SELECTED_WITH_LIMITATIONS",
+  "permitted_use": "SafeNest non-commercial research and model training; raw redistribution and commercial use require separate terms review",
+  "phase": "T-A0",
+  "prohibited_progression": [
+    "Do not start T-A1 on this branch.",
+    "Do not create a split from processed_thermal_80x62.npz.",
+    "Do not frame-randomly resplit SDT.",
+    "Do not describe the lying proxy as proof of a fall event."
+  ],
+  "representation": {
+    "image_d": "DEPTH; millimetres",
+    "image_t": "RADIOMETRIC_TEMPERATURE; Kelvin in documented FLIR 16/14-bit encoding"
+  },
+  "schema_version": "1.0",
+  "selected_candidate_id": "local_sdt_zenodo_4124309",
+  "selection_status": "PASS_WITH_LIMITATIONS",
+  "sensor_info": {
+    "real_depth": "Orbbec Astra",
+    "real_thermal": "FLIR Lepton 3.5",
+    "synthetic": "Blender plus documented sensor-noise simulation"
+  },
+  "source_checksum_information": "Official MD5 exists for every split file; local test.zip MD5 matches and local SHA-256 is recorded; placeholder bytes are not locally rehashed.",
+  "stable_identifier": "doi:10.5281/zenodo.4124309",
+  "t_a1_authorization_reason": "SDT satisfies the T-A0 source-basis gate for SafeNest posture evidence when lying is explicitly treated as a derived post-fall posture proxy, the stricter non-commercial research restriction is observed, and the official synthetic-train/synthetic-validation/real-test split is preserved. Temporal fall-event performance remains not verifiable.",
+  "t_a1_authorized": true,
+  "t_a1_eligibility": "YES_WITH_LIMITATIONS_AND_OWNER_AUTHORIZED_HYDRATION_BEFORE_READING_PLACEHOLDERS"
+}

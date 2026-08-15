@@ -1,0 +1,37 @@
+{
+  "absolute_celsius_information": "DISCARDED_BY_NORMALIZATION",
+  "artifact_path": "models/thermal/thermal_fall_int8_v0.1.0.tflite",
+  "class_map": {
+    "0": "NOT_HUMAN",
+    "1": "HUMAN_NORMAL",
+    "2": "HUMAN_FALL"
+  },
+  "input_tensor": {
+    "dtype": "int8",
+    "scale": 0.003921568859368563,
+    "shape": [
+      1,
+      62,
+      80,
+      1
+    ],
+    "zero_point": -128
+  },
+  "manifest_match": true,
+  "measured_sha256": "5b56da8d127ccef85f30b6459cc0cfe2d86490e41f3caa5bd2a7b70bbc46ae84",
+  "measured_size_bytes": 318184,
+  "output_tensor": {
+    "dtype": "int8",
+    "scale": 0.00390625,
+    "shape": [
+      1,
+      3
+    ],
+    "zero_point": -128
+  },
+  "phase": "T-A0",
+  "preprocessing": "per-frame min-max normalization when values fall outside [0,1]",
+  "schema_version": "1.0",
+  "thermal44_hardware_status": "NOT_VERIFIABLE_DEFERRED_TO_T_C",
+  "validation_claim": "ARTIFACT_AND_SOFTWARE_CONTRACT_ONLY; NO_NEW_MODEL_PERFORMANCE_CLAIM"
+}

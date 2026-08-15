@@ -1,0 +1,42 @@
+{
+  "full_integer": true,
+  "input": {
+    "dtype": "int8",
+    "name": "serving_default_input_frame:0",
+    "quantized_dimension": 0,
+    "scale": 0.31791284680366516,
+    "scales": [
+      0.31791284680366516
+    ],
+    "shape": [
+      1,
+      62,
+      80,
+      1
+    ],
+    "zero_point": -125,
+    "zero_points": [
+      -125
+    ]
+  },
+  "output": {
+    "dtype": "int8",
+    "name": "StatefulPartitionedCall_1:0",
+    "quantized_dimension": 0,
+    "scale": 0.00390625,
+    "scales": [
+      0.00390625
+    ],
+    "shape": [
+      1,
+      3
+    ],
+    "zero_point": -128,
+    "zero_points": [
+      -128
+    ]
+  },
+  "per_axis_details_present": false,
+  "phase": "T-B4",
+  "schema_version": "1.0"
+}

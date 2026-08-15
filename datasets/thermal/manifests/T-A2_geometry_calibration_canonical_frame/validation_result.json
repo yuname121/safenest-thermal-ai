@@ -1,0 +1,36 @@
+{
+  "error_count": 0,
+  "errors": [],
+  "evidence_validation": "PASS",
+  "overall_outcome": "PASS_WITH_LIMITATIONS",
+  "phase": "T-A2",
+  "schema_version": "1.0",
+  "t_a0_outcome": "PASS_WITH_LIMITATIONS",
+  "t_a0_validation": "PASS",
+  "t_a1_outcome": "PASS_WITH_LIMITATIONS",
+  "t_a1_validation": "PASS",
+  "t_a3_authorized": true,
+  "warning_count": 4,
+  "warnings": [
+    {
+      "code": "NO_TEMPORAL_EVENT_FIELDS",
+      "location": "SDT source",
+      "message": "Sequence/event/timestamp fields remain absent for later phases."
+    },
+    {
+      "code": "SOURCE_NATIVE_RECONSTRUCTION_NOT_CLAIMED",
+      "location": "source_schema_profile/T-A2",
+      "message": "Distributed SDT image is author-upscaled; T-A2 does not reverse it."
+    },
+    {
+      "code": "THERMAL44_ORIENTATION_UNVERIFIED",
+      "location": "selected_geometry_profile.json",
+      "message": "Software canonical orientation is not a hardware packet-orientation claim."
+    },
+    {
+      "code": "TRAIN_VALIDATION_PLACEHOLDERS",
+      "location": "archive_member_inventory.json",
+      "message": "No large archive hydration occurred."
+    }
+  ]
+}

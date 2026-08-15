@@ -1,0 +1,41 @@
+{
+  "finalization_policy": "temporary outputs are verified and atomically finalized; partial runs cannot be FINALIZED",
+  "full_experiment_status": "RESERVED_NOT_EXECUTED",
+  "full_result_statuses": [
+    "NOT_STARTED",
+    "RUNNING",
+    "TRAINING_COMPLETE",
+    "VALIDATION_COMPLETE",
+    "FINALIZED"
+  ],
+  "phase": "T-B1",
+  "required_full_bundle": [
+    "execution_summary.json",
+    "environment.json",
+    "dataset_identity.json",
+    "target_identity.json",
+    "initialization_registry.json",
+    "p0_preprocessing.json",
+    "p1_preprocessing.json",
+    "p2_preprocessing.json",
+    "p0_training_summary.json",
+    "p1_training_summary.json",
+    "p2_training_summary.json",
+    "validation_comparison.json",
+    "winner_selection.json",
+    "real_eval_development.json",
+    "checkpoint_registry.json",
+    "metrics_registry.json",
+    "limitations.json",
+    "checksums.sha256"
+  ],
+  "schema_version": "1.0",
+  "stage1_forbidden": [
+    "full_performance_metrics",
+    "winner_declaration",
+    "real_eval_metrics",
+    "final_tflite_model",
+    "full_checkpoint_bundle"
+  ],
+  "stage1_status": "PENDING_FULL_EXPERIMENT"
+}

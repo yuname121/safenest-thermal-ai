@@ -1,0 +1,22 @@
+{
+  "batch_size": 1,
+  "delegate": "CPU_XNNPACK_IF_AVAILABLE",
+  "gpu_delegate": false,
+  "host_scope": "MAC_HOST_ONLY",
+  "input_role": "VALIDATION",
+  "measured_iterations": 200,
+  "phase": "T-B5",
+  "pi_latency": "NOT_MEASURED",
+  "posthoc_tuning": false,
+  "protocol_id": "THERMAL_T_B5_MAC_LATENCY_001",
+  "sample_count": 64,
+  "schema_version": "1.0",
+  "thermal44_end_to_end": "NOT_MEASURED_DEFERRED_TO_T-C",
+  "threads": 1,
+  "timers": {
+    "invoke_only": "interpreter.set_tensor+invoke+get_tensor",
+    "preprocess_plus_invoke": "canonical_frame_to_P1_or_INT8_input_plus_invoke"
+  },
+  "units": "microseconds",
+  "warmup_iterations": 20
+}

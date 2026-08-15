@@ -1,0 +1,31 @@
+{
+  "error_count": 0,
+  "errors": [],
+  "evidence_validation": "PASS",
+  "full_training_performed": false,
+  "new_trained_model_generated": false,
+  "overall_outcome": "PASS_WITH_LIMITATIONS",
+  "phase": "T-B0",
+  "schema_version": "1.0",
+  "t_a6_gate": "T_A6_FULL_COMPLETE_WITH_LIMITATIONS",
+  "t_b0_gate": "T_B0_COMPLETE_WITH_LIMITATIONS",
+  "t_b1_authorized": "YES_WITH_LIMITATIONS",
+  "warning_count": 3,
+  "warnings": [
+    {
+      "code": "GROUPING_NOT_VERIFIABLE",
+      "location": "dataset_authority.json",
+      "message": "Subject/session/event generalization remains unavailable from source provenance."
+    },
+    {
+      "code": "NEAR_DUPLICATE_OVERLAP",
+      "location": "near_duplicate_sensitivity_policy.json",
+      "message": "14,514 TRAIN-VALIDATION near-duplicate pairs require disclosure."
+    },
+    {
+      "code": "NO_PRISTINE_LOCKED_TEST",
+      "location": "evaluation_role_policy.json",
+      "message": "REAL_EVAL_DEVELOPMENT is not an untouched final test."
+    }
+  ]
+}

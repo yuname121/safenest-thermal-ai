@@ -1,0 +1,30 @@
+{
+  "bulk_checkpoints_tracked_in_git": false,
+  "checkpoints": [
+    {
+      "candidate_id": "SMALL_CNN_BASELINE_V1",
+      "logical_path": "checkpoints/P1_TRAIN_FITTED_GLOBAL_ZSCORE.weights.h5",
+      "materialization": "PERSISTENT_EXTERNAL_OUTPUT",
+      "sha256": "7aba32fe8d0e241546429bdc3e8cd059b10d4d8f548e9e12c4085abeba308a75",
+      "size_bytes": 3777416,
+      "source": "T-B1_EXTERNAL_CHECKPOINT"
+    },
+    {
+      "candidate_id": "DEPTHWISE_SEPARABLE_CNN_V1",
+      "logical_path": "checkpoints/DEPTHWISE_SEPARABLE_CNN_V1.weights.h5",
+      "materialization": "PERSISTENT_EXTERNAL_OUTPUT",
+      "sha256": "5b0a4b61555b44a990e4b967e55d6ba78355a662ac1a824eedb374c91ef9fbef",
+      "size_bytes": 34520,
+      "source": "T-B2_EXTERNAL_CHECKPOINT"
+    }
+  ],
+  "schema_version": "1.0",
+  "storage_scope": "SSD_EXTERNAL_PERSISTENT",
+  "winner_candidate_id": "SMALL_CNN_BASELINE_V1",
+  "winner_checkpoint": {
+    "logical_path": "checkpoints/P1_TRAIN_FITTED_GLOBAL_ZSCORE.weights.h5",
+    "materialization": "PERSISTENT_EXTERNAL_OUTPUT",
+    "sha256": "7aba32fe8d0e241546429bdc3e8cd059b10d4d8f548e9e12c4085abeba308a75",
+    "size_bytes": 3777416
+  }
+}

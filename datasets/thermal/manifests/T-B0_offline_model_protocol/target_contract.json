@@ -1,0 +1,57 @@
+{
+  "class_order": [
+    "NOT_HUMAN",
+    "HUMAN_NORMAL",
+    "HUMAN_FALL"
+  ],
+  "compatibility_proxy": {
+    "EMPTY_ROOM": {
+      "claim_scope": "frame-level presence only; not safety ground truth",
+      "derived_target": "NOT_HUMAN",
+      "mapping_type": "DIRECT_SOURCE_EQUIVALENT"
+    },
+    "LYING": {
+      "claim_scope": "frame-level fall-compatibility posture proxy only; not temporal event ground truth",
+      "derived_target": "HUMAN_FALL",
+      "mapping_type": "DERIVED_POSTURE_PROXY"
+    },
+    "SITTING": {
+      "claim_scope": "frame-level posture proxy only",
+      "derived_target": "HUMAN_NORMAL",
+      "mapping_type": "DERIVED_POSTURE_PROXY"
+    },
+    "STANDING": {
+      "claim_scope": "frame-level posture proxy only",
+      "derived_target": "HUMAN_NORMAL",
+      "mapping_type": "DERIVED_POSTURE_PROXY"
+    }
+  },
+  "derived_target_distribution": {
+    "REAL_EVAL_DEVELOPMENT": "NOT_REPORTED_IN_T_B0_COMPACT_EVIDENCE",
+    "TRAIN": {
+      "HUMAN_FALL": 8000,
+      "HUMAN_NORMAL": 16000,
+      "NOT_HUMAN": 8000
+    },
+    "VALIDATION": {
+      "HUMAN_FALL": 2000,
+      "HUMAN_NORMAL": 4000,
+      "NOT_HUMAN": 2000
+    }
+  },
+  "label_layers": {
+    "proxy_labels_separate": true,
+    "proxy_overwrites_source": false,
+    "source_labels": {
+      "0": "LYING",
+      "1": "SITTING",
+      "2": "STANDING",
+      "3": "EMPTY_ROOM"
+    },
+    "source_labels_immutable": true
+  },
+  "phase": "T-B0",
+  "schema_version": "1.0",
+  "temporal_event_ground_truth": "NOT_VERIFIABLE",
+  "training_target_authority": "T-A4 compatibility mapping only after preserving immutable source labels"
+}

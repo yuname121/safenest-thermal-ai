@@ -1,0 +1,144 @@
+{
+  "array_keys": [
+    "X",
+    "y"
+  ],
+  "arrays": {
+    "X": {
+      "dtype": "<f4",
+      "shape": [
+        54218,
+        62,
+        80
+      ]
+    },
+    "y": {
+      "dtype": "<i4",
+      "shape": [
+        54218
+      ]
+    }
+  },
+  "artifact_path": "datasets/thermal/processed_thermal_80x62.npz",
+  "canonical_status": "LEGACY_OR_GENERATED_EXISTING_ARTIFACT; NOT_T_A_CANONICAL",
+  "confidence_status": "PROCESSED_LINEAGE_PARTIALLY_RECONSTRUCTED",
+  "inferred_source_contributors": [
+    {
+      "reason": "Current code order, official split size, and exact balanced class counts 8000/16000/8000; train payload is a cloud placeholder so byte-level confirmation was not attempted.",
+      "row_count": 32000,
+      "row_range": [
+        0,
+        31999
+      ],
+      "source": "SDT train split image_t"
+    },
+    {
+      "reason": "Current code order, official split size, and exact balanced class counts 2000/4000/2000; validation payload is a cloud placeholder.",
+      "row_count": 8000,
+      "row_range": [
+        32000,
+        39999
+      ],
+      "source": "SDT validation split image_t"
+    }
+  ],
+  "known_source_contributors": [
+    {
+      "evidence": "Selected test indices 0,1,2,100,999,3999,7999 exactly match NPZ rows 40000,40001,40002,40100,40999,43999,47999 after current resize/min-max code; class distribution also matches.",
+      "evidence_category": "LOCALLY_MEASURED",
+      "row_count": 8000,
+      "row_range": [
+        40000,
+        47999
+      ],
+      "source": "SDT test.zip image_t"
+    },
+    {
+      "evidence": "Current code appends Family A after the additional tree; 3,448 locally allocated files exactly match rows in this range. Total row count is inferred from residual ordering.",
+      "evidence_category": "INFERRED_WITH_LOCAL_SPOT_MATCHES",
+      "row_count": 6198,
+      "row_range": [
+        48020,
+        54217
+      ],
+      "source": "Family A colorized PNG files"
+    },
+    {
+      "evidence": "Current code appends this tree before Family A; six locally allocated images exactly match rows 48002-48012 and the first Family A match begins at 48020.",
+      "evidence_category": "INFERRED_WITH_LOCAL_SPOT_MATCHES",
+      "row_count": 20,
+      "row_range": [
+        48000,
+        48019
+      ],
+      "source": "Additional human/not-human image tree"
+    }
+  ],
+  "legacy_path_assumptions": {
+    "active_artifact": "datasets/thermal/processed_thermal_80x62.npz",
+    "family_a_input": "thermal/archive/Thermal_Dataset_Fall_Non_Fall",
+    "output": "thermal/processed_thermal_80x62.npz",
+    "preparation_input_sdt_fallback": "thermal_new_dataset",
+    "preparation_input_sdt_primary": "../datasets/raw_archives/thermal_split_zips relative to project root (resolves outside canonical root and is erroneous for the active layout)",
+    "small_image_input": "thermal/thermal image"
+  },
+  "measured_sha256": "3d6ad1eb2ed0438f0faaf83abed8b6e2c175074dfa031dcb4a5739c45984d06e",
+  "phase": "T-A0",
+  "preprocessing_evidence": {
+    "additional_tree": [
+      "convert RGB/RGBA rendering to grayscale",
+      "bilinear resize to 80x62",
+      "divide by 255",
+      "presence folder or geometry heuristic labels"
+    ],
+    "exception_behavior": "Multiple broad except Exception: pass blocks silently skip failures.",
+    "family_a": [
+      "convert RGB rendering to grayscale",
+      "bilinear resize to 80x62",
+      "divide by 255",
+      "geometry heuristic labels"
+    ],
+    "sdt": [
+      "read only image_t",
+      "bilinear resize to 80x62",
+      "per-frame min-max to [0,1]",
+      "source pose-to-SafeNest class mapping"
+    ]
+  },
+  "provenance_retention": {
+    "lost": [
+      "source dataset",
+      "source split",
+      "source file",
+      "frame index",
+      "subject",
+      "session",
+      "scene",
+      "sequence",
+      "event",
+      "camera",
+      "timestamp",
+      "original label",
+      "mapping type",
+      "quality/exclusion record"
+    ],
+    "retained": [
+      "normalized frame tensor",
+      "derived class integer"
+    ]
+  },
+  "schema_version": "1.0",
+  "size_bytes": 330777971,
+  "split_history_evidence": {
+    "execution_against_current_model": "NOT_VERIFIABLE: no immutable training log or model-to-NPZ lineage manifest proves the script execution that produced the current TFLite artifact.",
+    "later_random_split": "CONFIRMED_IN_CODE: thermal_train.py applies a seeded frame-level permutation and 80:20 split to the combined array.",
+    "risk": "If executed as written, original split isolation and subject/event grouping are destroyed, creating source/split contamination risk.",
+    "source_split_merge": "CONFIRMED_IN_CODE: thermal_prep.py appends SDT train, validation and test into one X/y array."
+  },
+  "unknown_source_contributors": [
+    "Exact original file ID for most rows is absent.",
+    "Why only 6,198 of 6,748 current Family A files appear in the artifact is unknown.",
+    "Why only 20 of the current 410 additional images appear is unknown.",
+    "Generation timestamp, source commit and artifact move from legacy thermal/ to datasets/thermal are not recorded."
+  ]
+}

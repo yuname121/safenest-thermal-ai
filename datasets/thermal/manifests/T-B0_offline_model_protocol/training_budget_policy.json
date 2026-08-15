@@ -1,0 +1,54 @@
+{
+  "augmentation": {
+    "allowed_partition": "TRAIN_ONLY",
+    "baseline": "DISABLED",
+    "later_ablation_owner": "T-B1",
+    "temporal_event_fabrication": false,
+    "thermal_physical_semantics_required": true
+  },
+  "baseline_budget": {
+    "architecture_specific_budget_exception": "NONE_WITHIN_T-B0_REGISTERED_CANDIDATES",
+    "batch_size": 64,
+    "early_stopping": {
+      "mode": "max",
+      "monitor": "validation_macro_f1",
+      "patience": 5,
+      "restore_best_weights": true
+    },
+    "initial_learning_rate": 0.001,
+    "learning_rate_schedule": {
+      "factor": 0.5,
+      "minimum_learning_rate": 1e-06,
+      "mode": "max",
+      "monitor": "validation_macro_f1",
+      "patience": 3,
+      "type": "ReduceLROnPlateau"
+    },
+    "loss": "unweighted_sparse_categorical_crossentropy",
+    "maximum_epochs": 20,
+    "maximum_tuning_trials_per_candidate_profile": 1,
+    "optimizer": "Adam"
+  },
+  "class_imbalance": {
+    "baseline": "UNWEIGHTED_CROSS_ENTROPY",
+    "class_weight": "DISABLED_IN_BASELINE",
+    "focal_loss": "DISABLED_IN_BASELINE",
+    "later_ablation_owner": "T-B2",
+    "oversampling": "DISABLED_IN_BASELINE",
+    "train_distribution": {
+      "HUMAN_FALL": 8000,
+      "HUMAN_NORMAL": 16000,
+      "NOT_HUMAN": 8000
+    }
+  },
+  "fairness_rules": {
+    "no_unreported_extra_trials": true,
+    "preprocessing_profile_is_recorded_as_factor": true,
+    "real_not_used_for_tuning": true,
+    "same_budget_dimensions_across_candidates": true,
+    "validation_not_used_for_weight_fitting": true
+  },
+  "phase": "T-B0",
+  "schema_version": "1.0",
+  "training_executed_in_t_b0": false
+}

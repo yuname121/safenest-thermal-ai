@@ -1,0 +1,19 @@
+{
+  "border_observation": "Selected profile has no synthetic padding; no border artifact observed.",
+  "crop_observation": "Fixed crop removes 10 source columns on each horizontal side; diagnostic bbox overlays show bounded FOV loss.",
+  "hot_region_observation": "Hot-region positions remain spatially aligned under fixed crop and bilinear mapping.",
+  "orientation_observation": "Source-as-stored: row 0 is top, column 0 is left; corner markers preserve ordering.",
+  "path": "datasets/thermal/manifests/T-A2_geometry_calibration_canonical_frame/visual_spotcheck.png",
+  "phase": "T-A2",
+  "representative_indices": [
+    0,
+    2000,
+    4000,
+    6000
+  ],
+  "role": "HUMAN_VISUAL_DIAGNOSTIC_ONLY_NOT_RADIOMETRIC_MODEL_INPUT",
+  "schema_version": "1.0",
+  "sha256": "e45c9bcf995009b7a641eb9aa2f85bae44835085d774a116d6e5fdcbca1c55e1",
+  "status": "PASS",
+  "stretch_observation": "Selected crop avoids the direct-stretch vertical anisotropy; no unexpected rotation or flip observed."
+}

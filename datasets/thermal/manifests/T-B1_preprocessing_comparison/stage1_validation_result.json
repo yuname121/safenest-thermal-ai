@@ -1,0 +1,114 @@
+{
+  "error_count": 0,
+  "errors": [],
+  "evidence_validation": "PASS",
+  "full_experiment": "PENDING_EXTERNAL_SSD_EXECUTION",
+  "full_training_performed": false,
+  "new_trained_model_generated": false,
+  "overall_outcome": "T_B1_STAGE1_IMPLEMENTATION_READY_WITH_LIMITATIONS",
+  "performance_winner_selected": false,
+  "phase": "T-B1",
+  "predecessors": {
+    "T-A6": {
+      "error_count": 0,
+      "errors": [],
+      "evidence_validation": "PASS",
+      "full_t_a6_gate": "T_A6_FULL_COMPLETE_WITH_LIMITATIONS",
+      "mode": "FULL_DATASET",
+      "overall_outcome": "PASS_WITH_LIMITATIONS",
+      "phase": "T-A6_COLAB_STAGE2",
+      "predecessors": {
+        "T-A0": {
+          "evidence_validation": "PASS",
+          "overall_outcome": "PASS_WITH_LIMITATIONS"
+        },
+        "T-A1": {
+          "evidence_validation": "PASS",
+          "overall_outcome": "PASS_WITH_LIMITATIONS"
+        },
+        "T-A2": {
+          "evidence_validation": "PASS",
+          "overall_outcome": "PASS_WITH_LIMITATIONS"
+        },
+        "T-A3": {
+          "evidence_validation": "PASS",
+          "overall_outcome": "PASS_WITH_LIMITATIONS"
+        },
+        "T-A4": {
+          "evidence_validation": "PASS",
+          "overall_outcome": "PASS_WITH_LIMITATIONS"
+        },
+        "T-A5": {
+          "evidence_validation": "PASS",
+          "overall_outcome": "PASS_WITH_LIMITATIONS"
+        }
+      },
+      "schema_version": "1.0",
+      "stage1_gate": "T_A6_STAGE1_COMPLETE",
+      "stage1_gate_source": "REAL_EVAL_DEVELOPMENT role independently validated inside the Stage-2 bundle",
+      "stage2_validation": {
+        "error_count": 0,
+        "errors": [],
+        "evidence_validation": "PASS",
+        "full_t_a6_gate": "T_A6_FULL_COMPLETE_WITH_LIMITATIONS",
+        "overall_outcome": "PASS_WITH_LIMITATIONS",
+        "phase": "T-A6_COLAB_STAGE2",
+        "schema_version": "1.0",
+        "t_b_authorized": false,
+        "warning_count": 0,
+        "warnings": []
+      },
+      "t_b_authorized": false,
+      "warning_count": 0,
+      "warnings": []
+    },
+    "T-B0": {
+      "error_count": 0,
+      "errors": [],
+      "evidence_validation": "PASS",
+      "full_training_performed": false,
+      "new_trained_model_generated": false,
+      "overall_outcome": "PASS_WITH_LIMITATIONS",
+      "phase": "T-B0",
+      "schema_version": "1.0",
+      "t_a6_gate": "T_A6_FULL_COMPLETE_WITH_LIMITATIONS",
+      "t_b0_gate": "T_B0_COMPLETE_WITH_LIMITATIONS",
+      "t_b1_authorized": "YES_WITH_LIMITATIONS",
+      "warning_count": 3,
+      "warnings": [
+        {
+          "code": "GROUPING_NOT_VERIFIABLE",
+          "location": "dataset_authority.json",
+          "message": "Subject/session/event generalization remains unavailable from source provenance."
+        },
+        {
+          "code": "NEAR_DUPLICATE_OVERLAP",
+          "location": "near_duplicate_sensitivity_policy.json",
+          "message": "14,514 TRAIN-VALIDATION near-duplicate pairs require disclosure."
+        },
+        {
+          "code": "NO_PRISTINE_LOCKED_TEST",
+          "location": "evaluation_role_policy.json",
+          "message": "REAL_EVAL_DEVELOPMENT is not an untouched final test."
+        }
+      ]
+    }
+  },
+  "schema_version": "1.0",
+  "stage": "STAGE1_IMPLEMENTATION",
+  "stage1_gate": "T_B1_STAGE1_IMPLEMENTATION_READY_WITH_LIMITATIONS",
+  "t_b2_authorized": false,
+  "warning_count": 2,
+  "warnings": [
+    {
+      "code": "FULL_EXPERIMENT_PENDING_EXTERNAL_SSD",
+      "location": "limitations.json",
+      "message": "Full P0/P1/P2 execution is intentionally pending the external canonical artifacts."
+    },
+    {
+      "code": "NO_FULL_TRAINING",
+      "location": "stage1_validation_result.json",
+      "message": "Stage 1 proves infrastructure only; no Thermal performance metrics exist."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "bundle_artifacts": {
+    "checkpoint_registry": "checkpoint_registry.json",
+    "dataset_identity": "dataset_identity.json",
+    "environment": "environment.json",
+    "initialization": "initialization_registry.json",
+    "limitations": "limitations.json",
+    "metrics_registry": "metrics_registry.json",
+    "real_eval_development": "real_eval_development.json",
+    "target_identity": "target_identity.json",
+    "validation_comparison": "validation_comparison.json",
+    "winner_selection": "winner_selection.json"
+  },
+  "full_training_performed": true,
+  "mode": "FULL_EXPERIMENT",
+  "new_trained_model_generated": true,
+  "phase": "T-B1",
+  "profile_order": [
+    "P0_CANONICAL_CELSIUS_DIRECT",
+    "P1_TRAIN_FITTED_GLOBAL_ZSCORE",
+    "P2_LEGACY_PER_FRAME_MINMAX"
+  ],
+  "schema_version": "1.0",
+  "selected_profile_id": "P1_TRAIN_FITTED_GLOBAL_ZSCORE",
+  "status": "FINALIZED",
+  "t_b2_authorized": "YES_WITH_LIMITATIONS"
+}

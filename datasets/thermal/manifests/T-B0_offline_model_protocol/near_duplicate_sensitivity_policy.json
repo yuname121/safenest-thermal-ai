@@ -1,0 +1,51 @@
+{
+  "blocking_status": "NON_BLOCKING_WITH_MANDATORY_DISCLOSURE",
+  "evaluation_views": {
+    "V0_OFFICIAL_VALIDATION": {
+      "includes_all_official_validation": true,
+      "metrics_reported": true,
+      "split_role_changed": false,
+      "winner_selection_allowed": true
+    },
+    "V1_NEAR_DUPLICATE_SENSITIVITY": {
+      "intended_definition": "validation samples implicated by the frozen TRAIN-VALIDATION near-duplicate evidence, evaluated without moving them between roles",
+      "materialization_status": "SENSITIVITY_SUBSET_NOT_MATERIALIZABLE_FROM_CURRENT_COMPACT_EVIDENCE",
+      "metrics_reported_if_materialized": [
+        "full official VALIDATION",
+        "non-implicated VALIDATION subset",
+        "implicated VALIDATION subset"
+      ],
+      "missing_evidence": "Complete deterministic implicated VALIDATION canonical_sample_index list or a later bounded recomputation from the canonical arrays using this frozen profile",
+      "split_role_changed": false,
+      "winner_selection_allowed": false
+    }
+  },
+  "frozen_source_profile": {
+    "exhaustiveness_claim": "DETERMINISTIC_SCREENING_NOT_EXHAUSTIVE",
+    "label_independent": true,
+    "model_independent": true,
+    "no_label_or_model_tuning": true,
+    "profile_id": "THERMAL_T_A6_NEAR_DUPLICATE_SCREEN_V1"
+  },
+  "interpretation": "The measured overlap is a validation-sensitivity limitation, not evidence that exact cross-role leakage occurred.",
+  "measured_counts_in_t_a6": {
+    "candidate_pair_count": 5945736,
+    "screened_pair_count": 200000,
+    "train_real_confirmed_pairs": 0,
+    "train_validation_confirmed_pairs": 14514,
+    "validation_real_confirmed_pairs": 0,
+    "within_real_confirmed_pairs": 0,
+    "within_train_confirmed_pairs": 58467,
+    "within_validation_confirmed_pairs": 0
+  },
+  "phase": "T-B0",
+  "policy": {
+    "hash_resplit": "PROHIBITED",
+    "near_duplicate_limit_must_be_reported": true,
+    "official_validation_remains_authoritative": true,
+    "random_resplit": "PROHIBITED",
+    "role_reassignment": "PROHIBITED",
+    "sample_deletion": "PROHIBITED_IN_T_B0"
+  },
+  "schema_version": "1.0"
+}

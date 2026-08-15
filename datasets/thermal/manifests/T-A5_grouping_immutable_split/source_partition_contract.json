@@ -1,0 +1,86 @@
+{
+  "contract_id": "THERMAL_SOURCE_PARTITION_CONTRACT_001",
+  "dataset_id": "local_sdt_zenodo_4124309",
+  "dataset_name": "SDT Dataset",
+  "doi": "doi:10.5281/zenodo.4124309",
+  "model_metrics_used": false,
+  "no_random_or_hash_resplit": true,
+  "official_documentation_url": "https://cvl.tuwien.ac.at/research/cvl-databases/sdt-icip/",
+  "official_partition_total": 48000,
+  "official_source_url": "https://zenodo.org/records/4124309",
+  "original_publication_status": "OFFICIAL_SOURCE_DOCUMENTATION_VERIFIED",
+  "partition_counts": {
+    "test": 8000,
+    "train": 32000,
+    "validation": 8000
+  },
+  "partition_domains": {
+    "test": "REAL",
+    "train": "SYNTHETIC",
+    "validation": "SYNTHETIC"
+  },
+  "partitions": [
+    {
+      "access_status": "T_A0_METADATA_ONLY_NO_PAYLOAD_READ",
+      "assignment_seed": "NOT_APPLICABLE",
+      "hash_assignment": "NOT_APPLICABLE",
+      "locked_test_status": "NOT_APPLICABLE_SYNTHETIC_TRAIN_PARTITION",
+      "materialization_status": "LOCAL_CLOUD_PLACEHOLDER",
+      "official_sample_count": 32000,
+      "planned_safenest_role": "TRAIN",
+      "pristine_locked_test_eligible": false,
+      "readable_offline": false,
+      "sample_inventory_status": "SAMPLE_LEVEL_INVENTORY_PENDING_MATERIALIZATION",
+      "source_domain": "SYNTHETIC",
+      "source_partition_preserved": true,
+      "source_split": "train",
+      "thermal_pair_count": 32000
+    },
+    {
+      "access_status": "T_A0_METADATA_ONLY_NO_PAYLOAD_READ",
+      "assignment_seed": "NOT_APPLICABLE",
+      "hash_assignment": "NOT_APPLICABLE",
+      "locked_test_status": "NOT_APPLICABLE_SYNTHETIC_VALIDATION_PARTITION",
+      "materialization_status": "LOCAL_CLOUD_PLACEHOLDER",
+      "official_sample_count": 8000,
+      "planned_safenest_role": "VALIDATION",
+      "pristine_locked_test_eligible": false,
+      "readable_offline": false,
+      "sample_inventory_status": "SAMPLE_LEVEL_INVENTORY_PENDING_MATERIALIZATION",
+      "source_domain": "SYNTHETIC",
+      "source_partition_preserved": true,
+      "source_split": "validation",
+      "thermal_pair_count": 8000
+    },
+    {
+      "access_status": "USED_FOR_T_A0_T_A4_DEVELOPMENT_AND_GEOMETRY_SELECTION",
+      "archive_path": "datasets/raw_archives/thermal_split_zips/test.zip",
+      "archive_sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+      "assignment_seed": "NOT_APPLICABLE",
+      "hash_assignment": "NOT_APPLICABLE",
+      "locked_test_disqualification_reason": "USED_FOR_PREPROCESSING_GEOMETRY_SELECTION",
+      "locked_test_status": "DISQUALIFIED_BY_PRIOR_ACCESS",
+      "materialization_status": "LOCALLY_MATERIALIZED",
+      "official_sample_count": 8000,
+      "planned_safenest_role": "REAL_EVAL_DEVELOPMENT",
+      "pristine_locked_test_eligible": false,
+      "readable_offline": true,
+      "sample_inventory_status": "FULL_MEMBER_AND_LABEL_INVENTORY_VERIFIED_T_A1_T_A4",
+      "source_domain": "REAL",
+      "source_partition_preserved": true,
+      "source_split": "test",
+      "thermal_pair_count": 8000
+    }
+  ],
+  "phase": "T-A5",
+  "real_test_inventory": "FULL_MEMBER_LABEL_ASSIGNMENT_INVENTORY_VERIFIED",
+  "schema_version": "1.0",
+  "source_archive": {
+    "path": "datasets/raw_archives/thermal_split_zips/test.zip",
+    "sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+    "test_member_count": 8000
+  },
+  "source_partition_preservation": true,
+  "source_partitions_must_remain_separate": true,
+  "train_validation_sample_level_inventory": "PENDING_MATERIALIZATION"
+}

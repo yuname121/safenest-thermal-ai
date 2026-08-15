@@ -1,0 +1,27 @@
+{
+  "arbitrary_values_allowed": false,
+  "available_evidence": [],
+  "eligible": false,
+  "overlap": "NOT_APPLICABLE_NO_VERIFIED_TIMELINE",
+  "phase": "T-A3",
+  "policy_id": "THERMAL_T_A3_WINDOW_POLICY_001",
+  "reason": "A frame count or duration has no verified time unit because SDT FPS/timestamps/sequence identity are unavailable.",
+  "required_evidence": [
+    "verified timeline",
+    "sequence grouping",
+    "duration or frame-count semantics",
+    "gap/duplicate policy",
+    "boundary policy"
+  ],
+  "safe_to_construct": false,
+  "schema_version": "1.0",
+  "status": "WINDOWING_NOT_APPLICABLE_TO_SOURCE",
+  "stride": "NOT_APPLICABLE_NO_VERIFIED_TIMELINE",
+  "temporal_unit": "NOT_APPLICABLE",
+  "unsupported_request_behavior": {
+    "behavior": "FAIL_CLOSED",
+    "error_code": "WINDOW_CONSTRUCTION_NOT_ALLOWED"
+  },
+  "window_duration": "NOT_APPLICABLE_NO_VERIFIED_TIMELINE",
+  "window_frame_count": "NOT_APPLICABLE_NO_VERIFIED_TIMELINE"
+}

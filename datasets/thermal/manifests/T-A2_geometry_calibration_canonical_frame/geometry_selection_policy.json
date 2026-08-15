@@ -1,0 +1,144 @@
+{
+  "admissibility_thresholds": {
+    "candidate_crop_additional_bbox_area_loss_fraction_max": {
+      "inclusive": true,
+      "justification": "One percent permits annotation-boundary overlap while rejecting material crop damage.",
+      "unit": "fraction of source-clipped person-bbox area",
+      "value": 0.01
+    },
+    "minimum_bbox_retention_due_to_candidate_transform_min": {
+      "inclusive": true,
+      "justification": "Candidate geometry must not materially remove a labeled person.",
+      "unit": "fraction after source-frame clipping",
+      "value": 0.995
+    },
+    "padding_percentage_max": {
+      "inclusive": true,
+      "justification": "Reject synthetic/masked pixels when a measured rectangular candidate exists.",
+      "unit": "percent of canonical pixels",
+      "value": 0.0
+    },
+    "source_fov_retained_fraction_min": {
+      "inclusive": true,
+      "justification": "At most five percent bounded source-area loss is admissible.",
+      "unit": "fraction of source area",
+      "value": 0.95
+    }
+  },
+  "interpolation_preference": {
+    "area": 1,
+    "bilinear": 0,
+    "nearest": 2
+  },
+  "mandatory_rejection_gates": [
+    {
+      "condition": "profile.source_shape == [480,640] and profile.canonical_shape == [62,80]",
+      "gate_id": "SOURCE_AND_CANONICAL_SHAPES",
+      "unit": "shape tuple"
+    },
+    {
+      "condition": "source_unit == CELSIUS and canonical_unit == CELSIUS and canonical_dtype == float32",
+      "gate_id": "PHYSICAL_FRAME_CONTRACT",
+      "unit": "declared representation"
+    },
+    {
+      "condition": "rotation == 0 and horizontal_flip == false and vertical_flip == false",
+      "gate_id": "SOURCE_AS_STORED_ORIENTATION",
+      "unit": "boolean/quarter-turn"
+    },
+    {
+      "condition": "finite_valid_output == true",
+      "gate_id": "FINITE_VALID_OUTPUT",
+      "unit": "boolean"
+    },
+    {
+      "condition": "constant_temperature_preserved == true",
+      "gate_id": "CONSTANT_TEMPERATURE_PRESERVED",
+      "unit": "boolean"
+    },
+    {
+      "condition": "repeated_canonicalization_deterministic == true",
+      "gate_id": "DETERMINISTIC_REPEATED_CANONICALIZATION",
+      "unit": "boolean"
+    }
+  ],
+  "metric_definitions": {
+    "additional_bbox_area_loss_due_to_candidate_crop_fraction": "candidate-crop area loss / source-frame-clipped person-bbox area; fraction; thresholded before ranking",
+    "anisotropy_ratio_excess": "max(horizontal_scale_factor, vertical_scale_factor) / min(horizontal_scale_factor, vertical_scale_factor) - 1; dimensionless; lower is better",
+    "mean_absolute_shift_celsius": "mean absolute candidate-minus-source frame mean; degrees Celsius; lower is better",
+    "padding_percentage": "masked/non-measured canonical pixels / canonical pixel count * 100; percent; lower is better",
+    "range_compression_distance_from_one": "abs(mean range_compression_ratio - 1); dimensionless; lower is better",
+    "round_trip_mae": "diagnostic downsample/reconstruction mean absolute error; degrees Celsius; lower is better",
+    "source_fov_retained_fraction": "candidate crop area / distributed source-frame area; fraction; thresholded before ranking"
+  },
+  "model_performance_used": false,
+  "phase": "T-A2",
+  "policy_id": "THERMAL_T_A2_GEOMETRY_SELECTION_POLICY_002",
+  "policy_justification": [
+    "FOV and bbox thresholds define an admissible geometry set without model output.",
+    "Within admissible geometry, anisotropy is minimized before physical-statistic distortion.",
+    "Bilinear is the declared deterministic interpolation preference; this is not an antialias claim.",
+    "Candidate ID is only the final neutral reproducibility tie-break."
+  ],
+  "policy_version": "2.0",
+  "ranking_order": [
+    {
+      "direction": "ascending",
+      "metric": "anisotropy_ratio_excess",
+      "unit": "ratio excess"
+    },
+    {
+      "direction": "ascending",
+      "metric": "padding_percentage",
+      "unit": "percent"
+    },
+    {
+      "direction": "ascending",
+      "metric": "interpolation_preference_rank",
+      "unit": "ordinal (lower is preferred)"
+    },
+    {
+      "direction": "ascending",
+      "metric": "mean_absolute_shift_celsius",
+      "unit": "degrees Celsius"
+    },
+    {
+      "direction": "ascending",
+      "metric": "range_compression_distance_from_one",
+      "unit": "absolute ratio distance"
+    },
+    {
+      "direction": "ascending",
+      "metric": "round_trip_mae",
+      "unit": "degrees Celsius"
+    },
+    {
+      "direction": "ascending",
+      "metric": "candidate_id",
+      "unit": "lexical identifier"
+    }
+  ],
+  "schema_version": "1.0",
+  "selection_algorithm": "MANDATORY_GATES_THEN_ADMISSIBILITY_THEN_LEXICOGRAPHIC_RANKING",
+  "tie_break_rule": "candidate_id ascending after all declared numeric ranking fields are tied within numeric_tolerance",
+  "tie_definition": {
+    "candidate_id_excluded_until_tie_break": true,
+    "fields": [
+      "anisotropy_ratio_excess",
+      "padding_percentage",
+      "interpolation_preference_rank",
+      "mean_absolute_shift_celsius",
+      "range_compression_distance_from_one",
+      "round_trip_mae"
+    ],
+    "numeric_tolerance": 1e-12
+  },
+  "unsupported_metrics": [
+    "accuracy",
+    "f1",
+    "fall_recall",
+    "model_score",
+    "inference_latency",
+    "Thermal-44 hardware performance"
+  ]
+}

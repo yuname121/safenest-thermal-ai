@@ -1,0 +1,21 @@
+{
+  "bbox_relabeling": "PROHIBITED",
+  "claim_scope": [
+    "FRAME_LEVEL_ONLY",
+    "NOT_TEMPORAL_EVENT_GROUND_TRUTH",
+    "NOT_SAFETY_GROUND_TRUTH"
+  ],
+  "evidence_labels": {
+    "EMPTY_ROOM": "NO_ANNOTATED_HUMAN_IN_REPRESENTED_FRAME",
+    "LYING": "HUMAN_LYING_POSTURE",
+    "SITTING": "HUMAN_SITTING_POSTURE",
+    "STANDING": "HUMAN_STANDING_POSTURE"
+  },
+  "fall_event_ground_truth": "NOT_VERIFIABLE",
+  "layer": "B_FRAME_LEVEL_EVIDENCE_SEMANTIC",
+  "phase": "T-A4",
+  "schema_version": "1.0",
+  "source_annotation_remains_separate": true,
+  "temporal_event_status": "NOT_VERIFIABLE",
+  "worker_safety_ground_truth": "NOT_SUPPORTED"
+}

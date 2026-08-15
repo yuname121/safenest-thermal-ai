@@ -1,0 +1,43 @@
+{
+  "canonical_artifacts_mutated": false,
+  "contract_id": "THERMAL_T_B1_STAGE1_IMPLEMENTATION_001",
+  "full_experiment_status": "PENDING_EXTERNAL_SSD_EXECUTION",
+  "full_training_performed": false,
+  "legacy_tflite_replaced": false,
+  "new_trained_model_generated": false,
+  "next_gate": "T_B1_FULL_EXPERIMENT_REQUIRES_OWNER_AUTHORIZED_TRAINING_RUN_READY",
+  "no_colab_dependency": true,
+  "objective": "Implement a controlled P0/P1/P2 preprocessing comparison infrastructure with one frozen SMALL_CNN baseline.",
+  "performance_winner_selected": false,
+  "phase": "T-B1",
+  "predecessors": {
+    "T-A6": {
+      "gate": "T_A6_FULL_COMPLETE_WITH_LIMITATIONS",
+      "mode": "FULL_DATASET",
+      "validator": "scripts/validate_thermal_t_a6.py"
+    },
+    "T-B0": {
+      "commit": "0aa6cb8d1c282f07c769f108d6b6482e112c85d2",
+      "gate": "T_B0_COMPLETE_WITH_LIMITATIONS",
+      "validator": "scripts/validate_thermal_t_b0.py"
+    }
+  },
+  "raw_payload_required_for_t_b1": false,
+  "runner": {
+    "canonical_root": "CONFIGURABLE_ARGUMENT",
+    "dry_run_supported": true,
+    "full_execute_owner_authorization_required": true,
+    "modes": [
+      "STAGE1_IMPLEMENTATION",
+      "FULL_EXPERIMENT"
+    ],
+    "output_root": "CONFIGURABLE_ARGUMENT",
+    "path": "scripts/run_thermal_t_b1.py",
+    "training_run_ready_gate": true,
+    "work_root": "CONFIGURABLE_ARGUMENT"
+  },
+  "schema_version": "1.0",
+  "stage": "STAGE1_IMPLEMENTATION",
+  "stage1_external_storage_required": false,
+  "t_b2_authorized": false
+}

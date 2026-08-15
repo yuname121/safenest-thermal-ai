@@ -1,0 +1,46 @@
+{
+  "assignment_rule_id": "THERMAL_ASSIGNMENT_RULE_001",
+  "forbidden_assignment_methods": [
+    "FRAME_RANDOM",
+    "STRATIFIED_FRAME_RANDOM",
+    "FRAME_HASH",
+    "FRAME_INDEX_BLOCK",
+    "LABEL_AS_GROUP"
+  ],
+  "hash_assignment": "NOT_APPLICABLE",
+  "locked_test_rule": "Never assign a source partition with prior geometry/semantic/preprocessing access to LOCKED_TEST.",
+  "model_metrics_used": false,
+  "phase": "T-A5",
+  "required_fields": [
+    "source_dataset_id",
+    "source_doi",
+    "source_split",
+    "source_domain",
+    "source_member",
+    "source_frame_index",
+    "grouping_unit_type",
+    "grouping_unit_id",
+    "grouping_evidence_status",
+    "safenest_assignment_role",
+    "assignment_eligibility",
+    "locked_test_eligibility",
+    "prior_access_status",
+    "assignment_rule_id",
+    "t_a4_semantic_policy_id",
+    "original_label_id",
+    "original_label_name",
+    "compatibility_target",
+    "mapping_type",
+    "mapping_rule_id"
+  ],
+  "role_by_source_split": {
+    "test": "REAL_EVAL_DEVELOPMENT",
+    "train": "TRAIN",
+    "validation": "VALIDATION"
+  },
+  "rule": "Preserve official SDT partition; test frames receive REAL_EVAL_DEVELOPMENT after prior-access audit.",
+  "schema_version": "1.0",
+  "seed": "NOT_APPLICABLE",
+  "source_dataset_id": "local_sdt_zenodo_4124309",
+  "split_policy_id": "THERMAL_SPLIT_POLICY_001"
+}

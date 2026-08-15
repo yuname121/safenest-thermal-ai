@@ -1,0 +1,33 @@
+{
+  "celsius_formula": "(encoded_uint16 - 27315) / 100",
+  "container_bit_depth": 16,
+  "conversion_witness": {
+    "celsius": 26.85,
+    "encoded_uint16": 30000,
+    "kelvin": 300.0
+  },
+  "decoded_dtype": "uint16",
+  "distributed_png_byte_order": "PNG 16-bit samples are serialized network-byte-order; decoder emits semantic uint16 values",
+  "kelvin_formula": "encoded_uint16 / 100",
+  "lossless_source_value_policy": "Reader returns decoded integer sample values unchanged; no resize, normalization, quantization, clipping, relabeling, or inference",
+  "observed_pilot_celsius_range": [
+    19.62,
+    34.99
+  ],
+  "observed_pilot_encoded_range": [
+    29277,
+    30814
+  ],
+  "phase": "T-A1",
+  "physical_unit": "KELVIN_CENTIUNITS",
+  "remaining_ambiguities": [
+    "Official documentation says FLIR 16/14-bit encoding but the 30000 witness exceeds an unsigned 14-bit container; no bit mask or ADC interpretation is guessed.",
+    "Saturation/calibration validity thresholds are not documented; container extrema are integrity signals, not calibrated sensor limits.",
+    "Thermal-44 packet dtype, endianness, unit, and conversion remain deferred to T-C."
+  ],
+  "representation_class": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+  "saturation_policy": "Fully constant 0 or 65535 frames fail closed; partial container extrema and other constant frames are flagged; physical saturation threshold NOT_VERIFIABLE",
+  "schema_version": "1.0",
+  "source_doi": "doi:10.5281/zenodo.4124309",
+  "source_value_hash_policy": "SHA-256 over C-contiguous semantic samples serialized as canonical little-endian uint16"
+}

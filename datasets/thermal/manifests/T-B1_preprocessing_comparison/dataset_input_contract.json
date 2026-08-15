@@ -1,0 +1,48 @@
+{
+  "canonical_artifacts_mutated": false,
+  "canonical_dtype": "float32_little_endian",
+  "canonical_shape": [
+    62,
+    80
+  ],
+  "canonical_unit": "CELSIUS",
+  "hash_resplit": "PROHIBITED",
+  "legacy_npz_authority": "PROHIBITED",
+  "phase": "T-B1",
+  "provenance_requirement": "T-A6 JSONL provenance remains 1:1 with canonical rows and supplies immutable source labels plus compatibility targets.",
+  "random_resplit": "PROHIBITED",
+  "raw_sdt_zip_required": false,
+  "roles": {
+    "REAL_EVAL_DEVELOPMENT": {
+      "artifact_size_bytes": 158720128,
+      "fit_allowed": false,
+      "rows": 8000,
+      "sha256": "cd696e68aeec063cbc8185719b4f4dad3d038cb3d28eec0d3701b8311e4ad8f1",
+      "source_domain": "REAL",
+      "source_split": "test",
+      "use": "selected-checkpoint real-domain development characterization only",
+      "winner_selection": false
+    },
+    "TRAIN": {
+      "artifact_size_bytes": 634880128,
+      "fit_allowed": true,
+      "rows": 32000,
+      "sha256": "749c847fc9ab50ea5eee8827f0d47b5ebaa48165732a382c59f8b96c565b9d93",
+      "source_domain": "SYNTHETIC",
+      "source_split": "train",
+      "use": "weights, P1 statistics, deterministic TRAIN shuffle",
+      "winner_selection": false
+    },
+    "VALIDATION": {
+      "artifact_size_bytes": 158720128,
+      "fit_allowed": false,
+      "rows": 8000,
+      "sha256": "5d16451702c1bccfa945d9188d9b29a26ce11c8b33bf7a0dfbb25bfa86d74610",
+      "source_domain": "SYNTHETIC",
+      "source_split": "validation",
+      "use": "early stopping, profile comparison, and validation-only winner selection",
+      "winner_selection": true
+    }
+  },
+  "schema_version": "1.0"
+}

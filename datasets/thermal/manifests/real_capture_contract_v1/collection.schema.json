@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://safenest.local/schemas/thermal-real-capture/collection-v1.json",
+  "title": "SafeNest Thermal real capture collection manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "contract_id",
+    "collection_id",
+    "collection_role",
+    "created_at",
+    "subject_ids",
+    "session_ids",
+    "full_frame_collection_status",
+    "split_policy",
+    "source"
+  ],
+  "properties": {
+    "schema_version": { "const": "safenest.thermal.real_capture.collection.v1" },
+    "contract_id": { "const": "safenest.thermal.real_capture.v1" },
+    "collection_id": { "type": "string", "minLength": 1, "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$" },
+    "collection_role": {
+      "type": "string",
+      "enum": [
+        "DEVICE_CONTRACT_PILOT",
+        "REAL_DEVELOPMENT",
+        "FUTURE_TRAIN_CANDIDATE",
+        "REAL_LOCKED_TEST"
+      ]
+    },
+    "created_at": { "type": "string", "minLength": 1 },
+    "subject_ids": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "session_ids": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "full_frame_collection_status": {
+      "type": "string",
+      "enum": ["FULL_FRAME_AVAILABLE", "NOT_YET_AVAILABLE", "SCALAR_ONLY", "UNKNOWN"]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_status", "source_description"],
+      "properties": {
+        "source_status": {
+          "type": "string",
+          "enum": ["TEAM_DEVICE_CAPTURE", "SYNTHETIC_EXAMPLE_NOT_MEASUREMENT", "UNKNOWN"]
+        },
+        "source_description": { "type": "string", "minLength": 1 },
+        "team_repository_base_commit": { "type": ["string", "null"] },
+        "collector_git_commit": { "type": ["string", "null"] }
+      }
+    },
+    "split_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assignment_unit", "frame_random_split_allowed", "locked_test_access"],
+      "properties": {
+        "assignment_unit": {
+          "type": "string",
+          "enum": ["SUBJECT", "SESSION", "EVENT", "NOT_ASSIGNED"]
+        },
+        "frame_random_split_allowed": { "const": false },
+        "assignment_method": { "type": "string", "minLength": 1 },
+        "locked_test_access": {
+          "type": "string",
+          "enum": ["UNTOUCHED", "DEVELOPMENT_ONLY", "NOT_APPLICABLE", "UNKNOWN"]
+        },
+        "frozen_before_model_inspection": { "type": ["boolean", "null"] }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pseudonymous_ids_only": { "const": true },
+        "names_in_filenames": { "const": false },
+        "unnecessary_personal_metadata_present": { "const": false }
+      }
+    },
+    "notes": { "type": "string" }
+  }
+}

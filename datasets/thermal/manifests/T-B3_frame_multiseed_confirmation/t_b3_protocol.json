@@ -1,0 +1,39 @@
+{
+  "best_seed_cherry_picking": "PROHIBITED",
+  "extra_seeds": [],
+  "factor_changed": "SEED_ONLY",
+  "factors_frozen": [
+    "dataset",
+    "official_roles",
+    "target_mapping",
+    "p1_statistics",
+    "p1_implementation",
+    "architecture",
+    "loss",
+    "optimizer",
+    "training_budget",
+    "early_stopping",
+    "learning_rate_schedule",
+    "augmentation",
+    "class_weighting",
+    "oversampling",
+    "focal_loss",
+    "metric_implementation",
+    "class_order"
+  ],
+  "next_phase_started": false,
+  "phase": "T-B3",
+  "protocol_id": "THERMAL_T_B3_FRAME_ONLY_MULTI_SEED_CONFIRMATION_001",
+  "real_policy": "EXISTING_REFERENCE_ONLY_NOT_REPEATED",
+  "schema_version": "1.0",
+  "scope": "FROZEN_P1_SMALL_CNN_FRAME_ONLY_STABILITY_CONFIRMATION",
+  "seeds": [
+    20260813,
+    20260814,
+    20260815
+  ],
+  "selection_role": "VALIDATION",
+  "status": "T_B3_MULTI_SEED_RUN_READY",
+  "t_b4_started": false,
+  "temporal_training": "PROHIBITED"
+}

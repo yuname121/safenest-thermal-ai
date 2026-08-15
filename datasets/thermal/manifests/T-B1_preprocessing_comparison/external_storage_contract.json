@@ -1,0 +1,40 @@
+{
+  "canonical_role_layouts": [
+    "<canonical-root>/TRAIN/train_canonical.npy + train_provenance.jsonl",
+    "<canonical-root>/VALIDATION/validation_canonical.npy + validation_provenance.jsonl",
+    "<canonical-root>/REAL_EVAL_DEVELOPMENT/real_eval_development_canonical.npy + real_eval_development_provenance.jsonl"
+  ],
+  "full_experiment": {
+    "authoritative_input_is_read_only": true,
+    "disconnect_behavior": "EXTERNAL_STORAGE_DISCONNECTED; do not finalize partial results",
+    "external_canonical_root_required": true,
+    "free_capacity_required": true,
+    "full_sha256_required": true,
+    "output_writable_required": true,
+    "required_roles": [
+      "TRAIN",
+      "VALIDATION",
+      "REAL_EVAL_DEVELOPMENT"
+    ]
+  },
+  "path_policy": {
+    "canonical_root": "CLI --canonical-root; no hardcoded volume name",
+    "output_root": "CLI --output-root; persistent external storage recommended",
+    "repository_absolute_paths_persisted": false,
+    "work_root": "CLI --work-root; prefer Mac local scratch"
+  },
+  "phase": "T-B1",
+  "raw_sdt_zip_required": false,
+  "schema_version": "1.0",
+  "stage1": {
+    "canonical_payload_required": false,
+    "external_ssd_required": false,
+    "fixture_and_contract_tests_allowed": true
+  },
+  "supported_media": [
+    "USB-A SSD",
+    "USB-C SSD",
+    "USB 3.x SSD",
+    "ordinary USB flash with measured stable reads/writes"
+  ]
+}

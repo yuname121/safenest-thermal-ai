@@ -1,0 +1,12 @@
+{
+  "error_count": 0,
+  "errors": [],
+  "evidence_validation": "PASS",
+  "full_t_a6_gate": "T_A6_FULL_COMPLETE_WITH_LIMITATIONS",
+  "overall_outcome": "PASS_WITH_LIMITATIONS",
+  "phase": "T-A6_COLAB_STAGE2",
+  "schema_version": "1.0",
+  "t_b_authorized": false,
+  "warning_count": 0,
+  "warnings": []
+}

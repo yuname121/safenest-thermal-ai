@@ -1,0 +1,60 @@
+{
+  "a_stage_predecessor": {
+    "canonical_dataset_contract": "datasets/thermal/manifests/T-A6_execution_result/canonical_artifact_registry.json",
+    "full_dataset_gate": "T_A6_FULL_COMPLETE_WITH_LIMITATIONS",
+    "validator": "scripts/validate_thermal_t_a6.py",
+    "validator_mode": "FULL_DATASET"
+  },
+  "b_series_boundary": {
+    "T-B0": "offline protocol, baseline and candidate preregistration",
+    "T-B1": "preprocessing and augmentation ablation",
+    "T-B2": "class imbalance and hard-negative strategy",
+    "T-B3": "frame versus temporal architecture",
+    "T-B4": "Float to TFLite to INT8 equivalence",
+    "T-B5": "robustness, latency and candidate lock",
+    "current_phase_may_train_full_model": false,
+    "next_phase": "T-B1"
+  },
+  "baseline_release_policy": {
+    "a_stage_only_intermediate_release": true,
+    "hold_reason": "Hold T-B development for post-intermediate-release merge; the current main is the Thermal A-stage release baseline.",
+    "t_b0_branch": "feature/thermal-t-b0-offline-model-protocol",
+    "t_b0_in_intermediate_release": false,
+    "t_b0_merge_to_main_allowed_now": false
+  },
+  "canonical_representation": {
+    "dtype": "float32_little_endian",
+    "model_preprocessing_is_downstream": true,
+    "normalization": "NONE_T_A6_PHYSICAL_ARTIFACT",
+    "shape": [
+      62,
+      80
+    ],
+    "unit": "CELSIUS"
+  },
+  "dataset_authority_ref": "dataset_authority.json",
+  "deployment_policy_ref": "deployment_measurement_policy.json",
+  "evaluation_policy_ref": "evaluation_role_policy.json",
+  "existing_model_audit_ref": "existing_model_inventory.json",
+  "license_boundary_ref": "license_boundary.json",
+  "metric_policy_ref": "metric_policy.json",
+  "near_duplicate_policy_ref": "near_duplicate_sensitivity_policy.json",
+  "phase": "T-B0",
+  "preprocessing_policy_ref": "preprocessing_candidate_registry.json",
+  "protocol_id": "THERMAL_T_B0_OFFLINE_MODEL_PROTOCOL_001",
+  "randomness_policy_ref": "randomness_policy.json",
+  "schema_version": "1.0",
+  "scope": {
+    "full_training_performed": false,
+    "hyperparameter_search_performed": false,
+    "model_performance_claimed": false,
+    "new_split_created": false,
+    "tflite_candidate_generated": false,
+    "winner_declared": false
+  },
+  "selection_is_preregistered_before_training": true,
+  "status": "T_B0_COMPLETE_WITH_LIMITATIONS",
+  "target_contract_ref": "target_contract.json",
+  "training_budget_policy_ref": "training_budget_policy.json",
+  "winner_selection_policy_ref": "winner_selection_policy.json"
+}

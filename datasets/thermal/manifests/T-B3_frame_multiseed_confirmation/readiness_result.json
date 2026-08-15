@@ -1,0 +1,19 @@
+{
+  "architecture_frozen": true,
+  "canonical_valid": true,
+  "p1_frozen": true,
+  "phase": "T-B3",
+  "predecessors_valid": true,
+  "real_excluded_from_seed_selection": true,
+  "roadmap_reconciliation_present": true,
+  "schema_version": "1.0",
+  "seed_20260813_reusable": true,
+  "seed_set": [
+    20260813,
+    20260814,
+    20260815
+  ],
+  "status": "T_B3_MULTI_SEED_RUN_READY",
+  "t_b4_started": false,
+  "temporal_disabled": true
+}

@@ -1,0 +1,34 @@
+{
+  "error_count": 0,
+  "errors": [],
+  "evidence_validation": "PASS",
+  "overall_outcome": "PASS_WITH_LIMITATIONS",
+  "phase": "T-A1",
+  "schema_version": "1.0",
+  "t_a0_outcome": "PASS_WITH_LIMITATIONS",
+  "t_a0_validation": "PASS",
+  "t_a2_authorized": true,
+  "warning_count": 4,
+  "warnings": [
+    {
+      "code": "GROUP_IDENTIFIERS_ABSENT",
+      "location": "SDT provenance",
+      "message": "Subject/session/sequence/event/timestamp IDs are absent."
+    },
+    {
+      "code": "LICENSE_RESTRICTED",
+      "location": "T-A0 license",
+      "message": "Use the stricter non-commercial research common denominator."
+    },
+    {
+      "code": "NO_TEMPORAL_FALL_EVENTS",
+      "location": "SDT labels",
+      "message": "LYING is posture evidence, not a fall event."
+    },
+    {
+      "code": "PLACEHOLDERS_NOT_HYDRATED",
+      "location": "local payload",
+      "message": "Train and validation bytes remain unavailable offline."
+    }
+  ]
+}

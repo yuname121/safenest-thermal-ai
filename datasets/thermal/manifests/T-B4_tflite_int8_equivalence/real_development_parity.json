@@ -1,0 +1,601 @@
+{
+  "argmax_agreement": 0.8565,
+  "confusion_matrix_difference": [
+    [
+      164,
+      64,
+      -228
+    ],
+    [
+      0,
+      -74,
+      74
+    ],
+    [
+      0,
+      -92,
+      92
+    ]
+  ],
+  "diagnostic_performed": true,
+  "disagreement_count": 1148,
+  "float_metrics": {
+    "accuracy": 0.67825,
+    "balanced_accuracy": 0.58275,
+    "class_order": [
+      "NOT_HUMAN",
+      "HUMAN_NORMAL",
+      "HUMAN_FALL"
+    ],
+    "confusion_matrix": [
+      [
+        675,
+        483,
+        842
+      ],
+      [
+        0,
+        3859,
+        141
+      ],
+      [
+        0,
+        1108,
+        892
+      ]
+    ],
+    "h_fall_posture_proxy_recall": 0.446,
+    "macro_f1": 0.593926523563344,
+    "per_class": {
+      "HUMAN_FALL": {
+        "f1": 0.46038709677419354,
+        "precision": 0.47573333333333334,
+        "recall": 0.446,
+        "support": 2000
+      },
+      "HUMAN_NORMAL": {
+        "f1": 0.8167195767195766,
+        "precision": 0.7080733944954128,
+        "recall": 0.96475,
+        "support": 4000
+      },
+      "NOT_HUMAN": {
+        "f1": 0.5046728971962617,
+        "precision": 1.0,
+        "recall": 0.3375,
+        "support": 2000
+      }
+    },
+    "prediction_distribution": {
+      "HUMAN_FALL": 1875,
+      "HUMAN_NORMAL": 5450,
+      "NOT_HUMAN": 675
+    },
+    "sample_count": 8000
+  },
+  "float_vs_int8_parity": {
+    "argmax_agreement": 0.8565,
+    "confusion_matrix_difference": [
+      [
+        164,
+        64,
+        -228
+      ],
+      [
+        0,
+        -74,
+        74
+      ],
+      [
+        0,
+        -92,
+        92
+      ]
+    ],
+    "disagreement_count": 1148,
+    "float_metrics": {
+      "accuracy": 0.67825,
+      "balanced_accuracy": 0.58275,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          675,
+          483,
+          842
+        ],
+        [
+          0,
+          3859,
+          141
+        ],
+        [
+          0,
+          1108,
+          892
+        ]
+      ],
+      "h_fall_posture_proxy_recall": 0.446,
+      "macro_f1": 0.593926523563344,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.46038709677419354,
+          "precision": 0.47573333333333334,
+          "recall": 0.446,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.8167195767195766,
+          "precision": 0.7080733944954128,
+          "recall": 0.96475,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.5046728971962617,
+          "precision": 1.0,
+          "recall": 0.3375,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1875,
+        "HUMAN_NORMAL": 5450,
+        "NOT_HUMAN": 675
+      },
+      "sample_count": 8000
+    },
+    "metric_delta_other_minus_float": {
+      "accuracy": 0.022749999999999937,
+      "balanced_accuracy": 0.03649999999999998,
+      "h_fall_posture_proxy_recall": 0.045999999999999985,
+      "macro_f1": 0.04506717892425138
+    },
+    "other_metrics": {
+      "accuracy": 0.701,
+      "balanced_accuracy": 0.61925,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          839,
+          547,
+          614
+        ],
+        [
+          0,
+          3785,
+          215
+        ],
+        [
+          0,
+          1016,
+          984
+        ]
+      ],
+      "h_fall_posture_proxy_recall": 0.492,
+      "macro_f1": 0.6389937024875953,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.5161290322580646,
+          "precision": 0.5427468284611142,
+          "recall": 0.492,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.8097988874625588,
+          "precision": 0.7077412116679133,
+          "recall": 0.94625,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.5910531877421628,
+          "precision": 1.0,
+          "recall": 0.4195,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1813,
+        "HUMAN_NORMAL": 5348,
+        "NOT_HUMAN": 839
+      },
+      "sample_count": 8000
+    },
+    "per_class_probability_mae": {
+      "HUMAN_FALL": 0.1145756479871904,
+      "HUMAN_NORMAL": 0.09021062161289323,
+      "NOT_HUMAN": 0.0613413355053862
+    },
+    "probability_mae": 0.08870920170182328,
+    "probability_max_absolute_error": 0.9999970197677612,
+    "sample_count": 8000
+  },
+  "float_vs_tflite_fp32_parity": {
+    "argmax_agreement": 1.0,
+    "confusion_matrix_difference": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "disagreement_count": 0,
+    "float_metrics": {
+      "accuracy": 0.67825,
+      "balanced_accuracy": 0.58275,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          675,
+          483,
+          842
+        ],
+        [
+          0,
+          3859,
+          141
+        ],
+        [
+          0,
+          1108,
+          892
+        ]
+      ],
+      "h_fall_posture_proxy_recall": 0.446,
+      "macro_f1": 0.593926523563344,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.46038709677419354,
+          "precision": 0.47573333333333334,
+          "recall": 0.446,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.8167195767195766,
+          "precision": 0.7080733944954128,
+          "recall": 0.96475,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.5046728971962617,
+          "precision": 1.0,
+          "recall": 0.3375,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1875,
+        "HUMAN_NORMAL": 5450,
+        "NOT_HUMAN": 675
+      },
+      "sample_count": 8000
+    },
+    "metric_delta_other_minus_float": {
+      "accuracy": 0.0,
+      "balanced_accuracy": 0.0,
+      "h_fall_posture_proxy_recall": 0.0,
+      "macro_f1": 0.0
+    },
+    "other_metrics": {
+      "accuracy": 0.67825,
+      "balanced_accuracy": 0.58275,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          675,
+          483,
+          842
+        ],
+        [
+          0,
+          3859,
+          141
+        ],
+        [
+          0,
+          1108,
+          892
+        ]
+      ],
+      "h_fall_posture_proxy_recall": 0.446,
+      "macro_f1": 0.593926523563344,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.46038709677419354,
+          "precision": 0.47573333333333334,
+          "recall": 0.446,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.8167195767195766,
+          "precision": 0.7080733944954128,
+          "recall": 0.96475,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.5046728971962617,
+          "precision": 1.0,
+          "recall": 0.3375,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1875,
+        "HUMAN_NORMAL": 5450,
+        "NOT_HUMAN": 675
+      },
+      "sample_count": 8000
+    },
+    "per_class_probability_mae": {
+      "HUMAN_FALL": 4.109451691805691e-08,
+      "HUMAN_NORMAL": 3.972093673675642e-08,
+      "NOT_HUMAN": 5.23185661771806e-09
+    },
+    "probability_mae": 2.8682436757510464e-08,
+    "probability_max_absolute_error": 1.5497207641601562e-06,
+    "sample_count": 8000
+  },
+  "fp32_tflite_metrics": {
+    "accuracy": 0.67825,
+    "balanced_accuracy": 0.58275,
+    "h_fall_posture_proxy_recall": 0.446,
+    "macro_f1": 0.593926523563344
+  },
+  "fp32_vs_int8_parity": {
+    "argmax_agreement": 0.8565,
+    "confusion_matrix_difference": [
+      [
+        164,
+        64,
+        -228
+      ],
+      [
+        0,
+        -74,
+        74
+      ],
+      [
+        0,
+        -92,
+        92
+      ]
+    ],
+    "disagreement_count": 1148,
+    "float_metrics": {
+      "accuracy": 0.67825,
+      "balanced_accuracy": 0.58275,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          675,
+          483,
+          842
+        ],
+        [
+          0,
+          3859,
+          141
+        ],
+        [
+          0,
+          1108,
+          892
+        ]
+      ],
+      "h_fall_posture_proxy_recall": 0.446,
+      "macro_f1": 0.593926523563344,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.46038709677419354,
+          "precision": 0.47573333333333334,
+          "recall": 0.446,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.8167195767195766,
+          "precision": 0.7080733944954128,
+          "recall": 0.96475,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.5046728971962617,
+          "precision": 1.0,
+          "recall": 0.3375,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1875,
+        "HUMAN_NORMAL": 5450,
+        "NOT_HUMAN": 675
+      },
+      "sample_count": 8000
+    },
+    "metric_delta_other_minus_float": {
+      "accuracy": 0.022749999999999937,
+      "balanced_accuracy": 0.03649999999999998,
+      "h_fall_posture_proxy_recall": 0.045999999999999985,
+      "macro_f1": 0.04506717892425138
+    },
+    "other_metrics": {
+      "accuracy": 0.701,
+      "balanced_accuracy": 0.61925,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          839,
+          547,
+          614
+        ],
+        [
+          0,
+          3785,
+          215
+        ],
+        [
+          0,
+          1016,
+          984
+        ]
+      ],
+      "h_fall_posture_proxy_recall": 0.492,
+      "macro_f1": 0.6389937024875953,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.5161290322580646,
+          "precision": 0.5427468284611142,
+          "recall": 0.492,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.8097988874625588,
+          "precision": 0.7077412116679133,
+          "recall": 0.94625,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.5910531877421628,
+          "precision": 1.0,
+          "recall": 0.4195,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1813,
+        "HUMAN_NORMAL": 5348,
+        "NOT_HUMAN": 839
+      },
+      "sample_count": 8000
+    },
+    "per_class_probability_mae": {
+      "HUMAN_FALL": 0.11457564718784385,
+      "HUMAN_NORMAL": 0.09021062071567312,
+      "NOT_HUMAN": 0.06134133516286093
+    },
+    "probability_mae": 0.08870920102212597,
+    "probability_max_absolute_error": 0.9999970197677612,
+    "sample_count": 8000
+  },
+  "frozen_before_real": true,
+  "input_saturation": {
+    "boundary_fraction": 0.0068174395161290325,
+    "frames_with_boundary_value": 1365,
+    "frames_with_required_clipping": 780,
+    "lower_boundary_count": 270516,
+    "output_boundary_fraction": 0.759375,
+    "output_dequantized_max": 0.99609375,
+    "output_dequantized_min": 0.0,
+    "output_lower_boundary_count": 12692,
+    "output_total_elements": 24000,
+    "output_upper_boundary_count": 5533,
+    "required_clipping_count": 43614,
+    "required_clipping_fraction": 0.0010991431451612902,
+    "total_elements": 39680000,
+    "upper_boundary_count": 0
+  },
+  "metric_delta_other_minus_float": {
+    "accuracy": 0.022749999999999937,
+    "balanced_accuracy": 0.03649999999999998,
+    "h_fall_posture_proxy_recall": 0.045999999999999985,
+    "macro_f1": 0.04506717892425138
+  },
+  "other_metrics": {
+    "accuracy": 0.701,
+    "balanced_accuracy": 0.61925,
+    "class_order": [
+      "NOT_HUMAN",
+      "HUMAN_NORMAL",
+      "HUMAN_FALL"
+    ],
+    "confusion_matrix": [
+      [
+        839,
+        547,
+        614
+      ],
+      [
+        0,
+        3785,
+        215
+      ],
+      [
+        0,
+        1016,
+        984
+      ]
+    ],
+    "h_fall_posture_proxy_recall": 0.492,
+    "macro_f1": 0.6389937024875953,
+    "per_class": {
+      "HUMAN_FALL": {
+        "f1": 0.5161290322580646,
+        "precision": 0.5427468284611142,
+        "recall": 0.492,
+        "support": 2000
+      },
+      "HUMAN_NORMAL": {
+        "f1": 0.8097988874625588,
+        "precision": 0.7077412116679133,
+        "recall": 0.94625,
+        "support": 4000
+      },
+      "NOT_HUMAN": {
+        "f1": 0.5910531877421628,
+        "precision": 1.0,
+        "recall": 0.4195,
+        "support": 2000
+      }
+    },
+    "prediction_distribution": {
+      "HUMAN_FALL": 1813,
+      "HUMAN_NORMAL": 5348,
+      "NOT_HUMAN": 839
+    },
+    "sample_count": 8000
+  },
+  "per_class_probability_mae": {
+    "HUMAN_FALL": 0.1145756479871904,
+    "HUMAN_NORMAL": 0.09021062161289323,
+    "NOT_HUMAN": 0.0613413355053862
+  },
+  "phase": "T-B4",
+  "probability_mae": 0.08870920170182328,
+  "probability_max_absolute_error": 0.9999970197677612,
+  "role": "REAL_EVAL_DEVELOPMENT",
+  "sample_count": 8000,
+  "schema_version": "1.0",
+  "used_for_calibration": false,
+  "used_for_selection": false
+}

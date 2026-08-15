@@ -1,0 +1,10 @@
+{
+  "canonical_payloads_tracked": false,
+  "checkpoint_tracked": false,
+  "external_root": "EXTERNAL_SSD_SAFE_NEST_AI_THERMAL_EXPERIMENTS_T_B4",
+  "git_binary_policy": "COMPACT_EVIDENCE_AND_CHECKSUMS_ONLY",
+  "legacy_model_overwrite": false,
+  "phase": "T-B4",
+  "raw_payloads_tracked": false,
+  "schema_version": "1.0"
+}

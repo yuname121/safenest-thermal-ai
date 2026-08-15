@@ -1,0 +1,26 @@
+{
+  "audit_scope": "WITHIN_REAL_EVAL_DEVELOPMENT",
+  "audit_sha256": "dc9d1b506824c558a27226323f3f2d5f49328d8c85d0bfe86a2c8f80ffd10cfd",
+  "canonical_frame_hashes": {
+    "cluster_count": 0,
+    "clusters": [],
+    "duplicate_sample_count": 0
+  },
+  "cluster_metadata_fields": [
+    "sample_indices",
+    "source_members",
+    "original_labels",
+    "compatibility_targets"
+  ],
+  "decoded_frame_hashes": {
+    "cluster_count": 0,
+    "clusters": [],
+    "duplicate_sample_count": 0
+  },
+  "exclusions_caused_by_duplicates": 0,
+  "source_member_byte_hashes": {
+    "cluster_count": 0,
+    "clusters": [],
+    "duplicate_sample_count": 0
+  }
+}

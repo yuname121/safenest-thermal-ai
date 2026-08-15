@@ -1,0 +1,50 @@
+{
+  "class_order": [
+    "NOT_HUMAN",
+    "HUMAN_NORMAL",
+    "HUMAN_FALL"
+  ],
+  "event_metrics": "NOT_COMPUTABLE_FROM_FRAME_LEVEL_SDT_PROVENANCE",
+  "metric_set_frozen_before_training": true,
+  "metrics": {
+    "accuracy": {
+      "definition": "correct predictions divided by all evaluated samples",
+      "primary": false,
+      "zero_division": "NOT_APPLICABLE"
+    },
+    "balanced_accuracy": {
+      "definition": "unweighted arithmetic mean of per-class recall over the frozen three-class order",
+      "primary": false,
+      "zero_division": 0.0
+    },
+    "confusion_matrix": {
+      "definition": "integer matrix with rows=true class and columns=predicted class in frozen order",
+      "primary": false,
+      "zero_division": "NOT_APPLICABLE"
+    },
+    "macro_f1": {
+      "definition": "unweighted arithmetic mean of per-class F1 over the frozen three-class order",
+      "primary": true,
+      "zero_division": 0.0
+    },
+    "per_class_f1": {
+      "definition": "harmonic mean of per-class precision and recall",
+      "primary": false,
+      "zero_division": 0.0
+    },
+    "per_class_precision": {
+      "definition": "tp/(tp+fp) for each class in frozen order",
+      "primary": false,
+      "zero_division": 0.0
+    },
+    "per_class_recall": {
+      "definition": "tp/(tp+fn) for each class in frozen order",
+      "primary": false,
+      "zero_division": 0.0
+    }
+  },
+  "phase": "T-B0",
+  "probability_calibration": "OUT_OF_SCOPE_FOR_T_B0",
+  "sample_weighting": "NONE_UNWEIGHTED",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,19 @@
+{
+  "comparison": [
+    {
+      "candidate_id": "SMALL_CNN_BASELINE_V1",
+      "checkpoint_size_bytes": 3777416,
+      "parameter_count": 312131
+    },
+    {
+      "candidate_id": "DEPTHWISE_SEPARABLE_CNN_V1",
+      "checkpoint_size_bytes": 34520,
+      "parameter_count": 347
+    }
+  ],
+  "deployment_claim": false,
+  "latency_measured": false,
+  "macs_measured": false,
+  "parameter_reduction_depthwise_vs_small_cnn": 0.9988882872896316,
+  "schema_version": "1.0"
+}

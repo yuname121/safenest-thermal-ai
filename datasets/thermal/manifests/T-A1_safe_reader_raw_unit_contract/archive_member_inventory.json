@@ -1,0 +1,73 @@
+{
+  "archive_identity": {
+    "materialization_state": "LOCALLY_MATERIALIZED",
+    "md5": "d59a739f3b5ecf373c94046fb94cd94f",
+    "path": "datasets/raw_archives/thermal_split_zips/test.zip",
+    "sha256": "3a838bd70835e579ecfaa820a6c0b4cbc6ba7b76729417c73845f0c959281449",
+    "size_bytes": 1740348425
+  },
+  "class_counts": {
+    "0": 2000,
+    "1": 2000,
+    "2": 2000,
+    "3": 2000
+  },
+  "depth_member_count": 8000,
+  "depth_member_pattern": "test/image_d_(\\d+)\\.png",
+  "directory_count": 1,
+  "duplicate_depth_indices": [],
+  "duplicate_member_names": [],
+  "duplicate_thermal_indices": [],
+  "file_count": 16001,
+  "index_base": 0,
+  "index_continuous": true,
+  "index_last": 7999,
+  "index_relationship": {
+    "depth_indices": "0..7999 continuous",
+    "duplicate_indices": [],
+    "label_indices": "labels.txt row 0..7999",
+    "missing_intersections": [],
+    "thermal_indices": "0..7999 continuous",
+    "unexpected_indices": []
+  },
+  "index_set_sha256": "6f4683b64cc2b6fd20aaa00bdf603d0975ab96d0d361f799cddf739a7496e1d7",
+  "label_member_count": 1,
+  "label_row_count": 8000,
+  "labels_member_path": "test/labels.txt",
+  "member_count": 16002,
+  "missing_depth_indices": [],
+  "missing_thermal_indices": [],
+  "phase": "T-A1",
+  "schema_version": "1.0",
+  "thermal_depth_label_linkage": "ONE_TO_ONE_BY_ZERO_BASED_INDEX",
+  "thermal_member_count": 8000,
+  "thermal_member_pattern": "test/image_t_(\\d+)\\.png",
+  "unexpected_members": [],
+  "unhydrated_official_split_payloads": [
+    {
+      "materialization_state": "LOCAL_CLOUD_PLACEHOLDER",
+      "path": "datasets/raw_archives/thermal_split_zips/train.zip.001",
+      "readable_offline": false
+    },
+    {
+      "materialization_state": "LOCAL_CLOUD_PLACEHOLDER",
+      "path": "datasets/raw_archives/thermal_split_zips/train.zip.002",
+      "readable_offline": false
+    },
+    {
+      "materialization_state": "LOCAL_CLOUD_PLACEHOLDER",
+      "path": "datasets/raw_archives/thermal_split_zips/train.zip.003",
+      "readable_offline": false
+    },
+    {
+      "materialization_state": "LOCAL_CLOUD_PLACEHOLDER",
+      "path": "datasets/raw_archives/thermal_split_zips/train.zip.004",
+      "readable_offline": false
+    },
+    {
+      "materialization_state": "LOCAL_CLOUD_PLACEHOLDER",
+      "path": "datasets/raw_archives/thermal_split_zips/validation.zip",
+      "readable_offline": false
+    }
+  ]
+}

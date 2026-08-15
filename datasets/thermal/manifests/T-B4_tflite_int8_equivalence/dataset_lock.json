@@ -1,0 +1,94 @@
+{
+  "canonical_root_configured": true,
+  "legacy_npz_used": false,
+  "near_duplicate_pairs_train_validation": 14514,
+  "official_partition_preservation": true,
+  "raw_zip_used": false,
+  "roles": {
+    "REAL_EVAL_DEVELOPMENT": {
+      "array_path": "REAL_EVAL_DEVELOPMENT/real_eval_development_canonical.npy",
+      "dtype": "float32_little_endian",
+      "locked_test": false,
+      "provenance_path": "REAL_EVAL_DEVELOPMENT/real_eval_development_provenance.jsonl",
+      "provenance_sha256": "c9d12f12d845d218e5636dad84a4a094e869faa29d95feb4a6f69603c195e550",
+      "role": "REAL_EVAL_DEVELOPMENT",
+      "rows": 8000,
+      "sha256": "cd696e68aeec063cbc8185719b4f4dad3d038cb3d28eec0d3701b8311e4ad8f1",
+      "shape": [
+        8000,
+        62,
+        80
+      ],
+      "size_bytes": 158720128,
+      "source_domain": "REAL",
+      "source_label_counts": {
+        "EMPTY_ROOM": 2000,
+        "LYING": 2000,
+        "SITTING": 2000,
+        "STANDING": 2000
+      },
+      "target_distribution": {
+        "HUMAN_FALL": 2000,
+        "HUMAN_NORMAL": 4000,
+        "NOT_HUMAN": 2000
+      },
+      "unit": "CELSIUS"
+    },
+    "TRAIN": {
+      "array_path": "TRAIN/train_canonical.npy",
+      "dtype": "float32_little_endian",
+      "provenance_path": "TRAIN/train_provenance.jsonl",
+      "provenance_sha256": "b4ec8228e35703bac3319ca218a69fdef43013ea44b23376da4929b274d24888",
+      "role": "TRAIN",
+      "rows": 32000,
+      "sha256": "749c847fc9ab50ea5eee8827f0d47b5ebaa48165732a382c59f8b96c565b9d93",
+      "shape": [
+        32000,
+        62,
+        80
+      ],
+      "size_bytes": 634880128,
+      "source_domain": "SYNTHETIC",
+      "source_label_counts": {
+        "EMPTY_ROOM": 8000,
+        "LYING": 8000,
+        "SITTING": 8000,
+        "STANDING": 8000
+      },
+      "target_distribution": {
+        "HUMAN_FALL": 8000,
+        "HUMAN_NORMAL": 16000,
+        "NOT_HUMAN": 8000
+      },
+      "unit": "CELSIUS"
+    },
+    "VALIDATION": {
+      "array_path": "VALIDATION/validation_canonical.npy",
+      "dtype": "float32_little_endian",
+      "provenance_path": "VALIDATION/validation_provenance.jsonl",
+      "provenance_sha256": "48ebd03ca6f8d738ad7048aa72d4c454fd821140aa887971c27c5b49c1d7ec63",
+      "role": "VALIDATION",
+      "rows": 8000,
+      "sha256": "5d16451702c1bccfa945d9188d9b29a26ce11c8b33bf7a0dfbb25bfa86d74610",
+      "shape": [
+        8000,
+        62,
+        80
+      ],
+      "size_bytes": 158720128,
+      "source_domain": "SYNTHETIC",
+      "source_label_counts": {
+        "EMPTY_ROOM": 2000,
+        "LYING": 2000,
+        "SITTING": 2000,
+        "STANDING": 2000
+      },
+      "target_distribution": {
+        "HUMAN_FALL": 2000,
+        "HUMAN_NORMAL": 4000,
+        "NOT_HUMAN": 2000
+      },
+      "unit": "CELSIUS"
+    }
+  }
+}

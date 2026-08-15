@@ -1,0 +1,47 @@
+{
+  "cardinality": "one emitted record maps to exactly one original test/image_t_<index>.png and labels.txt row <index>",
+  "phase": "T-A1",
+  "prohibited_operations": [
+    "MODEL_INFERENCE",
+    "NORMALIZATION",
+    "QUANTIZATION",
+    "RELABELING",
+    "RESIZE"
+  ],
+  "required_fields": [
+    "source_dataset_id",
+    "source_doi",
+    "source_split",
+    "source_archive_path",
+    "source_archive_size_bytes",
+    "source_archive_md5",
+    "source_archive_sha256",
+    "source_member_name",
+    "source_member_index",
+    "source_member_crc32",
+    "source_member_sha256",
+    "source_frame_index",
+    "source_pose_label",
+    "source_pose_name",
+    "source_bbox",
+    "source_representation",
+    "source_dtype",
+    "distributed_frame_shape",
+    "native_sensor_shape",
+    "source_temperature_encoding",
+    "source_timestamp_status",
+    "source_subject_status",
+    "source_session_status",
+    "source_sequence_status",
+    "source_event_status",
+    "raw_encoded_frame_sha256"
+  ],
+  "schema_version": "1.0",
+  "unavailable_fields": {
+    "event_id": "ABSENT",
+    "sequence_id": "ABSENT",
+    "session_id": "ABSENT",
+    "subject_id": "ABSENT",
+    "timestamp": "ABSENT"
+  }
+}

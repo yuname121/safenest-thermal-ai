@@ -1,0 +1,29 @@
+{
+  "backend": {
+    "apple_silicon": true,
+    "backend_selected": "CPU",
+    "gpu_optional": true,
+    "gpu_visible": false,
+    "machine": "arm64",
+    "numpy": "1.26.4",
+    "physical_devices": [
+      {
+        "device_type": "CPU",
+        "name": "/physical_device:CPU:0"
+      }
+    ],
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.9.6",
+    "system": "Darwin",
+    "tensorflow": "2.20.0"
+  },
+  "canonical_root": "CONFIGURABLE_EXTERNAL_STORAGE_ROOT",
+  "gpu_required": false,
+  "origin_main": "22f745ac2f730e3a6c73d0a335c3e12644b03913",
+  "output_root": "SSD_EXTERNAL_OUTPUT_ROOT/T-B3_execution_result",
+  "phase": "T-B3",
+  "repo_commit": "2ee8aa618f69567ee1c0646daa479bc2a92eb061",
+  "schema_version": "1.0",
+  "temporal_training": false,
+  "work_root": "CONFIGURABLE_LOCAL_SCRATCH_ROOT"
+}

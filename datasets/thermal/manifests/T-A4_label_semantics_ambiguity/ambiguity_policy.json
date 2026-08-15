@@ -1,0 +1,22 @@
+{
+  "ambiguity_dimension_rule": "Keep clear source annotation VERIFIED while marking fall interpretation independently ambiguous/not verifiable.",
+  "boundary_frame_assignment": "NOT_APPLICABLE_NO_VERIFIED_TEMPORAL_EVENT",
+  "fall_interpretation": {
+    "EMPTY_ROOM": "NOT_VERIFIABLE_FOR_FALL_EVENT",
+    "LYING": "AMBIGUOUS_OR_NOT_VERIFIABLE_FOR_FALL_EVENT",
+    "SITTING": "NOT_VERIFIABLE_FOR_FALL_EVENT",
+    "STANDING": "NOT_VERIFIABLE_FOR_FALL_EVENT"
+  },
+  "missing_mapping_default_behavior": "FAIL_CLOSED; NO_DEFAULT_NORMAL",
+  "phase": "T-A4",
+  "schema_version": "1.0",
+  "source_label_ambiguity": {
+    "EMPTY_ROOM": false,
+    "LYING": false,
+    "SITTING": false,
+    "STANDING": false
+  },
+  "transition_frame_assignment": "NOT_APPLICABLE_NO_VERIFIED_TEMPORAL_EVENT",
+  "unknown_label_policy": "FAIL_CLOSED; NEVER_COERCE_TO_NORMAL",
+  "unsupported_target_policy": "COMPATIBILITY_TARGET_NULL_AND_UNSUPPORTED_MAPPING_IF_NO_DEFENSIBLE_RULE"
+}

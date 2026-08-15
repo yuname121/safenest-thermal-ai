@@ -1,0 +1,9 @@
+{
+  "architecture_fingerprint": "937fceb88900a779d67a8e407cebc3362cc21346721f92cea5ae8de1413aba2a",
+  "candidate_id": "SMALL_CNN_BASELINE_V1",
+  "initial_weight_fingerprint": "72a9805e1772aa0ee0a414fb7d41bc17ea0d183fa29e0e43049b22e0d5d35058",
+  "parameter_count": 312131,
+  "same_initial_weights_for_all_profiles": true,
+  "schema_version": "1.0",
+  "seed": 20260813
+}

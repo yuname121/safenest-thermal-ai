@@ -1,0 +1,13 @@
+{
+  "int8_sensitivity": {
+    "diagnostic_only": true,
+    "float_vs_int8_argmax_agreement": 0.8565,
+    "true_fp32_vs_int8_argmax_agreement": 0.8565
+  },
+  "locked_test": false,
+  "phase": "T-B5",
+  "role": "REAL_EVAL_DEVELOPMENT",
+  "schema_version": "1.0",
+  "source_phase": "T-B4",
+  "used_for_selection": false
+}

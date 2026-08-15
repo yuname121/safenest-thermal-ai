@@ -1,0 +1,36 @@
+{
+  "enabled": true,
+  "layer": "C_OPTIONAL_RUNTIME_COMPATIBILITY_PROXY",
+  "mapping_rule_ids": {
+    "EMPTY_ROOM": "THERMAL_MAP_EMPTY_ROOM_TO_NO_HUMAN_001",
+    "LYING": "THERMAL_MAP_LYING_TO_FALL_COMPAT_PROXY_001",
+    "SITTING": "THERMAL_MAP_SITTING_TO_NON_LYING_PROXY_001",
+    "STANDING": "THERMAL_MAP_STANDING_TO_NON_LYING_PROXY_001"
+  },
+  "model_metrics_used": false,
+  "phase": "T-A4",
+  "proxy_claim_limits": {
+    "EMPTY_ROOM": "FRAME_LEVEL_PRESENCE_ONLY",
+    "LYING": "FRAME_LEVEL_FALL_COMPATIBILITY_PROXY_ONLY",
+    "SITTING": "NON_LYING_POSTURE_COMPATIBILITY_ONLY",
+    "STANDING": "NON_LYING_POSTURE_COMPATIBILITY_ONLY"
+  },
+  "runtime_model_reference": {
+    "class_map": {
+      "0": "NOT_HUMAN",
+      "1": "HUMAN_NORMAL",
+      "2": "HUMAN_FALL"
+    },
+    "model_id": "thermal_fall_int8",
+    "model_metrics_used": false,
+    "path": "models/thermal/thermal_fall_int8_v0.1.0.tflite",
+    "role": "thermal_posture_3class",
+    "sha256": "5b56da8d127ccef85f30b6459cc0cfe2d86490e41f3caa5bd2a7b70bbc46ae84",
+    "size_bytes": 318184,
+    "status": "LEGACY_OR_CURRENT_RUNTIME_CLASS_MAP_NOT_SOURCE_GROUND_TRUTH",
+    "version": "0.1.0"
+  },
+  "safety_interpretation": "No compatibility target proves general worker safety or emergency state.",
+  "schema_version": "1.0",
+  "source_ground_truth_warning": "Runtime class names are not source-label ground truth."
+}

@@ -1,0 +1,11 @@
+{
+  "conversion_performed": false,
+  "mode": "READINESS",
+  "phase": "T-B5",
+  "production_model_changed": false,
+  "protocol_id": "THERMAL_T_B5_OFFLINE_ROBUSTNESS_LATENCY_CANDIDATE_LOCK_001",
+  "recalibration_performed": false,
+  "schema_version": "1.0",
+  "t_c_started": false,
+  "training_performed": false
+}

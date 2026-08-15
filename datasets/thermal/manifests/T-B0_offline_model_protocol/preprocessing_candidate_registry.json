@@ -1,0 +1,77 @@
+{
+  "candidate_profiles": [
+    {
+      "absolute_temperature_preservation": true,
+      "clipping": "NONE_IN_PREPROCESSOR; model quantization policy is a later T-B4 concern",
+      "epsilon": "NONE",
+      "fit_partition": "NONE",
+      "fit_required": false,
+      "formula": "y = x",
+      "input_source": "T-A6 canonical float32 Celsius frame",
+      "legacy_compatibility": "LOW_WITH_EXISTING_NORMALIZED_MODEL; SCIENTIFIC_REFERENCE",
+      "output_dtype": "float32",
+      "output_shape": [
+        1,
+        62,
+        80,
+        1
+      ],
+      "profile_id": "P0_CANONICAL_CELSIUS_DIRECT",
+      "status": "REGISTERED_REFERENCE_PROFILE",
+      "tradeoff": "Preserves physical Celsius information and is the clean canonical baseline; existing legacy model calibration may not accept it without a separately declared model/input contract."
+    },
+    {
+      "absolute_temperature_preservation": "RELATIVE_AFTER_TRAIN_FITTED_CENTER_AND_SCALE",
+      "clipping": "NONE_BY_DEFAULT; any later clipping must be a preregistered ablation",
+      "epsilon": 1e-06,
+      "fit_partition": "TRAIN_ONLY",
+      "fit_required": true,
+      "formula": "y = (x - mean_TRAIN) / max(std_TRAIN, epsilon)",
+      "input_source": "T-A6 canonical float32 Celsius frame",
+      "legacy_compatibility": "NEW_MODEL_INPUT_CONTRACT_ONLY",
+      "output_dtype": "float32",
+      "output_shape": [
+        1,
+        62,
+        80,
+        1
+      ],
+      "profile_id": "P1_TRAIN_FITTED_GLOBAL_ZSCORE",
+      "status": "REGISTERED_ABLATION_PROFILE",
+      "tradeoff": "Controls global scale using TRAIN statistics while preserving spatial thermal structure; statistics must be serialized and applied unchanged to VALIDATION and REAL_EVAL_DEVELOPMENT."
+    },
+    {
+      "absolute_temperature_preservation": false,
+      "clipping": "constant-frame clip to [0,1]",
+      "epsilon": "NONE_EXPLICIT; range > 0 branch",
+      "fit_partition": "NONE",
+      "fit_required": false,
+      "formula": "y = (x - min_frame) / (max_frame - min_frame) when range > 0; otherwise clip(x,0,1)",
+      "input_source": "T-A6 canonical float32 Celsius frame or an explicitly identified legacy frame",
+      "legacy_compatibility": "HIGH_WITH_EXISTING_THERMAL_INTERPRETER",
+      "output_dtype": "float32",
+      "output_shape": [
+        1,
+        62,
+        80,
+        1
+      ],
+      "profile_id": "P2_LEGACY_PER_FRAME_MINMAX",
+      "status": "REGISTERED_COMPATIBILITY_PROFILE_ONLY",
+      "tradeoff": "Enables a fair legacy compatibility comparison but discards absolute temperature and cannot be presented as the canonical physical representation."
+    }
+  ],
+  "canonical_physical_data_mutation": false,
+  "fit_data_rule": {
+    "learned_or_statistical_profiles": [
+      "P1_TRAIN_FITTED_GLOBAL_ZSCORE"
+    ],
+    "locked_test_fit_prohibited": true,
+    "real_eval_development_fit_prohibited": true,
+    "validation_fit_prohibited": true
+  },
+  "phase": "T-B0",
+  "profile_selection_in_t_b0": false,
+  "profile_set_frozen_before_training": true,
+  "schema_version": "1.0"
+}

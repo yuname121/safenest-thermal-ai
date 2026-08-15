@@ -1,0 +1,99 @@
+{
+  "overall_status": "PASS",
+  "phase": "T-A6_COLAB_STAGE2",
+  "policy": "EVERY_SOURCE_FRAME_HAS_EXPLICIT_TERMINAL_STATUS",
+  "roles": {
+    "REAL_EVAL_DEVELOPMENT": {
+      "quality": {
+        "channel_mismatch": 0,
+        "constant_canonical": 0,
+        "constant_source": 0,
+        "corrupt": 0,
+        "dtype_mismatch": 0,
+        "full_extreme": 0,
+        "full_invalid": 0,
+        "nonfinite": 0,
+        "partial_extreme_warnings": 0,
+        "shape_mismatch": 0,
+        "silent_skips": 0,
+        "temperature_distribution": {
+          "finite_pixel_count": 39680000,
+          "frame_maximum_p99": 35.16240539550781,
+          "frame_mean_p01": 20.742431080818175,
+          "frame_mean_p50": 24.226159711614734,
+          "frame_mean_p99": 26.020483127236368,
+          "frame_minimum_p01": 19.484200191497802,
+          "maximum_celsius": 36.17790222167969,
+          "mean_celsius": 24.046884845543822,
+          "minimum_celsius": 18.418468475341797,
+          "std_celsius": 1.8435828784710004
+        },
+        "truncated": 0,
+        "warning_code_counts": {}
+      },
+      "silent_skips": 0,
+      "status": "PASS",
+      "status_counts": {
+        "EXCLUDED": 0,
+        "FAILED": 0,
+        "SUCCESS": 8000,
+        "SUCCESS_WITH_WARNING": 0
+      }
+    },
+    "TRAIN": {
+      "quality": {
+        "failed_rows": [],
+        "silent_skips": 0,
+        "temperature_distribution": {
+          "finite_pixel_count": 158720000,
+          "frame_maximum_p99": 50.62306632995605,
+          "frame_mean_p01": 22.009771054936994,
+          "frame_mean_p50": 22.446656128475745,
+          "frame_mean_p99": 25.349205280973067,
+          "frame_minimum_p01": 21.272842407226562,
+          "maximum_celsius": 253.73031616210938,
+          "mean_celsius": 22.769290618485442,
+          "minimum_celsius": 18.846391677856445,
+          "std_celsius": 2.8684523405446374
+        },
+        "warning_count": 0
+      },
+      "silent_skips": 0,
+      "status": "PASS",
+      "status_counts": {
+        "EXCLUDED": 0,
+        "FAILED": 0,
+        "SUCCESS": 32000,
+        "SUCCESS_WITH_WARNING": 0
+      }
+    },
+    "VALIDATION": {
+      "quality": {
+        "failed_rows": [],
+        "silent_skips": 0,
+        "temperature_distribution": {
+          "finite_pixel_count": 39680000,
+          "frame_maximum_p99": 50.61537998199463,
+          "frame_mean_p01": 22.01067020257442,
+          "frame_mean_p50": 22.443378107009394,
+          "frame_mean_p99": 25.25590648335795,
+          "frame_minimum_p01": 21.259496688842773,
+          "maximum_celsius": 50.8941535949707,
+          "mean_celsius": 22.761902501313195,
+          "minimum_celsius": 19.643226623535156,
+          "std_celsius": 2.8451762366255826
+        },
+        "warning_count": 0
+      },
+      "silent_skips": 0,
+      "status": "PASS",
+      "status_counts": {
+        "EXCLUDED": 0,
+        "FAILED": 0,
+        "SUCCESS": 8000,
+        "SUCCESS_WITH_WARNING": 0
+      }
+    }
+  },
+  "schema_version": "1.0"
+}

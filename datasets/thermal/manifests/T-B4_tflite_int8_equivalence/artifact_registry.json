@@ -1,0 +1,107 @@
+{
+  "artifacts": [
+    {
+      "conversion": {
+        "dynamic_range_quantization": true,
+        "float16_enabled": false,
+        "optimizations": [
+          "DEFAULT"
+        ],
+        "quantization_mode": "DYNAMIC_RANGE",
+        "representative_dataset_attached": false,
+        "select_tf_ops": false,
+        "supported_ops": [
+          "TFLITE_BUILTINS"
+        ]
+      },
+      "diagnostic_only": true,
+      "id": "TFLITE_DYNAMIC_RANGE",
+      "internal_dtype_counts": {
+        "float32": 15,
+        "int32": 1,
+        "int8": 2
+      },
+      "logical_path": "artifacts/SMALL_CNN_BASELINE_V1_P1_dynamic_range.tflite",
+      "official_equivalence_stage": false,
+      "quantized_parameter_tensor_count": 2,
+      "quantized_tensor_count": 2,
+      "reclassified_from": "TFLITE_FP32",
+      "sha256": "297de231e26ecf2d4cd4010bd10c08d4df3b6b0a531c69693daea353afb8127d",
+      "size_bytes": 317344,
+      "tracked_in_git": false
+    },
+    {
+      "conversion": {
+        "dynamic_range_quantization": false,
+        "float16_enabled": false,
+        "optimizations": [],
+        "quantization_mode": "NONE",
+        "representative_dataset_attached": false,
+        "select_tf_ops": false,
+        "supported_ops": [
+          "TFLITE_BUILTINS"
+        ]
+      },
+      "diagnostic_only": false,
+      "id": "TFLITE_FP32",
+      "internal_dtype_counts": {
+        "float32": 17,
+        "int32": 1
+      },
+      "logical_path": "artifacts/SMALL_CNN_BASELINE_V1_P1_float32.tflite",
+      "official_equivalence_stage": true,
+      "quantized_parameter_tensor_count": 0,
+      "quantized_tensor_count": 0,
+      "sha256": "fbe891520f07e0534b1a7074dc819d8ed44bca58b27e35c78916c3ddae73a779",
+      "size_bytes": 1252048,
+      "tracked_in_git": false
+    },
+    {
+      "conversion": {
+        "dynamic_range_quantization": false,
+        "float16_enabled": false,
+        "optimizations": [
+          "DEFAULT"
+        ],
+        "quantization_mode": "FULL_INT8",
+        "representative_dataset_attached": true,
+        "representative_policy_checksum": "c5ce8a54898a19d0b9dad156aee89feeafbf85f79a64a6e424d7912b24a95179",
+        "select_tf_ops": false,
+        "supported_ops": [
+          "TFLITE_BUILTINS_INT8"
+        ]
+      },
+      "diagnostic_only": false,
+      "id": "FULL_INT8",
+      "internal_dtype_counts": {
+        "int32": 5,
+        "int8": 13
+      },
+      "logical_path": "artifacts/SMALL_CNN_BASELINE_V1_P1_full_int8.tflite",
+      "official_equivalence_stage": true,
+      "quantized_parameter_tensor_count": 4,
+      "quantized_tensor_count": 13,
+      "sha256": "fa9730c29535477a3994c11e664474a0ca0116afaaa172889f47446ab2ac46be",
+      "size_bytes": 318280,
+      "tracked_in_git": false
+    },
+    {
+      "id": "VALIDATION_PARITY_ARRAYS",
+      "logical_path": "parity/validation_probabilities.npz",
+      "sha256": "bf8c5b2672c6f54cee30c3ffe2468720dc12894056dbe4adbcef81844da60400",
+      "size_bytes": 150003,
+      "tracked_in_git": false
+    },
+    {
+      "id": "REAL_PARITY_ARRAYS",
+      "logical_path": "parity/real_probabilities.npz",
+      "sha256": "7ee8cf284bf9929449e200a0a87e2aad8c0c01e9be5b6cd2ee701710b6ed3362",
+      "size_bytes": 167829,
+      "tracked_in_git": false
+    }
+  ],
+  "legacy_model_overwrite": false,
+  "phase": "T-B4",
+  "production_manifest_changed": false,
+  "schema_version": "1.0"
+}

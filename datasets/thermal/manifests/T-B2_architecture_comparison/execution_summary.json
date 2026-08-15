@@ -1,0 +1,28 @@
+{
+  "bundle_artifacts": {
+    "architecture_registry": "architecture_candidate_registry.json",
+    "baseline_reuse": "small_cnn_baseline_reuse_assessment.json",
+    "checkpoint_registry": "checkpoint_registry.json",
+    "dataset": "dataset_lock.json",
+    "depthwise_contract": "depthwise_architecture_contract.json",
+    "efficiency": "efficiency_summary.json",
+    "initialization": "initialization_registry.json",
+    "limitations": "limitations.json",
+    "p1": "p1_lock.json",
+    "predecessor": "predecessor_identity.json",
+    "protocol": "t_b2_protocol.json",
+    "real": "real_eval_development.json",
+    "target": "target_identity.json",
+    "training": "training_result.json",
+    "validation": "validation_architecture_comparison.json",
+    "winner": "winner_selection.json"
+  },
+  "full_training_performed": true,
+  "mode": "FULL_EXPERIMENT",
+  "new_trained_model_generated": true,
+  "next_phase_started": false,
+  "phase": "T-B2",
+  "schema_version": "1.0",
+  "status": "FINALIZED",
+  "winner_candidate_id": "SMALL_CNN_BASELINE_V1"
+}

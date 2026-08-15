@@ -1,0 +1,238 @@
+{
+  "phase": "T-A6_COLAB_STAGE2",
+  "real_test": {
+    "locked_test_available": false,
+    "safenest_role": "REAL_EVAL_DEVELOPMENT",
+    "source_path": "test.zip"
+  },
+  "schema_version": "1.0",
+  "source_paths_are_logical": true,
+  "synthetic_physical_contract": {
+    "train": {
+      "class_counts": {
+        "EMPTY_ROOM": 8000,
+        "LYING": 8000,
+        "SITTING": 8000,
+        "STANDING": 8000
+      },
+      "depth_member_count": 32000,
+      "depth_unit": "MILLIMETRES",
+      "evidence_sha256": "f49f79cdae392859bc9819350715f4fb3bc067b9d05ac3059d347d52dd4dfc71",
+      "expected_frame_count": 32000,
+      "label_row_count": 32000,
+      "orientation": "SOURCE_ORIENTATION_AS_STORED",
+      "phase": "T-A6_COLAB_STAGE2",
+      "physical_contract": "PASS",
+      "raw_schema": "640x480 uint16 grayscale PNG image_t + image_d pairs",
+      "samples": [
+        {
+          "image_d_dtype": "uint16",
+          "image_d_quality_flags": [
+            "CONTAINER_MIN_PRESENT"
+          ],
+          "image_d_representation": "DEPTH_UINT16_MILLIMETRES",
+          "image_d_shape": [
+            480,
+            640
+          ],
+          "image_t_dtype": "uint16",
+          "image_t_quality_flags": [],
+          "image_t_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+          "image_t_shape": [
+            480,
+            640
+          ],
+          "image_t_temperature_encoding": "kelvin_centiunits; celsius=(raw-27315)/100",
+          "index": 0
+        },
+        {
+          "image_d_dtype": "uint16",
+          "image_d_quality_flags": [
+            "CONTAINER_MIN_PRESENT"
+          ],
+          "image_d_representation": "DEPTH_UINT16_MILLIMETRES",
+          "image_d_shape": [
+            480,
+            640
+          ],
+          "image_t_dtype": "uint16",
+          "image_t_quality_flags": [],
+          "image_t_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+          "image_t_shape": [
+            480,
+            640
+          ],
+          "image_t_temperature_encoding": "kelvin_centiunits; celsius=(raw-27315)/100",
+          "index": 16000
+        },
+        {
+          "image_d_dtype": "uint16",
+          "image_d_quality_flags": [
+            "CONTAINER_MIN_PRESENT"
+          ],
+          "image_d_representation": "DEPTH_UINT16_MILLIMETRES",
+          "image_d_shape": [
+            480,
+            640
+          ],
+          "image_t_dtype": "uint16",
+          "image_t_quality_flags": [],
+          "image_t_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+          "image_t_shape": [
+            480,
+            640
+          ],
+          "image_t_temperature_encoding": "kelvin_centiunits; celsius=(raw-27315)/100",
+          "index": 31999
+        }
+      ],
+      "schema_version": "1.0",
+      "source_split": "train",
+      "thermal_member_count": 32000,
+      "thermal_unit": "KELVIN_CENTIUNITS_CONVERTED_TO_CELSIUS"
+    },
+    "validation": {
+      "class_counts": {
+        "EMPTY_ROOM": 2000,
+        "LYING": 2000,
+        "SITTING": 2000,
+        "STANDING": 2000
+      },
+      "depth_member_count": 8000,
+      "depth_unit": "MILLIMETRES",
+      "evidence_sha256": "10f070133a1b0d939512b9ff5bec7cfcb4c2898cdbbd3754fa45f26df8554871",
+      "expected_frame_count": 8000,
+      "label_row_count": 8000,
+      "orientation": "SOURCE_ORIENTATION_AS_STORED",
+      "phase": "T-A6_COLAB_STAGE2",
+      "physical_contract": "PASS",
+      "raw_schema": "640x480 uint16 grayscale PNG image_t + image_d pairs",
+      "samples": [
+        {
+          "image_d_dtype": "uint16",
+          "image_d_quality_flags": [
+            "CONTAINER_MIN_PRESENT"
+          ],
+          "image_d_representation": "DEPTH_UINT16_MILLIMETRES",
+          "image_d_shape": [
+            480,
+            640
+          ],
+          "image_t_dtype": "uint16",
+          "image_t_quality_flags": [],
+          "image_t_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+          "image_t_shape": [
+            480,
+            640
+          ],
+          "image_t_temperature_encoding": "kelvin_centiunits; celsius=(raw-27315)/100",
+          "index": 0
+        },
+        {
+          "image_d_dtype": "uint16",
+          "image_d_quality_flags": [
+            "CONTAINER_MIN_PRESENT"
+          ],
+          "image_d_representation": "DEPTH_UINT16_MILLIMETRES",
+          "image_d_shape": [
+            480,
+            640
+          ],
+          "image_t_dtype": "uint16",
+          "image_t_quality_flags": [],
+          "image_t_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+          "image_t_shape": [
+            480,
+            640
+          ],
+          "image_t_temperature_encoding": "kelvin_centiunits; celsius=(raw-27315)/100",
+          "index": 4000
+        },
+        {
+          "image_d_dtype": "uint16",
+          "image_d_quality_flags": [
+            "CONTAINER_MIN_PRESENT"
+          ],
+          "image_d_representation": "DEPTH_UINT16_MILLIMETRES",
+          "image_d_shape": [
+            480,
+            640
+          ],
+          "image_t_dtype": "uint16",
+          "image_t_quality_flags": [],
+          "image_t_representation": "RADIOMETRIC_TEMPERATURE_ENCODED_UINT16",
+          "image_t_shape": [
+            480,
+            640
+          ],
+          "image_t_temperature_encoding": "kelvin_centiunits; celsius=(raw-27315)/100",
+          "index": 7999
+        }
+      ],
+      "schema_version": "1.0",
+      "source_split": "validation",
+      "thermal_member_count": 8000,
+      "thermal_unit": "KELVIN_CENTIUNITS_CONVERTED_TO_CELSIUS"
+    }
+  },
+  "train_multipart": {
+    "format": "RAW_BYTE_SPLIT_CANDIDATE",
+    "observations": [
+      {
+        "first_signature_hex": "504b0304140300000000840d58510000",
+        "last_signature_hex": "9ac654668bed10791d26392228262f303a79a31e0a58",
+        "logical_path": "train.zip.001",
+        "mode": 33152,
+        "path_exists": true,
+        "readable": true,
+        "size_bytes": 4194304000,
+        "stable": true
+      },
+      {
+        "first_signature_hex": "5ec4057c20f5bc195bc2a8b8febcec52",
+        "last_signature_hex": "c459057ecd6d222d5afa511cc72a230a88cff9b8fc07",
+        "logical_path": "train.zip.002",
+        "mode": 33152,
+        "path_exists": true,
+        "readable": true,
+        "size_bytes": 4194304000,
+        "stable": true
+      },
+      {
+        "first_signature_hex": "8ce36efcfe3b29c775bce4fa22ecea76",
+        "last_signature_hex": "5c04811662fd3ce6cbbfd5f9083785700f5a6bc176f2",
+        "logical_path": "train.zip.003",
+        "mode": 33152,
+        "path_exists": true,
+        "readable": true,
+        "size_bytes": 4194304000,
+        "stable": true
+      },
+      {
+        "first_signature_hex": "d0d8d94af124883f2348553cbf07985f",
+        "last_signature_hex": "504b05060000000002fa02fa66856f00ffffffff0000",
+        "logical_path": "train.zip.004",
+        "mode": 33152,
+        "path_exists": true,
+        "readable": true,
+        "size_bytes": 1408015891,
+        "stable": true
+      }
+    ],
+    "part_count": 4,
+    "reconstruction_policy": "ALLOWED_AFTER_LOGICAL_ARCHIVE_VALIDATION",
+    "signature_only": true
+  },
+  "train_reconstructed": {
+    "finalized": true,
+    "member_count": 64002,
+    "path": "train.zip",
+    "sha256": "3afa617d9a081270afe8c18135242b99ed9e9eac9b2aaa43e3255b648f4e715b",
+    "size_bytes": 13990927891
+  },
+  "validation_staged": {
+    "path": "validation.zip",
+    "sha256": "06d52e24163d1fe243ebfbdb7d2dcef33fcc0a5ed0531ad81621ec1490af4f8f",
+    "size_bytes": 3492475558
+  }
+}

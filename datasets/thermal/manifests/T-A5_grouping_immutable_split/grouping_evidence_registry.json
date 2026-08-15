@@ -1,0 +1,91 @@
+{
+  "dimensions": {
+    "camera": {
+      "availability": "SOURCE_SENSOR_DOCUMENTED_ONLY",
+      "cardinality": "NOT_VERIFIABLE",
+      "identifier_schema": "camera_id ABSENT_PER_FRAME",
+      "independence_confidence": "NONE",
+      "reason": "FLIR Lepton 3.5 is documented as the sensor, but no independent camera group key is attached to frames.",
+      "status": "NOT_VERIFIABLE",
+      "usable_for_split": false
+    },
+    "event": {
+      "availability": "ABSENT",
+      "cardinality": "NOT_VERIFIABLE",
+      "identifier_schema": "event_id ABSENT",
+      "independence_confidence": "NONE",
+      "reason": "Labels are frame pose/presence annotations and contain no event boundaries.",
+      "status": "NOT_VERIFIABLE",
+      "usable_for_split": false
+    },
+    "recording": {
+      "availability": "ABSENT",
+      "cardinality": "NOT_VERIFIABLE",
+      "identifier_schema": "recording_id ABSENT",
+      "independence_confidence": "NONE",
+      "reason": "The source is distributed as frame members without recording provenance.",
+      "status": "NOT_VERIFIABLE",
+      "usable_for_split": false
+    },
+    "scene": {
+      "availability": "NOT_DOCUMENTED",
+      "cardinality": "NOT_VERIFIABLE",
+      "identifier_schema": "scene/room subset NOT_DOCUMENTED_PER_FRAME",
+      "independence_confidence": "NONE",
+      "reason": "Visual similarity, filename ranges, and bbox position are not authoritative scene groups.",
+      "status": "NOT_VERIFIABLE",
+      "usable_for_split": false
+    },
+    "sequence": {
+      "availability": "ABSENT",
+      "cardinality": "NOT_VERIFIABLE",
+      "identifier_schema": "sequence_id/clip_id ABSENT",
+      "independence_confidence": "NONE",
+      "reason": "Frame index is provenance only; no sequence or temporal cadence is documented.",
+      "status": "NOT_VERIFIABLE",
+      "usable_for_split": false
+    },
+    "session": {
+      "availability": "ABSENT",
+      "cardinality": "NOT_VERIFIABLE",
+      "identifier_schema": "session_id/recording_id ABSENT",
+      "independence_confidence": "NONE",
+      "reason": "No session or recording identifier is distributed.",
+      "status": "NOT_VERIFIABLE",
+      "usable_for_split": false
+    },
+    "subject": {
+      "availability": "ABSENT",
+      "cardinality": "NOT_VERIFIABLE",
+      "identifier_schema": "subject_id ABSENT",
+      "independence_confidence": "NONE",
+      "reason": "T-A1 source schema and official documentation expose no subject identifier.",
+      "status": "NOT_VERIFIABLE",
+      "usable_for_split": false
+    }
+  },
+  "event_grouping": "NOT_VERIFIABLE",
+  "fallback_grouping": "NOT_VERIFIABLE",
+  "frame_index_as_group": false,
+  "generalization_performance": "NOT_VERIFIABLE",
+  "grouping_priority": [
+    "subject",
+    "session",
+    "recording",
+    "event",
+    "sequence",
+    "scene",
+    "camera"
+  ],
+  "label_as_group": false,
+  "model_metrics_used": false,
+  "phase": "T-A5",
+  "policy_id": "THERMAL_GROUPING_POLICY_001",
+  "schema_version": "1.0",
+  "sequence_grouping": "NOT_VERIFIABLE",
+  "session_grouping": "NOT_VERIFIABLE",
+  "source_dataset_id": "local_sdt_zenodo_4124309",
+  "strongest_verified_grouping_status": "SOURCE_PARTITION_ONLY_NO_SUBJECT_GROUP",
+  "strongest_verified_grouping_unit": "OFFICIAL_SOURCE_PARTITION",
+  "subject_grouping": "NOT_VERIFIABLE"
+}

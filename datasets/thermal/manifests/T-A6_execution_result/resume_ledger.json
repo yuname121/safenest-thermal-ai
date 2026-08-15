@@ -1,0 +1,240 @@
+{
+  "audits": {
+    "determinism": "PASS",
+    "exact": "2edf98444ad50f4eb7b32d21f5e9cd7654711677b29058af255e3bba6a0c5ea3",
+    "leakage": "a028b4dcb7a12eafdc48713e3a4e83bd380976aaaa1d64a89df0ee8c0c7292c5",
+    "near": "a450c06fc9aaa1fdcd940802c2907850fb1efda338a61f594c7513b8cc32058e"
+  },
+  "execution_result_bundle": "T-A6_execution_result",
+  "finalized": true,
+  "partitions": {
+    "REAL_EVAL_DEVELOPMENT": {
+      "status": "FINALIZED",
+      "summary": {
+        "artifact_path": "datasets/thermal/artifacts/T-A6_real_eval_development/real_eval_development_canonical.npy",
+        "artifact_sha256": "cd696e68aeec063cbc8185719b4f4dad3d038cb3d28eec0d3701b8311e4ad8f1",
+        "artifact_size_bytes": 158720128,
+        "canonical_dtype": "float32",
+        "canonical_rows": 8000,
+        "canonical_shape": [
+          62,
+          80
+        ],
+        "canonical_unit": "CELSIUS",
+        "exact_duplicate_audit": {
+          "audit_scope": "WITHIN_REAL_EVAL_DEVELOPMENT",
+          "audit_sha256": "dc9d1b506824c558a27226323f3f2d5f49328d8c85d0bfe86a2c8f80ffd10cfd",
+          "canonical_frame_hashes": {
+            "cluster_count": 0,
+            "clusters": [],
+            "duplicate_sample_count": 0
+          },
+          "cluster_metadata_fields": [
+            "sample_indices",
+            "source_members",
+            "original_labels",
+            "compatibility_targets"
+          ],
+          "decoded_frame_hashes": {
+            "cluster_count": 0,
+            "clusters": [],
+            "duplicate_sample_count": 0
+          },
+          "exclusions_caused_by_duplicates": 0,
+          "source_member_byte_hashes": {
+            "cluster_count": 0,
+            "clusters": [],
+            "duplicate_sample_count": 0
+          }
+        },
+        "expected_source_frames": 8000,
+        "failed_rows": [],
+        "finalized_status": "FINALIZED",
+        "geometry_profile_id": "G1_FIXED_ASPECT_CROP_BILINEAR",
+        "mode": "MAC_STAGE1",
+        "phase": "T-A6_STAGE1",
+        "provenance_format": "JSONL_V1_ONE_ROW_PER_CANONICAL_SAMPLE",
+        "provenance_path": "datasets/thermal/artifacts/T-A6_real_eval_development/real_eval_development_provenance.jsonl",
+        "provenance_sha256": "c9d12f12d845d218e5636dad84a4a094e869faa29d95feb4a6f69603c195e550",
+        "provenance_size_bytes": 29655857,
+        "quality": {
+          "channel_mismatch": 0,
+          "constant_canonical": 0,
+          "constant_source": 0,
+          "corrupt": 0,
+          "dtype_mismatch": 0,
+          "full_extreme": 0,
+          "full_invalid": 0,
+          "nonfinite": 0,
+          "partial_extreme_warnings": 0,
+          "shape_mismatch": 0,
+          "silent_skips": 0,
+          "temperature_distribution": {
+            "finite_pixel_count": 39680000,
+            "frame_maximum_p99": 35.16240539550781,
+            "frame_mean_p01": 20.742431080818175,
+            "frame_mean_p50": 24.226159711614734,
+            "frame_mean_p99": 26.020483127236368,
+            "frame_minimum_p01": 19.484200191497802,
+            "maximum_celsius": 36.17790222167969,
+            "mean_celsius": 24.046884845543822,
+            "minimum_celsius": 18.418468475341797,
+            "std_celsius": 1.8435828784710004
+          },
+          "truncated": 0,
+          "warning_code_counts": {}
+        },
+        "reconciliation": {
+          "canonical_rows_equals_success_plus_warning": true,
+          "expected_equals_status_sum": true
+        },
+        "resumed": true,
+        "safenest_role": "REAL_EVAL_DEVELOPMENT",
+        "source_domain": "REAL",
+        "source_frames_measured": 8000,
+        "source_split": "test",
+        "status_counts": {
+          "EXCLUDED": 0,
+          "FAILED": 0,
+          "SUCCESS": 8000,
+          "SUCCESS_WITH_WARNING": 0
+        },
+        "storage_format": "NPY_MEMMAP_V1_LITTLE_ENDIAN_FLOAT32"
+      }
+    },
+    "TRAIN": {
+      "status": "FINALIZED",
+      "summary": {
+        "artifact_path": "T-A6_real_and_synthetic_canonical/train_canonical.npy",
+        "artifact_sha256": "749c847fc9ab50ea5eee8827f0d47b5ebaa48165732a382c59f8b96c565b9d93",
+        "artifact_size_bytes": 634880128,
+        "canonical_dtype": "float32",
+        "canonical_rows": 32000,
+        "canonical_shape": [
+          62,
+          80
+        ],
+        "canonical_unit": "CELSIUS",
+        "exact_duplicate_audit": {
+          "audit_scope": "WITHIN_TRAIN",
+          "canonical_frame_hashes": {
+            "cluster_count": 0,
+            "clusters": []
+          },
+          "decoded_frame_hashes": {
+            "cluster_count": 0,
+            "clusters": []
+          },
+          "source_member_byte_hashes": {
+            "cluster_count": 0,
+            "clusters": []
+          }
+        },
+        "expected_source_frames": 32000,
+        "finalized_status": "FINALIZED",
+        "geometry_profile_id": "G1_FIXED_ASPECT_CROP_BILINEAR",
+        "mode": "COLAB_STAGE2",
+        "phase": "T-A6_COLAB_STAGE2",
+        "provenance_path": "T-A6_real_and_synthetic_canonical/train_provenance.jsonl",
+        "provenance_sha256": "b4ec8228e35703bac3319ca218a69fdef43013ea44b23376da4929b274d24888",
+        "provenance_size_bytes": 77767837,
+        "quality": {
+          "failed_rows": [],
+          "silent_skips": 0,
+          "temperature_distribution": {
+            "finite_pixel_count": 158720000,
+            "frame_maximum_p99": 50.62306632995605,
+            "frame_mean_p01": 22.009771054936994,
+            "frame_mean_p50": 22.446656128475745,
+            "frame_mean_p99": 25.349205280973067,
+            "frame_minimum_p01": 21.272842407226562,
+            "maximum_celsius": 253.73031616210938,
+            "mean_celsius": 22.769290618485442,
+            "minimum_celsius": 18.846391677856445,
+            "std_celsius": 2.8684523405446374
+          },
+          "warning_count": 0
+        },
+        "resumed": true,
+        "safenest_role": "TRAIN",
+        "source_domain": "SYNTHETIC",
+        "source_frames_measured": 32000,
+        "source_split": "train",
+        "status_counts": {
+          "EXCLUDED": 0,
+          "FAILED": 0,
+          "SUCCESS": 32000,
+          "SUCCESS_WITH_WARNING": 0
+        }
+      }
+    },
+    "VALIDATION": {
+      "status": "FINALIZED",
+      "summary": {
+        "artifact_path": "T-A6_real_and_synthetic_canonical/validation_canonical.npy",
+        "artifact_sha256": "5d16451702c1bccfa945d9188d9b29a26ce11c8b33bf7a0dfbb25bfa86d74610",
+        "artifact_size_bytes": 158720128,
+        "canonical_dtype": "float32",
+        "canonical_rows": 8000,
+        "canonical_shape": [
+          62,
+          80
+        ],
+        "canonical_unit": "CELSIUS",
+        "exact_duplicate_audit": {
+          "audit_scope": "WITHIN_VALIDATION",
+          "canonical_frame_hashes": {
+            "cluster_count": 0,
+            "clusters": []
+          },
+          "decoded_frame_hashes": {
+            "cluster_count": 0,
+            "clusters": []
+          },
+          "source_member_byte_hashes": {
+            "cluster_count": 0,
+            "clusters": []
+          }
+        },
+        "expected_source_frames": 8000,
+        "finalized_status": "FINALIZED",
+        "geometry_profile_id": "G1_FIXED_ASPECT_CROP_BILINEAR",
+        "mode": "COLAB_STAGE2",
+        "phase": "T-A6_COLAB_STAGE2",
+        "provenance_path": "T-A6_real_and_synthetic_canonical/validation_provenance.jsonl",
+        "provenance_sha256": "48ebd03ca6f8d738ad7048aa72d4c454fd821140aa887971c27c5b49c1d7ec63",
+        "provenance_size_bytes": 19648546,
+        "quality": {
+          "failed_rows": [],
+          "silent_skips": 0,
+          "temperature_distribution": {
+            "finite_pixel_count": 39680000,
+            "frame_maximum_p99": 50.61537998199463,
+            "frame_mean_p01": 22.01067020257442,
+            "frame_mean_p50": 22.443378107009394,
+            "frame_mean_p99": 25.25590648335795,
+            "frame_minimum_p01": 21.259496688842773,
+            "maximum_celsius": 50.8941535949707,
+            "mean_celsius": 22.761902501313195,
+            "minimum_celsius": 19.643226623535156,
+            "std_celsius": 2.8451762366255826
+          },
+          "warning_count": 0
+        },
+        "resumed": true,
+        "safenest_role": "VALIDATION",
+        "source_domain": "SYNTHETIC",
+        "source_frames_measured": 8000,
+        "source_split": "validation",
+        "status_counts": {
+          "EXCLUDED": 0,
+          "FAILED": 0,
+          "SUCCESS": 8000,
+          "SUCCESS_WITH_WARNING": 0
+        }
+      }
+    }
+  },
+  "phase": "T-A6_COLAB_STAGE2",
+  "schema_version": "1.0"
+}

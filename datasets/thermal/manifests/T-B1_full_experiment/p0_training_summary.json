@@ -1,0 +1,1011 @@
+{
+  "architecture_fingerprint": "937fceb88900a779d67a8e407cebc3362cc21346721f92cea5ae8de1413aba2a",
+  "best_epoch": 11,
+  "candidate_id": "SMALL_CNN_BASELINE_V1",
+  "checkpoint": {
+    "logical_path": "checkpoints/P0_CANONICAL_CELSIUS_DIRECT.weights.h5",
+    "materialization": "PERSISTENT_EXTERNAL_OUTPUT",
+    "sha256": "94ac046af2346b6f23d8d46570ac03eec451f91c5650dcb4137b46b8f37b0ad0",
+    "size_bytes": 3777416
+  },
+  "epoch_metrics": [
+    {
+      "accuracy": 0.927875,
+      "balanced_accuracy": 0.9230833333333334,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          2000,
+          0,
+          0
+        ],
+        [
+          66,
+          3769,
+          165
+        ],
+        [
+          70,
+          276,
+          1654
+        ]
+      ],
+      "epoch": 1,
+      "h_fall_posture_proxy_recall": 0.827,
+      "loss": 0.6763069033622742,
+      "macro_f1": 0.9234309392850917,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.8661953390940036,
+          "precision": 0.9092908191313909,
+          "recall": 0.827,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.9369794903666874,
+          "precision": 0.9317676143386897,
+          "recall": 0.94225,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.9671179883945841,
+          "precision": 0.9363295880149812,
+          "recall": 1.0,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1819,
+        "HUMAN_NORMAL": 4045,
+        "NOT_HUMAN": 2136
+      },
+      "sample_count": 8000,
+      "val_accuracy": 0.9278749823570251,
+      "val_loss": 0.19654324650764465
+    },
+    {
+      "accuracy": 0.940125,
+      "balanced_accuracy": 0.9345833333333333,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          2000,
+          0,
+          0
+        ],
+        [
+          49,
+          3827,
+          124
+        ],
+        [
+          51,
+          255,
+          1694
+        ]
+      ],
+      "epoch": 2,
+      "h_fall_posture_proxy_recall": 0.847,
+      "loss": 0.1681366115808487,
+      "macro_f1": 0.936676052198896,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.8873755893137768,
+          "precision": 0.9317931793179318,
+          "recall": 0.847,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.9470428111853502,
+          "precision": 0.9375306222439981,
+          "recall": 0.95675,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.975609756097561,
+          "precision": 0.9523809523809523,
+          "recall": 1.0,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1818,
+        "HUMAN_NORMAL": 4082,
+        "NOT_HUMAN": 2100
+      },
+      "sample_count": 8000,
+      "val_accuracy": 0.9401249885559082,
+      "val_loss": 0.1681421995162964
+    },
+    {
+      "accuracy": 0.9515,
+      "balanced_accuracy": 0.951,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          2000,
+          0,
+          0
+        ],
+        [
+          48,
+          3812,
+          140
+        ],
+        [
+          32,
+          168,
+          1800
+        ]
+      ],
+      "epoch": 3,
+      "h_fall_posture_proxy_recall": 0.9,
+      "loss": 0.13731005787849426,
+      "macro_f1": 0.9498287372656784,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.9137055837563451,
+          "precision": 0.9278350515463918,
+          "recall": 0.9,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.9553884711779448,
+          "precision": 0.9577889447236181,
+          "recall": 0.953,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.9803921568627451,
+          "precision": 0.9615384615384616,
+          "recall": 1.0,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1940,
+        "HUMAN_NORMAL": 3980,
+        "NOT_HUMAN": 2080
+      },
+      "sample_count": 8000,
+      "val_accuracy": 0.9514999985694885,
+      "val_loss": 0.13649779558181763
+    },
+    {
+      "accuracy": 0.936625,
+      "balanced_accuracy": 0.9282499999999999,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          2000,
+          0,
+          0
+        ],
+        [
+          52,
+          3847,
+          101
+        ],
+        [
+          77,
+          277,
+          1646
+        ]
+      ],
+      "epoch": 4,
+      "h_fall_posture_proxy_recall": 0.823,
+      "loss": 0.12115005403757095,
+      "macro_f1": 0.9314658331228931,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.8785695222844941,
+          "precision": 0.9421866056096165,
+          "recall": 0.823,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.9470704086656819,
+          "precision": 0.9328322017458778,
+          "recall": 0.96175,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.9687575684185032,
+          "precision": 0.9394081728511038,
+          "recall": 1.0,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1747,
+        "HUMAN_NORMAL": 4124,
+        "NOT_HUMAN": 2129
+      },
+      "sample_count": 8000,
+      "val_accuracy": 0.9366250038146973,
+      "val_loss": 0.1771494746208191
+    },
+    {
+      "accuracy": 0.944875,
+      "balanced_accuracy": 0.9389166666666666,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          1878,
+          122,
+          0
+        ],
+        [
+          4,
+          3851,
+          145
+        ],
+        [
+          5,
+          165,
+          1830
+        ]
+      ],
+      "epoch": 5,
+      "h_fall_posture_proxy_recall": 0.915,
+      "loss": 0.11644472181797028,
+      "macro_f1": 0.9444922719859109,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.9207547169811321,
+          "precision": 0.9265822784810127,
+          "recall": 0.915,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.9464241828459081,
+          "precision": 0.9306428226196231,
+          "recall": 0.96275,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.966297916130692,
+          "precision": 0.9952305246422893,
+          "recall": 0.939,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1975,
+        "HUMAN_NORMAL": 4138,
+        "NOT_HUMAN": 1887
+      },
+      "sample_count": 8000,
+      "val_accuracy": 0.9448750019073486,
+      "val_loss": 0.18551942706108093
+    },
+    {
+      "accuracy": 0.955875,
+      "balanced_accuracy": 0.9611666666666666,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          2000,
+          0,
+          0
+        ],
+        [
+          66,
+          3760,
+          174
+        ],
+        [
+          22,
+          91,
+          1887
+        ]
+      ],
+      "epoch": 6,
+      "h_fall_posture_proxy_recall": 0.9435,
+      "loss": 0.11253636330366135,
+      "macro_f1": 0.9552136995445109,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.9293277517852745,
+          "precision": 0.9155749636098981,
+          "recall": 0.9435,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.9578397656349509,
+          "precision": 0.9763697740846533,
+          "recall": 0.94,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.9784735812133072,
+          "precision": 0.9578544061302682,
+          "recall": 1.0,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 2061,
+        "HUMAN_NORMAL": 3851,
+        "NOT_HUMAN": 2088
+      },
+      "sample_count": 8000,
+      "val_accuracy": 0.9558749794960022,
+      "val_loss": 0.13057680428028107
+    },
+    {
+      "accuracy": 0.9695,
+      "balanced_accuracy": 0.9688333333333334,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          2000,
+          0,
+          0
+        ],
+        [
+          16,
+          3886,
+          98
+        ],
+        [
+          2,
+          128,
+          1870
+        ]
+      ],
+      "epoch": 7,
+      "h_fall_posture_proxy_recall": 0.935,
+      "loss": 0.08957314491271973,
+      "macro_f1": 0.9692877756283612,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.9425403225806451,
+          "precision": 0.9502032520325203,
+          "recall": 0.935,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.969802845021213,
+          "precision": 0.9681116093672147,
+          "recall": 0.9715,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.9955201592832256,
+          "precision": 0.9910802775024777,
+          "recall": 1.0,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1968,
+        "HUMAN_NORMAL": 4014,
+        "NOT_HUMAN": 2018
+      },
+      "sample_count": 8000,
+      "val_accuracy": 0.9695000052452087,
+      "val_loss": 0.09213647246360779
+    },
+    {
+      "accuracy": 0.961,
+      "balanced_accuracy": 0.9544166666666666,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          1999,
+          1,
+          0
+        ],
+        [
+          9,
+          3923,
+          68
+        ],
+        [
+          4,
+          230,
+          1766
+        ]
+      ],
+      "epoch": 8,
+      "h_fall_posture_proxy_recall": 0.883,
+      "loss": 0.09771334379911423,
+      "macro_f1": 0.9599895622098114,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.9212310902451748,
+          "precision": 0.9629225736095965,
+          "recall": 0.883,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.9622271277900417,
+          "precision": 0.9443909484833896,
+          "recall": 0.98075,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.9965104685942173,
+          "precision": 0.9935387673956262,
+          "recall": 0.9995,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1834,
+        "HUMAN_NORMAL": 4154,
+        "NOT_HUMAN": 2012
+      },
+      "sample_count": 8000,
+      "val_accuracy": 0.9610000252723694,
+      "val_loss": 0.11067870259284973
+    },
+    {
+      "accuracy": 0.9705,
+      "balanced_accuracy": 0.9689166666666665,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          2000,
+          0,
+          0
+        ],
+        [
+          13,
+          3901,
+          86
+        ],
+        [
+          7,
+          130,
+          1863
+        ]
+      ],
+      "epoch": 9,
+      "h_fall_posture_proxy_recall": 0.9315,
+      "loss": 0.08061771094799042,
+      "macro_f1": 0.9700134589768723,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.94353000759686,
+          "precision": 0.9558748075936377,
+          "recall": 0.9315,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.9714854937118665,
+          "precision": 0.96774993798065,
+          "recall": 0.97525,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.9950248756218906,
+          "precision": 0.9900990099009901,
+          "recall": 1.0,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1949,
+        "HUMAN_NORMAL": 4031,
+        "NOT_HUMAN": 2020
+      },
+      "sample_count": 8000,
+      "val_accuracy": 0.9704999923706055,
+      "val_loss": 0.08726547658443451
+    },
+    {
+      "accuracy": 0.971375,
+      "balanced_accuracy": 0.9692500000000001,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          1998,
+          2,
+          0
+        ],
+        [
+          11,
+          3911,
+          78
+        ],
+        [
+          0,
+          138,
+          1862
+        ]
+      ],
+      "epoch": 10,
+      "h_fall_posture_proxy_recall": 0.931,
+      "loss": 0.08063686639070511,
+      "macro_f1": 0.9711637631549467,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.9451776649746193,
+          "precision": 0.9597938144329897,
+          "recall": 0.931,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.9715563284064092,
+          "precision": 0.9654406319427302,
+          "recall": 0.97775,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.9967572960838114,
+          "precision": 0.9945246391239423,
+          "recall": 0.999,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1940,
+        "HUMAN_NORMAL": 4051,
+        "NOT_HUMAN": 2009
+      },
+      "sample_count": 8000,
+      "val_accuracy": 0.9713749885559082,
+      "val_loss": 0.08155301958322525
+    },
+    {
+      "accuracy": 0.97275,
+      "balanced_accuracy": 0.9690833333333334,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          1993,
+          6,
+          1
+        ],
+        [
+          8,
+          3935,
+          57
+        ],
+        [
+          0,
+          146,
+          1854
+        ]
+      ],
+      "epoch": 11,
+      "h_fall_posture_proxy_recall": 0.927,
+      "loss": 0.06305765360593796,
+      "macro_f1": 0.972423502977668,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.9478527607361964,
+          "precision": 0.9696652719665272,
+          "recall": 0.927,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.973166810931124,
+          "precision": 0.962808906288231,
+          "recall": 0.98375,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.9962509372656836,
+          "precision": 0.9960019990004998,
+          "recall": 0.9965,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1912,
+        "HUMAN_NORMAL": 4087,
+        "NOT_HUMAN": 2001
+      },
+      "sample_count": 8000,
+      "val_accuracy": 0.9727500081062317,
+      "val_loss": 0.0779775008559227
+    },
+    {
+      "accuracy": 0.920375,
+      "balanced_accuracy": 0.9195833333333333,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          1919,
+          64,
+          17
+        ],
+        [
+          81,
+          3691,
+          228
+        ],
+        [
+          11,
+          236,
+          1753
+        ]
+      ],
+      "epoch": 12,
+      "h_fall_posture_proxy_recall": 0.8765,
+      "loss": 0.08562485873699188,
+      "macro_f1": 0.9191987811580922,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.8769384692346173,
+          "precision": 0.8773773773773774,
+          "recall": 0.8765,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.9237892629207859,
+          "precision": 0.9248308694562766,
+          "recall": 0.92275,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.9568686113188731,
+          "precision": 0.9542516161113874,
+          "recall": 0.9595,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1998,
+        "HUMAN_NORMAL": 3991,
+        "NOT_HUMAN": 2011
+      },
+      "sample_count": 8000,
+      "val_accuracy": 0.9203749895095825,
+      "val_loss": 0.2900635004043579
+    },
+    {
+      "accuracy": 0.96175,
+      "balanced_accuracy": 0.9615,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          2000,
+          0,
+          0
+        ],
+        [
+          24,
+          3850,
+          126
+        ],
+        [
+          13,
+          143,
+          1844
+        ]
+      ],
+      "epoch": 13,
+      "h_fall_posture_proxy_recall": 0.922,
+      "loss": 0.14053650200366974,
+      "macro_f1": 0.9610483192560686,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.9289672544080606,
+          "precision": 0.9360406091370559,
+          "recall": 0.922,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.9633429250594269,
+          "precision": 0.9641873278236914,
+          "recall": 0.9625,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.9908347783007183,
+          "precision": 0.9818360333824251,
+          "recall": 1.0,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1970,
+        "HUMAN_NORMAL": 3993,
+        "NOT_HUMAN": 2037
+      },
+      "sample_count": 8000,
+      "val_accuracy": 0.9617499709129333,
+      "val_loss": 0.11758562922477722
+    },
+    {
+      "accuracy": 0.96575,
+      "balanced_accuracy": 0.9651666666666667,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          1998,
+          2,
+          0
+        ],
+        [
+          18,
+          3870,
+          112
+        ],
+        [
+          6,
+          136,
+          1858
+        ]
+      ],
+      "epoch": 14,
+      "h_fall_posture_proxy_recall": 0.929,
+      "loss": 0.11188820749521255,
+      "macro_f1": 0.9653630573724966,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.9360201511335012,
+          "precision": 0.9431472081218274,
+          "recall": 0.929,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.9665334665334665,
+          "precision": 0.9655688622754491,
+          "recall": 0.9675,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.9935355544505221,
+          "precision": 0.9881305637982196,
+          "recall": 0.999,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1970,
+        "HUMAN_NORMAL": 4008,
+        "NOT_HUMAN": 2022
+      },
+      "sample_count": 8000,
+      "val_accuracy": 0.965749979019165,
+      "val_loss": 0.1012863740324974
+    },
+    {
+      "accuracy": 0.96675,
+      "balanced_accuracy": 0.965,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          1999,
+          1,
+          0
+        ],
+        [
+          17,
+          3888,
+          95
+        ],
+        [
+          1,
+          152,
+          1847
+        ]
+      ],
+      "epoch": 15,
+      "h_fall_posture_proxy_recall": 0.9235,
+      "loss": 0.08341566473245621,
+      "macro_f1": 0.9664672582609551,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.9370877727042111,
+          "precision": 0.951081359423275,
+          "recall": 0.9235,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.9670439000124362,
+          "precision": 0.9621380846325167,
+          "recall": 0.972,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.9952701020662186,
+          "precision": 0.9910758552305404,
+          "recall": 0.9995,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1942,
+        "HUMAN_NORMAL": 4041,
+        "NOT_HUMAN": 2017
+      },
+      "sample_count": 8000,
+      "val_accuracy": 0.9667500257492065,
+      "val_loss": 0.0978626012802124
+    },
+    {
+      "accuracy": 0.963,
+      "balanced_accuracy": 0.9591666666666666,
+      "class_order": [
+        "NOT_HUMAN",
+        "HUMAN_NORMAL",
+        "HUMAN_FALL"
+      ],
+      "confusion_matrix": [
+        [
+          2000,
+          0,
+          0
+        ],
+        [
+          26,
+          3898,
+          76
+        ],
+        [
+          12,
+          182,
+          1806
+        ]
+      ],
+      "epoch": 16,
+      "h_fall_posture_proxy_recall": 0.903,
+      "loss": 0.07631036639213562,
+      "macro_f1": 0.9619630361358719,
+      "per_class": {
+        "HUMAN_FALL": {
+          "f1": 0.9304482225656878,
+          "precision": 0.9596174282678002,
+          "recall": 0.903,
+          "support": 2000
+        },
+        "HUMAN_NORMAL": {
+          "f1": 0.9648514851485149,
+          "precision": 0.9553921568627451,
+          "recall": 0.9745,
+          "support": 4000
+        },
+        "NOT_HUMAN": {
+          "f1": 0.9905894006934126,
+          "precision": 0.9813542688910697,
+          "recall": 1.0,
+          "support": 2000
+        }
+      },
+      "prediction_distribution": {
+        "HUMAN_FALL": 1882,
+        "HUMAN_NORMAL": 4080,
+        "NOT_HUMAN": 2038
+      },
+      "sample_count": 8000,
+      "val_accuracy": 0.9629999995231628,
+      "val_loss": 0.10577458143234253
+    }
+  ],
+  "history_keys": [
+    "accuracy",
+    "learning_rate",
+    "loss",
+    "val_accuracy",
+    "val_balanced_accuracy",
+    "val_human_fall_posture_proxy_recall",
+    "val_loss",
+    "val_macro_f1"
+  ],
+  "initial_weight_fingerprint": "72a9805e1772aa0ee0a414fb7d41bc17ea0d183fa29e0e43049b22e0d5d35058",
+  "parameter_count": 312131,
+  "preprocessing_statistics": null,
+  "profile_id": "P0_CANONICAL_CELSIUS_DIRECT",
+  "seed": 20260813,
+  "status": "VALIDATION_COMPLETE",
+  "validation_metrics": {
+    "accuracy": 0.97275,
+    "balanced_accuracy": 0.9690833333333334,
+    "class_order": [
+      "NOT_HUMAN",
+      "HUMAN_NORMAL",
+      "HUMAN_FALL"
+    ],
+    "confusion_matrix": [
+      [
+        1993,
+        6,
+        1
+      ],
+      [
+        8,
+        3935,
+        57
+      ],
+      [
+        0,
+        146,
+        1854
+      ]
+    ],
+    "h_fall_posture_proxy_recall": 0.927,
+    "macro_f1": 0.972423502977668,
+    "per_class": {
+      "HUMAN_FALL": {
+        "f1": 0.9478527607361964,
+        "precision": 0.9696652719665272,
+        "recall": 0.927,
+        "support": 2000
+      },
+      "HUMAN_NORMAL": {
+        "f1": 0.973166810931124,
+        "precision": 0.962808906288231,
+        "recall": 0.98375,
+        "support": 4000
+      },
+      "NOT_HUMAN": {
+        "f1": 0.9962509372656836,
+        "precision": 0.9960019990004998,
+        "recall": 0.9965,
+        "support": 2000
+      }
+    },
+    "prediction_distribution": {
+      "HUMAN_FALL": 1912,
+      "HUMAN_NORMAL": 4087,
+      "NOT_HUMAN": 2001
+    },
+    "sample_count": 8000
+  }
+}

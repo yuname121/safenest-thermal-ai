@@ -1,0 +1,38 @@
+{
+  "checked_artifact_count": 13,
+  "error_count": 0,
+  "errors": [],
+  "evidence_validation": "PASS",
+  "model_metrics_used": false,
+  "overall_outcome": "PASS_WITH_LIMITATIONS",
+  "phase": "T-A5",
+  "predecessor_validation": {
+    "T-A0": "PASS",
+    "T-A1": "PASS",
+    "T-A2": "PASS",
+    "T-A3": "PASS",
+    "T-A4": "PASS"
+  },
+  "schema_version": "1.0",
+  "t_a5_intermediate_release_readiness": "YES_WITH_LIMITATIONS",
+  "t_a6_authorized": true,
+  "t_a6_full_completion_requires_placeholder_hydration": true,
+  "warning_count": 3,
+  "warnings": [
+    {
+      "code": "NO_PRISTINE_LOCKED_TEST",
+      "location": "locked_test_eligibility.json",
+      "message": "An independent untouched Thermal holdout is not currently available."
+    },
+    {
+      "code": "GROUP_GENERALIZATION_NOT_VERIFIABLE",
+      "location": "grouping_evidence_registry.json",
+      "message": "Subject/session/event/sequence/scene/camera generalization cannot be verified from source provenance."
+    },
+    {
+      "code": "PLACEHOLDER_PARTITIONS_NOT_MATERIALIZED",
+      "location": "source_partition_contract.json",
+      "message": "Train and validation sample-level audits require explicit hydration authorization."
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "access_date": "2026-08-11",
+  "dataset_id": "local_sdt_zenodo_4124309",
+  "entries": [
+    {
+      "access_type": "SOURCE_IDENTITY_AND_INVENTORY",
+      "decision_influenced": true,
+      "evidence_reference": "T-A0 source identity and local asset registry",
+      "locked_test_contamination_relevance": "DISQUALIFIES_PRISTINE_LOCKED_TEST",
+      "payload_materialization": "LOCALLY_MATERIALIZED",
+      "phase": "T-A0",
+      "sample_scope": "metadata_and_bounded_inventory",
+      "source_domain": "REAL",
+      "source_split": "test"
+    },
+    {
+      "access_type": "SOURCE_IDENTITY_ONLY",
+      "decision_influenced": false,
+      "evidence_reference": "T-A0 source identity and local asset registry",
+      "locked_test_contamination_relevance": "NOT_APPLICABLE",
+      "payload_materialization": "LOCAL_CLOUD_PLACEHOLDER",
+      "phase": "T-A0",
+      "sample_scope": "official_partition_metadata",
+      "source_domain": "SYNTHETIC",
+      "source_split": "train"
+    },
+    {
+      "access_type": "SOURCE_IDENTITY_ONLY",
+      "decision_influenced": false,
+      "evidence_reference": "T-A0 source identity and local asset registry",
+      "locked_test_contamination_relevance": "NOT_APPLICABLE",
+      "payload_materialization": "LOCAL_CLOUD_PLACEHOLDER",
+      "phase": "T-A0",
+      "sample_scope": "official_partition_metadata",
+      "source_domain": "SYNTHETIC",
+      "source_split": "validation"
+    },
+    {
+      "access_type": "RAW_UNIT_AND_READER_PILOT",
+      "decision_influenced": true,
+      "evidence_reference": "T-A1 reader pilot and archive member inventory",
+      "locked_test_contamination_relevance": "DISQUALIFIES_PRISTINE_LOCKED_TEST",
+      "payload_materialization": "LOCALLY_MATERIALIZED",
+      "phase": "T-A1",
+      "sample_scope": "12_frame_real_pilot_plus_member_inventory",
+      "source_domain": "REAL",
+      "source_split": "test"
+    },
+    {
+      "access_type": "SOURCE_SCHEMA_ONLY",
+      "decision_influenced": false,
+      "evidence_reference": "T-A1 source schema profile",
+      "locked_test_contamination_relevance": "NOT_APPLICABLE",
+      "payload_materialization": "LOCAL_CLOUD_PLACEHOLDER",
+      "phase": "T-A1",
+      "sample_scope": "official_partition_metadata",
+      "source_domain": "SYNTHETIC",
+      "source_split": "train"
+    },
+    {
+      "access_type": "SOURCE_SCHEMA_ONLY",
+      "decision_influenced": false,
+      "evidence_reference": "T-A1 source schema profile",
+      "locked_test_contamination_relevance": "NOT_APPLICABLE",
+      "payload_materialization": "LOCAL_CLOUD_PLACEHOLDER",
+      "phase": "T-A1",
+      "sample_scope": "official_partition_metadata",
+      "source_domain": "SYNTHETIC",
+      "source_split": "validation"
+    },
+    {
+      "access_type": "GEOMETRY_SELECTION",
+      "decision_influenced": true,
+      "evidence_reference": "T-A2 pilot geometry summary and selected profile",
+      "locked_test_contamination_relevance": "DISQUALIFIES_PRISTINE_LOCKED_TEST",
+      "payload_materialization": "LOCALLY_MATERIALIZED",
+      "phase": "T-A2",
+      "sample_scope": "48_frame_real_pilot",
+      "source_domain": "REAL",
+      "source_split": "test"
+    },
+    {
+      "access_type": "NO_PAYLOAD_ACCESS",
+      "decision_influenced": false,
+      "evidence_reference": "T-A2 source partition inheritance",
+      "locked_test_contamination_relevance": "NOT_APPLICABLE",
+      "payload_materialization": "LOCAL_CLOUD_PLACEHOLDER",
+      "phase": "T-A2",
+      "sample_scope": "no_payload_access",
+      "source_domain": "SYNTHETIC",
+      "source_split": "train"
+    },
+    {
+      "access_type": "NO_PAYLOAD_ACCESS",
+      "decision_influenced": false,
+      "evidence_reference": "T-A2 source partition inheritance",
+      "locked_test_contamination_relevance": "NOT_APPLICABLE",
+      "payload_materialization": "LOCAL_CLOUD_PLACEHOLDER",
+      "phase": "T-A2",
+      "sample_scope": "no_payload_access",
+      "source_domain": "SYNTHETIC",
+      "source_split": "validation"
+    },
+    {
+      "access_type": "TEMPORAL_CAPABILITY_ANALYSIS",
+      "decision_influenced": true,
+      "evidence_reference": "T-A3 pilot temporal summary",
+      "locked_test_contamination_relevance": "DISQUALIFIES_PRISTINE_LOCKED_TEST",
+      "payload_materialization": "LOCALLY_MATERIALIZED",
+      "phase": "T-A3",
+      "sample_scope": "48_frame_real_pilot_reused",
+      "source_domain": "REAL",
+      "source_split": "test"
+    },
+    {
+      "access_type": "NO_PAYLOAD_ACCESS",
+      "decision_influenced": false,
+      "evidence_reference": "T-A3 temporal evidence registry",
+      "locked_test_contamination_relevance": "NOT_APPLICABLE",
+      "payload_materialization": "LOCAL_CLOUD_PLACEHOLDER",
+      "phase": "T-A3",
+      "sample_scope": "no_payload_access",
+      "source_domain": "SYNTHETIC",
+      "source_split": "train"
+    },
+    {
+      "access_type": "NO_PAYLOAD_ACCESS",
+      "decision_influenced": false,
+      "evidence_reference": "T-A3 temporal evidence registry",
+      "locked_test_contamination_relevance": "NOT_APPLICABLE",
+      "payload_materialization": "LOCAL_CLOUD_PLACEHOLDER",
+      "phase": "T-A3",
+      "sample_scope": "no_payload_access",
+      "source_domain": "SYNTHETIC",
+      "source_split": "validation"
+    },
+    {
+      "access_type": "SEMANTIC_POLICY_SELECTION",
+      "decision_influenced": true,
+      "evidence_reference": "T-A4 pilot semantic summary and label mapping inventory",
+      "locked_test_contamination_relevance": "DISQUALIFIES_PRISTINE_LOCKED_TEST",
+      "payload_materialization": "LOCALLY_MATERIALIZED",
+      "phase": "T-A4",
+      "sample_scope": "48_frame_pilot_reused_plus_all_8000_labels",
+      "source_domain": "REAL",
+      "source_split": "test"
+    },
+    {
+      "access_type": "NO_PAYLOAD_ACCESS",
+      "decision_influenced": false,
+      "evidence_reference": "T-A4 source contract",
+      "locked_test_contamination_relevance": "NOT_APPLICABLE",
+      "payload_materialization": "LOCAL_CLOUD_PLACEHOLDER",
+      "phase": "T-A4",
+      "sample_scope": "no_payload_access",
+      "source_domain": "SYNTHETIC",
+      "source_split": "train"
+    },
+    {
+      "access_type": "NO_PAYLOAD_ACCESS",
+      "decision_influenced": false,
+      "evidence_reference": "T-A4 source contract",
+      "locked_test_contamination_relevance": "NOT_APPLICABLE",
+      "payload_materialization": "LOCAL_CLOUD_PLACEHOLDER",
+      "phase": "T-A4",
+      "sample_scope": "no_payload_access",
+      "source_domain": "SYNTHETIC",
+      "source_split": "validation"
+    }
+  ],
+  "history_policy_id": "THERMAL_GROUPING_POLICY_001",
+  "model_metrics_used": false,
+  "phase": "T-A5",
+  "pristine_locked_test_available": "NO",
+  "pristine_locked_test_reason": "The real test partition was used for T-A2 geometry selection and later T-A3/T-A4 development evidence.",
+  "schema_version": "1.0",
+  "source_partitions": [
+    "train",
+    "validation",
+    "test"
+  ]
+}

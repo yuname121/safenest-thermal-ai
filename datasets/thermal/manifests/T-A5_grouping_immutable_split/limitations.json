@@ -1,0 +1,23 @@
+{
+  "downstream": {
+    "T-A6": "full canonical conversion and integrity audit",
+    "T-B": "conditional development evaluation; no final unbiased locked-test claim",
+    "T-C": "Thermal-44 hardware semantics",
+    "T-D": "gap-driven expansion if needed"
+  },
+  "large_download_authorization_required": true,
+  "limitations": [
+    "No subject/session/recording/event/sequence IDs are distributed; subject/event generalization is NOT_VERIFIABLE.",
+    "Scene and camera are not defensible per-frame fallback groups.",
+    "The real SDT test partition was used for T-A2 geometry selection and cannot be a pristine LOCKED_TEST.",
+    "Train and validation archive bytes are cloud placeholders; only partition-level planned roles are established.",
+    "The legacy processed_thermal_80x62.npz is not split authority and has lost source provenance.",
+    "Exact/near duplicate audit and full derived-sample accounting are deferred to T-A6.",
+    "A future independent holdout is required before an unbiased T-B LOCKED_TEST claim."
+  ],
+  "phase": "T-A5",
+  "schema_version": "1.0",
+  "status": "PASS_WITH_LIMITATIONS",
+  "t_a1_authorization_inherited": true,
+  "t_a6_full_completion_requires_placeholder_hydration": true
+}
