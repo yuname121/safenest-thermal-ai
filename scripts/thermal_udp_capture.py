@@ -1,27 +1,30 @@
 #!/usr/bin/env python3
 """Capture Thermal_Test UDP frames into the SafeNest real-capture contract v1.
 
-The preferred transport is one 10,080-byte datagram per sensor frame. Some
-Thermal_Test/XIAO deployments emit the same frame as several UDP datagrams
-(commonly 1,320/1,460-byte chunks); ``--reassemble-udp-chunks`` enables an
-explicit byte-stream reassembly mode for that deployment. In both modes the
-collector stores raw evidence, stores decoded native 80 x 62 uint16 pixels
-separately, and records provenance for a DEVICE_CONTRACT_PILOT. It deliberately
-does not normalize, calibrate, resize, rotate, or run a model.
+The current preferred transport is framed UDP V2: every MTU-safe chunk carries
+an explicit frame ID, chunk index/count, byte offset/length, logical frame
+length, and whole-frame CRC32. ``--reassemble-udp-chunks`` enables that mode.
+The exact 10,080-byte Thermal_Test frame remains the logical payload and is
+stored unchanged after fail-closed reassembly. The historic blind byte-stream
+mode remains available only as ``--legacy-stream-reassembly`` for preserving
+old diagnostic evidence; it is not suitable for new model-input capture.
 
 The script needs only Python's standard library and is suitable for Raspberry
 Pi OS. It must run before the ESP32 sender begins emitting packets.
 """
 
 import argparse
+from dataclasses import asdict, dataclass, field
 import hashlib
 import json
+import math
 import os
 import re
 import socket
 import struct
 import sys
 import time
+import zlib
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
@@ -32,7 +35,7 @@ SESSION_SCHEMA = "safenest.thermal.real_capture.session.v1"
 FRAME_SCHEMA = "safenest.thermal.real_capture.frame.v1"
 ANNOTATION_SCHEMA = "safenest.thermal.real_capture.annotation.v1"
 CONTRACT_ID = "safenest.thermal.real_capture.v1"
-COLLECTOR_VERSION = "thermal_udp_capture_v1"
+COLLECTOR_VERSION = "thermal_udp_capture_v2"
 
 HEADER_WORDS = 80
 WIDTH = 80
@@ -44,7 +47,273 @@ UINT16_LE = struct.Struct("<{}H".format(FRAME_WORDS))
 PIXEL_UINT16_LE = struct.Struct("<{}H".format(PIXEL_WORDS))
 ID_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*$")
 
+# SafeNest Thermal raw UDP V2. Header fields use network byte order while the
+# payload remains the unmodified 10,080-byte little-endian Thermal_Test frame.
+CHUNK_MAGIC = b"SNTR"
+CHUNK_PROTOCOL_VERSION = 2
+CHUNK_MESSAGE_TYPE_RAW_U16_LE = 1
+CHUNK_HEADER = struct.Struct("!4sBBHIHHIIHHI")
+CHUNK_HEADER_BYTES = CHUNK_HEADER.size
+CHUNK_DATAGRAM_BYTES = 1200
+CHUNK_PAYLOAD_BYTES = CHUNK_DATAGRAM_BYTES - CHUNK_HEADER_BYTES
+CHUNK_COUNT = math.ceil(FRAME_BYTES / CHUNK_PAYLOAD_BYTES)
+CHUNK_MAX_COUNT = 16
+
 SOURCE_LABELS = ("NOT_ANNOTATED", "EMPTY", "STANDING", "SITTING", "LYING", "UNKNOWN")
+
+
+class ChunkProtocolError(ValueError):
+    """A framed UDP V2 datagram violated the transport contract."""
+
+
+@dataclass(frozen=True)
+class FramedChunk:
+    frame_id: int
+    chunk_index: int
+    chunk_count: int
+    frame_size: int
+    chunk_offset: int
+    frame_crc32: int
+    payload: bytes
+
+
+@dataclass
+class ChunkMetrics:
+    received_datagrams: int = 0
+    invalid_datagrams: int = 0
+    completed_frames: int = 0
+    incomplete_frames: int = 0
+    duplicate_chunks: int = 0
+    conflicting_duplicates: int = 0
+    out_of_order_chunks: int = 0
+    reconstruction_timeouts: int = 0
+    pending_limit_evictions: int = 0
+    checksum_failures: int = 0
+
+
+@dataclass
+class _PendingFrame:
+    frame_id: int
+    chunk_count: int
+    frame_size: int
+    frame_crc32: int
+    started_at: float
+    updated_at: float
+    chunks: Dict[int, bytes] = field(default_factory=dict)
+
+
+def decode_framed_chunk(datagram: bytes) -> FramedChunk:
+    """Decode one SNTR V2 datagram without accepting ambiguous offsets."""
+
+    if len(datagram) < CHUNK_HEADER_BYTES:
+        raise ChunkProtocolError("datagram is shorter than the framed UDP V2 header")
+    (
+        magic,
+        version,
+        message_type,
+        header_size,
+        frame_id,
+        chunk_index,
+        chunk_count,
+        frame_size,
+        chunk_offset,
+        chunk_length,
+        reserved,
+        frame_crc32,
+    ) = CHUNK_HEADER.unpack_from(datagram)
+    if magic != CHUNK_MAGIC:
+        raise ChunkProtocolError("invalid framed UDP V2 magic")
+    if version != CHUNK_PROTOCOL_VERSION:
+        raise ChunkProtocolError("unsupported framed UDP protocol version")
+    if message_type != CHUNK_MESSAGE_TYPE_RAW_U16_LE:
+        raise ChunkProtocolError("unsupported framed UDP message type")
+    if header_size != CHUNK_HEADER_BYTES or reserved != 0:
+        raise ChunkProtocolError("invalid framed UDP header fields")
+    if frame_size != FRAME_BYTES:
+        raise ChunkProtocolError("logical Thermal frame size is not 10,080 bytes")
+    expected_count = math.ceil(frame_size / CHUNK_PAYLOAD_BYTES)
+    if (
+        chunk_count != expected_count
+        or chunk_count < 1
+        or chunk_count > CHUNK_MAX_COUNT
+        or chunk_index >= chunk_count
+    ):
+        raise ChunkProtocolError("invalid chunk count or index")
+    expected_offset = chunk_index * CHUNK_PAYLOAD_BYTES
+    expected_length = min(CHUNK_PAYLOAD_BYTES, frame_size - expected_offset)
+    payload = datagram[header_size:]
+    if chunk_offset != expected_offset or chunk_length != expected_length or len(payload) != chunk_length:
+        raise ChunkProtocolError("invalid chunk offset or length")
+    return FramedChunk(
+        frame_id=frame_id,
+        chunk_index=chunk_index,
+        chunk_count=chunk_count,
+        frame_size=frame_size,
+        chunk_offset=chunk_offset,
+        frame_crc32=frame_crc32,
+        payload=payload,
+    )
+
+
+def encode_framed_frame(payload: bytes, frame_id: int) -> List[bytes]:
+    """Reference encoder used by loopback and loss/reordering tests."""
+
+    if len(payload) != FRAME_BYTES:
+        raise ValueError("Thermal raw frame must be exactly 10,080 bytes")
+    if not 0 <= int(frame_id) <= 0xFFFFFFFF:
+        raise ValueError("transport frame ID must fit uint32")
+    frame_crc32 = zlib.crc32(payload) & 0xFFFFFFFF
+    datagrams: List[bytes] = []
+    for chunk_index in range(CHUNK_COUNT):
+        offset = chunk_index * CHUNK_PAYLOAD_BYTES
+        chunk = payload[offset : offset + CHUNK_PAYLOAD_BYTES]
+        header = CHUNK_HEADER.pack(
+            CHUNK_MAGIC,
+            CHUNK_PROTOCOL_VERSION,
+            CHUNK_MESSAGE_TYPE_RAW_U16_LE,
+            CHUNK_HEADER_BYTES,
+            int(frame_id),
+            chunk_index,
+            CHUNK_COUNT,
+            len(payload),
+            offset,
+            len(chunk),
+            0,
+            frame_crc32,
+        )
+        datagrams.append(header + chunk)
+    return datagrams
+
+
+class FramedChunkReassembler:
+    """Bounded, timeout-aware reassembler that never joins different frames."""
+
+    def __init__(self, frame_timeout_seconds: float = 1.0, max_pending_frames: int = 8) -> None:
+        if not math.isfinite(float(frame_timeout_seconds)) or frame_timeout_seconds <= 0:
+            raise ValueError("frame timeout must be positive and finite")
+        if isinstance(max_pending_frames, bool) or max_pending_frames < 1:
+            raise ValueError("max pending frames must be positive")
+        self.frame_timeout_seconds = float(frame_timeout_seconds)
+        self.max_pending_frames = int(max_pending_frames)
+        self.pending: Dict[Tuple[str, int, int], _PendingFrame] = {}
+        self.completed: Dict[Tuple[str, int, int], float] = {}
+        self.metrics = ChunkMetrics()
+
+    def _evict_expired(self, now: float) -> int:
+        expired = [key for key, item in self.pending.items() if now - item.updated_at >= self.frame_timeout_seconds]
+        for key in expired:
+            del self.pending[key]
+        self.metrics.incomplete_frames += len(expired)
+        self.metrics.reconstruction_timeouts += len(expired)
+        stale_completed = [key for key, completed_at in self.completed.items() if now - completed_at >= self.frame_timeout_seconds * 4]
+        for key in stale_completed:
+            del self.completed[key]
+        return len(expired)
+
+    def evict_expired(self, now: Optional[float] = None) -> int:
+        return self._evict_expired(time.monotonic() if now is None else float(now))
+
+    def accept(
+        self,
+        datagram: bytes,
+        peer: Tuple[str, int],
+        received_monotonic: Optional[float] = None,
+    ) -> Optional[Tuple[bytes, Dict[str, Any]]]:
+        now = time.monotonic() if received_monotonic is None else float(received_monotonic)
+        self.metrics.received_datagrams += 1
+        self._evict_expired(now)
+        try:
+            chunk = decode_framed_chunk(datagram)
+        except ChunkProtocolError:
+            self.metrics.invalid_datagrams += 1
+            return None
+
+        key = (peer[0], peer[1], chunk.frame_id)
+        if key in self.completed:
+            self.metrics.duplicate_chunks += 1
+            return None
+        pending = self.pending.get(key)
+        if pending is None:
+            if len(self.pending) >= self.max_pending_frames:
+                oldest_key = min(self.pending, key=lambda item: self.pending[item].updated_at)
+                del self.pending[oldest_key]
+                self.metrics.incomplete_frames += 1
+                self.metrics.pending_limit_evictions += 1
+            pending = _PendingFrame(
+                frame_id=chunk.frame_id,
+                chunk_count=chunk.chunk_count,
+                frame_size=chunk.frame_size,
+                frame_crc32=chunk.frame_crc32,
+                started_at=now,
+                updated_at=now,
+            )
+            self.pending[key] = pending
+        elif (
+            pending.chunk_count != chunk.chunk_count
+            or pending.frame_size != chunk.frame_size
+            or pending.frame_crc32 != chunk.frame_crc32
+        ):
+            del self.pending[key]
+            self.metrics.invalid_datagrams += 1
+            self.metrics.incomplete_frames += 1
+            return None
+
+        existing = pending.chunks.get(chunk.chunk_index)
+        if existing is not None:
+            if existing == chunk.payload:
+                self.metrics.duplicate_chunks += 1
+            else:
+                del self.pending[key]
+                self.metrics.conflicting_duplicates += 1
+                self.metrics.invalid_datagrams += 1
+                self.metrics.incomplete_frames += 1
+            return None
+        if chunk.chunk_index != len(pending.chunks):
+            self.metrics.out_of_order_chunks += 1
+        pending.chunks[chunk.chunk_index] = chunk.payload
+        pending.updated_at = now
+        if len(pending.chunks) != pending.chunk_count:
+            return None
+
+        del self.pending[key]
+        payload = b"".join(pending.chunks[index] for index in range(pending.chunk_count))
+        if len(payload) != pending.frame_size:
+            self.metrics.invalid_datagrams += 1
+            self.metrics.incomplete_frames += 1
+            return None
+        if zlib.crc32(payload) & 0xFFFFFFFF != pending.frame_crc32:
+            self.metrics.checksum_failures += 1
+            self.metrics.incomplete_frames += 1
+            return None
+        self.metrics.completed_frames += 1
+        self.completed[key] = now
+        return payload, {
+            "protocol": "SAFENEST_THERMAL_RAW_UDP_V2",
+            "transport_frame_id": pending.frame_id,
+            "chunk_count": pending.chunk_count,
+            "frame_crc32": "{:08x}".format(pending.frame_crc32),
+            "reassembly_seconds": max(0.0, now - pending.started_at),
+        }
+
+    def finalize(self) -> int:
+        incomplete = len(self.pending)
+        self.pending.clear()
+        self.metrics.incomplete_frames += incomplete
+        return incomplete
+
+    def snapshot(self) -> Dict[str, Any]:
+        result = asdict(self.metrics)
+        result.update(
+            {
+                "pending_frames": len(self.pending),
+                "frame_timeout_seconds": self.frame_timeout_seconds,
+                "max_pending_frames": self.max_pending_frames,
+                "chunk_payload_bytes": CHUNK_PAYLOAD_BYTES,
+                "datagram_bytes_max": CHUNK_DATAGRAM_BYTES,
+                "expected_chunks_per_frame": CHUNK_COUNT,
+            }
+        )
+        return result
 
 
 def utc_offset_now() -> str:
@@ -120,8 +389,12 @@ class CaptureWriter:
         self.packet_loss_count = 0
         self.decode_failure_count = 0
         self.last_counter: Optional[int] = None
+        self.transport_metrics: Dict[str, Any] = {}
         self.frames_handle: Any = None
         self.annotations_handle: Any = None
+
+    def _chunk_capture_enabled(self) -> bool:
+        return bool(self.args.reassemble_udp_chunks or self.args.legacy_stream_reassembly)
 
     def prepare(self) -> None:
         if self.session_dir.exists():
@@ -133,7 +406,7 @@ class CaptureWriter:
             )
 
         self.raw_dir.mkdir(parents=True, exist_ok=False)
-        if self.args.reassemble_udp_chunks:
+        if self._chunk_capture_enabled():
             self.raw_chunks_dir.mkdir(parents=True, exist_ok=False)
         self.decoded_dir.mkdir(parents=True, exist_ok=False)
         self.frames_handle = self.frames_path.open("x", encoding="utf-8")
@@ -354,7 +627,11 @@ class CaptureWriter:
         chunk_name = "chunk_{:08d}_{}B.bin".format(chunk_index, len(data))
         (self.raw_chunks_dir / chunk_name).write_bytes(data)
 
-    def record_valid_datagram(self, data: bytes) -> None:
+    def record_valid_datagram(
+        self,
+        data: bytes,
+        transport_metadata: Optional[Dict[str, Any]] = None,
+    ) -> None:
         received_monotonic_ns = time.monotonic_ns()
         received_wall_time = wall_time_now()
         try:
@@ -403,13 +680,19 @@ class CaptureWriter:
             "native_shape": [HEIGHT, WIDTH],
             "native_dtype": "uint16",
             "raw_encoding": (
-                "LITTLE_ENDIAN_UINT16_WORDS_5040_REASSEMBLED_FROM_UDP_CHUNKS"
+                "LITTLE_ENDIAN_UINT16_WORDS_5040_REASSEMBLED_FROM_FRAMED_UDP_V2"
                 if self.args.reassemble_udp_chunks
+                else "LITTLE_ENDIAN_UINT16_WORDS_5040_REASSEMBLED_FROM_UNSAFE_LEGACY_STREAM"
+                if self.args.legacy_stream_reassembly
                 else "LITTLE_ENDIAN_UINT16_WORDS_5040"
             ),
             "raw_unit_claim": "UNKNOWN_NOT_VERIFIED",
             "unit_status": "NOT_VERIFIED",
-            "crc_or_packet_status": "UDP_DATAGRAM_LENGTH_OK_NO_CRC_IN_PROTOCOL",
+            "crc_or_packet_status": (
+                "FRAME_CRC32_VERIFIED"
+                if transport_metadata is not None
+                else "UDP_DATAGRAM_LENGTH_OK_NO_CRC_IN_PROTOCOL"
+            ),
             "packet_loss_status": packet_loss_status,
             "validity_status": "DUPLICATE" if duplicate else "VALID",
             "exclude_reason": "Duplicate header counter retained as evidence." if duplicate else None,
@@ -418,6 +701,11 @@ class CaptureWriter:
             "decoded_native_sha256": sha256_file(decoded_path),
             "scalar_thermal_max_c": None,
             "capture_error_code": None,
+            "transport_protocol": transport_metadata.get("protocol") if transport_metadata else "THERMAL_TEST_UDP_RAW_V1",
+            "transport_frame_id": transport_metadata.get("transport_frame_id") if transport_metadata else None,
+            "transport_chunk_count": transport_metadata.get("chunk_count") if transport_metadata else None,
+            "transport_frame_crc32": transport_metadata.get("frame_crc32") if transport_metadata else None,
+            "transport_reassembly_seconds": transport_metadata.get("reassembly_seconds") if transport_metadata else None,
             "notes": "Header words are preserved only in raw UDP datagram; decoded file contains untransformed pixel words 80..5039.",
         }
         append_jsonl(self.frames_handle, frame)
@@ -428,6 +716,24 @@ class CaptureWriter:
             self.valid_frame_count += 1
 
     def _session_manifest(self) -> Dict[str, Any]:
+        if self.args.reassemble_udp_chunks:
+            protocol = "SAFENEST_THERMAL_RAW_UDP_V2"
+            protocol_version = "2"
+            datagram_mode = "FRAME_ID_CHUNKED_REASSEMBLY"
+            crc_status = "WHOLE_FRAME_CRC32_REQUIRED"
+            reassembly_safety = "FRAME_BOUNDARY_EXPLICIT_FAIL_CLOSED"
+        elif self.args.legacy_stream_reassembly:
+            protocol = "THERMAL_TEST_UDP_RAW_V1"
+            protocol_version = "1"
+            datagram_mode = "UNSAFE_LEGACY_STREAM_REASSEMBLY"
+            crc_status = "NO_CRC_IN_PROTOCOL"
+            reassembly_safety = "NOT_SAFE_FOR_NEW_MODEL_INPUT_CAPTURE"
+        else:
+            protocol = "THERMAL_TEST_UDP_RAW_V1"
+            protocol_version = "1"
+            datagram_mode = "SINGLE_FRAME_DATAGRAM"
+            crc_status = "NO_CRC_IN_PROTOCOL"
+            reassembly_safety = "EXACT_DATAGRAM_LENGTH_ONLY"
         return {
             "schema_version": SESSION_SCHEMA,
             "collection_id": self.args.collection_id,
@@ -462,15 +768,18 @@ class CaptureWriter:
             },
             "transport": {
                 "transport_path": "XIAO_ESP32C6_TO_RASPBERRY_PI_UDP",
-                "protocol": "THERMAL_TEST_UDP_RAW_V1",
-                "protocol_version": "1",
-                "udp_datagram_mode": (
-                    "REASSEMBLED_CHUNKS" if self.args.reassemble_udp_chunks else "SINGLE_FRAME_DATAGRAM"
-                ),
+                "protocol": protocol,
+                "protocol_version": protocol_version,
+                "udp_datagram_mode": datagram_mode,
                 "full_frame_status": "PRESERVED",
                 "scalar_thermal_max_status": "PRESENT",
                 "raw_packet_bytes_preserved": True,
-                "raw_udp_chunks_preserved": self.args.reassemble_udp_chunks,
+                "raw_udp_chunks_preserved": self._chunk_capture_enabled(),
+                "chunk_header_bytes": CHUNK_HEADER_BYTES if self.args.reassemble_udp_chunks else None,
+                "chunk_payload_bytes": CHUNK_PAYLOAD_BYTES if self.args.reassemble_udp_chunks else None,
+                "expected_chunks_per_frame": CHUNK_COUNT if self.args.reassemble_udp_chunks else None,
+                "frame_crc_status": crc_status,
+                "reassembly_safety": reassembly_safety,
                 "transport_latency_status": "NOT_MEASURED",
             },
             "timing": {
@@ -497,7 +806,7 @@ class CaptureWriter:
                 "annotations_file": "annotations.jsonl",
                 "checksums_file": "checksums.sha256",
                 "raw_root": "raw",
-                "raw_chunks_root": "raw_chunks" if self.args.reassemble_udp_chunks else None,
+                "raw_chunks_root": "raw_chunks" if self._chunk_capture_enabled() else None,
                 "decoded_native_root": "decoded_native",
                 "model_input_root": None,
             },
@@ -508,6 +817,7 @@ class CaptureWriter:
                 "duplicate_counter_count": self.duplicate_counter_count,
                 "decode_failure_count": self.decode_failure_count,
                 "packet_loss_count": self.packet_loss_count,
+                "transport_metrics": self.transport_metrics,
             },
             "role_governance": {
                 "role": self.args.collection_role,
@@ -531,7 +841,7 @@ class CaptureWriter:
     def _write_checksums(self) -> None:
         paths: List[Path] = [self.session_path, self.frames_path, self.annotations_path]
         paths.extend(sorted(path for path in self.raw_dir.rglob("*") if path.is_file()))
-        if self.args.reassemble_udp_chunks:
+        if self._chunk_capture_enabled():
             paths.extend(sorted(path for path in self.raw_chunks_dir.rglob("*") if path.is_file()))
         paths.extend(sorted(path for path in self.decoded_dir.rglob("*") if path.is_file()))
         paths.sort(key=lambda path: path.relative_to(self.session_dir).as_posix())
@@ -564,11 +874,19 @@ def parse_args(argv: Optional[Iterable[str]] = None) -> argparse.Namespace:
     parser.add_argument("--operator-code", required=True, help="Pseudonymous operator code; no personal names.")
     parser.add_argument("--bind", default="0.0.0.0")
     parser.add_argument("--port", type=int, default=5005)
-    parser.add_argument(
+    reassembly = parser.add_mutually_exclusive_group()
+    reassembly.add_argument(
         "--reassemble-udp-chunks",
         action="store_true",
-        help="Reassemble sequential UDP chunks (for deployments observed at 1320/1460 bytes) into 10,080-byte frames.",
+        help="Reassemble framed SNTR UDP V2 chunks by frame ID/index and verify whole-frame CRC32.",
     )
+    reassembly.add_argument(
+        "--legacy-stream-reassembly",
+        action="store_true",
+        help="Diagnostic compatibility only: blindly concatenate historic UDP chunks; unsafe for new model-input capture.",
+    )
+    parser.add_argument("--chunk-timeout-seconds", type=float, default=1.0)
+    parser.add_argument("--max-pending-frames", type=int, default=8)
     parser.add_argument("--duration-seconds", type=float, default=120.0)
     parser.add_argument("--max-frames", type=int, default=None)
     parser.add_argument("--max-gap-markers", type=int, default=300)
@@ -616,6 +934,10 @@ def parse_args(argv: Optional[Iterable[str]] = None) -> argparse.Namespace:
         parser.error("--max-gap-markers must be zero or greater")
     if args.configured_fps <= 0:
         parser.error("--configured-fps must be positive")
+    if not math.isfinite(args.chunk_timeout_seconds) or args.chunk_timeout_seconds <= 0:
+        parser.error("--chunk-timeout-seconds must be positive and finite")
+    if args.max_pending_frames <= 0:
+        parser.error("--max-pending-frames must be positive")
     return args
 
 
@@ -627,13 +949,26 @@ def run_capture(args: argparse.Namespace) -> int:
     sock.bind((args.bind, args.port))
     sock.settimeout(0.5)
 
-    mode = "sequential UDP chunk reassembly" if args.reassemble_udp_chunks else "exact UDP datagrams"
+    if args.reassemble_udp_chunks:
+        mode = "framed SNTR UDP V2 reassembly"
+    elif args.legacy_stream_reassembly:
+        mode = "UNSAFE legacy sequential UDP stream reassembly"
+    else:
+        mode = "exact UDP datagrams"
     print("[capture] listening on {}:{} for {} (frame bytes={})".format(args.bind, args.port, mode, FRAME_BYTES))
     print("[capture] output: {}".format(writer.collection_dir))
     deadline = time.monotonic() + args.duration_seconds
     packet_count = 0
     chunk_buffer = bytearray()
     chunk_index = 0
+    reassembler = (
+        FramedChunkReassembler(
+            frame_timeout_seconds=args.chunk_timeout_seconds,
+            max_pending_frames=args.max_pending_frames,
+        )
+        if args.reassemble_udp_chunks
+        else None
+    )
     try:
         while time.monotonic() < deadline:
             if args.max_frames is not None and writer.valid_frame_count >= args.max_frames:
@@ -641,11 +976,21 @@ def run_capture(args: argparse.Namespace) -> int:
             try:
                 # Preserve an entire unexpected datagram for diagnosis instead
                 # of truncating it to the expected frame length.
-                data, _address = sock.recvfrom(65535)
+                data, address = sock.recvfrom(65535)
             except socket.timeout:
+                if reassembler is not None:
+                    reassembler.evict_expired()
                 continue
             packet_count += 1
             if args.reassemble_udp_chunks:
+                writer.record_udp_chunk(data, chunk_index)
+                chunk_index += 1
+                assert reassembler is not None
+                completed = reassembler.accept(data, address)
+                if completed is not None:
+                    frame_data, transport_metadata = completed
+                    writer.record_valid_datagram(frame_data, transport_metadata=transport_metadata)
+            elif args.legacy_stream_reassembly:
                 writer.record_udp_chunk(data, chunk_index)
                 chunk_index += 1
                 chunk_buffer.extend(data)
@@ -670,11 +1015,18 @@ def run_capture(args: argparse.Namespace) -> int:
     except KeyboardInterrupt:
         print("\n[capture] interrupted by operator; finalizing captured evidence.")
     finally:
-        if args.reassemble_udp_chunks and chunk_buffer:
+        if reassembler is not None:
+            reassembler.finalize()
+            writer.transport_metrics = reassembler.snapshot()
+        elif args.legacy_stream_reassembly and chunk_buffer:
             writer.record_invalid_datagram(
                 bytes(chunk_buffer),
                 "Capture ended with an incomplete reassembled frame of {} bytes.".format(len(chunk_buffer)),
             )
+            writer.transport_metrics = {
+                "legacy_stream_partial_bytes": len(chunk_buffer),
+                "integrity_status": "UNSAFE_STREAM_BOUNDARY_NOT_VERIFIABLE",
+            }
         sock.close()
         writer.close()
 

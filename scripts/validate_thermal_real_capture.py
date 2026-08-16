@@ -787,6 +787,37 @@ def _validate_session(
         safety = session["safety"]
         if safety.get("uncontrolled_free_fall_experiment") is True or safety.get("safety_control_status") == "UNCONTROLLED":
             _error(errors, "UNCONTROLLED_FALL_EXPERIMENT", "session.json:safety", "Unprotected free-fall experiments are prohibited.")
+    transport = session.get("transport") if isinstance(session.get("transport"), dict) else {}
+    framed_udp_v2 = transport.get("protocol") == "SAFENEST_THERMAL_RAW_UDP_V2"
+    legacy_stream = transport.get("udp_datagram_mode") == "UNSAFE_LEGACY_STREAM_REASSEMBLY"
+    if framed_udp_v2:
+        expected_transport = {
+            "protocol_version": "2",
+            "udp_datagram_mode": "FRAME_ID_CHUNKED_REASSEMBLY",
+            "full_frame_status": "PRESERVED",
+            "raw_packet_bytes_preserved": True,
+            "raw_udp_chunks_preserved": True,
+            "chunk_header_bytes": 32,
+            "chunk_payload_bytes": 1168,
+            "expected_chunks_per_frame": 9,
+            "frame_crc_status": "WHOLE_FRAME_CRC32_REQUIRED",
+            "reassembly_safety": "FRAME_BOUNDARY_EXPLICIT_FAIL_CLOSED",
+        }
+        for field, expected in expected_transport.items():
+            if transport.get(field) != expected:
+                _error(
+                    errors,
+                    "FRAMED_UDP_V2_CONTRACT_INVALID",
+                    f"session.json:transport:{field}",
+                    f"Expected {expected!r}, got {transport.get(field)!r}.",
+                )
+    elif legacy_stream:
+        _warning(
+            warnings,
+            "UNSAFE_LEGACY_STREAM_REASSEMBLY",
+            "session.json:transport:udp_datagram_mode",
+            "Blind byte-stream chunk concatenation cannot prove frame boundaries after UDP loss; retain only as diagnostic evidence.",
+        )
     storage = session.get("storage") if isinstance(session.get("storage"), dict) else {}
     storage_paths: dict[str, Path | None] = {}
     for field in ("frames_file", "annotations_file", "checksums_file", "raw_root", "decoded_native_root"):
@@ -796,6 +827,23 @@ def _validate_session(
     checksums_path = storage_paths.get("checksums_file")
     raw_root = storage_paths.get("raw_root")
     decoded_root = storage_paths.get("decoded_native_root")
+    sensor = session.get("sensor") if isinstance(session.get("sensor"), dict) else {}
+    raw_chunks_root = None
+    if storage.get("raw_chunks_root") is not None:
+        raw_chunks_root = _check_relative_manifest_path(
+            storage.get("raw_chunks_root"),
+            "raw_chunks_root",
+            session_dir,
+            "session.json:storage",
+            errors,
+        )
+    if framed_udp_v2 and (raw_chunks_root is None or not raw_chunks_root.is_dir()):
+        _error(
+            errors,
+            "RAW_CHUNKS_ROOT_MISSING",
+            "session.json:storage:raw_chunks_root",
+            "Framed UDP V2 capture must preserve every received datagram in raw_chunks/.",
+        )
     frames = _load_jsonl(frames_path, errors, "frames.jsonl") if frames_path else []
     annotations = _load_jsonl(annotations_path, errors, "annotations.jsonl") if annotations_path else []
     frame_ids: set[str] = set()
@@ -880,7 +928,6 @@ def _validate_session(
                 elif frame.get("decoded_native_sha256") and _sha256(resolved) != str(frame["decoded_native_sha256"]).lower():
                     _error(errors, "DECODED_FRAME_CHECKSUM_MISMATCH", f"{item_path}:decoded_native_sha256", "Frame decoded_native_sha256 does not match the referenced file.")
         native_shape = frame.get("native_shape")
-        sensor = session.get("sensor") if isinstance(session.get("sensor"), dict) else {}
         expected_shape = [sensor.get("native_height"), sensor.get("native_width")]
         if isinstance(native_shape, list) and expected_shape[0] is not None and expected_shape[1] is not None and native_shape != expected_shape:
             _error(errors, "NATIVE_SHAPE_MISMATCH", f"{item_path}:native_shape", f"Frame shape {native_shape!r} differs from session native shape {expected_shape!r}.")
@@ -908,6 +955,31 @@ def _validate_session(
     expected_count = quality.get("expected_frame_count")
     if isinstance(expected_count, int) and expected_count != len(frames):
         _warning(warnings, "EXPECTED_FRAME_COUNT_DIFFERENCE", "session.json:quality:expected_frame_count", f"Expected {expected_count} frame(s), received {len(frames)}; the discrepancy is retained as evidence.")
+    transport_metrics = quality.get("transport_metrics") if isinstance(quality.get("transport_metrics"), dict) else {}
+    if framed_udp_v2:
+        integrity_failures = {
+            field: int(transport_metrics.get(field, 0) or 0)
+            for field in (
+                "invalid_datagrams",
+                "incomplete_frames",
+                "conflicting_duplicates",
+                "reconstruction_timeouts",
+                "pending_limit_evictions",
+                "checksum_failures",
+            )
+        }
+        nonzero_failures = {field: value for field, value in integrity_failures.items() if value != 0}
+        if nonzero_failures:
+            _error(
+                errors,
+                "FRAMED_UDP_V2_INTEGRITY_FAILED",
+                "session.json:quality:transport_metrics",
+                f"Framed UDP V2 fail-closed metrics contain errors: {nonzero_failures!r}.",
+            )
+        if int(transport_metrics.get("duplicate_chunks", 0) or 0) > 0:
+            _warning(warnings, "UDP_DUPLICATE_CHUNKS", "session.json:quality:transport_metrics", "Duplicate chunks were ignored without corrupting a frame.")
+        if int(transport_metrics.get("out_of_order_chunks", 0) or 0) > 0:
+            _warning(warnings, "UDP_OUT_OF_ORDER_CHUNKS", "session.json:quality:transport_metrics", "Out-of-order chunks were reassembled by explicit chunk index.")
     sequence_summary = _series_checks(frames, "sequence_index", "frames.jsonl", errors, warnings)
     counter_summary = _series_checks(frames, "sensor_frame_counter", "frames.jsonl", errors, warnings)
     timing_summaries = {
@@ -924,6 +996,13 @@ def _validate_session(
     valid_frames = [frame for frame in frames if frame.get("validity_status") == "VALID"]
     valid_count = len(valid_frames)
     invalid_count = len(frames) - valid_count
+    if framed_udp_v2 and int(transport_metrics.get("completed_frames", -1)) != valid_count:
+        _error(
+            errors,
+            "FRAMED_UDP_V2_COMPLETED_COUNT_MISMATCH",
+            "session.json:quality:transport_metrics:completed_frames",
+            "Completed transport frame count must equal the number of valid persisted frames.",
+        )
     sequence_verified = bool(valid_frames) and all(
         frame.get("sequence_index") is not None and frame.get("sequence_index_status") == "VERIFIED" for frame in valid_frames
     )

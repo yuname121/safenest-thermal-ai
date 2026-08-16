@@ -302,7 +302,7 @@ def test_tampered_t_a2_evidence_is_revalidated_even_with_stale_pass_result(monke
         assert result["evidence_validation"] == "FAIL"
         assert any(error["code"] == "T_A2_VALIDATION_FAILED" for error in result["errors"])
     finally:
-        geometry_path.write_text(original, encoding="utf-8")
+        geometry_path.write_text(original, encoding="utf-8", newline="\n")
 
 
 def test_no_t_a6_payload_conversion_or_model_metric_is_present() -> None:

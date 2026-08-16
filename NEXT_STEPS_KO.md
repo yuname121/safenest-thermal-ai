@@ -67,7 +67,7 @@ Get-FileHash -Algorithm SHA256 .\artifacts\thermal_full_int8.tflite
 3. `docs/20260815_Codex_Thermal_Runtime_Temporal_Handoff_KO_01.md`
 4. `docs/THERMAL90_UDP_CAPTURE_SETUP_KO.md` — XIAO-ESP32C6와 Raspberry Pi를 쓸 때의 실제 raw-capture 설치·실행 절차
 
-현재 수집 구현은 `firmware/xiao_esp32c6_thermal90_udp_capture/`와 `scripts/thermal_udp_capture.py`다. 이 구현은 `Thermal_Test`의 10,080-byte UDP raw-frame 형식을 보존하며, 화면 표시·정규화·모델 추론 대신 원본 datagram, native pixel, provenance, checksum을 남긴다.
+현재 수집 구현은 `firmware/xiao_esp32c6_thermal90_udp_capture/`와 `scripts/thermal_udp_capture.py`다. 이 구현은 `Thermal_Test`의 10,080-byte little-endian 논리 raw frame을 보존하고, `SNTR` UDP V2의 frame ID/chunk index/offset/length/CRC32로 MTU-safe하게 전송·재조립한다. 화면 표시·정규화·모델 추론 대신 원본 datagram, 재조립 raw frame, native pixel, provenance, checksum을 남긴다. 구형 blind stream 재조립은 기존 오류 증거를 읽기 위한 진단 호환 모드일 뿐 새 수집에 사용하지 않는다.
 
 수집 세션마다 다음을 지킨다.
 

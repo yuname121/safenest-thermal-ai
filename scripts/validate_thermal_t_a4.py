@@ -395,13 +395,46 @@ def _validate_pilot(documents: dict[str, Any], errors: list[dict[str, str]]) -> 
         _error(errors, "PILOT_FALL_ESCALATION", "pilot_semantic_summary.json", "Pilot cannot claim fall event evidence.")
 
 
-def _validate_model_reference(repo_root: Path, documents: dict[str, Any], errors: list[dict[str, str]]) -> None:
+def _validate_model_reference(
+    repo_root: Path,
+    documents: dict[str, Any],
+    errors: list[dict[str, str]],
+    warnings: list[dict[str, str]],
+) -> None:
     reference = documents["compatibility_mapping_contract.json"].get("runtime_model_reference", {})
+    expected_map = {str(key): value for key, value in sorted(RUNTIME_CLASS_MAP.items())}
+    expected_reference = {
+        "model_id": "thermal_fall_int8",
+        "version": "0.1.0",
+        "path": "models/thermal/thermal_fall_int8_v0.1.0.tflite",
+        "sha256": "5b56da8d127ccef85f30b6459cc0cfe2d86490e41f3caa5bd2a7b70bbc46ae84",
+        "size_bytes": 318184,
+        "class_map": expected_map,
+        "model_metrics_used": False,
+        "status": "LEGACY_OR_CURRENT_RUNTIME_CLASS_MAP_NOT_SOURCE_GROUND_TRUTH",
+    }
+    for key, expected in expected_reference.items():
+        if reference.get(key) != expected:
+            _error(
+                errors,
+                "RUNTIME_REFERENCE_MISMATCH",
+                f"compatibility_mapping_contract.json:runtime_model_reference.{key}",
+                str(reference.get(key)),
+            )
+
+    manifest_path = repo_root / "models/model_manifest.json"
+    if not manifest_path.is_file():
+        _warning(
+            warnings,
+            "LEGACY_RUNTIME_ARTIFACT_INTENTIONALLY_EXCLUDED",
+            "models/model_manifest.json",
+            "The focused thermal-AI repository excludes the legacy runtime manifest and binary; only the frozen compatibility reference was validated.",
+        )
+        return
     try:
-        manifest = json.loads((repo_root / "models/model_manifest.json").read_text(encoding="utf-8"))["models"]["thermal"]
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))["models"]["thermal"]
         model_path = repo_root / manifest["path"]
         measured = {"sha256": _sha256(model_path), "size_bytes": model_path.stat().st_size}
-        expected_map = {str(key): value for key, value in sorted(RUNTIME_CLASS_MAP.items())}
         for key, value in (("model_id", manifest["model_id"]), ("version", manifest["version"]), ("path", manifest["path"]), ("sha256", measured["sha256"]), ("size_bytes", measured["size_bytes"]), ("class_map", expected_map)):
             if reference.get(key) != value:
                 _error(errors, "RUNTIME_REFERENCE_MISMATCH", f"compatibility_mapping_contract.json:runtime_model_reference.{key}", str(reference.get(key)))
@@ -444,7 +477,7 @@ def validate_evidence(*, repo_root: Path = ROOT, evidence_dir: Path | None = Non
         _validate_pilot(documents, errors)
         if winner != documents["selected_semantic_policy.json"].get("selected_candidate_id"):
             _error(errors, "SELECTED_POLICY_WINNER_MISMATCH", "selected_semantic_policy.json", f"computed={winner!r}")
-        _validate_model_reference(repo_root, documents, errors)
+        _validate_model_reference(repo_root, documents, errors, warnings)
     _validate_static_implementation(repo_root, errors)
     validation_path = evidence_dir / "validation_result.json"
     if validation_path.is_file():

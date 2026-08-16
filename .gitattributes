@@ -1,0 +1,10 @@
+* text=auto eol=lf
+
+# Never apply newline conversion to binary datasets and model artifacts.
+*.bin binary
+*.h5 binary
+*.keras binary
+*.npy binary
+*.npz binary
+*.tflite binary
+*.zip binary

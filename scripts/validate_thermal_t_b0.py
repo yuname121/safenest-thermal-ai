@@ -175,7 +175,22 @@ def _validate_a6(repo_root: Path, errors: list[dict[str, str]]) -> dict[str, Any
     return result
 
 
-def _validate_dataset_authority(documents: Mapping[str, Any], repo_root: Path, errors: list[dict[str, str]]) -> None:
+def _focused_repo_excludes_legacy_runtime(repo_root: Path) -> bool:
+    """Return whether the focused-repository provenance records the exclusion."""
+
+    provenance = repo_root / "docs/PROVENANCE.md"
+    if not provenance.is_file():
+        return False
+    source = provenance.read_text(encoding="utf-8")
+    return "legacy interpreter code" in source and "model binaries are excluded" in source
+
+
+def _validate_dataset_authority(
+    documents: Mapping[str, Any],
+    repo_root: Path,
+    errors: list[dict[str, str]],
+    warnings: list[dict[str, str]],
+) -> None:
     authority = documents.get("dataset_authority.json", {})
     if authority.get("total_canonical_rows") != 48000:
         _error(errors, "DATASET_TOTAL_INVALID", "dataset_authority.json", "T-A6 total must remain 48,000 rows.")
@@ -216,7 +231,10 @@ def _validate_dataset_authority(documents: Mapping[str, Any], repo_root: Path, e
             if item.get(key) != expected[key] or reg.get(key) != expected[key]:
                 _error(errors, "DATASET_ROLE_MISMATCH", f"dataset_authority.json:roles.{role}.{key}", f"expected {expected[key]!r}")
     if not (repo_root / MODEL_PATH).is_file():
-        _error(errors, "LEGACY_MODEL_MISSING", MODEL_PATH, "Tracked legacy model artifact is required for T-B0 audit.")
+        if _focused_repo_excludes_legacy_runtime(repo_root):
+            _warning(warnings, "LEGACY_MODEL_INTENTIONALLY_EXCLUDED", MODEL_PATH, "Focused repository provenance excludes legacy model binaries; the frozen inventory remains reference-only.")
+        else:
+            _error(errors, "LEGACY_MODEL_MISSING", MODEL_PATH, "Legacy model is absent without a recorded focused-repository exclusion.")
 
 
 def _validate_target(documents: Mapping[str, Any], errors: list[dict[str, str]]) -> None:
@@ -233,7 +251,12 @@ def _validate_target(documents: Mapping[str, Any], errors: list[dict[str, str]])
         _error(errors, "TEMPORAL_CLAIM_ESCALATED", "target_contract.json:temporal_event_ground_truth", "T-B0 cannot establish temporal fall ground truth.")
 
 
-def _validate_runtime_and_model(documents: Mapping[str, Any], repo_root: Path, errors: list[dict[str, str]]) -> None:
+def _validate_runtime_and_model(
+    documents: Mapping[str, Any],
+    repo_root: Path,
+    errors: list[dict[str, str]],
+    warnings: list[dict[str, str]],
+) -> None:
     inventory = documents.get("existing_model_inventory.json", {})
     if inventory.get("t_b0_classification") != "LEGACY_DEPLOYED_REFERENCE":
         _error(errors, "LEGACY_MODEL_MISCLASSIFIED", "existing_model_inventory.json:t_b0_classification", "Existing model must remain a legacy reference.")
@@ -249,11 +272,17 @@ def _validate_runtime_and_model(documents: Mapping[str, Any], repo_root: Path, e
         if model_path.stat().st_size != 318184:
             _error(errors, "MODEL_SIZE_MISMATCH", MODEL_PATH, "Measured legacy model size differs from pinned identity.")
     audit = documents.get("existing_runtime_preprocessing_audit.json", {})
-    source = (repo_root / "inference/thermal_interpreter.py").read_text(encoding="utf-8")
-    required_tokens = ["_prepare_float_frame", "array.min()", "array.max()", "(array - min_value) / range_val", "np.rint", "np.clip"]
-    for token in required_tokens:
-        if token not in source:
-            _error(errors, "RUNTIME_AUDIT_NOT_REPRODUCIBLE", "inference/thermal_interpreter.py", f"Missing audited token: {token}")
+    runtime_path = repo_root / "inference/thermal_interpreter.py"
+    if runtime_path.is_file():
+        source = runtime_path.read_text(encoding="utf-8")
+        required_tokens = ["_prepare_float_frame", "array.min()", "array.max()", "(array - min_value) / range_val", "np.rint", "np.clip"]
+        for token in required_tokens:
+            if token not in source:
+                _error(errors, "RUNTIME_AUDIT_NOT_REPRODUCIBLE", "inference/thermal_interpreter.py", f"Missing audited token: {token}")
+    elif _focused_repo_excludes_legacy_runtime(repo_root):
+        _warning(warnings, "LEGACY_RUNTIME_INTENTIONALLY_EXCLUDED", "inference/thermal_interpreter.py", "Focused repository provenance excludes the legacy interpreter; the frozen audit is retained for compatibility history.")
+    else:
+        _error(errors, "LEGACY_RUNTIME_MISSING", "inference/thermal_interpreter.py", "Legacy interpreter is absent without a recorded focused-repository exclusion.")
     if audit.get("audit_status") != "COMPLETE_WITH_COMPATIBILITY_LIMITATION" or audit.get("per_frame") is not True:
         _error(errors, "RUNTIME_AUDIT_STATUS_INVALID", "existing_runtime_preprocessing_audit.json", "Runtime per-frame behavior must be explicitly audited.")
     if audit.get("absolute_temperature_preserved") is not False or audit.get("canonical_celsius_directly_consumed") is not False:
@@ -402,9 +431,9 @@ def validate_evidence(*, repo_root: Path = ROOT, evidence_dir: Path | None = Non
     documents = _load_documents(evidence_dir, errors)
     ta6 = _validate_a6(repo_root, errors)
     if all(name in documents for name in REQUIRED_JSON):
-        _validate_dataset_authority(documents, repo_root, errors)
+        _validate_dataset_authority(documents, repo_root, errors, warnings)
         _validate_target(documents, errors)
-        _validate_runtime_and_model(documents, repo_root, errors)
+        _validate_runtime_and_model(documents, repo_root, errors, warnings)
         _validate_preprocessing(documents, errors)
         _validate_roles_metrics_and_near_duplicates(documents, errors, warnings)
         _validate_winner_repro_budget(documents, errors)
