@@ -115,6 +115,26 @@ Thermal-90 → XIAO-ESP32C6 → UDP raw datagram → Raspberry Pi 수집기
 
 세부 기록은 PC 바탕화면의 `pilot_review_session_S000_004_KO.md`와 `validation_session_S000_004.json`에 있다. 이 세션은 구조·전송 pilot 증거로 보관하며, 재학습·낙상 이벤트 주장·LOCKED_TEST 승격에 사용하지 않는다.
 
+### 정적 자세 수집 결과: `session_S000_011`~`014`
+
+PC 바탕화면 `sessions/` 아래의 네 세션을 PC validator로 재검증했다. 모든 세션의 checksum은 `PASS`였지만, 조각 재조립 후 header frame-counter 무결성이 세션별로 달랐다.
+
+| 세션 | 라벨 | validator | 유효/무효 | 주요 결과 |
+|---|---|---|---:|---|
+| `session_S000_011` | `EMPTY` | `CAPTURE_INVALID` | 171 / 639 | sensor counter gap 2254, duplicate 626, reversal 38 |
+| `session_S000_012` | `STANDING` | `CAPTURE_INVALID` | 173 / 1709 | duplicate 1732, reversal 82 |
+| `session_S000_013` | `SITTING` | `CAPTURE_STRUCTURE_VALID_WITH_LIMITATIONS` | 174 / 1 | counter gap/duplicate/reversal 0 |
+| `session_S000_014` | `LYING` | `CAPTURE_INVALID` | 173 / 614 | sensor counter gap 1147, duplicate 588, reversal 27 |
+
+해석:
+
+- `S000_013`만 현재 pilot 구조 검토 후보로 보관한다.
+- `S000_011`, `012`, `014`는 UDP 조각 손실 또는 재조립 stream desynchronization 증거가 있어 학습·정적 라벨 검증에 사용하지 않는다.
+- invalid 세션을 파일 편집으로 복구하거나 유효 프레임만 골라 새 세션으로 만들지 않는다. 원본은 오류 증거로 보존한다.
+- validator JSON은 PC 바탕화면 `sessions/validation_session_S000_011.json`~`014.json`에 생성했다.
+
+세부 요약은 `docs/20260816_Thermal_Static_Sessions_S000_011_014_Report_KO.md`에 있다.
+
 ## 앞으로 해야 하는 것
 
 ### 1. PC에서 비밀 설정 파일 생성
@@ -239,6 +259,14 @@ python3 ~/safenest-thermal-capture/validate_thermal_real_capture.py "$collection
 
 LYING을 낙상으로 명명하지 않는다. 실제 전이 event를 수집하려면 별도 안전 승인과 phase annotation 설계가 필요하다.
 
+현재 정적 수집 재시도 대상은 다음과 같다.
+
+- `session_S000_015`: `EMPTY` 재수집
+- `session_S000_016`: `STANDING` 재수집
+- `session_S000_017`: `LYING` 재수집
+
+재시도 전에는 Pi 수집기를 먼저 실행하고 ESP32를 재시작한다. Serial Monitor의 `send_failures`가 수집 중 증가하지 않는지 확인한다. 조각 재조립 모드에서 frame-counter 오류가 반복되면 대량 수집을 중단하고 UDP chunk sequence를 포함하는 프로토콜 개선을 T-C에 올린다.
+
 ### 7. PC로 수집물 회수
 
 PC의 로컬 PowerShell에서 실행한다.
@@ -283,6 +311,8 @@ python scripts\validate_thermal_real_capture.py `
 - XIAO 실제 업로드·센서 I2C/SPI 연결은 아직 확인하지 않았다.
 - 실제 Thermal-90 native unit, byte order의 물리적 의미, orientation은 아직 검증하지 않았다.
 - `session_S000_004`에서 effective FPS 약 4.3173, sensor counter gap/packet loss 0을 측정했지만, 2초 timing gap 4회 원인은 아직 확인하지 않았다.
+- `session_S000_013`은 effective FPS 약 5.7792, frame-counter 오류 0인 유일한 정적 자세 pilot 후보이다.
+- `session_S000_011`, `012`, `014`는 재조립 후 frame-counter 오류로 invalid 판정되었다.
 - Pi의 실제 WLAN IP와 Wi-Fi 비밀값은 작업자가 입력해야 한다.
 - 기존 `Desktop\Thermal_Test\udp_receiver_rpi.py`는 화면 표시·보정 중심의 prototype이며 계약형 수집기로 사용하지 않는다.
 - 공개 저장소에는 `wifi_secrets.h`, raw capture, `.tflite` binary를 추가하지 않는다.
