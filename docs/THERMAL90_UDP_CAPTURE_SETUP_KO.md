@@ -38,6 +38,33 @@ XIAO는 프레임마다 UDP datagram 하나를 전송한다.
 mkdir -p ~/safenest-thermal-capture
 ```
 
+### 팀원이 확인해야 할 실제 코드 위치
+
+| 역할 | Git 저장소 원본 | Raspberry Pi/Arduino 실제 위치 |
+|---|---|---|
+| ESP32 송신 코드 | `firmware/xiao_esp32c6_thermal90_udp_capture/xiao_esp32c6_thermal90_udp_capture.ino` | Arduino IDE에서 위 폴더의 `.ino`를 열어 XIAO-ESP32C6에 업로드 |
+| Pi 수집기 | `scripts/thermal_udp_capture.py` | `~/safenest-thermal-capture/thermal_udp_capture.py` |
+| Pi validator | `scripts/validate_thermal_real_capture.py` | `~/safenest-thermal-capture/validate_thermal_real_capture.py` |
+
+Pi에서 배포된 파일을 확인한다.
+
+```bash
+ls -l ~/safenest-thermal-capture/thermal_udp_capture.py \
+  ~/safenest-thermal-capture/validate_thermal_real_capture.py
+sha256sum ~/safenest-thermal-capture/thermal_udp_capture.py \
+  ~/safenest-thermal-capture/validate_thermal_real_capture.py
+```
+
+Git의 `.ino` 파일이 존재하는 것과 실제 ESP32에 업로드된 것은 별개다. Arduino Serial Monitor에서 아래 세 줄을 확인해야 현재 펌웨어가 이 수집기와 호환된다고 기록할 수 있다.
+
+```text
+[SafeNest Thermal-90 raw UDP sender]
+[Protocol] UDP raw V1: 10080 bytes/frame, 80 x 62 pixels
+[Receiver] <Raspberry Pi WLAN IP>:5005
+```
+
+`send_failures`가 수집 중 증가하면 업로드 성공 여부와 별개로 해당 세션은 통신 품질 검토 대상으로 보류한다.
+
 PC에서 Pi로 수집기와 validator를 복사한다. `<pi-user>`, `<pi-host>`만 실제 값으로 교체한다.
 
 ```powershell

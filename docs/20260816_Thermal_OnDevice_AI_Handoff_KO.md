@@ -196,6 +196,24 @@ scp scripts/thermal_udp_capture.py <pi-user>@<pi-host>:~/safenest-thermal-captur
 scp scripts/validate_thermal_real_capture.py <pi-user>@<pi-host>:~/safenest-thermal-capture/
 ```
 
+팀원이 이어서 작업할 때의 코드 위치는 다음과 같다.
+
+| 역할 | Git 원본 | 실제 실행/업로드 위치 |
+|---|---|---|
+| XIAO-ESP32C6 송신기 | `firmware/xiao_esp32c6_thermal90_udp_capture/xiao_esp32c6_thermal90_udp_capture.ino` | Arduino IDE에서 열어 XIAO-ESP32C6에 업로드 |
+| Pi 수집기 | `scripts/thermal_udp_capture.py` | `~/safenest-thermal-capture/thermal_udp_capture.py` |
+| Pi validator | `scripts/validate_thermal_real_capture.py` | `~/safenest-thermal-capture/validate_thermal_real_capture.py` |
+
+Git 파일 존재만으로 ESP32 업로드 완료를 증명할 수 없다. 업로드 후 Serial Monitor `115200` baud에서 다음을 확인하고 기록한다.
+
+```text
+[SafeNest Thermal-90 raw UDP sender]
+[Protocol] UDP raw V1: 10080 bytes/frame, 80 x 62 pixels
+[Receiver] <Pi WLAN IP>:5005
+```
+
+이전 실제 로그에서는 위 호환 문구가 확인되었지만 `send_failures`가 8회 관찰되었다. 이후 세션에서는 Pi 수집기를 먼저 실행하고 ESP32를 재시작한 뒤 `send_failures`가 더 증가하지 않는지 확인한다.
+
 Pi에서 수신 주소를 확인한다.
 
 ```bash
@@ -308,7 +326,7 @@ python scripts\validate_thermal_real_capture.py `
 
 ## 현재 미해결 항목
 
-- XIAO 실제 업로드·센서 I2C/SPI 연결은 아직 확인하지 않았다.
+- XIAO는 Serial Monitor에서 SafeNest Thermal-90 송신기·10080-byte protocol·Pi receiver 문구가 확인되었다. 다만 Git 커밋과 실제 보드 binary의 일치 여부는 Arduino IDE 업로드 기록으로 별도 확인해야 한다.
 - 실제 Thermal-90 native unit, byte order의 물리적 의미, orientation은 아직 검증하지 않았다.
 - `session_S000_004`에서 effective FPS 약 4.3173, sensor counter gap/packet loss 0을 측정했지만, 2초 timing gap 4회 원인은 아직 확인하지 않았다.
 - `session_S000_013`은 effective FPS 약 5.7792, frame-counter 오류 0인 유일한 정적 자세 pilot 후보이다.
@@ -329,6 +347,13 @@ C:\Users\KIM TAEGYUN\Documents\ChatGPT\Embedded_SW\safenest-thermal-ai\
 ├── scripts\thermal_udp_capture.py
 ├── scripts\validate_thermal_real_capture.py
 └── docs\THERMAL90_UDP_CAPTURE_SETUP_KO.md
+```
+
+Pi 배포 경로:
+
+```text
+~/safenest-thermal-capture/thermal_udp_capture.py
+~/safenest-thermal-capture/validate_thermal_real_capture.py
 ```
 
 ### 원본 Desktop prototype
