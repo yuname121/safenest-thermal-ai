@@ -14,6 +14,8 @@ Thermal-90 센서 기반 온디바이스 열화상 AI의 **검증과 재학습**
 1. 작업 전 [NEXT_STEPS_KO.md](NEXT_STEPS_KO.md)를 처음부터 읽습니다.
 2. 보존된 인수인계 문서는 [docs/20260815_Codex_Thermal_Runtime_Temporal_Handoff_KO_01.md](docs/20260815_Codex_Thermal_Runtime_Temporal_Handoff_KO_01.md)입니다.
 3. 실제 데이터 수집 기준은 [docs/20260814_Codex_Thermal_Real_Data_Acquisition_Guide_KO_01.md](docs/20260814_Codex_Thermal_Real_Data_Acquisition_Guide_KO_01.md)와 `scripts/validate_thermal_real_capture.py`입니다.
+4. XIAO-ESP32C6 → Raspberry Pi UDP raw-capture 구현과 실행 절차는 [docs/THERMAL90_UDP_CAPTURE_SETUP_KO.md](docs/THERMAL90_UDP_CAPTURE_SETUP_KO.md)입니다.
+5. 현재 상태와 다음 담당자 작업 순서는 [docs/20260816_Thermal_OnDevice_AI_Handoff_KO.md](docs/20260816_Thermal_OnDevice_AI_Handoff_KO.md)입니다.
 
 ## 디렉터리
 
@@ -21,6 +23,7 @@ Thermal-90 센서 기반 온디바이스 열화상 AI의 **검증과 재학습**
 | --- | --- |
 | `datasets/thermal/` | 표준화·분할·학습/평가 파이프라인 및 T-A/T-B 검증 manifest |
 | `scripts/` | T-A0~T-B5 생성·검증과 실제 수집 계약 validator |
+| `firmware/xiao_esp32c6_thermal90_udp_capture/` | Thermal_Test 호환 10,080-byte UDP raw-frame 송신 스케치. Wi-Fi 비밀값은 로컬 `wifi_secrets.h`에만 둠 |
 | `tests/` | 단계별 회귀 테스트 |
 | `docs/` | 인수인계·수집 계약·오프라인 실험 보고서 |
 | `data/`, `artifacts/` | 로컬/승인된 외부 저장소에서만 관리할 비추적 대용량 데이터와 모델 |

@@ -65,6 +65,9 @@ Get-FileHash -Algorithm SHA256 .\artifacts\thermal_full_int8.tflite
 1. `docs/20260814_Codex_Thermal_Real_Data_Acquisition_Guide_KO_01.md`
 2. `docs/20260814_Codex_Thermal_Real_Data_Acquisition_Contract_EN_01.md`
 3. `docs/20260815_Codex_Thermal_Runtime_Temporal_Handoff_KO_01.md`
+4. `docs/THERMAL90_UDP_CAPTURE_SETUP_KO.md` — XIAO-ESP32C6와 Raspberry Pi를 쓸 때의 실제 raw-capture 설치·실행 절차
+
+현재 수집 구현은 `firmware/xiao_esp32c6_thermal90_udp_capture/`와 `scripts/thermal_udp_capture.py`다. 이 구현은 `Thermal_Test`의 10,080-byte UDP raw-frame 형식을 보존하며, 화면 표시·정규화·모델 추론 대신 원본 datagram, native pixel, provenance, checksum을 남긴다.
 
 수집 세션마다 다음을 지킨다.
 

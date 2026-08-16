@@ -846,7 +846,10 @@ def _validate_session(
         representation = frame.get("raw_representation")
         if representation not in FULL_FRAME_REPRESENTATIONS | LIMITED_REPRESENTATIONS | PREPROCESSED_REPRESENTATIONS | {"UNKNOWN"}:
             _error(errors, "RAW_REPRESENTATION_INVALID", f"{item_path}:raw_representation", f"Unsupported raw representation {representation!r}.")
-        else:
+        elif frame.get("validity_status") == "VALID":
+            # Missing, corrupt, partial, and duplicate markers must stay in the
+            # manifest as transport evidence. They do not, however, change the
+            # collection's successful raw-frame representation classification.
             representations.append(representation)
         raw_file = frame.get("raw_file")
         decoded_file = frame.get("decoded_native_file")

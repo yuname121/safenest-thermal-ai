@@ -23,3 +23,6 @@ data/real_capture/**
 *.npz
 *.npy
 *.zip
+
+# Local Wi-Fi and receiver endpoint credentials for the XIAO capture firmware.
+firmware/xiao_esp32c6_thermal90_udp_capture/wifi_secrets.h

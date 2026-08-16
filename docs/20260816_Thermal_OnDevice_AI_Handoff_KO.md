@@ -1,0 +1,298 @@
+# SafeNest 열화상 온디바이스 AI 인수인계서
+
+작성일: 2026-08-16 (KST)
+저장소: `rla1729/safenest-thermal-ai`
+범위: Thermal-90 열화상 데이터 수집 계약, 모델 검증, 재학습 준비
+범위 밖: TCP/UDP 제품 통신 설계, ESP32 애플리케이션 기능, 위험도 융합, 경보 정책
+
+## 문서 사용법
+
+이 문서는 다음 작업자가 장비와 저장소를 처음 받아도 현재 상태를 오해하지 않고 이어서 작업하도록 작성했다.
+
+1. `현재 하고 있는 것`을 읽어 현재 단계와 중단선을 확인한다.
+2. `지금까지 한 것`에서 이미 있는 코드·근거·검증 결과를 확인한다.
+3. `앞으로 해야 하는 것`을 위에서부터 순서대로 수행한다.
+4. 원시 데이터, Wi-Fi 비밀번호, 모델 binary는 Git에 올리지 않는다.
+
+## 현재 하고 있는 것
+
+현재 단계는 **T-C 전 단계의 DEVICE_CONTRACT_PILOT 수집기 준비**다. 아직 실제 Thermal-90 센서에서 수집한 결과로 모델 성능을 판정하거나 재학습하는 단계가 아니다.
+
+현재 하드웨어 경로:
+
+```text
+Thermal-90 → XIAO-ESP32C6 → UDP raw datagram → Raspberry Pi 수집기
+                                             ↓
+                                  raw/native/provenance/checksum
+                                             ↓
+                                  PC validator 및 T-C 검토
+```
+
+현재 구현된 wire 계약은 팀 PC의 `Desktop\Thermal_Test`를 기준으로 한다.
+
+- 프레임마다 UDP datagram 1개
+- datagram 크기: 정확히 10,080 bytes
+- 5,040 little-endian `uint16` word
+- word `0..79`: 센서 header
+- word `80..5039`: `80×62` pixel payload
+- header word `0`: 수신 frame counter로 기록
+- 물리 온도 단위, orientation, 실제 FPS는 아직 검증하지 않음
+
+수집기는 다음을 저장한다.
+
+```text
+<collection_id>/
+├── collection.json
+└── subjects/<subject_id>/sessions/<session_id>/
+    ├── raw/*.udp.bin
+    ├── decoded_native/*_pixels_u16le.bin
+    ├── frames.jsonl
+    ├── annotations.jsonl
+    ├── session.json
+    └── checksums.sha256
+```
+
+수집 중에는 resize, crop, rotate, normalize, calibration, color-map, model inference를 하지 않는다. `HUMAN_FALL`은 실제 낙상 event가 아니라 LYING 유래 자세 proxy이므로, 안전하지 않은 자유 낙상 실험을 하지 않는다.
+
+## 지금까지 한 것
+
+### 저장소와 문서
+
+- 공개 저장소 `rla1729/safenest-thermal-ai`를 생성했다.
+- T-A0~T-B5 열화상 데이터 계약·검증 스크립트·manifest·보고서를 선별 이관했다.
+- 통신/통합 노드/위험도 융합/구형 runtime과 구형 모델 binary는 현재 열화상 AI 기준선에서 제외했다.
+- 실행 매뉴얼은 `NEXT_STEPS_KO.md`다.
+- 실제 수집 계약은 `docs/20260814_Codex_Thermal_Real_Data_Acquisition_Guide_KO_01.md`다.
+- XIAO와 Pi 수집 절차는 `docs/THERMAL90_UDP_CAPTURE_SETUP_KO.md`다.
+
+### 새 수집 구현
+
+- `firmware/xiao_esp32c6_thermal90_udp_capture/xiao_esp32c6_thermal90_udp_capture.ino`
+  - Thermal_Test의 XIAO ESP32C6 핀·I2C·SPI 초기화 흐름을 기반으로 raw frame을 전송한다.
+  - Wi-Fi와 Pi 주소는 `wifi_secrets.h`에서 읽으며 이 파일은 Git에 올리지 않는다.
+- `scripts/thermal_udp_capture.py`
+  - Raspberry Pi 표준 Python만으로 동작한다.
+  - exact-size UDP datagram, unexpected datagram, header counter gap/duplicate를 기록한다.
+  - Pi host monotonic timestamp와 wall-clock을 기록한다.
+  - 모델 입력을 만들거나 예측하지 않는다.
+- `scripts/validate_thermal_real_capture.py`
+  - 수집 구조·manifest·파일 존재·checksum·sequence/timestamp·annotation을 검사한다.
+  - 성공해도 학습·T-C·T-D·LOCKED_TEST 사용을 승인하지 않는다.
+
+### 검증 결과
+
+실제 센서 연결 전 localhost UDP 시뮬레이션으로 다음을 확인했다.
+
+- 10,080-byte frame 3개 수신
+- 의도적인 header counter gap 1개를 missing marker로 보존
+- raw/native/JSONL/session/checksum 생성
+- validator 결과 `CAPTURE_STRUCTURE_VALID_WITH_LIMITATIONS`
+- checksum `PASS`
+- validator error `0`
+
+이 결과는 코드 흐름 검증일 뿐 실제 XIAO·Thermal-90·Pi 하드웨어 검증이 아니다.
+
+## 앞으로 해야 하는 것
+
+### 1. PC에서 비밀 설정 파일 생성
+
+현재 추적되는 것은 `wifi_secrets.example.h`뿐이다. 실제 Wi-Fi 정보를 로컬 파일에 복사해 입력한다.
+
+PowerShell:
+
+```powershell
+$fw = 'C:\Users\KIM TAEGYUN\Documents\ChatGPT\Embedded_SW\safenest-thermal-ai\firmware\xiao_esp32c6_thermal90_udp_capture'
+Copy-Item -LiteralPath (Join-Path $fw 'wifi_secrets.example.h') -Destination (Join-Path $fw 'wifi_secrets.h')
+code (Join-Path $fw 'wifi_secrets.h')
+```
+
+입력할 값은 다음 세 가지다.
+
+```cpp
+#define THERMAL_WIFI_SSID "실제_2G_WiFi_SSID"
+#define THERMAL_WIFI_PASSWORD "실제_WiFi_비밀번호"
+#define THERMAL_RECEIVER_IP "라즈베리파이_WLAN_IP"
+```
+
+`wifi_secrets.h`는 `.gitignore`에 의해 추적되지 않는다. 커밋 전에 `git status`로 비추적 파일에 나타나지 않는지 확인한다.
+
+### 2. XIAO-ESP32C6 업로드
+
+Arduino IDE에서 다음 폴더의 `.ino`를 연다.
+
+```text
+firmware/xiao_esp32c6_thermal90_udp_capture/
+```
+
+XIAO ESP32C6 보드와 실제 serial port를 선택해 업로드한다. 배선은 기존 Thermal_Test와 대조한다.
+
+- SDA: D4
+- SCL: D5
+- MOSI: D10
+- MISO: D9
+- SCK: D8
+- CS: D3
+- DATA_READY: D1
+- NRESET: D2
+
+Serial Monitor는 `115200` baud로 열고 다음을 확인한다.
+
+- 센서 I2C 발견
+- Wi-Fi 연결
+- receiver IP/port가 예상값
+- `send_failures`가 증가하지 않음
+
+실제 센서가 발견되지 않거나 frame counter가 증가하지 않으면 수집을 진행하지 말고 배선·전원·I2C 주소를 확인한다.
+
+### 3. Raspberry Pi에 수집기 복사
+
+PC의 저장소 루트에서 실행한다.
+
+```powershell
+scp scripts/thermal_udp_capture.py <pi-user>@<pi-host>:~/safenest-thermal-capture/
+scp scripts/validate_thermal_real_capture.py <pi-user>@<pi-host>:~/safenest-thermal-capture/
+```
+
+Pi에서 수신 주소를 확인한다.
+
+```bash
+hostname -I
+ss -lun | grep ':5005'
+mkdir -p ~/thermal-captures
+```
+
+### 4. 첫 30초 빈 장면 pilot
+
+Pi 수집기를 먼저 실행하고 XIAO를 켠다.
+
+```bash
+python3 ~/safenest-thermal-capture/thermal_udp_capture.py \
+  --output ~/thermal-captures \
+  --collection-id collection_20260816_pilot01 \
+  --subject-id S000 \
+  --session-id session_S000_001 \
+  --operator-code OP_001 \
+  --duration-seconds 30 \
+  --source-label EMPTY \
+  --sensor-device-id THERMAL90_001 \
+  --firmware-version xiao_thermal_udp_v1
+```
+
+다음이 생성되는지 확인한다.
+
+```bash
+find ~/thermal-captures/collection_20260816_pilot01 -type f | sort
+```
+
+`raw/`가 없거나 `.npy`/화면 screenshot만 생성되면 계약형 수집에 실패한 것이다. 그 상태에서 대량 수집·재학습을 시작하지 않는다.
+
+### 5. 수집 직후 Pi에서 validator 실행
+
+```bash
+collection=~/thermal-captures/collection_20260816_pilot01
+python3 ~/safenest-thermal-capture/validate_thermal_real_capture.py "$collection" \
+  --json-out "$collection/validator_result.json"
+```
+
+예상되는 초기 제한:
+
+- `PHYSICAL_UNIT_NOT_VERIFIED`
+- `EFFECTIVE_FPS_NOT_VERIFIED`
+- `TEMPORAL_ORDER_ONLY`
+
+이 제한은 실제 수집값 검토 대상이며, 임의로 `VERIFIED`로 바꾸지 않는다.
+
+### 6. 조건별 추가 session 수집
+
+센서 재시작, 설치 변경, subject 변경, 환경 변경마다 새 session ID를 사용한다.
+
+- 빈 장면: `source-label EMPTY`
+- 서 있기: `source-label STANDING`
+- 앉기: `source-label SITTING`
+- 안전하게 눕기: `source-label LYING`
+- 거리·각도·부분 가림·배경 변화: metadata 옵션에 기록
+
+LYING을 낙상으로 명명하지 않는다. 실제 전이 event를 수집하려면 별도 안전 승인과 phase annotation 설계가 필요하다.
+
+### 7. PC로 수집물 회수
+
+PC의 로컬 PowerShell에서 실행한다.
+
+```powershell
+$dest = "$env:USERPROFILE\Documents\rpi_backup\20260816"
+New-Item -ItemType Directory -Force -Path $dest
+scp -r <pi-user>@<pi-host>:~/thermal-captures/collection_20260816_pilot01 $dest
+```
+
+raw capture는 `data/real_capture/` 또는 외부 SSD에 보관하며 Git에 추가하지 않는다.
+
+### 8. PC에서 재검증 및 전달
+
+```powershell
+cd C:\Users\KIM TAEGYUN\Documents\ChatGPT\Embedded_SW\safenest-thermal-ai
+python scripts\validate_thermal_real_capture.py `
+  "$env:USERPROFILE\Documents\rpi_backup\20260816\collection_20260816_pilot01" `
+  --json-out "$env:USERPROFILE\Documents\rpi_backup\20260816\validator_result_pc.json"
+```
+
+팀에 전달할 것은 collection 전체, Pi/PC validator 결과, 센서·firmware·collector 버전, 실제 FPS, packet loss·decode 오류, UNKNOWN/NOT_VERIFIED 목록이다.
+
+### 9. T-C 종료 판단
+
+- 입력 계약·raw 무결성·시간 정보가 확인되고 도메인 문제가 허용 범위면: 재학습하지 않고 T-C 결과를 문서화한다.
+- unit/geometry/시간/설치 조건 불일치 또는 성능 저하가 확인되면: 원인과 증거를 정리해 T-D 재학습 승인을 요청한다.
+- T-C 증거와 명시 승인이 없으면 T-D 재학습을 시작하지 않는다.
+
+### 10. T-D 재학습 승인 후 절차
+
+1. 수집물의 권한·동의·checksum을 확인한다.
+2. subject/session/event group split을 고정한다.
+3. TRAIN 데이터로만 P1 전처리 통계를 fit한다.
+4. T-A0~T-A6 validator를 통과시킨다.
+5. T-B1~T-B5를 실행하고 validation 기준으로 후보를 고른다.
+6. LOCKED_TEST는 마지막 1회만 사용한다.
+7. float/INT8 parity와 artifact checksum을 기록한다.
+
+## 현재 미해결 항목
+
+- XIAO 실제 업로드·센서 I2C/SPI 연결은 아직 확인하지 않았다.
+- 실제 Thermal-90 native unit, byte order의 물리적 의미, orientation은 아직 검증하지 않았다.
+- 실제 effective FPS와 UDP loss는 아직 측정하지 않았다.
+- Pi의 실제 WLAN IP와 Wi-Fi 비밀값은 작업자가 입력해야 한다.
+- 기존 `Desktop\Thermal_Test\udp_receiver_rpi.py`는 화면 표시·보정 중심의 prototype이며 계약형 수집기로 사용하지 않는다.
+- 공개 저장소에는 `wifi_secrets.h`, raw capture, `.tflite` binary를 추가하지 않는다.
+
+## 파일 위치 요약
+
+### 새 저장소의 현재 파일
+
+```text
+C:\Users\KIM TAEGYUN\Documents\ChatGPT\Embedded_SW\safenest-thermal-ai\
+├── firmware\xiao_esp32c6_thermal90_udp_capture\
+│   ├── xiao_esp32c6_thermal90_udp_capture.ino
+│   └── wifi_secrets.example.h
+├── scripts\thermal_udp_capture.py
+├── scripts\validate_thermal_real_capture.py
+└── docs\THERMAL90_UDP_CAPTURE_SETUP_KO.md
+```
+
+### 원본 Desktop prototype
+
+```text
+C:\Users\KIMTAEGYUN\Desktop\Thermal_Test\udp_sender_esp32\udp_sender_esp32.ino
+C:\Users\KIMTAEGYUN\Desktop\Thermal_Test\udp_receiver_rpi.py
+```
+
+원본 prototype과 새 계약형 수집기를 혼동하지 않는다. 실제 수집에는 새 저장소의 `.ino`와 `thermal_udp_capture.py`를 사용한다.
+
+## 완료 체크리스트
+
+- [ ] `wifi_secrets.h`를 로컬에서 생성했고 Git에 나타나지 않는다.
+- [ ] XIAO Serial Monitor에서 센서·Wi-Fi·송신 상태를 확인했다.
+- [ ] Pi 수집기를 먼저 실행했다.
+- [ ] 10,080-byte raw datagram이 `raw/`에 저장됐다.
+- [ ] `decoded_native/`, `frames.jsonl`, `annotations.jsonl`, `session.json`, `checksums.sha256`가 생성됐다.
+- [ ] Pi와 PC에서 validator를 실행했다.
+- [ ] 실제 FPS·loss·unit·orientation 제한을 기록했다.
+- [ ] raw capture와 secret을 Git에 추가하지 않았다.
+- [ ] T-C 검토와 명시 승인 전에 재학습하지 않았다.
