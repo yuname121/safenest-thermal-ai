@@ -23,7 +23,7 @@ Thermal-90 센서 기반 온디바이스 열화상 AI의 **검증과 재학습**
 | --- | --- |
 | `datasets/thermal/` | 표준화·분할·학습/평가 파이프라인 및 T-A/T-B 검증 manifest |
 | `scripts/` | T-A0~T-B5 생성·검증과 실제 수집 계약 validator |
-| `firmware/xiao_esp32c6_thermal90_udp_capture/` | Thermal_Test 호환 10,080-byte UDP raw-frame 송신 스케치. Wi-Fi 비밀값은 로컬 `wifi_secrets.h`에만 둠 |
+| `firmware/xiao_esp32c6_thermal90_udp_capture/` | Thermal_Test 호환 10,080-byte 논리 raw frame을 SNTR UDP V2 chunk로 보내는 스케치. Wi-Fi 비밀값은 로컬 `wifi_secrets.h`에만 둠 |
 | `tests/` | 단계별 회귀 테스트 |
 | `docs/` | 인수인계·수집 계약·오프라인 실험 보고서 |
 | `data/`, `artifacts/` | 로컬/승인된 외부 저장소에서만 관리할 비추적 대용량 데이터와 모델 |

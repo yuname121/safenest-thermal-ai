@@ -2,8 +2,10 @@
  * Thermal-90 UDP raw-frame sender for Seeed XIAO ESP32-C6.
  *
  * Protocol compatibility:
- *   - One UDP datagram per frame, exactly 10,080 bytes.
- *   - The datagram is 5,040 uint16 words in ESP32 little-endian memory order.
+ *   - One logical frame is exactly 10,080 bytes.
+ *   - MTU-safe UDP chunks carry an explicit frame/chunk envelope and CRC32.
+ *   - The reassembled payload is 5,040 uint16 words in ESP32 little-endian
+ *     memory order, unchanged from the Thermal_Test frame.
  *   - Words 0..79 are the unmodified sensor header.
  *   - Words 80..5039 are the unmodified 80 x 62 pixel payload.
  *
@@ -41,18 +43,57 @@ constexpr uint16_t THERMAL_FRAME_WORDS = THERMAL_HEADER_WORDS + THERMAL_PIXEL_WO
 constexpr size_t THERMAL_FRAME_BYTES = THERMAL_FRAME_WORDS * sizeof(uint16_t);
 constexpr uint16_t THERMAL_UDP_LOCAL_PORT = 40000;
 
+// SafeNest Thermal raw UDP V2. Header integers use network byte order. The
+// payload remains the original little-endian 10,080-byte sensor frame.
+constexpr char THERMAL_UDP_MAGIC[] = "SNTR";
+constexpr uint8_t THERMAL_UDP_VERSION = 2;
+constexpr uint8_t THERMAL_UDP_MESSAGE_TYPE_RAW_U16_LE = 1;
+constexpr size_t THERMAL_UDP_HEADER_BYTES = 32;
+constexpr size_t THERMAL_UDP_DATAGRAM_BYTES = 1200;
+constexpr size_t THERMAL_UDP_CHUNK_BYTES =
+    THERMAL_UDP_DATAGRAM_BYTES - THERMAL_UDP_HEADER_BYTES;
+constexpr uint16_t THERMAL_UDP_CHUNK_COUNT =
+    (THERMAL_FRAME_BYTES + THERMAL_UDP_CHUNK_BYTES - 1) /
+    THERMAL_UDP_CHUNK_BYTES;
+
 static_assert(THERMAL_FRAME_WORDS == 5040, "Thermal_Test protocol requires 5,040 words");
 static_assert(THERMAL_FRAME_BYTES == 10080, "Thermal_Test protocol requires 10,080 bytes");
+static_assert(THERMAL_UDP_CHUNK_COUNT == 9, "Raw UDP V2 requires nine chunks per frame");
 
 WiFiUDP udp;
 IPAddress receiverIp;
 uint16_t frameWords[THERMAL_FRAME_WORDS];
+uint8_t thermalUdpDatagram[THERMAL_UDP_DATAGRAM_BYTES];
 
 volatile uint32_t dataReadySignals = 0;
 uint32_t sentFrames = 0;
 uint32_t sendFailures = 0;
 uint32_t droppedReadySignals = 0;
+uint32_t transportFrameId = 0;
 unsigned long lastWifiAttemptMs = 0;
+
+void putU16(uint8_t* output, uint16_t value) {
+  output[0] = static_cast<uint8_t>(value >> 8);
+  output[1] = static_cast<uint8_t>(value);
+}
+
+void putU32(uint8_t* output, uint32_t value) {
+  output[0] = static_cast<uint8_t>(value >> 24);
+  output[1] = static_cast<uint8_t>(value >> 16);
+  output[2] = static_cast<uint8_t>(value >> 8);
+  output[3] = static_cast<uint8_t>(value);
+}
+
+uint32_t rawFrameCrc32(const uint8_t* data, size_t length) {
+  uint32_t crc = 0xFFFFFFFFU;
+  for (size_t offset = 0; offset < length; ++offset) {
+    crc ^= data[offset];
+    for (uint8_t bit = 0; bit < 8; ++bit) {
+      crc = (crc >> 1) ^ (0xEDB88320U & (0U - (crc & 1U)));
+    }
+  }
+  return ~crc;
+}
 
 void IRAM_ATTR onDataReady() {
   dataReadySignals++;
@@ -151,16 +192,39 @@ bool takeFrame() {
   return true;
 }
 
-bool sendRawFrame() {
+bool sendRawFrame(uint32_t frameId) {
   if (WiFi.status() != WL_CONNECTED) {
     return false;
   }
-  if (!udp.beginPacket(receiverIp, THERMAL_RECEIVER_PORT)) {
-    return false;
+  const uint8_t* rawFrame = reinterpret_cast<const uint8_t*>(frameWords);
+  const uint32_t frameCrc32 = rawFrameCrc32(rawFrame, THERMAL_FRAME_BYTES);
+  for (uint16_t chunkIndex = 0; chunkIndex < THERMAL_UDP_CHUNK_COUNT; ++chunkIndex) {
+    const uint32_t offset = chunkIndex * THERMAL_UDP_CHUNK_BYTES;
+    const size_t remaining = THERMAL_FRAME_BYTES - offset;
+    const uint16_t length = static_cast<uint16_t>(
+        remaining < THERMAL_UDP_CHUNK_BYTES ? remaining : THERMAL_UDP_CHUNK_BYTES);
+    uint8_t* header = thermalUdpDatagram;
+    memcpy(header, THERMAL_UDP_MAGIC, 4);
+    header[4] = THERMAL_UDP_VERSION;
+    header[5] = THERMAL_UDP_MESSAGE_TYPE_RAW_U16_LE;
+    putU16(header + 6, THERMAL_UDP_HEADER_BYTES);
+    putU32(header + 8, frameId);
+    putU16(header + 12, chunkIndex);
+    putU16(header + 14, THERMAL_UDP_CHUNK_COUNT);
+    putU32(header + 16, THERMAL_FRAME_BYTES);
+    putU32(header + 20, offset);
+    putU16(header + 24, length);
+    putU16(header + 26, 0);
+    putU32(header + 28, frameCrc32);
+    memcpy(header + THERMAL_UDP_HEADER_BYTES, rawFrame + offset, length);
+    const size_t datagramBytes = THERMAL_UDP_HEADER_BYTES + length;
+    if (!udp.beginPacket(receiverIp, THERMAL_RECEIVER_PORT) ||
+        udp.write(thermalUdpDatagram, datagramBytes) != datagramBytes ||
+        udp.endPacket() != 1) {
+      return false;
+    }
   }
-  const size_t written = udp.write(reinterpret_cast<const uint8_t*>(frameWords), THERMAL_FRAME_BYTES);
-  const bool completed = udp.endPacket() == 1;
-  return written == THERMAL_FRAME_BYTES && completed;
+  return true;
 }
 
 void setup() {
@@ -196,8 +260,9 @@ void setup() {
   WiFi.begin(THERMAL_WIFI_SSID, THERMAL_WIFI_PASSWORD);
   udp.begin(THERMAL_UDP_LOCAL_PORT);
 
-  Serial.printf("[Protocol] UDP raw V1: %u bytes/frame, %u x %u pixels\n",
-                static_cast<unsigned>(THERMAL_FRAME_BYTES), THERMAL_WIDTH, THERMAL_HEIGHT);
+  Serial.printf("[Protocol] SafeNest Thermal raw UDP V2: %u bytes/frame, %u chunks, %u x %u pixels\n",
+                static_cast<unsigned>(THERMAL_FRAME_BYTES), THERMAL_UDP_CHUNK_COUNT,
+                THERMAL_WIDTH, THERMAL_HEIGHT);
   Serial.printf("[Receiver] %s:%u\n", THERMAL_RECEIVER_IP, THERMAL_RECEIVER_PORT);
 }
 
@@ -229,15 +294,17 @@ void loop() {
   }
 
   const uint16_t frameCounter = frameWords[0];
-  if (sendRawFrame()) {
+  const uint32_t currentTransportFrameId = transportFrameId++;
+  if (sendRawFrame(currentTransportFrameId)) {
     sentFrames++;
   } else {
     sendFailures++;
   }
 
   if ((sentFrames + sendFailures) % 30 == 0) {
-    Serial.printf("[Stats] frame_counter=%u sent=%lu send_failures=%lu ready_drops=%lu wifi=%s\n",
-                  frameCounter, static_cast<unsigned long>(sentFrames),
+    Serial.printf("[Stats] transport_frame_id=%lu frame_counter=%u sent=%lu send_failures=%lu ready_drops=%lu wifi=%s\n",
+                  static_cast<unsigned long>(currentTransportFrameId), frameCounter,
+                  static_cast<unsigned long>(sentFrames),
                   static_cast<unsigned long>(sendFailures),
                   static_cast<unsigned long>(droppedReadySignals),
                   WiFi.status() == WL_CONNECTED ? "connected" : "disconnected");

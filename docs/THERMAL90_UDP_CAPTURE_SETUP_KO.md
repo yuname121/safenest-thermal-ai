@@ -1,21 +1,27 @@
 # Thermal-90 UDP 수집기 설치·실행 절차
 
-이 문서는 `Thermal_Test`의 기존 UDP 형식을 보존하면서, XIAO-ESP32C6와 Raspberry Pi로 **DEVICE_CONTRACT_PILOT**을 수집하는 방법이다. 모델 추론·재학습·낙상 판정은 수행하지 않는다.
+이 문서는 `Thermal_Test`의 10,080-byte 논리 raw frame을 보존하면서, XIAO-ESP32C6와 Raspberry Pi로 **DEVICE_CONTRACT_PILOT**을 수집하는 방법이다. 모델 추론·재학습·낙상 판정은 수행하지 않는다.
 
 ## 1. 프로토콜 고정
 
-XIAO는 프레임마다 UDP datagram 하나를 전송한다.
+XIAO는 논리 프레임 하나를 MTU-safe UDP V2 chunk 9개로 전송한다. 각 chunk는 frame/chunk 식별자와 전체 frame CRC32를 가지므로, 손실된 chunk가 다음 frame과 섞이지 않는다.
 
 | 항목 | 값 |
 | --- | --- |
 | UDP port | 기본 `5005` |
-| datagram 크기 | 정확히 `10080` bytes |
+| 논리 frame 크기 | 정확히 `10080` bytes |
+| UDP magic/version | `SNTR` / `2` |
+| chunk header | 32-byte network byte order |
+| 최대 datagram | `1200` bytes |
+| chunk payload | 최대 `1168` bytes |
+| frame당 chunk | `9` |
+| 무결성 | frame ID/index/count/offset/length + 전체 frame CRC32 |
 | word 수 | `5040`개의 little-endian `uint16` |
 | header | word `0..79` |
 | pixel | word `80..5039`, `80×62` |
 | header 관찰값 | word `0`: frame counter, `2`: die temp 추정 필드, `5/6`: max/min 추정 필드 |
 
-이 형식은 기존 `Thermal_Test` 구현의 wire 형식이다. 논리 프레임은 10,080 bytes지만 실제 XIAO/Pi 경로에서는 1320/1460-byte UDP 조각으로 관측될 수 있다. 이 경우 `--reassemble-udp-chunks`를 사용한다. header 의미, 물리 온도 단위, orientation, 실제 FPS는 이번 pilot에서 **확인 대상**이며 확정값이 아니다.
+payload 형식은 기존 `Thermal_Test` 구현과 동일하다. `--reassemble-udp-chunks`는 SNTR V2 header로 frame별 조립하고 CRC32를 확인한다. 구형 1320/1460-byte 조각을 단순 연결하는 방식은 패킷 손실 후 frame 경계를 증명할 수 없으므로 새 수집에 사용하지 않는다. header 의미, 물리 온도 단위, orientation, 실제 FPS는 이번 pilot에서 **확인 대상**이며 확정값이 아니다.
 
 ## 2. XIAO-ESP32C6 준비
 
@@ -24,7 +30,7 @@ XIAO는 프레임마다 UDP datagram 하나를 전송한다.
 3. `wifi_secrets.h`에 2.4 GHz Wi-Fi SSID·비밀번호와 Raspberry Pi의 WLAN IPv4 주소를 입력한다. 이 파일은 Git에서 무시되므로 커밋하지 않는다.
 4. Arduino IDE에서 XIAO ESP32-C6 보드와 실제 serial port를 선택해 `.ino`를 업로드한다.
 5. Serial Monitor `115200` baud에서 다음을 확인한다.
-   - `[Protocol] UDP raw V1: 10080 bytes/frame, 80 x 62 pixels`
+   - `[Protocol] SafeNest Thermal raw UDP V2: 10080 bytes/frame, 9 chunks, 80 x 62 pixels`
    - `[Receiver] <Pi IP>:5005`
    - `send_failures=0`에 가까운 상태
 
@@ -59,7 +65,7 @@ Git의 `.ino` 파일이 존재하는 것과 실제 ESP32에 업로드된 것은 
 
 ```text
 [SafeNest Thermal-90 raw UDP sender]
-[Protocol] UDP raw V1: 10080 bytes/frame, 80 x 62 pixels
+[Protocol] SafeNest Thermal raw UDP V2: 10080 bytes/frame, 9 chunks, 80 x 62 pixels
 [Receiver] <Raspberry Pi WLAN IP>:5005
 ```
 
@@ -105,7 +111,8 @@ python3 ~/safenest-thermal-capture/thermal_udp_capture.py \
 ~/thermal-captures/collection_20260816_pilot01/
 ├── collection.json
 └── subjects/S000/sessions/session_S000_001/
-    ├── raw/*.udp.bin                 # 원본 10,080-byte UDP datagram
+    ├── raw/*.udp.bin                 # CRC 통과 후 재조립된 원본 10,080-byte 논리 frame
+    ├── raw_chunks/*.bin              # 수신한 32-byte header 포함 UDP datagram
     ├── decoded_native/*_pixels_u16le.bin
     ├── frames.jsonl
     ├── annotations.jsonl
@@ -163,7 +170,8 @@ PC에서 동일 validator를 다시 실행하고 `validator_result.json`, `colle
 | 증상 | 확인 순서 |
 | --- | --- |
 | Pi가 `0` frame | Pi 수집기를 먼저 실행했는지, XIAO receiver IP/port가 맞는지, 동일 2.4 GHz Wi-Fi인지, Serial Monitor의 Wi-Fi·send failure를 확인 |
-| unexpected datagram | UDP payload가 정확히 10,080 bytes인지, 구형 송신기가 섞이지 않았는지 확인. 해당 datagram은 raw에 보존됨 |
+| invalid datagram | Serial 문구가 UDP V2인지, magic/version/header/길이가 맞는지 확인. 해당 datagram은 `raw_chunks/`에 보존됨 |
+| incomplete frame / CRC 실패 | 대량 수집을 중단하고 Wi-Fi·send failure·chunk loss를 조사. 누락 frame을 다음 frame bytes로 보충하지 않음 |
 | checksum 실패 | 수집 종료 후 파일을 수정·이동하지 말고, Pi의 원본 session 폴더에서 다시 회수 |
 | validator raw 오류 | `raw/`, `decoded_native/`, `frames.jsonl`을 따로 지우거나 이름 변경하지 말 것 |
 

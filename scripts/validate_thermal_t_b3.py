@@ -180,13 +180,21 @@ def _validate_predecessors(repo_root: Path, errors: list[dict[str, str]]) -> dic
     return result
 
 
-def _validate_roadmap(repo_root: Path, errors: list[dict[str, str]]) -> None:
+def _validate_roadmap(repo_root: Path, errors: list[dict[str, str]], warnings: list[dict[str, str]]) -> None:
     roadmap = repo_root / ROADMAP_REL
     reconciliation = repo_root / RECONCILIATION_REL
-    if not roadmap.is_file() or not reconciliation.is_file():
+    if not reconciliation.is_file():
         _error(errors, "ROADMAP_RECONCILIATION_MISSING", PHASE, "Merged T-B3 reconciliation evidence is required.")
         return
-    text = (roadmap.read_text(encoding="utf-8") + "\n" + reconciliation.read_text(encoding="utf-8")).lower()
+    # The focused derivative intentionally carries phase evidence and reports,
+    # not every historical team planning document.  The reconciliation report
+    # is authoritative here and already records the relevant roadmap decision.
+    text = reconciliation.read_text(encoding="utf-8")
+    if roadmap.is_file():
+        text = roadmap.read_text(encoding="utf-8") + "\n" + text
+    else:
+        _warning(warnings, "HISTORICAL_ROADMAP_NOT_CURATED", ROADMAP_REL, "Focused repository retains the merged reconciliation report but excludes this historical planning document.")
+    text = text.lower()
     for phrase in ("controlled frame-architecture comparison", "frame-only multi-seed", "temporal comparison remains deferred", "small_cnn_baseline_v1"):
         if phrase not in text:
             _error(errors, "ROADMAP_RECONCILIATION_INCOMPLETE", phrase, "Required post-T-B2 reconciliation phrase is absent.")
@@ -420,7 +428,7 @@ def validate_evidence(*, repo_root: Path = ROOT, evidence_dir: Path | None = Non
     for phase in ("T-A6", "T-B0", "T-B1", "T-B2"):
         if live.get(phase, {}).get("evidence_validation") != "PASS":
             _error(errors, "PREDECESSOR_LIVE_INVALID", phase, "Live predecessor validator is not PASS.")
-    _validate_roadmap(repo_root, errors)
+    _validate_roadmap(repo_root, errors, warnings)
     if all(name in documents for name in BASE_JSON):
         _validate_protocol(documents["t_b3_protocol.json"], errors)
         _validate_predecessor_identity(documents["predecessor_identity.json"], live, errors)

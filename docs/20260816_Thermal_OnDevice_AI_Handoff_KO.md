@@ -28,11 +28,13 @@ Thermal-90 → XIAO-ESP32C6 → UDP raw datagram → Raspberry Pi 수집기
                                   PC validator 및 T-C 검토
 ```
 
-현재 구현된 wire 계약은 팀 PC의 `Desktop\Thermal_Test`를 기준으로 한다. 이상적인 표현은 프레임 1개당 10,080 bytes이지만, 실제 XIAO/Pi pilot에서는 한 프레임이 여러 UDP 조각으로 관측되었다. 따라서 수집기는 단일 datagram 모드와 명시적 조각 재조립 모드를 모두 지원한다.
+현재 논리 frame 계약은 팀 PC의 `Desktop\Thermal_Test`를 기준으로 한다. 실제 XIAO/Pi pilot에서 구형 조각을 단순 연결할 때 frame 경계가 무너진 증거가 반복되어, 새 수집용 송신기·수집기는 `SNTR` framed UDP V2를 사용한다. 각 조각은 frame ID, chunk index/count, offset/length와 전체 frame CRC32를 포함한다. 아래의 과거 `S000_004`, `S000_011`~`014` 결과는 구형 V1 수집 증거로 그대로 보존한다.
 
 - 논리 프레임 크기: 정확히 10,080 bytes
-- 실제 pilot UDP 조각: 1320/1460 bytes
-- 재조립 모드: `--reassemble-udp-chunks`
+- 새 V2 UDP 조각: 최대 1,200 bytes, frame당 9개
+- V2 header: 32 bytes, network byte order, magic `SNTR`, version `2`
+- 재조립 모드: `--reassemble-udp-chunks` (frame별 fail-closed + CRC32)
+- 구형 blind stream: `--legacy-stream-reassembly` (진단 보존 전용, 새 수집 금지)
 - 5,040 little-endian `uint16` word
 - word `0..79`: 센서 header
 - word `80..5039`: `80×62` pixel payload
@@ -74,8 +76,9 @@ Thermal-90 → XIAO-ESP32C6 → UDP raw datagram → Raspberry Pi 수집기
   - Wi-Fi와 Pi 주소는 `wifi_secrets.h`에서 읽으며 이 파일은 Git에 올리지 않는다.
 - `scripts/thermal_udp_capture.py`
   - Raspberry Pi 표준 Python만으로 동작한다.
-  - exact-size UDP datagram 모드와 `--reassemble-udp-chunks` 조각 재조립 모드를 지원한다.
-  - 재조립 모드에서는 원본 UDP 조각을 `raw_chunks/`에 보존하고 10,080-byte 논리 프레임을 `raw/`와 `decoded_native/`에 기록한다.
+  - exact-size V1 진단 모드와 `--reassemble-udp-chunks` framed UDP V2 모드를 지원한다.
+  - V2 재조립은 frame ID/chunk index/count/offset/length를 검증하고 전체 frame CRC32가 맞을 때만 10,080-byte 논리 프레임을 `raw/`와 `decoded_native/`에 기록한다.
+  - 손실·중복 충돌·timeout·CRC 실패는 다음 frame bytes로 보충하지 않고 fail-closed metric으로 남긴다.
   - unexpected datagram, header counter gap/duplicate를 기록한다.
   - Pi host monotonic timestamp와 wall-clock을 기록한다.
   - 모델 입력을 만들거나 예측하지 않는다.
@@ -208,7 +211,7 @@ Git 파일 존재만으로 ESP32 업로드 완료를 증명할 수 없다. 업�
 
 ```text
 [SafeNest Thermal-90 raw UDP sender]
-[Protocol] UDP raw V1: 10080 bytes/frame, 80 x 62 pixels
+[Protocol] SafeNest Thermal raw UDP V2: 10080 bytes/frame, 9 chunks, 80 x 62 pixels
 [Receiver] <Pi WLAN IP>:5005
 ```
 
@@ -283,7 +286,7 @@ LYING을 낙상으로 명명하지 않는다. 실제 전이 event를 수집하�
 - `session_S000_016`: `STANDING` 재수집
 - `session_S000_017`: `LYING` 재수집
 
-재시도 전에는 Pi 수집기를 먼저 실행하고 ESP32를 재시작한다. Serial Monitor의 `send_failures`가 수집 중 증가하지 않는지 확인한다. 조각 재조립 모드에서 frame-counter 오류가 반복되면 대량 수집을 중단하고 UDP chunk sequence를 포함하는 프로토콜 개선을 T-C에 올린다.
+재시도 전에는 Pi 수집기를 먼저 실행하고 ESP32를 재시작한다. Serial Monitor의 `send_failures`가 수집 중 증가하지 않는지 확인한다. V2 모드에서 `incomplete_frames`, `checksum_failures`, `conflicting_duplicates`, `invalid_datagrams`가 하나라도 발생하면 대량 수집을 중단하고 Wi-Fi·송신 실패·수신 buffer를 조사한다. 누락 조각을 수동 보정하거나 다음 frame과 연결하지 않는다.
 
 ### 7. PC로 수집물 회수
 
@@ -326,7 +329,7 @@ python scripts\validate_thermal_real_capture.py `
 
 ## 현재 미해결 항목
 
-- XIAO는 Serial Monitor에서 SafeNest Thermal-90 송신기·10080-byte protocol·Pi receiver 문구가 확인되었다. 다만 Git 커밋과 실제 보드 binary의 일치 여부는 Arduino IDE 업로드 기록으로 별도 확인해야 한다.
+- SNTR UDP V2 송신기와 Pi reassembler는 로컬 Python 회귀 테스트를 통과했고, XIAO ESP32-C6 스케치는 `esp32:esp32 3.3.11` / `esp32:esp32:XIAO_ESP32C6` 대상으로 컴파일을 통과했다(Flash 1,000,948 bytes, RAM 55,952 bytes). 실제 보드 업로드와 Pi 수신은 T-C 통합 시점까지 수행하지 않았다. Git 파일과 실제 보드 binary의 일치 여부는 그때 Arduino IDE 업로드 기록으로 별도 확인해야 한다.
 - 실제 Thermal-90 native unit, byte order의 물리적 의미, orientation은 아직 검증하지 않았다.
 - `session_S000_004`에서 effective FPS 약 4.3173, sensor counter gap/packet loss 0을 측정했지만, 2초 timing gap 4회 원인은 아직 확인하지 않았다.
 - `session_S000_013`은 effective FPS 약 5.7792, frame-counter 오류 0인 유일한 정적 자세 pilot 후보이다.

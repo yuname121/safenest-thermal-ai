@@ -148,14 +148,15 @@ def test_p1_is_train_only_and_deterministic() -> None:
 
 
 def test_p2_matches_legacy_preparation_and_constant_behavior() -> None:
-    from inference.thermal_interpreter import ThermalInterpreter
-
     varied = np.linspace(20.0, 30.0, 62 * 80, dtype="<f4").reshape(1, 62, 80)
-    expected = ThermalInterpreter._prepare_float_frame(varied[0])
+    # Independent frozen reference for the deliberately excluded legacy
+    # ThermalInterpreter._prepare_float_frame implementation.
+    varied_frame = varied[0].astype(np.float32)
+    expected = ((varied_frame - varied_frame.min()) / (varied_frame.max() - varied_frame.min()))[None, ..., None]
     actual = apply_p2(varied)
     np.testing.assert_allclose(actual, expected, rtol=0, atol=0)
     constant = np.full((1, 62, 80), 42.0, dtype="<f4")
-    expected_constant = ThermalInterpreter._prepare_float_frame(constant[0])
+    expected_constant = np.clip(constant[0], 0.0, 1.0)[None, ..., None]
     np.testing.assert_allclose(apply_p2(constant), expected_constant, rtol=0, atol=0)
 
 
