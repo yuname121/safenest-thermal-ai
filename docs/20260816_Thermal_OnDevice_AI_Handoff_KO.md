@@ -28,10 +28,11 @@ Thermal-90 → XIAO-ESP32C6 → UDP raw datagram → Raspberry Pi 수집기
                                   PC validator 및 T-C 검토
 ```
 
-현재 구현된 wire 계약은 팀 PC의 `Desktop\Thermal_Test`를 기준으로 한다.
+현재 구현된 wire 계약은 팀 PC의 `Desktop\Thermal_Test`를 기준으로 한다. 이상적인 표현은 프레임 1개당 10,080 bytes이지만, 실제 XIAO/Pi pilot에서는 한 프레임이 여러 UDP 조각으로 관측되었다. 따라서 수집기는 단일 datagram 모드와 명시적 조각 재조립 모드를 모두 지원한다.
 
-- 프레임마다 UDP datagram 1개
-- datagram 크기: 정확히 10,080 bytes
+- 논리 프레임 크기: 정확히 10,080 bytes
+- 실제 pilot UDP 조각: 1320/1460 bytes
+- 재조립 모드: `--reassemble-udp-chunks`
 - 5,040 little-endian `uint16` word
 - word `0..79`: 센서 header
 - word `80..5039`: `80×62` pixel payload
@@ -45,6 +46,7 @@ Thermal-90 → XIAO-ESP32C6 → UDP raw datagram → Raspberry Pi 수집기
 ├── collection.json
 └── subjects/<subject_id>/sessions/<session_id>/
     ├── raw/*.udp.bin
+    ├── raw_chunks/*.bin               # 조각 재조립 모드에서만 생성
     ├── decoded_native/*_pixels_u16le.bin
     ├── frames.jsonl
     ├── annotations.jsonl
@@ -72,7 +74,9 @@ Thermal-90 → XIAO-ESP32C6 → UDP raw datagram → Raspberry Pi 수집기
   - Wi-Fi와 Pi 주소는 `wifi_secrets.h`에서 읽으며 이 파일은 Git에 올리지 않는다.
 - `scripts/thermal_udp_capture.py`
   - Raspberry Pi 표준 Python만으로 동작한다.
-  - exact-size UDP datagram, unexpected datagram, header counter gap/duplicate를 기록한다.
+  - exact-size UDP datagram 모드와 `--reassemble-udp-chunks` 조각 재조립 모드를 지원한다.
+  - 재조립 모드에서는 원본 UDP 조각을 `raw_chunks/`에 보존하고 10,080-byte 논리 프레임을 `raw/`와 `decoded_native/`에 기록한다.
+  - unexpected datagram, header counter gap/duplicate를 기록한다.
   - Pi host monotonic timestamp와 wall-clock을 기록한다.
   - 모델 입력을 만들거나 예측하지 않는다.
 - `scripts/validate_thermal_real_capture.py`
@@ -91,6 +95,25 @@ Thermal-90 → XIAO-ESP32C6 → UDP raw datagram → Raspberry Pi 수집기
 - validator error `0`
 
 이 결과는 코드 흐름 검증일 뿐 실제 XIAO·Thermal-90·Pi 하드웨어 검증이 아니다.
+
+### 실제 하드웨어 pilot: `session_S000_004`
+
+- PC 보존 위치: `Desktop\session_S000_004`
+- validator 결과: `CAPTURE_STRUCTURE_VALID_WITH_LIMITATIONS`
+- checksum: `PASS`
+- `raw_chunks/`: 904개 (1320 bytes 129개, 1460 bytes 775개)
+- 논리 프레임: `VALID` 129개, 마지막 `PARTIAL` 1개
+- `decoded_native/`: 129개
+- `annotations.jsonl`: 129개, 모두 `EMPTY`
+- sensor counter gap / packet loss: 0
+- raw evidence: `FULL_FRAME_RAW`
+- 측정 effective FPS: 약 4.3173 FPS (설정값 7 FPS와 차이)
+- physical unit/orientation: 아직 `NOT_VERIFIED`
+- temporal provenance: `TEMPORAL_ORDER_ONLY`
+- 2초 이상 inter-frame timing gap 경고: 4회
+- 모델 사용 eligibility: validator가 승인하지 않음
+
+세부 기록은 PC 바탕화면의 `pilot_review_session_S000_004_KO.md`와 `validation_session_S000_004.json`에 있다. 이 세션은 구조·전송 pilot 증거로 보관하며, 재학습·낙상 이벤트 주장·LOCKED_TEST 승격에 사용하지 않는다.
 
 ## 앞으로 해야 하는 것
 
@@ -167,6 +190,7 @@ Pi 수집기를 먼저 실행하고 XIAO를 켠다.
 
 ```bash
 python3 ~/safenest-thermal-capture/thermal_udp_capture.py \
+  --reassemble-udp-chunks \
   --output ~/thermal-captures \
   --collection-id collection_20260816_pilot01 \
   --subject-id S000 \
@@ -184,7 +208,7 @@ python3 ~/safenest-thermal-capture/thermal_udp_capture.py \
 find ~/thermal-captures/collection_20260816_pilot01 -type f | sort
 ```
 
-`raw/`가 없거나 `.npy`/화면 screenshot만 생성되면 계약형 수집에 실패한 것이다. 그 상태에서 대량 수집·재학습을 시작하지 않는다.
+조각 재조립 모드에서는 `raw_chunks/`, `raw/`, `decoded_native/`가 함께 생성되어야 한다. `raw/`가 없거나 `.npy`/화면 screenshot만 생성되면 계약형 수집에 실패한 것이다. 그 상태에서 대량 수집·재학습을 시작하지 않는다.
 
 ### 5. 수집 직후 Pi에서 validator 실행
 
@@ -199,6 +223,7 @@ python3 ~/safenest-thermal-capture/validate_thermal_real_capture.py "$collection
 - `PHYSICAL_UNIT_NOT_VERIFIED`
 - `EFFECTIVE_FPS_NOT_VERIFIED`
 - `TEMPORAL_ORDER_ONLY`
+- `CONFIGURED_EFFECTIVE_FPS_DIFFERENCE` (실제 pilot 측정값이 설정 FPS와 다를 때)
 
 이 제한은 실제 수집값 검토 대상이며, 임의로 `VERIFIED`로 바꾸지 않는다.
 
@@ -257,7 +282,7 @@ python scripts\validate_thermal_real_capture.py `
 
 - XIAO 실제 업로드·센서 I2C/SPI 연결은 아직 확인하지 않았다.
 - 실제 Thermal-90 native unit, byte order의 물리적 의미, orientation은 아직 검증하지 않았다.
-- 실제 effective FPS와 UDP loss는 아직 측정하지 않았다.
+- `session_S000_004`에서 effective FPS 약 4.3173, sensor counter gap/packet loss 0을 측정했지만, 2초 timing gap 4회 원인은 아직 확인하지 않았다.
 - Pi의 실제 WLAN IP와 Wi-Fi 비밀값은 작업자가 입력해야 한다.
 - 기존 `Desktop\Thermal_Test\udp_receiver_rpi.py`는 화면 표시·보정 중심의 prototype이며 계약형 수집기로 사용하지 않는다.
 - 공개 저장소에는 `wifi_secrets.h`, raw capture, `.tflite` binary를 추가하지 않는다.

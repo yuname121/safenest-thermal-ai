@@ -15,7 +15,7 @@ XIAO는 프레임마다 UDP datagram 하나를 전송한다.
 | pixel | word `80..5039`, `80×62` |
 | header 관찰값 | word `0`: frame counter, `2`: die temp 추정 필드, `5/6`: max/min 추정 필드 |
 
-이 형식은 기존 `Thermal_Test` 구현의 wire 형식이다. header 의미, 물리 온도 단위, orientation, 실제 FPS는 이번 pilot에서 **확인 대상**이며 확정값이 아니다.
+이 형식은 기존 `Thermal_Test` 구현의 wire 형식이다. 논리 프레임은 10,080 bytes지만 실제 XIAO/Pi 경로에서는 1320/1460-byte UDP 조각으로 관측될 수 있다. 이 경우 `--reassemble-udp-chunks`를 사용한다. header 의미, 물리 온도 단위, orientation, 실제 FPS는 이번 pilot에서 **확인 대상**이며 확정값이 아니다.
 
 ## 2. XIAO-ESP32C6 준비
 
@@ -60,6 +60,7 @@ hostname -I
 
 ```bash
 python3 ~/safenest-thermal-capture/thermal_udp_capture.py \
+  --reassemble-udp-chunks \
   --output ~/thermal-captures \
   --collection-id collection_20260816_pilot01 \
   --subject-id S000 \

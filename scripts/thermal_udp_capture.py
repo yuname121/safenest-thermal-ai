@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Capture Thermal_Test UDP frames into the SafeNest real-capture contract v1.
 
-The XIAO ESP32-C6 sender emits exactly one 10,080-byte datagram per sensor
-frame. This collector stores the unmodified datagram, stores the decoded native
-80 x 62 uint16 pixel words separately, and records all provenance needed for a
-DEVICE_CONTRACT_PILOT. It deliberately does not normalize, calibrate, resize,
-rotate, or run a model.
+The preferred transport is one 10,080-byte datagram per sensor frame. Some
+Thermal_Test/XIAO deployments emit the same frame as several UDP datagrams
+(commonly 1,320/1,460-byte chunks); ``--reassemble-udp-chunks`` enables an
+explicit byte-stream reassembly mode for that deployment. In both modes the
+collector stores raw evidence, stores decoded native 80 x 62 uint16 pixels
+separately, and records provenance for a DEVICE_CONTRACT_PILOT. It deliberately
+does not normalize, calibrate, resize, rotate, or run a model.
 
 The script needs only Python's standard library and is suitable for Raspberry
 Pi OS. It must run before the ESP32 sender begins emitting packets.
@@ -101,6 +103,7 @@ class CaptureWriter:
         self.subject_dir = self.collection_dir / "subjects" / args.subject_id
         self.session_dir = self.subject_dir / "sessions" / args.session_id
         self.raw_dir = self.session_dir / "raw"
+        self.raw_chunks_dir = self.session_dir / "raw_chunks"
         self.decoded_dir = self.session_dir / "decoded_native"
         self.frames_path = self.session_dir / "frames.jsonl"
         self.annotations_path = self.session_dir / "annotations.jsonl"
@@ -130,6 +133,8 @@ class CaptureWriter:
             )
 
         self.raw_dir.mkdir(parents=True, exist_ok=False)
+        if self.args.reassemble_udp_chunks:
+            self.raw_chunks_dir.mkdir(parents=True, exist_ok=False)
         self.decoded_dir.mkdir(parents=True, exist_ok=False)
         self.frames_handle = self.frames_path.open("x", encoding="utf-8")
         self.annotations_handle = self.annotations_path.open("x", encoding="utf-8")
@@ -344,6 +349,11 @@ class CaptureWriter:
         append_jsonl(self.frames_handle, frame)
         self.invalid_frame_count += 1
 
+    def record_udp_chunk(self, data: bytes, chunk_index: int) -> None:
+        """Preserve each UDP datagram used by chunked reassembly."""
+        chunk_name = "chunk_{:08d}_{}B.bin".format(chunk_index, len(data))
+        (self.raw_chunks_dir / chunk_name).write_bytes(data)
+
     def record_valid_datagram(self, data: bytes) -> None:
         received_monotonic_ns = time.monotonic_ns()
         received_wall_time = wall_time_now()
@@ -392,7 +402,11 @@ class CaptureWriter:
             "byte_count": len(data),
             "native_shape": [HEIGHT, WIDTH],
             "native_dtype": "uint16",
-            "raw_encoding": "LITTLE_ENDIAN_UINT16_WORDS_5040",
+            "raw_encoding": (
+                "LITTLE_ENDIAN_UINT16_WORDS_5040_REASSEMBLED_FROM_UDP_CHUNKS"
+                if self.args.reassemble_udp_chunks
+                else "LITTLE_ENDIAN_UINT16_WORDS_5040"
+            ),
             "raw_unit_claim": "UNKNOWN_NOT_VERIFIED",
             "unit_status": "NOT_VERIFIED",
             "crc_or_packet_status": "UDP_DATAGRAM_LENGTH_OK_NO_CRC_IN_PROTOCOL",
@@ -450,9 +464,13 @@ class CaptureWriter:
                 "transport_path": "XIAO_ESP32C6_TO_RASPBERRY_PI_UDP",
                 "protocol": "THERMAL_TEST_UDP_RAW_V1",
                 "protocol_version": "1",
+                "udp_datagram_mode": (
+                    "REASSEMBLED_CHUNKS" if self.args.reassemble_udp_chunks else "SINGLE_FRAME_DATAGRAM"
+                ),
                 "full_frame_status": "PRESERVED",
                 "scalar_thermal_max_status": "PRESENT",
                 "raw_packet_bytes_preserved": True,
+                "raw_udp_chunks_preserved": self.args.reassemble_udp_chunks,
                 "transport_latency_status": "NOT_MEASURED",
             },
             "timing": {
@@ -479,6 +497,7 @@ class CaptureWriter:
                 "annotations_file": "annotations.jsonl",
                 "checksums_file": "checksums.sha256",
                 "raw_root": "raw",
+                "raw_chunks_root": "raw_chunks" if self.args.reassemble_udp_chunks else None,
                 "decoded_native_root": "decoded_native",
                 "model_input_root": None,
             },
@@ -512,6 +531,8 @@ class CaptureWriter:
     def _write_checksums(self) -> None:
         paths: List[Path] = [self.session_path, self.frames_path, self.annotations_path]
         paths.extend(sorted(path for path in self.raw_dir.rglob("*") if path.is_file()))
+        if self.args.reassemble_udp_chunks:
+            paths.extend(sorted(path for path in self.raw_chunks_dir.rglob("*") if path.is_file()))
         paths.extend(sorted(path for path in self.decoded_dir.rglob("*") if path.is_file()))
         paths.sort(key=lambda path: path.relative_to(self.session_dir).as_posix())
         with self.checksums_path.open("w", encoding="utf-8", newline="\n") as handle:
@@ -532,7 +553,7 @@ class CaptureWriter:
 
 def parse_args(argv: Optional[Iterable[str]] = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Capture exact 10,080-byte Thermal_Test UDP frames into the SafeNest real-capture contract."
+        description="Capture Thermal_Test UDP frames into the SafeNest real-capture contract."
     )
     parser.add_argument("--output", required=True, help="Parent directory for collection folders; keep outside Git.")
     parser.add_argument("--collection-id", required=True)
@@ -543,6 +564,11 @@ def parse_args(argv: Optional[Iterable[str]] = None) -> argparse.Namespace:
     parser.add_argument("--operator-code", required=True, help="Pseudonymous operator code; no personal names.")
     parser.add_argument("--bind", default="0.0.0.0")
     parser.add_argument("--port", type=int, default=5005)
+    parser.add_argument(
+        "--reassemble-udp-chunks",
+        action="store_true",
+        help="Reassemble sequential UDP chunks (for deployments observed at 1320/1460 bytes) into 10,080-byte frames.",
+    )
     parser.add_argument("--duration-seconds", type=float, default=120.0)
     parser.add_argument("--max-frames", type=int, default=None)
     parser.add_argument("--max-gap-markers", type=int, default=300)
@@ -601,13 +627,16 @@ def run_capture(args: argparse.Namespace) -> int:
     sock.bind((args.bind, args.port))
     sock.settimeout(0.5)
 
-    print("[capture] listening on {}:{} for exactly {}-byte UDP datagrams".format(args.bind, args.port, FRAME_BYTES))
+    mode = "sequential UDP chunk reassembly" if args.reassemble_udp_chunks else "exact UDP datagrams"
+    print("[capture] listening on {}:{} for {} (frame bytes={})".format(args.bind, args.port, mode, FRAME_BYTES))
     print("[capture] output: {}".format(writer.collection_dir))
     deadline = time.monotonic() + args.duration_seconds
     packet_count = 0
+    chunk_buffer = bytearray()
+    chunk_index = 0
     try:
         while time.monotonic() < deadline:
-            if args.max_frames is not None and packet_count >= args.max_frames:
+            if args.max_frames is not None and writer.valid_frame_count >= args.max_frames:
                 break
             try:
                 # Preserve an entire unexpected datagram for diagnosis instead
@@ -616,13 +645,24 @@ def run_capture(args: argparse.Namespace) -> int:
             except socket.timeout:
                 continue
             packet_count += 1
-            if len(data) == FRAME_BYTES:
-                writer.record_valid_datagram(data)
+            if args.reassemble_udp_chunks:
+                writer.record_udp_chunk(data, chunk_index)
+                chunk_index += 1
+                chunk_buffer.extend(data)
+                while len(chunk_buffer) >= FRAME_BYTES:
+                    frame_data = bytes(chunk_buffer[:FRAME_BYTES])
+                    del chunk_buffer[:FRAME_BYTES]
+                    writer.record_valid_datagram(frame_data)
+                    if args.max_frames is not None and writer.valid_frame_count >= args.max_frames:
+                        break
             else:
-                writer.record_invalid_datagram(
-                    data,
-                    "Expected {} bytes from THERMAL_TEST_UDP_RAW_V1, received {} bytes.".format(FRAME_BYTES, len(data)),
-                )
+                if len(data) == FRAME_BYTES:
+                    writer.record_valid_datagram(data)
+                else:
+                    writer.record_invalid_datagram(
+                        data,
+                        "Expected {} bytes from THERMAL_TEST_UDP_RAW_V1, received {} bytes.".format(FRAME_BYTES, len(data)),
+                    )
             if packet_count % 30 == 0:
                 print("[capture] datagrams={} valid={} invalid={} packet_loss={}".format(
                     packet_count, writer.valid_frame_count, writer.invalid_frame_count, writer.packet_loss_count
@@ -630,6 +670,11 @@ def run_capture(args: argparse.Namespace) -> int:
     except KeyboardInterrupt:
         print("\n[capture] interrupted by operator; finalizing captured evidence.")
     finally:
+        if args.reassemble_udp_chunks and chunk_buffer:
+            writer.record_invalid_datagram(
+                bytes(chunk_buffer),
+                "Capture ended with an incomplete reassembled frame of {} bytes.".format(len(chunk_buffer)),
+            )
         sock.close()
         writer.close()
 
